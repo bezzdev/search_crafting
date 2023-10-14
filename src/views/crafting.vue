@@ -57,6 +57,17 @@ export default {
         ],
         goals: [
           "item.minecraft.bucket",
+        ]
+      },
+      {
+        inventory: [
+          "block.minecraft.oak_planks",
+          "item.minecraft.stick",
+          "item.minecraft.iron_ingot",
+          "item.minecraft.gold_ingot",
+          "item.minecraft.flint"
+        ],
+        goals: [
           "item.minecraft.flint_and_steel"
         ]
       },
@@ -173,7 +184,9 @@ export default {
     var self = this;
     self.results = []
 
-    var test_languages = [ Languages.find(l => l.file == 'en_gb'), Languages.find(l => l.file == 'bs_ba')]
+    var keys = ['en_gb', 'bs_ba', 'ko_kr', 'uk_ua', 'vi_vn']
+    // var keys = ['ko_kr']
+    var test_languages = keys.map(k => Languages.find(l => l.file == k))
 
     test_languages.forEach(function(language) {
       var translation_result = { 
@@ -200,15 +213,23 @@ export default {
             best_search_term = search;
           }
         })
-        console.log(best_search_term);
-        console.log(best_search_results);
-        var best_search_recipes = self.getRecipesForGroups(best_search_results, craft.inventory)
-        translation_result.crafting.push({
-          goals: craft.goals,
-          best_search_term: best_search_term,
-          best_search_recipes: best_search_recipes
-        })
-        translation_result.score += best_search_recipes.length - craft.goals.length
+
+        if (best_search_term != null) {
+          var best_search_recipes = self.getRecipesForGroups(best_search_results, craft.inventory)
+          translation_result.crafting.push({
+            goals: craft.goals,
+            best_search_term: best_search_term,
+            best_search_recipes: best_search_recipes
+          })
+          translation_result.score += best_search_recipes.length - craft.goals.length
+        } else {
+          translation_result.crafting.push({
+            goals: craft.goals,
+            best_search_term: null,
+            best_search_recipes: []
+          })
+          translation_result.score += 100
+        }
       })
 
       self.results.push(translation_result)
