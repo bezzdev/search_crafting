@@ -154,6 +154,7 @@ export default {
     addCraft: function () {
       this.crafting.push({
         enabled: true,
+        size: 3,
         goals: [
         ],
         inventory: [
@@ -169,6 +170,8 @@ export default {
     },
     duplicateCraft: function(craft) {
       var dupe = {
+        enabled: true,
+        size: 3,
         goals: [
         ],
         inventory: [
