@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row>
       <v-spacer/>
-      <v-col cols="6">
+      <v-col cols="12" sm="5" lg="6">
         <v-toolbar class="mb-2">
           <v-btn v-if="!edit" @click="setEditMode(true)" tile color="blue">
             Edit
@@ -25,7 +25,7 @@
           </v-tooltip>
         </v-expansion-panels>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" sm="7" lg="6">
         <v-toolbar class="mb-2">
           <v-text-field label="search" v-model="search" hide-details single-line />
         </v-toolbar>  
