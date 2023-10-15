@@ -206,13 +206,14 @@ export default {
       }
     },
     share: function () {
+      var items = this.$store.getters.getItems;
       var shareObject = {
         crafting: this.crafting.map(function (craft) {
           return { 
             enabled: craft.enabled, 
             size: craft.size, 
-            goals: craft.goals, 
-            inventory: craft.inventory 
+            goals: craft.goals.map(g => items.indexOf(g)), 
+            inventory: craft.inventory.map(i => items.indexOf(i))
           }
         }),
         options: {
@@ -221,12 +222,22 @@ export default {
           search: this.options.search
         }
       }
-      encodeURIComponent
+
       var json = JSON.stringify(shareObject);
       var encoded = btoa(json);
 
-      var link = process.env.VUE_APP_CLIENT_URL + "?data=" + encoded;
+      var link = process.env.VUE_APP_CLIENT_PROTOCOL + process.env.VUE_APP_CLIENT_URL + "?data=" + encoded;
       navigator.clipboard.writeText(link);
+    },
+    deserialize: function (encoded) {
+      var items = this.$store.getters.getItems;
+
+      var json = JSON.parse(atob(encoded))
+      json.crafting.forEach(function (craft) {
+        craft.goals = craft.goals.map(g => items[g])
+        craft.inventory = craft.inventory.map(i => items[i])
+      })
+      return json;
     },
     setResultsOutdated: function () {
       this.resultsOutdated = true;
@@ -535,7 +546,8 @@ export default {
     
     if(self.$route.query.data) {
       var encoded = self.$route.query.data;
-      var json = JSON.parse(atob(encoded))
+      
+      var json = self.deserialize(encoded)
       if (json.crafting) {
         self.crafting = json.crafting
       }
@@ -547,6 +559,8 @@ export default {
     } else {
       self.setResultsOutdated();
     }
+
+    self.$store.commit('setLoding', false)
 
     setInterval(function() {
       if (self.resultsOutdated) {

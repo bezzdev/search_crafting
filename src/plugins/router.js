@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import store from '../store'
 import VueRouter from 'vue-router'
-import Crafting from '../views/crafting.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -12,7 +11,7 @@ const routes = [
       toolbar: true,
       absoluteToolbar: true
     },
-    component: Crafting
+    component: () => import('../views/crafting.vue')
   }
 ]
 

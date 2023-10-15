@@ -2,7 +2,12 @@
   <v-app>
     <v-main>
       <toolbar/>
-      <router-view/>
+      <router-view v-show="loading"/>
+      <v-row v-show="!loading" align="center" class="text-center" style="height: 800px;">
+        <v-col>
+          <v-progress-circular indeterminate size="80" color="primary" />
+        </v-col>
+      </v-row>
     </v-main>
   </v-app>
 </template>
@@ -16,6 +21,9 @@ export default {
   data: () => ({
   }),
   computed: {
+    loading () {
+      return this.$store.getters.getLoading
+    }
   },
   watch: {
   }
