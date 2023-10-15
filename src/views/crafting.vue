@@ -167,7 +167,7 @@ export default {
     resultsOutdated: false,
     craftingChanged: false,
     loading: false,
-    one_character_only: true
+    one_character_only: false
   }),
   computed: {
   },
@@ -440,12 +440,14 @@ export default {
 
             translation_result.crafting.push({
               goals: craft.goals,
+              valid: true,
               best_search: best_search,
               best_searches: best_searches
             })
           } else {
              translation_result.crafting.push({
               goals: craft.goals,
+              valid: false,
               best_search: null,
               best_searches: []
             })
