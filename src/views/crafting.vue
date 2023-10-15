@@ -12,6 +12,7 @@
           </v-btn>
           <v-spacer />
           <v-switch v-model="one_character_only" class="mr-2" hide-details label="Find Single Character Only" @change="setResultsOutdated"/>
+          <v-switch v-model="score_search_lengths" class="mr-2" hide-details label="Search Length Matters" @change="setResultsOutdated"/>
         </v-toolbar>
         <v-expansion-panels>
           <craft :ref="'craft-' + c" v-for="craft, c in crafting" :key="c" :craft="craft" :edit="edit" @delete="deleteCraft" @duplicate="duplicateCraft" @itemsChanged="itemsChanged" @enabled="enabledChanged" />
@@ -167,7 +168,8 @@ export default {
     resultsOutdated: false,
     craftingChanged: false,
     loading: false,
-    one_character_only: false
+    one_character_only: false,
+    score_search_lengths: true
   }),
   computed: {
   },
@@ -361,6 +363,8 @@ export default {
     scoreSearch: function(search, goals, results) {
       var remainder = results.length - goals.length;
       var letters = search.length;
+      if (!this.score_search_lengths)
+        letters = 1;
       return Math.pow(0.6 * letters, 2) + (remainder); 
     },
     getResults: function () {
