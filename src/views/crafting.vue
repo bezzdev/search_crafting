@@ -328,8 +328,20 @@ export default {
       var test_languages = keys.map(k => Languages.find(l => l.key == k))
 
       var valid_crafts = self.crafting.filter(c => c.goals.length > 0 && c.inventory.length > 0);
+      valid_crafts.forEach(function (craft) {
+        var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.size, craft.inventory)
+        
+        var valid = true;
+        craft.goals.forEach(function (goal) {
+          var found_craftable = groups.find(g => g.find(r => r.output == goal))
+          if (found_craftable == null) {
+            valid = false;
+          }
+        })
+        craft.valid = valid;
+      })
       var enabled_crafts = valid_crafts.filter(c => c.enabled);
-
+      
       test_languages.forEach(function(language) {
         var translation_result = {
           language_name: language.name,
@@ -342,48 +354,58 @@ export default {
         var translations = LanguageTooltips[language.key];
 
         enabled_crafts.forEach(function(craft) {
-          var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.size, craft.inventory)
-          var searches = self.getSearchesForItems(craft.goals, translations);
+          if (craft.valid) {
+            var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.size, craft.inventory)
+            var searches = self.getSearchesForItems(craft.goals, translations);
 
-          var scored_search_results = []
+            var scored_search_results = []
 
-          searches.forEach(function(search) {
-            var results = self.searchGroups(groups, translations, search);
-            var score = self.scoreSearch(search, craft.goals, results);
-
-            scored_search_results.push({
-              search_term: search,
-              results: self.getRecipesForGroups(results, craft.inventory),
-              score: score
-            })
-          })
-
-          var best_searches = []
-          var best_search = null
-
-          if (scored_search_results.length > 0) {
-            scored_search_results.sort(function compare(a, b) {
-              if (a.score < b.score) {
-                return -1;
-              } else if (a.score > b.score) {
-                return 1;
+            searches.forEach(function(search) {
+              var results = self.searchGroups(groups, translations, search);
+              var score = self.scoreSearch(search, craft.goals, results);
+              if (score == -0.64) {
+                console.log()
               }
-              return 0;
+              scored_search_results.push({
+                search_term: search,
+                results: self.getRecipesForGroups(results, craft.inventory),
+                score: score
+              })
             })
-            
-            best_search = scored_search_results[0]
-          }
 
-          if (scored_search_results.length > 1) {
-            best_searches = scored_search_results.slice(1, 3);
-            best_searches = best_searches.filter(s => s.score < best_search.score * 5)
-          }
+            var best_searches = []
+            var best_search = null
 
-          translation_result.crafting.push({
-            goals: craft.goals,
-            best_search: best_search,
-            best_searches: best_searches
-          })
+            if (scored_search_results.length > 0) {
+              scored_search_results.sort(function compare(a, b) {
+                if (a.score < b.score) {
+                  return -1;
+                } else if (a.score > b.score) {
+                  return 1;
+                }
+                return 0;
+              })
+              
+              best_search = scored_search_results[0]
+            }
+
+            if (scored_search_results.length > 1) {
+              best_searches = scored_search_results.slice(1, 3);
+              best_searches = best_searches.filter(s => s.score < best_search.score * 5)
+            }
+
+            translation_result.crafting.push({
+              goals: craft.goals,
+              best_search: best_search,
+              best_searches: best_searches
+            })
+          } else {
+             translation_result.crafting.push({
+              goals: craft.goals,
+              best_search: null,
+              best_searches: []
+            })
+          }
 
           if (best_search != null) {
             translation_result.score += best_search.score

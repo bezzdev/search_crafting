@@ -56,7 +56,8 @@
                 <v-list-item-content>
                   <v-row dense style="width: 100%;">
                     <v-col cols="auto">
-                      <div class="pt-2">Not Found</div>
+                      <div class="pt-2" v-if="craft.valid">Not Found</div>
+                      <div class="pt-2" v-else>Not Craftable</div>
                     </v-col>
                     <v-col cols="10">
                       <item v-for="goal in craft.goals" :key="'g-'+c+'-'+goal" :item="goal" />
