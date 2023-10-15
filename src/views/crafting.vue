@@ -10,9 +10,21 @@
           <v-btn v-else @click="setEditMode(false)" tile color="green">
             Save
           </v-btn>
+          <v-switch v-model="options.one_character_only" class="ml-4" hide-details label="Find Single Character Only" @change="setResultsOutdated"/>
+          <v-switch v-model="options.score_search_lengths" class="ml-2" hide-details label="Search Length Matters" @change="setResultsOutdated"/>
           <v-spacer />
-          <v-switch v-model="one_character_only" class="mr-2" hide-details label="Find Single Character Only" @change="setResultsOutdated"/>
-          <v-switch v-model="score_search_lengths" class="mr-2" hide-details label="Search Length Matters" @change="setResultsOutdated"/>
+          
+          <v-tooltip v-if="!edit" bottom>
+            <template v-slot:activator="{ on }">
+              <v-btn  v-on="on" @click="share" text>
+                Share
+                <v-icon class="ml-2">
+                  mdi-share
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>Copy a link to this setup</span>
+          </v-tooltip>
         </v-toolbar>
         <v-expansion-panels>
           <craft :ref="'craft-' + c" v-for="craft, c in crafting" :key="c" :craft="craft" :edit="edit" @delete="deleteCraft" @duplicate="duplicateCraft" @itemsChanged="itemsChanged" @enabled="enabledChanged" />
@@ -28,7 +40,7 @@
       </v-col>
       <v-col cols="12" sm="7" lg="6">
         <v-toolbar class="mb-2">
-          <v-text-field label="search" v-model="search" hide-details single-line />
+          <v-text-field label="search" v-model="options.search" hide-details single-line @change="searchChanged" />
         </v-toolbar>  
         <v-expansion-panels v-if="!loading">
           <languageResult v-show="filterLanguage(result)" v-for="result, r in results" :key="r" :result="result" />
@@ -161,15 +173,17 @@ export default {
         ]
       }
     ],
+    options: {
+      one_character_only: false,
+      score_search_lengths: true,
+      search: ''
+    },
     badCharacters: ["□"],
     results: [],
-    search: '',
     edit: false,
     resultsOutdated: false,
     craftingChanged: false,
     loading: false,
-    one_character_only: false,
-    score_search_lengths: true
   }),
   computed: {
   },
@@ -190,6 +204,29 @@ export default {
 
         this.setResultsOutdated();
       }
+    },
+    share: function () {
+      var shareObject = {
+        crafting: this.crafting.map(function (craft) {
+          return { 
+            enabled: craft.enabled, 
+            size: craft.size, 
+            goals: craft.goals, 
+            inventory: craft.inventory 
+          }
+        }),
+        options: {
+          one_character_only: this.options.one_character_only,
+          score_search_lengths: this.options.score_search_lengths,
+          search: this.options.search
+        }
+      }
+      encodeURIComponent
+      var json = JSON.stringify(shareObject);
+      var encoded = btoa(json);
+
+      var link = process.env.VUE_APP_CLIENT_URL + "?data=" + encoded;
+      navigator.clipboard.writeText(link);
     },
     setResultsOutdated: function () {
       this.resultsOutdated = true;
@@ -230,14 +267,17 @@ export default {
     enabledChanged: function () {
       this.setResultsOutdated();
     },
+    searchChanged: function () {
+      this.$store.commit('setOptions', this.options)
+    },
     filterLanguage: function (languageResult) {
-      if (this.search == '')
+      if (this.options.search == '')
         return true
-      if(languageResult.language_name.toLowerCase().includes(this.search.toLowerCase()))
+      if(languageResult.language_name.toLowerCase().includes(this.options.search.toLowerCase()))
         return true
-      if(languageResult.language_region.toLowerCase().includes(this.search.toLowerCase()))
+      if(languageResult.language_region.toLowerCase().includes(this.options.search.toLowerCase()))
         return true
-      if(languageResult.localized.toLowerCase().includes(this.search.toLowerCase()))
+      if(languageResult.localized.toLowerCase().includes(this.options.search.toLowerCase()))
         return true
       return false
     },
@@ -295,7 +335,7 @@ export default {
       })
 
 
-      if (!this.one_character_only) {
+      if (!this.options.one_character_only) {
         // handling for search lengths > 1
         var characters2 = []
         var valid_characters2 = []
@@ -363,7 +403,7 @@ export default {
     scoreSearch: function(search, goals, results) {
       var remainder = results.length - goals.length;
       var letters = search.length;
-      if (!this.score_search_lengths)
+      if (!this.options.score_search_lengths)
         letters = 1;
       return Math.pow(0.6 * letters, 2) + (remainder); 
     },
@@ -488,11 +528,30 @@ export default {
       self.crafting = loadedCrafting;
     }
 
-    self.setResultsOutdated();
+    var loadedOptions = self.$store.getters.getOptions;
+    if (loadedOptions != null) {
+      self.options = loadedOptions;
+    }
+    
+    if(self.$route.query.data) {
+      var encoded = self.$route.query.data;
+      var json = JSON.parse(atob(encoded))
+      if (json.crafting) {
+        self.crafting = json.crafting
+      }
+      if (json.options) {
+        self.options = json.options
+      }
+      self.$router.replace({'query': null});
+      self.getResults();
+    } else {
+      self.setResultsOutdated();
+    }
 
     setInterval(function() {
       if (self.resultsOutdated) {
         self.$store.commit('setCrafting', self.crafting)
+        self.$store.commit('setOptions', self.options)
         self.resultsOutdated = false;
         self.getResults();
       }

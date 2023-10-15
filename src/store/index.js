@@ -22,7 +22,7 @@ export default new Vuex.Store({
   state: {
     items: [],
     crafting: [],
-    settings: {}
+    options: {}
   },
   getters: {
     getItems: state => {
@@ -31,8 +31,8 @@ export default new Vuex.Store({
     getCrafting: state => {
       return state.crafting;
     },
-    getSettings: state => {
-      return state.settings;
+    getOptions: state => {
+      return state.options;
     }
   },
   mutations: {
@@ -42,8 +42,8 @@ export default new Vuex.Store({
     setCrafting (state, val) {
       state.crafting = val;
     },
-    setSettings (state, val) {
-      state.settings = val;
+    setOptions (state, val) {
+      state.options = val;
     }
   },
   actions: {
