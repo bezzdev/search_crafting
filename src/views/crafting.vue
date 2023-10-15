@@ -3,14 +3,36 @@
     <v-row>
       <v-spacer/>
       <v-col cols="6">
+        <v-toolbar class="mb-2">
+          <v-btn v-if="!edit" @click="setEditMode(true)" tile color="blue">
+            Edit
+          </v-btn>
+          <v-btn v-else @click="setEditMode(false)" tile color="green">
+            Save
+          </v-btn>
+          <v-spacer />
+          <v-switch v-model="one_character_only" class="mr-2" hide-details label="Find Single Character Only" @change="setResultsOutdated"/>
+        </v-toolbar>
         <v-expansion-panels>
-          <craft v-for="craft, c in crafting" :key="c" :craft="craft" />
+          <craft :ref="'craft-' + c" v-for="craft, c in crafting" :key="c" :craft="craft" :edit="edit" @delete="deleteCraft" @duplicate="duplicateCraft" @itemsChanged="itemsChanged" @enabled="enabledChanged" />
+          <v-btn v-if="edit" icon large @click="addCraft">
+            <v-icon>mdi-plus</v-icon>
+          </v-btn>
         </v-expansion-panels>
       </v-col>
       <v-col cols="6">
-        <v-expansion-panels>
-          <languageResult v-for="result, r in results" :key="r" :result="result" />
+        <v-toolbar class="mb-2">
+          <v-text-field label="search" v-model="search" hide-details single-line />
+        </v-toolbar>  
+        <v-expansion-panels v-if="!loading">
+          <languageResult v-show="filterLanguage(result)" v-for="result, r in results" :key="r" :result="result" />
         </v-expansion-panels>
+        <div class="text-center" v-else>
+          <v-progress-circular
+            indeterminate
+            color="primary"
+          ></v-progress-circular>
+        </div>
       </v-col>
       <v-spacer/>
     </v-row>
@@ -22,7 +44,9 @@ import languageResult from '../components/languageResult.vue'
 
 import { RecipeGroups } from '../js/recipeGroups.js';
 import { Languages } from '../js/languages.js';
-import { LanguageKeys } from '../js/languageKeys.js';
+// import { LanguageNames } from '../js/languageNames.js';
+import { LanguageTooltips } from '../js/languageTooltips.js';
+import { en_gb } from '../js/names/en_gb.js';
 
 export default {
   name: 'Crafting',
@@ -34,44 +58,56 @@ export default {
   data: () => ({
     crafting: [
       {
-        inventory: [
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.flint"
-        ],
+        enabled: true,
+        size: 3,
         goals: [
           "item.minecraft.iron_pickaxe",
           "item.minecraft.iron_axe",
           "item.minecraft.iron_shovel",
-        ]
-      },
-      {
+        ],
         inventory: [
           "block.minecraft.oak_planks",
           "item.minecraft.stick",
           "item.minecraft.iron_ingot",
           "item.minecraft.gold_ingot",
           "item.minecraft.flint"
-        ],
+        ]
+      },
+      {
+        enabled: true,
+        size: 3,
         goals: [
           "item.minecraft.bucket",
-        ]
-      },
-      {
+        ],
         inventory: [
           "block.minecraft.oak_planks",
           "item.minecraft.stick",
           "item.minecraft.iron_ingot",
           "item.minecraft.gold_ingot",
           "item.minecraft.flint"
-        ],
-        goals: [
-          "item.minecraft.flint_and_steel"
-        ]
+        ]        
       },
       {
+        enabled: true,
+        size: 2,
+        goals: [
+          "item.minecraft.flint_and_steel"
+        ],
+        inventory: [
+          "block.minecraft.oak_planks",
+          "item.minecraft.stick",
+          "item.minecraft.iron_ingot",
+          "item.minecraft.gold_ingot",
+          "item.minecraft.flint"
+        ]       
+      },
+      {
+        enabled: true,
+        size: 3,
+        goals: [
+          "block.minecraft.white_bed",
+          "block.minecraft.respawn_anchor"
+        ],
         inventory: [
           "block.minecraft.oak_planks",
           "block.minecraft.white_wool",
@@ -80,33 +116,101 @@ export default {
           "block.minecraft.glowstone",
           "item.minecraft.ender_pearl",
           "item.minecraft.blaze_rod"
-        ],
-        goals: [
-          "block.minecraft.white_bed",
-          "block.minecraft.respawn_anchor"
         ]
       }
     ],
-    badCharacters: [" "],
-    results: []
+    badCharacters: ["□"],
+    results: [],
+    search: '',
+    edit: false,
+    resultsOutdated: false,
+    craftingChanged: false,
+    loading: false,
+    one_character_only: true
   }),
   computed: {
   },
   watch: {
+    resultsOutdated: function(val) {
+      if (val) {
+        this.loading = true;
+      }
+    }
   },
   methods: {
-    getRelevantGroupsForInventory: function (groups, inventory) {
+    setEditMode: function (val) {
+      this.edit = val;
+      if (this.edit == false && this.craftingChanged) {
+
+        for(var c = 0; c < this.crafting.length; c++)
+          this.$refs["craft-"+c][0].applyChanges();
+
+        this.setResultsOutdated();
+      }
+    },
+    setResultsOutdated: function () {
+      this.resultsOutdated = true;
+    },
+    addCraft: function () {
+      this.crafting.push({
+        enabled: true,
+        goals: [
+        ],
+        inventory: [
+        ]        
+      })
+    },
+    deleteCraft: function(craft) {
+      this.crafting.splice(this.crafting.indexOf(craft), 1);
+      this.craftingChanged = true;
+    },
+    itemsChanged: function () {
+      this.craftingChanged = true;
+    },
+    duplicateCraft: function(craft) {
+      var dupe = {
+        goals: [
+        ],
+        inventory: [
+        ]        
+      }
+
+      dupe.goals = [].concat(craft.goals)
+      dupe.inventory = [].concat(craft.inventory)
+
+      this.crafting.push(dupe)
+      this.craftingChanged = true;
+    },
+    enabledChanged: function () {
+      this.setResultsOutdated();
+    },
+    filterLanguage: function (languageResult) {
+      if (this.search == '')
+        return true
+      if(languageResult.language_name.toLowerCase().includes(this.search.toLowerCase()))
+        return true
+      if(languageResult.language_region.toLowerCase().includes(this.search.toLowerCase()))
+        return true
+      if(languageResult.localized.toLowerCase().includes(this.search.toLowerCase()))
+        return true
+      return false
+    },
+    getRelevantGroupsForInventory: function (groups, size, inventory) {
       var relevant = []
       groups.forEach(function(group) {
         var group_relevant = false;
         group.forEach(function(recipe) {
           var craftable = true;
-          recipe.ingredients.forEach(function(ingredient) {
-            if (!ingredient.some(ing => inventory.includes(ing))) {
-              // does not have ingredient
-              craftable = false;
-            }
-          })
+          if (recipe.size > size) {
+            craftable = false;
+          } else {
+            recipe.ingredients.forEach(function(ingredient) {
+              if (!ingredient.some(ing => inventory.includes(ing))) {
+                // does not have ingredient
+                craftable = false;
+              }
+            })
+          }
           if (craftable) {
             group_relevant = true;
           }
@@ -143,7 +247,38 @@ export default {
           valid_characters.push(char); 
         }
       })
-      return valid_characters;
+
+
+      if (!this.one_character_only) {
+        // handling for search lengths > 1
+        var characters2 = []
+        var valid_characters2 = []
+
+        valid_characters.forEach(function(char) {
+          items.forEach(function(item) {
+            var translation = translations[item].toLowerCase();
+            for(var i = 0; i < translation.length - 1; i++) {
+              if (translation[i] == char) {
+                var newChar2 = translation[i+1];
+                if(!self.badCharacters.includes(newChar2)) {
+                  var newSearch = char + newChar2;
+                  if (!characters2.includes(newSearch)) {
+                    characters2.push(newSearch)
+                  }
+                }
+              }
+            }
+          })
+        })
+        characters2.forEach(function(char2) {
+          if(item_translations.every(function (translation) { return translation.includes(char2); })) {
+            valid_characters2.push(char2); 
+          }
+        })
+        valid_characters = valid_characters.concat(valid_characters2); 
+      }
+
+      return valid_characters
     },
     searchGroups: function (groups, translations, search) {
       var found = []
@@ -178,73 +313,126 @@ export default {
         })
       })
       return recipes;
+    },
+    scoreSearch: function(search, goals, results) {
+      var remainder = results.length - goals.length;
+      var letters = search.length;
+      return Math.pow(0.6 * letters, 2) + (remainder); 
+    },
+    getResults: function () {
+      var self = this;
+      self.loading = true;
+      self.results = []
+
+      var keys = Languages.map(l => l.key)
+      var test_languages = keys.map(k => Languages.find(l => l.key == k))
+
+      var valid_crafts = self.crafting.filter(c => c.goals.length > 0 && c.inventory.length > 0);
+      var enabled_crafts = valid_crafts.filter(c => c.enabled);
+
+      test_languages.forEach(function(language) {
+        var translation_result = {
+          language_name: language.name,
+          language_region: language.region,
+          localized: language.localized,
+          language_key: language.key,
+          crafting: [],
+          score: 0
+        }
+        var translations = LanguageTooltips[language.key];
+
+        enabled_crafts.forEach(function(craft) {
+          var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.size, craft.inventory)
+          var searches = self.getSearchesForItems(craft.goals, translations);
+
+          var scored_search_results = []
+
+          searches.forEach(function(search) {
+            var results = self.searchGroups(groups, translations, search);
+            var score = self.scoreSearch(search, craft.goals, results);
+
+            scored_search_results.push({
+              search_term: search,
+              results: self.getRecipesForGroups(results, craft.inventory),
+              score: score
+            })
+          })
+
+          var best_searches = []
+          var best_search = null
+
+          if (scored_search_results.length > 0) {
+            scored_search_results.sort(function compare(a, b) {
+              if (a.score < b.score) {
+                return -1;
+              } else if (a.score > b.score) {
+                return 1;
+              }
+              return 0;
+            })
+            
+            best_search = scored_search_results[0]
+          }
+
+          if (scored_search_results.length > 1) {
+            best_searches = scored_search_results.slice(1, 3);
+            best_searches = best_searches.filter(s => s.score < best_search.score * 5)
+          }
+
+          translation_result.crafting.push({
+            goals: craft.goals,
+            best_search: best_search,
+            best_searches: best_searches
+          })
+
+          if (best_search != null) {
+            translation_result.score += best_search.score
+          } else {
+            translation_result.score += 100.0
+          }
+        })
+
+        self.results.push(translation_result)
+      })
+
+      self.results.sort(function compare(a, b) {
+        if (a.score < b.score) {
+          return -1;
+        } else if (a.score > b.score) {
+          return 1;
+        }
+        return 0;
+      })
+
+      self.loading = false;
     }
   },
   mounted () {
     var self = this;
-    self.results = []
+    self.$store.commit('setItems', Object.keys(en_gb));
+    
+    var loadedCrafting = self.$store.getters.getCrafting;
+    if (loadedCrafting != null && loadedCrafting.length > 0) {
+      self.crafting = loadedCrafting;
+    }
 
-    var keys = ['en_gb', 'bs_ba', 'ko_kr', 'uk_ua', 'vi_vn']
-    // var keys = ['ko_kr']
-    var test_languages = keys.map(k => Languages.find(l => l.file == k))
+    self.setResultsOutdated();
 
-    test_languages.forEach(function(language) {
-      var translation_result = { 
-        language_name: language.name, 
-        language_key: language.file,
-        crafting: [],
-        score: 0
+    setInterval(function() {
+      if (self.resultsOutdated) {
+        self.$store.commit('setCrafting', self.crafting)
+        self.resultsOutdated = false;
+        self.getResults();
       }
-      var translations = LanguageKeys[language.file];
-
-      self.crafting.forEach(function(craft) {
-        var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.inventory)
-        var searches = self.getSearchesForItems(craft.goals, translations);
-
-        var best_search_term = null;
-        var best_search_results = null;
-        var best_search_score = Number.MAX_SAFE_INTEGER;
-        searches.forEach(function(search) {
-          var results = self.searchGroups(groups, translations, search);
-
-          if (results.length < best_search_score) {
-            best_search_results = results;
-            best_search_score = results.length;
-            best_search_term = search;
-          }
-        })
-
-        if (best_search_term != null) {
-          var best_search_recipes = self.getRecipesForGroups(best_search_results, craft.inventory)
-          translation_result.crafting.push({
-            goals: craft.goals,
-            best_search_term: best_search_term,
-            best_search_recipes: best_search_recipes
-          })
-          translation_result.score += best_search_recipes.length - craft.goals.length
-        } else {
-          translation_result.crafting.push({
-            goals: craft.goals,
-            best_search_term: null,
-            best_search_recipes: []
-          })
-          translation_result.score += 100
-        }
-      })
-
-      self.results.push(translation_result)
-    })
-
-    self.results.sort(function compare(a, b) {
-      if (a.score < b.score) {
-        return -1;
-      } else if (a.score > b.score) {
-        return 1;
-      }
-      return 0;
-    })
+    }, 500)
   }
 }
 </script>
 <style lang="scss" scoped>
+</style>
+<style lang="scss">
+.v-expansion-panel-content__wrap {
+  padding-left: 8px;
+  padding-right: 8px;
+}
 </style>

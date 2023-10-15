@@ -1,5 +1,5 @@
 <template>
-  <v-img aspect-ratio="1" max-height="32" max-width="32" contain :src="image"></v-img>
+  <v-img class="d-inline-flex" aspect-ratio="1" max-height="32" max-width="32" contain :src="image" lazy-src="icons/command_block.png"></v-img>
 </template>
 <script>
 export default {

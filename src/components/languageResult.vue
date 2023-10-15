@@ -1,33 +1,96 @@
 <template>
   <v-expansion-panel>
     <v-expansion-panel-header>
-      {{ result.language_name }}
+      ( {{ result.score.toFixed(2) }} ) {{ result.localized }} = {{ result.language_name }} ( {{ result.language_region }} )
     </v-expansion-panel-header>
     <v-expansion-panel-content>
-      <div v-for="craft, c in result.crafting" :key="c">
-        <div v-if="craft.best_search_term">
-          <v-subheader>Best search letter: "{{ craft.best_search_term }}" Clashing search results: {{ craft.best_search_recipes.length - craft.goals.length }} </v-subheader>
-          <v-list-item>
-            <v-list-item-content>
-              <item v-for="goal in craft.goals" :key="goal" :item="goal" />
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-content>
-              <item v-for="result in nonGoalItems(craft)" :key="result" :item="result" />
-            </v-list-item-content>
-          </v-list-item>
-          <v-divider></v-divider>
-        </div>
-        <div v-else>
-          <v-subheader>No good searches found</v-subheader>
-          <v-list-item>
-            <v-list-item-content>
-              <item v-for="goal in craft.goals" :key="goal" :item="goal" />
-            </v-list-item-content>
-          </v-list-item>
-        </div>
-      </div>
+      <v-subheader>
+        Best search letters {{ bestCharacters }} <br>
+        Calculated efficiency score ( {{ result.score.toFixed(2) }} )
+      </v-subheader>
+      <v-lazy>
+        <v-expansion-panels class="px-2">
+          <v-expansion-panel v-for="craft, c in result.crafting" :key="c" :readonly="craft.best_searches.length == 0">
+            <template v-if="craft.best_search">
+              <v-expansion-panel-header>
+                <v-row dense style="width: 100%;">
+                  <v-col cols="auto" style="width: 100px;">
+                    <div class="pt-2 pr-2 d-inline-flex">( {{ formatSearchTerm(craft.best_search.search_term) }} )</div>
+                    <div class="pt-2 d-inline-flex">({{ craft.best_search.score.toFixed(2) }})</div>
+                  </v-col>
+                  <v-col cols="10">
+                    <item v-for="goal in craft.goals" :key="'g-'+c+'-'+goal" :item="goal" />
+                    <div class="pt-2 d-inline-flex" v-if="!(craft.best_search.results.length - craft.goals.length == 0)">
+                      <v-icon large>mdi-plus</v-icon>
+                    </div>
+                    <item v-for="result in nonGoalItems(craft.goals, craft.best_search.results)" :key="'c-'+c+'-'+result" :item="result" />
+                  </v-col>
+                </v-row>
+                <template v-slot:actions>
+                  <v-icon v-show="craft.best_searches.length != 0">
+                    $expand
+                  </v-icon>
+                </template>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content class="px-3">
+                <v-divider class="pb-4" />
+                <v-row v-for="search, s in craft.best_searches" :key="search.search_term" dense style="width: 100%;">
+                  <v-col cols="auto" style="width: 100px;">
+                    <div class="pt-2 pr-2 d-inline-flex">( {{ formatSearchTerm(search.search_term) }} )</div>
+                    <div class="pt-2 d-inline-flex">({{ search.score.toFixed(2) }})</div>
+                  </v-col>
+                  <v-col cols="10">
+                    <!-- <item v-for="result in search.results" :key="'c-'+c+'s-'+s+'-'+result" :item="result" /> -->
+
+                    <item v-for="goal in craft.goals" :key="'c-'+c+'s-'+s+'-'+goal" :item="goal" />
+                    <div class="pt-2 d-inline-flex" v-if="!(search.results.length == craft.goals.length)">
+                      <v-icon large>mdi-plus</v-icon>
+                    </div>
+                    <item v-for="result in nonGoalItems(craft.goals, search.results)" :key="'c-'+c+'s-'+s+'-'+result" :item="result" />
+                  </v-col>
+                </v-row>
+              </v-expansion-panel-content>
+            </template>
+            <template v-else>
+              <v-list-item class="pl-6">
+                <v-list-item-content>
+                  <v-row dense style="width: 100%;">
+                    <v-col cols="auto">
+                      <div class="pt-2">Not Found</div>
+                    </v-col>
+                    <v-col cols="10">
+                      <item v-for="goal in craft.goals" :key="'g-'+c+'-'+goal" :item="goal" />
+                    </v-col>
+                  </v-row>
+                </v-list-item-content>
+              </v-list-item>
+            </template>
+          </v-expansion-panel>
+        </v-expansion-panels>
+      </v-lazy>
+      <!-- <v-list v-for="craft, c in result.crafting" :key="c">
+        <v-list-item>
+          <v-list-item-content>
+            <item v-for="goal in craft.goals" :key="goal" :item="goal" />
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-content>
+            <v-row v-for="search in craft.best_searches" :key="search.search_term" dense style="width: 100%;">
+              <v-col cols="auto">
+                <div class="pt-2">( {{ search.search_term }} )</div>
+              </v-col>
+              <v-col cols="auto">
+                <div class="pt-2">({{ search.score.toFixed(2) }})</div>
+              </v-col>
+              <v-col cols="10">
+                <item v-for="result in search.results" :key="result" :item="result" />
+              </v-col>
+            </v-row>
+          </v-list-item-content>
+        </v-list-item>
+        <v-divider></v-divider>
+      </v-list> -->
     </v-expansion-panel-content>
   </v-expansion-panel>
 </template>
@@ -42,12 +105,23 @@ export default {
   data: () => ({
   }),
   computed: {
+    bestCharacters() {
+      return "( " + this.result.crafting.filter(c => c.best_search != null).map(c => c.best_search.search_term).join(' ') + " )"
+    }
   },
   watch: {
   },
   methods: {
-    nonGoalItems: function(craft) {
-      return craft.best_search_recipes.filter(i => !craft.goals.includes(i));
+    bestSearch: function(craft) {
+      return craft.best_searches[0]
+    },
+    nonGoalItems: function(goals, results) {
+      return results.filter(i => !goals.includes(i));
+    },
+    formatSearchTerm: function (term) {
+      if (term == " ")
+        return "\xa0 \xa0";
+      return term;
     }
   },
   mounted () {

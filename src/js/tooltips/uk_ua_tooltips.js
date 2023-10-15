@@ -975,4 +975,4 @@ var items = {
   "block.minecraft.cracked_polished_blackstone_bricks": "тріснута полірована чорнокам'яна цегла",
   "block.minecraft.respawn_anchor": "якір відродження",
 }
-export const uk_ua = items;
+export const uk_ua = items; 

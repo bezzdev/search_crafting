@@ -975,4 +975,4 @@ var items = {
   "block.minecraft.cracked_polished_blackstone_bricks": "gạch đá đen được đánh bóng nứt",
   "block.minecraft.respawn_anchor": "neo hồi sinh",
 }
-export const vi_vn = items;
+export const vi_vn = items; 

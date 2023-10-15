@@ -1,1390 +1,1706 @@
 var recipe_groups = [
   [
     {
-      "output": "block.minecraft.lime_carpet",
+      "output": "block.minecraft.orange_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.orange_stained_glass"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.orange_stained_glass"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.orange_stained_glass"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.orange_stained_glass"
         ],
         [
-          "item.minecraft.lime_dye"
+          "block.minecraft.orange_stained_glass"
         ],
         [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
+          "block.minecraft.orange_stained_glass"
         ]
       ]
     },
     {
-      "output": "block.minecraft.brown_carpet",
+      "output": "block.minecraft.light_gray_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.brown_wool"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.brown_wool"
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "item.minecraft.light_gray_dye"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
         ]
       ]
     },
     {
-      "output": "block.minecraft.gray_carpet",
+      "output": "block.minecraft.pink_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.gray_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.orange_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.orange_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.gray_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.gray_wool"
-        ],
-        [
-          "block.minecraft.gray_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.yellow_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.yellow_wool"
-        ],
-        [
-          "block.minecraft.yellow_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.red_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.red_wool"
-        ],
-        [
-          "block.minecraft.red_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.black_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.black_wool"
-        ],
-        [
-          "block.minecraft.black_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.purple_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.purple_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.light_blue_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.magenta_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.magenta_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.red_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.red_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.magenta_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.magenta_wool"
-        ],
-        [
-          "block.minecraft.magenta_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_gray_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.light_gray_wool"
-        ],
-        [
-          "block.minecraft.light_gray_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.blue_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.blue_wool"
-        ],
-        [
-          "block.minecraft.blue_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.cyan_wool"
-        ],
-        [
-          "block.minecraft.cyan_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.white_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_wool"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.yellow_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.yellow_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.pink_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ],
         [
           "item.minecraft.pink_dye"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ]
       ]
     },
     {
-      "output": "block.minecraft.black_carpet",
+      "output": "block.minecraft.purple_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.white_carpet"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.black_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.lime_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.lime_wool"
-        ],
-        [
-          "block.minecraft.lime_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.green_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.green_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_gray_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.light_gray_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.green_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.green_wool"
-        ],
-        [
-          "block.minecraft.green_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.light_blue_wool"
-        ],
-        [
-          "block.minecraft.light_blue_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.cyan_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.brown_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.brown_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.pink_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.pink_wool"
-        ],
-        [
-          "block.minecraft.pink_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.purple_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.purple_wool"
-        ],
-        [
-          "block.minecraft.purple_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.blue_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "item.minecraft.blue_dye"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ],
-        [
-          "block.minecraft.white_carpet"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.orange_carpet",
-      "ingredients": [
-        [
-          "block.minecraft.orange_wool"
-        ],
-        [
-          "block.minecraft.orange_wool"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.wheat",
-      "ingredients": [
-        [
-          "block.minecraft.hay_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.map",
-      "ingredients": [
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.compass"
-        ],
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.paper"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.black_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.black_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.cyan_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.magenta_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.magenta_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.blue_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.blue_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_gray_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.light_gray_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.light_blue_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.lime_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.lime_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.gray_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.gray_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.purple_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
+          "block.minecraft.glass_pane"
         ],
         [
           "item.minecraft.purple_dye"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
         ]
       ]
     },
     {
-      "output": "block.minecraft.orange_bed",
+      "output": "block.minecraft.lime_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.white_bed"
+          "block.minecraft.glass_pane"
         ],
         [
-          "item.minecraft.orange_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.red_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.red_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.yellow_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.yellow_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.brown_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.brown_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.pink_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.pink_dye"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.green_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_bed"
-        ],
-        [
-          "item.minecraft.green_dye"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.green_terracotta",
-      "ingredients": [
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "item.minecraft.green_dye"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.black_terracotta",
-      "ingredients": [
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "item.minecraft.black_dye"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.orange_terracotta",
-      "ingredients": [
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "item.minecraft.orange_dye"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_terracotta",
-      "ingredients": [
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "item.minecraft.light_blue_dye"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_terracotta",
-      "ingredients": [
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "item.minecraft.cyan_dye"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.red_terracotta",
-      "ingredients": [
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "item.minecraft.red_dye"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_gray_terracotta",
-      "ingredients": [
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "item.minecraft.light_gray_dye"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.lime_terracotta",
-      "ingredients": [
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
           "item.minecraft.lime_dye"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ]
       ]
     },
     {
-      "output": "block.minecraft.blue_terracotta",
+      "output": "block.minecraft.magenta_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.magenta_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.magenta_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.magenta_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.magenta_stained_glass"
         ],
         [
-          "item.minecraft.blue_dye"
+          "block.minecraft.magenta_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
+          "block.minecraft.magenta_stained_glass"
         ]
       ]
     },
     {
-      "output": "block.minecraft.brown_terracotta",
+      "output": "block.minecraft.green_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.green_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.green_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.green_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.green_stained_glass"
         ],
         [
-          "item.minecraft.brown_dye"
+          "block.minecraft.green_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
+          "block.minecraft.green_stained_glass"
         ]
       ]
     },
     {
-      "output": "block.minecraft.yellow_terracotta",
+      "output": "block.minecraft.yellow_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.yellow_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.yellow_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.yellow_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.yellow_stained_glass"
         ],
         [
-          "item.minecraft.yellow_dye"
+          "block.minecraft.yellow_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
+          "block.minecraft.yellow_stained_glass"
         ]
       ]
     },
     {
-      "output": "block.minecraft.white_terracotta",
+      "output": "block.minecraft.red_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.red_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.red_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.red_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.red_stained_glass"
+        ],
+        [
+          "block.minecraft.red_stained_glass"
+        ],
+        [
+          "block.minecraft.red_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.lime_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.lime_stained_glass"
+        ],
+        [
+          "block.minecraft.lime_stained_glass"
+        ],
+        [
+          "block.minecraft.lime_stained_glass"
+        ],
+        [
+          "block.minecraft.lime_stained_glass"
+        ],
+        [
+          "block.minecraft.lime_stained_glass"
+        ],
+        [
+          "block.minecraft.lime_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.blue_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.blue_stained_glass"
+        ],
+        [
+          "block.minecraft.blue_stained_glass"
+        ],
+        [
+          "block.minecraft.blue_stained_glass"
+        ],
+        [
+          "block.minecraft.blue_stained_glass"
+        ],
+        [
+          "block.minecraft.blue_stained_glass"
+        ],
+        [
+          "block.minecraft.blue_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.red_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "item.minecraft.red_dye"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "item.minecraft.cyan_dye"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.white_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
         ],
         [
           "item.minecraft.white_dye"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ]
       ]
     },
     {
-      "output": "block.minecraft.gray_terracotta",
+      "output": "block.minecraft.brown_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "item.minecraft.brown_dye"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_blue_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "item.minecraft.light_blue_dye"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cyan_stained_glass"
+        ],
+        [
+          "block.minecraft.cyan_stained_glass"
+        ],
+        [
+          "block.minecraft.cyan_stained_glass"
+        ],
+        [
+          "block.minecraft.cyan_stained_glass"
+        ],
+        [
+          "block.minecraft.cyan_stained_glass"
+        ],
+        [
+          "block.minecraft.cyan_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_gray_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.light_gray_stained_glass"
+        ],
+        [
+          "block.minecraft.light_gray_stained_glass"
+        ],
+        [
+          "block.minecraft.light_gray_stained_glass"
+        ],
+        [
+          "block.minecraft.light_gray_stained_glass"
+        ],
+        [
+          "block.minecraft.light_gray_stained_glass"
+        ],
+        [
+          "block.minecraft.light_gray_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.gray_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
         ],
         [
           "item.minecraft.gray_dye"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ]
       ]
     },
     {
-      "output": "block.minecraft.pink_terracotta",
+      "output": "block.minecraft.brown_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.brown_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.brown_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.brown_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.brown_stained_glass"
         ],
         [
-          "item.minecraft.pink_dye"
+          "block.minecraft.brown_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
-        ],
-        [
-          "block.minecraft.terracotta"
+          "block.minecraft.brown_stained_glass"
         ]
       ]
     },
     {
-      "output": "block.minecraft.magenta_terracotta",
+      "output": "block.minecraft.black_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.black_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.black_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.black_stained_glass"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.black_stained_glass"
+        ],
+        [
+          "block.minecraft.black_stained_glass"
+        ],
+        [
+          "block.minecraft.black_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.blue_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "item.minecraft.blue_dye"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.gray_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.gray_stained_glass"
+        ],
+        [
+          "block.minecraft.gray_stained_glass"
+        ],
+        [
+          "block.minecraft.gray_stained_glass"
+        ],
+        [
+          "block.minecraft.gray_stained_glass"
+        ],
+        [
+          "block.minecraft.gray_stained_glass"
+        ],
+        [
+          "block.minecraft.gray_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.green_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "item.minecraft.green_dye"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_blue_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.light_blue_stained_glass"
+        ],
+        [
+          "block.minecraft.light_blue_stained_glass"
+        ],
+        [
+          "block.minecraft.light_blue_stained_glass"
+        ],
+        [
+          "block.minecraft.light_blue_stained_glass"
+        ],
+        [
+          "block.minecraft.light_blue_stained_glass"
+        ],
+        [
+          "block.minecraft.light_blue_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.purple_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.purple_stained_glass"
+        ],
+        [
+          "block.minecraft.purple_stained_glass"
+        ],
+        [
+          "block.minecraft.purple_stained_glass"
+        ],
+        [
+          "block.minecraft.purple_stained_glass"
+        ],
+        [
+          "block.minecraft.purple_stained_glass"
+        ],
+        [
+          "block.minecraft.purple_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.magenta_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
         ],
         [
           "item.minecraft.magenta_dye"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ]
       ]
     },
     {
-      "output": "block.minecraft.purple_terracotta",
+      "output": "block.minecraft.orange_stained_glass_pane",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "item.minecraft.purple_dye"
+          "item.minecraft.orange_dye"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
         ],
         [
-          "block.minecraft.terracotta"
+          "block.minecraft.glass_pane"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.pink_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.pink_stained_glass"
+        ],
+        [
+          "block.minecraft.pink_stained_glass"
+        ],
+        [
+          "block.minecraft.pink_stained_glass"
+        ],
+        [
+          "block.minecraft.pink_stained_glass"
+        ],
+        [
+          "block.minecraft.pink_stained_glass"
+        ],
+        [
+          "block.minecraft.pink_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.white_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_stained_glass"
+        ],
+        [
+          "block.minecraft.white_stained_glass"
+        ],
+        [
+          "block.minecraft.white_stained_glass"
+        ],
+        [
+          "block.minecraft.white_stained_glass"
+        ],
+        [
+          "block.minecraft.white_stained_glass"
+        ],
+        [
+          "block.minecraft.white_stained_glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.yellow_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "item.minecraft.yellow_dye"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.black_stained_glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "item.minecraft.black_dye"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
+        ],
+        [
+          "block.minecraft.glass_pane"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.light_gray_banner",
+      "output": "item.minecraft.light_gray_dye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.black_dye"
+        ],
+        [
+          "item.minecraft.white_dye"
+        ],
+        [
+          "item.minecraft.white_dye"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.light_gray_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.azure_bluet"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.light_gray_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.white_tulip"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.light_gray_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.oxeye_daisy"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.light_gray_dye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.gray_dye"
+        ],
+        [
+          "item.minecraft.white_dye"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.jungle_planks",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.acacia_planks",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.birch_planks",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.spruce_planks",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.crimson_planks",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.warped_planks",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.dark_oak_planks",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.oak_planks",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.orange_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.orange_wool"
+        ],
+        [
+          "block.minecraft.orange_wool"
+        ],
+        [
+          "block.minecraft.orange_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cyan_wool"
+        ],
+        [
+          "block.minecraft.cyan_wool"
+        ],
+        [
+          "block.minecraft.cyan_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.blue_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.blue_wool"
+        ],
+        [
+          "block.minecraft.blue_wool"
+        ],
+        [
+          "block.minecraft.blue_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.white_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_wool"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.pink_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.pink_wool"
+        ],
+        [
+          "block.minecraft.pink_wool"
+        ],
+        [
+          "block.minecraft.pink_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.brown_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.brown_wool"
+        ],
+        [
+          "block.minecraft.brown_wool"
+        ],
+        [
+          "block.minecraft.brown_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.yellow_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.yellow_wool"
+        ],
+        [
+          "block.minecraft.yellow_wool"
+        ],
+        [
+          "block.minecraft.yellow_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_blue_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.light_blue_wool"
+        ],
+        [
+          "block.minecraft.light_blue_wool"
+        ],
+        [
+          "block.minecraft.light_blue_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.green_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.green_wool"
+        ],
+        [
+          "block.minecraft.green_wool"
+        ],
+        [
+          "block.minecraft.green_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.magenta_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.magenta_wool"
+        ],
+        [
+          "block.minecraft.magenta_wool"
+        ],
+        [
+          "block.minecraft.magenta_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.gray_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.gray_wool"
+        ],
+        [
+          "block.minecraft.gray_wool"
+        ],
+        [
+          "block.minecraft.gray_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.red_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.red_wool"
+        ],
+        [
+          "block.minecraft.red_wool"
+        ],
+        [
+          "block.minecraft.red_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.lime_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.lime_wool"
+        ],
+        [
+          "block.minecraft.lime_wool"
+        ],
+        [
+          "block.minecraft.lime_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.black_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.black_wool"
+        ],
+        [
+          "block.minecraft.black_wool"
+        ],
+        [
+          "block.minecraft.black_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_gray_bed",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.light_gray_wool"
@@ -1396,13 +1712,1077 @@ var recipe_groups = [
           "block.minecraft.light_gray_wool"
         ],
         [
-          "block.minecraft.light_gray_wool"
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
         ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.purple_bed",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.purple_wool"
+        ],
+        [
+          "block.minecraft.purple_wool"
+        ],
+        [
+          "block.minecraft.purple_wool"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.fishing_rod",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.string"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.repeater",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.redstone_torch"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "block.minecraft.redstone_torch"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.warped_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.oak_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.acacia_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.jungle_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.birch_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.crimson_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.dark_oak_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.spruce_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_blackstone_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.white_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.lily_of_the_valley"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.white_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "item.minecraft.bone_meal"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.light_blue_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.light_blue_wool"
+        ],
+        [
+          "block.minecraft.light_blue_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.magenta_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.magenta_wool"
+        ],
+        [
+          "block.minecraft.magenta_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.cyan_wool"
+        ],
+        [
+          "block.minecraft.cyan_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.purple_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.purple_wool"
+        ],
+        [
+          "block.minecraft.purple_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.lime_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.lime_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.green_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.green_wool"
+        ],
+        [
+          "block.minecraft.green_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.pink_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.pink_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.yellow_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.yellow_wool"
+        ],
+        [
+          "block.minecraft.yellow_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.purple_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.purple_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.gray_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.gray_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.lime_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.lime_wool"
+        ],
+        [
+          "block.minecraft.lime_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.yellow_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.yellow_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.black_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.black_wool"
+        ],
+        [
+          "block.minecraft.black_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.cyan_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.red_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.red_wool"
+        ],
+        [
+          "block.minecraft.red_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.brown_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.brown_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.black_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.black_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.green_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.green_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_blue_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.light_blue_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.pink_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.pink_wool"
+        ],
+        [
+          "block.minecraft.pink_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_gray_carpet",
+      "size": "2",
+      "ingredients": [
         [
           "block.minecraft.light_gray_wool"
         ],
         [
           "block.minecraft.light_gray_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_gray_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.light_gray_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.red_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.red_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.magenta_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.magenta_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.blue_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.blue_wool"
+        ],
+        [
+          "block.minecraft.blue_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.orange_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.orange_wool"
+        ],
+        [
+          "block.minecraft.orange_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.orange_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.orange_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.blue_carpet",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "item.minecraft.blue_dye"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ],
+        [
+          "block.minecraft.white_carpet"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.gray_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.gray_wool"
+        ],
+        [
+          "block.minecraft.gray_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.white_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.white_wool"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.brown_carpet",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.brown_wool"
+        ],
+        [
+          "block.minecraft.brown_wool"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.orange_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.orange_tulip"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.orange_dye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.red_dye"
+        ],
+        [
+          "item.minecraft.yellow_dye"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.netherite_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.netherite_ingot"
+        ],
+        [
+          "item.minecraft.netherite_ingot"
+        ],
+        [
+          "item.minecraft.netherite_ingot"
+        ],
+        [
+          "item.minecraft.netherite_ingot"
+        ],
+        [
+          "item.minecraft.netherite_ingot"
+        ],
+        [
+          "item.minecraft.netherite_ingot"
+        ],
+        [
+          "item.minecraft.netherite_ingot"
+        ],
+        [
+          "item.minecraft.netherite_ingot"
+        ],
+        [
+          "item.minecraft.netherite_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.andesite_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.blue_banner",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.blue_wool"
+        ],
+        [
+          "block.minecraft.blue_wool"
+        ],
+        [
+          "block.minecraft.blue_wool"
+        ],
+        [
+          "block.minecraft.blue_wool"
+        ],
+        [
+          "block.minecraft.blue_wool"
+        ],
+        [
+          "block.minecraft.blue_wool"
         ],
         [
           "item.minecraft.stick"
@@ -1410,25 +2790,134 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "block.minecraft.black_banner",
+      "output": "block.minecraft.gray_banner",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.black_wool"
+          "block.minecraft.gray_wool"
         ],
         [
-          "block.minecraft.black_wool"
+          "block.minecraft.gray_wool"
         ],
         [
-          "block.minecraft.black_wool"
+          "block.minecraft.gray_wool"
         ],
         [
-          "block.minecraft.black_wool"
+          "block.minecraft.gray_wool"
         ],
         [
-          "block.minecraft.black_wool"
+          "block.minecraft.gray_wool"
         ],
         [
-          "block.minecraft.black_wool"
+          "block.minecraft.gray_wool"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.yellow_banner",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.yellow_wool"
+        ],
+        [
+          "block.minecraft.yellow_wool"
+        ],
+        [
+          "block.minecraft.yellow_wool"
+        ],
+        [
+          "block.minecraft.yellow_wool"
+        ],
+        [
+          "block.minecraft.yellow_wool"
+        ],
+        [
+          "block.minecraft.yellow_wool"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.green_banner",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.green_wool"
+        ],
+        [
+          "block.minecraft.green_wool"
+        ],
+        [
+          "block.minecraft.green_wool"
+        ],
+        [
+          "block.minecraft.green_wool"
+        ],
+        [
+          "block.minecraft.green_wool"
+        ],
+        [
+          "block.minecraft.green_wool"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.red_banner",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.red_wool"
+        ],
+        [
+          "block.minecraft.red_wool"
+        ],
+        [
+          "block.minecraft.red_wool"
+        ],
+        [
+          "block.minecraft.red_wool"
+        ],
+        [
+          "block.minecraft.red_wool"
+        ],
+        [
+          "block.minecraft.red_wool"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_banner",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cyan_wool"
+        ],
+        [
+          "block.minecraft.cyan_wool"
+        ],
+        [
+          "block.minecraft.cyan_wool"
+        ],
+        [
+          "block.minecraft.cyan_wool"
+        ],
+        [
+          "block.minecraft.cyan_wool"
+        ],
+        [
+          "block.minecraft.cyan_wool"
         ],
         [
           "item.minecraft.stick"
@@ -1437,6 +2926,7 @@ var recipe_groups = [
     },
     {
       "output": "block.minecraft.purple_banner",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.purple_wool"
@@ -1463,6 +2953,7 @@ var recipe_groups = [
     },
     {
       "output": "block.minecraft.pink_banner",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.pink_wool"
@@ -1488,25 +2979,26 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "block.minecraft.yellow_banner",
+      "output": "block.minecraft.white_banner",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.yellow_wool"
+          "block.minecraft.white_wool"
         ],
         [
-          "block.minecraft.yellow_wool"
+          "block.minecraft.white_wool"
         ],
         [
-          "block.minecraft.yellow_wool"
+          "block.minecraft.white_wool"
         ],
         [
-          "block.minecraft.yellow_wool"
+          "block.minecraft.white_wool"
         ],
         [
-          "block.minecraft.yellow_wool"
+          "block.minecraft.white_wool"
         ],
         [
-          "block.minecraft.yellow_wool"
+          "block.minecraft.white_wool"
         ],
         [
           "item.minecraft.stick"
@@ -1514,25 +3006,26 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "block.minecraft.gray_banner",
+      "output": "block.minecraft.black_banner",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.gray_wool"
+          "block.minecraft.black_wool"
         ],
         [
-          "block.minecraft.gray_wool"
+          "block.minecraft.black_wool"
         ],
         [
-          "block.minecraft.gray_wool"
+          "block.minecraft.black_wool"
         ],
         [
-          "block.minecraft.gray_wool"
+          "block.minecraft.black_wool"
         ],
         [
-          "block.minecraft.gray_wool"
+          "block.minecraft.black_wool"
         ],
         [
-          "block.minecraft.gray_wool"
+          "block.minecraft.black_wool"
         ],
         [
           "item.minecraft.stick"
@@ -1540,25 +3033,53 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "block.minecraft.green_banner",
+      "output": "block.minecraft.lime_banner",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.green_wool"
+          "block.minecraft.lime_wool"
         ],
         [
-          "block.minecraft.green_wool"
+          "block.minecraft.lime_wool"
         ],
         [
-          "block.minecraft.green_wool"
+          "block.minecraft.lime_wool"
         ],
         [
-          "block.minecraft.green_wool"
+          "block.minecraft.lime_wool"
         ],
         [
-          "block.minecraft.green_wool"
+          "block.minecraft.lime_wool"
         ],
         [
-          "block.minecraft.green_wool"
+          "block.minecraft.lime_wool"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_blue_banner",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.light_blue_wool"
+        ],
+        [
+          "block.minecraft.light_blue_wool"
+        ],
+        [
+          "block.minecraft.light_blue_wool"
+        ],
+        [
+          "block.minecraft.light_blue_wool"
+        ],
+        [
+          "block.minecraft.light_blue_wool"
+        ],
+        [
+          "block.minecraft.light_blue_wool"
         ],
         [
           "item.minecraft.stick"
@@ -1567,6 +3088,7 @@ var recipe_groups = [
     },
     {
       "output": "block.minecraft.magenta_banner",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.magenta_wool"
@@ -1585,32 +3107,6 @@ var recipe_groups = [
         ],
         [
           "block.minecraft.magenta_wool"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_banner",
-      "ingredients": [
-        [
-          "block.minecraft.cyan_wool"
-        ],
-        [
-          "block.minecraft.cyan_wool"
-        ],
-        [
-          "block.minecraft.cyan_wool"
-        ],
-        [
-          "block.minecraft.cyan_wool"
-        ],
-        [
-          "block.minecraft.cyan_wool"
-        ],
-        [
-          "block.minecraft.cyan_wool"
         ],
         [
           "item.minecraft.stick"
@@ -1619,6 +3115,7 @@ var recipe_groups = [
     },
     {
       "output": "block.minecraft.brown_banner",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.brown_wool"
@@ -1645,6 +3142,7 @@ var recipe_groups = [
     },
     {
       "output": "block.minecraft.orange_banner",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.orange_wool"
@@ -1670,129 +3168,26 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "block.minecraft.red_banner",
+      "output": "block.minecraft.light_gray_banner",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.red_wool"
+          "block.minecraft.light_gray_wool"
         ],
         [
-          "block.minecraft.red_wool"
+          "block.minecraft.light_gray_wool"
         ],
         [
-          "block.minecraft.red_wool"
+          "block.minecraft.light_gray_wool"
         ],
         [
-          "block.minecraft.red_wool"
+          "block.minecraft.light_gray_wool"
         ],
         [
-          "block.minecraft.red_wool"
+          "block.minecraft.light_gray_wool"
         ],
         [
-          "block.minecraft.red_wool"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.lime_banner",
-      "ingredients": [
-        [
-          "block.minecraft.lime_wool"
-        ],
-        [
-          "block.minecraft.lime_wool"
-        ],
-        [
-          "block.minecraft.lime_wool"
-        ],
-        [
-          "block.minecraft.lime_wool"
-        ],
-        [
-          "block.minecraft.lime_wool"
-        ],
-        [
-          "block.minecraft.lime_wool"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.blue_banner",
-      "ingredients": [
-        [
-          "block.minecraft.blue_wool"
-        ],
-        [
-          "block.minecraft.blue_wool"
-        ],
-        [
-          "block.minecraft.blue_wool"
-        ],
-        [
-          "block.minecraft.blue_wool"
-        ],
-        [
-          "block.minecraft.blue_wool"
-        ],
-        [
-          "block.minecraft.blue_wool"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.white_banner",
-      "ingredients": [
-        [
-          "block.minecraft.white_wool"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_banner",
-      "ingredients": [
-        [
-          "block.minecraft.light_blue_wool"
-        ],
-        [
-          "block.minecraft.light_blue_wool"
-        ],
-        [
-          "block.minecraft.light_blue_wool"
-        ],
-        [
-          "block.minecraft.light_blue_wool"
-        ],
-        [
-          "block.minecraft.light_blue_wool"
-        ],
-        [
-          "block.minecraft.light_blue_wool"
+          "block.minecraft.light_gray_wool"
         ],
         [
           "item.minecraft.stick"
@@ -1802,2706 +3197,127 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "item.minecraft.oak_boat",
+      "output": "block.minecraft.detector_rail",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.oak_planks"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "block.minecraft.oak_planks"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "block.minecraft.oak_planks"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "block.minecraft.oak_planks"
+          "block.minecraft.stone_pressure_plate"
         ],
         [
-          "block.minecraft.oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.acacia_boat",
-      "ingredients": [
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.birch_boat",
-      "ingredients": [
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.jungle_boat",
-      "ingredients": [
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.dark_oak_boat",
-      "ingredients": [
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.spruce_boat",
-      "ingredients": [
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.gray_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.gray_stained_glass"
-        ],
-        [
-          "block.minecraft.gray_stained_glass"
-        ],
-        [
-          "block.minecraft.gray_stained_glass"
-        ],
-        [
-          "block.minecraft.gray_stained_glass"
-        ],
-        [
-          "block.minecraft.gray_stained_glass"
-        ],
-        [
-          "block.minecraft.gray_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.blue_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.blue_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.yellow_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.yellow_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.light_blue_stained_glass"
-        ],
-        [
-          "block.minecraft.light_blue_stained_glass"
-        ],
-        [
-          "block.minecraft.light_blue_stained_glass"
-        ],
-        [
-          "block.minecraft.light_blue_stained_glass"
-        ],
-        [
-          "block.minecraft.light_blue_stained_glass"
-        ],
-        [
-          "block.minecraft.light_blue_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.magenta_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.magenta_stained_glass"
-        ],
-        [
-          "block.minecraft.magenta_stained_glass"
-        ],
-        [
-          "block.minecraft.magenta_stained_glass"
-        ],
-        [
-          "block.minecraft.magenta_stained_glass"
-        ],
-        [
-          "block.minecraft.magenta_stained_glass"
-        ],
-        [
-          "block.minecraft.magenta_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_gray_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.light_gray_stained_glass"
-        ],
-        [
-          "block.minecraft.light_gray_stained_glass"
-        ],
-        [
-          "block.minecraft.light_gray_stained_glass"
-        ],
-        [
-          "block.minecraft.light_gray_stained_glass"
-        ],
-        [
-          "block.minecraft.light_gray_stained_glass"
-        ],
-        [
-          "block.minecraft.light_gray_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.lime_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.lime_stained_glass"
-        ],
-        [
-          "block.minecraft.lime_stained_glass"
-        ],
-        [
-          "block.minecraft.lime_stained_glass"
-        ],
-        [
-          "block.minecraft.lime_stained_glass"
-        ],
-        [
-          "block.minecraft.lime_stained_glass"
-        ],
-        [
-          "block.minecraft.lime_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.magenta_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.magenta_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.pink_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.pink_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.lime_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.lime_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.blue_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.blue_stained_glass"
-        ],
-        [
-          "block.minecraft.blue_stained_glass"
-        ],
-        [
-          "block.minecraft.blue_stained_glass"
-        ],
-        [
-          "block.minecraft.blue_stained_glass"
-        ],
-        [
-          "block.minecraft.blue_stained_glass"
-        ],
-        [
-          "block.minecraft.blue_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.gray_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.gray_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.cyan_stained_glass"
-        ],
-        [
-          "block.minecraft.cyan_stained_glass"
-        ],
-        [
-          "block.minecraft.cyan_stained_glass"
-        ],
-        [
-          "block.minecraft.cyan_stained_glass"
-        ],
-        [
-          "block.minecraft.cyan_stained_glass"
-        ],
-        [
-          "block.minecraft.cyan_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.white_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.white_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.red_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.red_stained_glass"
-        ],
-        [
-          "block.minecraft.red_stained_glass"
-        ],
-        [
-          "block.minecraft.red_stained_glass"
-        ],
-        [
-          "block.minecraft.red_stained_glass"
-        ],
-        [
-          "block.minecraft.red_stained_glass"
-        ],
-        [
-          "block.minecraft.red_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.brown_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.brown_stained_glass"
-        ],
-        [
-          "block.minecraft.brown_stained_glass"
-        ],
-        [
-          "block.minecraft.brown_stained_glass"
-        ],
-        [
-          "block.minecraft.brown_stained_glass"
-        ],
-        [
-          "block.minecraft.brown_stained_glass"
-        ],
-        [
-          "block.minecraft.brown_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.purple_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.purple_stained_glass"
-        ],
-        [
-          "block.minecraft.purple_stained_glass"
-        ],
-        [
-          "block.minecraft.purple_stained_glass"
-        ],
-        [
-          "block.minecraft.purple_stained_glass"
-        ],
-        [
-          "block.minecraft.purple_stained_glass"
-        ],
-        [
-          "block.minecraft.purple_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.pink_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.pink_stained_glass"
-        ],
-        [
-          "block.minecraft.pink_stained_glass"
-        ],
-        [
-          "block.minecraft.pink_stained_glass"
-        ],
-        [
-          "block.minecraft.pink_stained_glass"
-        ],
-        [
-          "block.minecraft.pink_stained_glass"
-        ],
-        [
-          "block.minecraft.pink_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.orange_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.orange_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.red_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.red_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.orange_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.orange_stained_glass"
-        ],
-        [
-          "block.minecraft.orange_stained_glass"
-        ],
-        [
-          "block.minecraft.orange_stained_glass"
-        ],
-        [
-          "block.minecraft.orange_stained_glass"
-        ],
-        [
-          "block.minecraft.orange_stained_glass"
-        ],
-        [
-          "block.minecraft.orange_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.green_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.green_stained_glass"
-        ],
-        [
-          "block.minecraft.green_stained_glass"
-        ],
-        [
-          "block.minecraft.green_stained_glass"
-        ],
-        [
-          "block.minecraft.green_stained_glass"
-        ],
-        [
-          "block.minecraft.green_stained_glass"
-        ],
-        [
-          "block.minecraft.green_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.black_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.black_stained_glass"
-        ],
-        [
-          "block.minecraft.black_stained_glass"
-        ],
-        [
-          "block.minecraft.black_stained_glass"
-        ],
-        [
-          "block.minecraft.black_stained_glass"
-        ],
-        [
-          "block.minecraft.black_stained_glass"
-        ],
-        [
-          "block.minecraft.black_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.yellow_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.yellow_stained_glass"
-        ],
-        [
-          "block.minecraft.yellow_stained_glass"
-        ],
-        [
-          "block.minecraft.yellow_stained_glass"
-        ],
-        [
-          "block.minecraft.yellow_stained_glass"
-        ],
-        [
-          "block.minecraft.yellow_stained_glass"
-        ],
-        [
-          "block.minecraft.yellow_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.purple_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.purple_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.black_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.black_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.brown_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.brown_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.cyan_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.green_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.green_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_gray_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.light_gray_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.white_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.white_stained_glass"
-        ],
-        [
-          "block.minecraft.white_stained_glass"
-        ],
-        [
-          "block.minecraft.white_stained_glass"
-        ],
-        [
-          "block.minecraft.white_stained_glass"
-        ],
-        [
-          "block.minecraft.white_stained_glass"
-        ],
-        [
-          "block.minecraft.white_stained_glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_stained_glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "item.minecraft.light_blue_dye"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ],
-        [
-          "block.minecraft.glass_pane"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.light_gray_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.light_gray_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.white_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.white_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.cyan_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.orange_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.orange_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.gray_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.gray_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.yellow_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.yellow_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.brown_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.brown_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.green_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.green_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.lime_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.lime_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.light_blue_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.black_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.black_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.pink_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.pink_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.purple_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.purple_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.red_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.red_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.magenta_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.magenta_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.blue_concrete_powder",
-      "ingredients": [
-        [
-          "item.minecraft.blue_dye"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_blackstone_pressure_plate",
-      "ingredients": [
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.yellow_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.yellow_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.gray_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.gray_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.black_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.black_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.red_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.red_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.brown_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.brown_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_gray_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.light_gray_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.lime_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.lime_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.orange_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.orange_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.purple_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.purple_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.cyan_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.green_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.green_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.white_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.white_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.pink_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.pink_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.magenta_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.magenta_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.light_blue_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.blue_stained_glass",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.blue_dye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.dark_oak_slab",
-      "ingredients": [
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.warped_slab",
-      "ingredients": [
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.jungle_slab",
-      "ingredients": [
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.spruce_slab",
-      "ingredients": [
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.birch_slab",
-      "ingredients": [
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.oak_slab",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.crimson_slab",
-      "ingredients": [
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.acacia_slab",
-      "ingredients": [
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.carrot_on_a_stick",
-      "ingredients": [
-        [
-          "item.minecraft.fishing_rod"
-        ],
-        [
-          "item.minecraft.carrot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_diorite_slab",
-      "ingredients": [
-        [
-          "block.minecraft.polished_diorite"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "block.minecraft.polished_diorite"
+          "item.minecraft.iron_ingot"
         ],
-        [
-          "block.minecraft.polished_diorite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.redstone_torch",
-      "ingredients": [
         [
           "item.minecraft.redstone"
         ],
         [
-          "item.minecraft.stick"
+          "item.minecraft.iron_ingot"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.stone_sword",
+      "output": "block.minecraft.orange_bed",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
+          "block.minecraft.white_bed"
         ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.fermented_spider_eye",
-      "ingredients": [
-        [
-          "item.minecraft.spider_eye"
-        ],
-        [
-          "block.minecraft.brown_mushroom"
-        ],
-        [
-          "item.minecraft.sugar"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.netherite_block",
-      "ingredients": [
-        [
-          "item.minecraft.netherite_ingot"
-        ],
-        [
-          "item.minecraft.netherite_ingot"
-        ],
-        [
-          "item.minecraft.netherite_ingot"
-        ],
-        [
-          "item.minecraft.netherite_ingot"
-        ],
-        [
-          "item.minecraft.netherite_ingot"
-        ],
-        [
-          "item.minecraft.netherite_ingot"
-        ],
-        [
-          "item.minecraft.netherite_ingot"
-        ],
-        [
-          "item.minecraft.netherite_ingot"
-        ],
-        [
-          "item.minecraft.netherite_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.sugar",
-      "ingredients": [
-        [
-          "item.minecraft.honey_bottle"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.sugar",
-      "ingredients": [
-        [
-          "block.minecraft.sugar_cane"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.stone_brick_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.birch_planks",
-      "ingredients": [
-        [
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.oak_planks",
-      "ingredients": [
-        [
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.crimson_planks",
-      "ingredients": [
-        [
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.spruce_planks",
-      "ingredients": [
-        [
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.warped_planks",
-      "ingredients": [
-        [
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.jungle_planks",
-      "ingredients": [
-        [
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.dark_oak_planks",
-      "ingredients": [
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.acacia_planks",
-      "ingredients": [
-        [
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.blue_dye",
-      "ingredients": [
-        [
-          "item.minecraft.lapis_lazuli"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.blue_dye",
-      "ingredients": [
-        [
-          "block.minecraft.cornflower"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.white_dye",
-      "ingredients": [
-        [
-          "item.minecraft.bone_meal"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.white_dye",
-      "ingredients": [
-        [
-          "block.minecraft.lily_of_the_valley"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.smooth_sandstone_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.smooth_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_sandstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.pink_wool",
-      "ingredients": [
-        [
-          "item.minecraft.pink_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.gray_wool",
-      "ingredients": [
-        [
-          "item.minecraft.gray_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_wool",
-      "ingredients": [
-        [
-          "item.minecraft.cyan_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.magenta_wool",
-      "ingredients": [
-        [
-          "item.minecraft.magenta_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.yellow_wool",
-      "ingredients": [
-        [
-          "item.minecraft.yellow_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.purple_wool",
-      "ingredients": [
-        [
-          "item.minecraft.purple_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_wool",
-      "ingredients": [
-        [
-          "item.minecraft.light_blue_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.brown_wool",
-      "ingredients": [
-        [
-          "item.minecraft.brown_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_gray_wool",
-      "ingredients": [
-        [
-          "item.minecraft.light_gray_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.red_wool",
-      "ingredients": [
-        [
-          "item.minecraft.red_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.black_wool",
-      "ingredients": [
-        [
-          "item.minecraft.black_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.lime_wool",
-      "ingredients": [
-        [
-          "item.minecraft.lime_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.blue_wool",
-      "ingredients": [
-        [
-          "item.minecraft.blue_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.green_wool",
-      "ingredients": [
-        [
-          "item.minecraft.green_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.orange_wool",
-      "ingredients": [
         [
           "item.minecraft.orange_dye"
-        ],
-        [
-          "block.minecraft.white_wool"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "item.minecraft.diamond_hoe",
+      "output": "block.minecraft.green_bed",
+      "size": "2",
       "ingredients": [
         [
-          "item.minecraft.diamond"
+          "block.minecraft.white_bed"
         ],
         [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
+          "item.minecraft.green_dye"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "item.minecraft.leather_horse_armor",
+      "output": "block.minecraft.brown_bed",
+      "size": "2",
       "ingredients": [
         [
-          "item.minecraft.leather"
+          "block.minecraft.white_bed"
         ],
         [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
+          "item.minecraft.brown_dye"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "block.minecraft.sandstone_slab",
+      "output": "block.minecraft.lime_bed",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.sandstone",
-          "block.minecraft.chiseled_sandstone"
+          "block.minecraft.white_bed"
         ],
         [
-          "block.minecraft.sandstone",
-          "block.minecraft.chiseled_sandstone"
-        ],
-        [
-          "block.minecraft.sandstone",
-          "block.minecraft.chiseled_sandstone"
+          "item.minecraft.lime_dye"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "item.minecraft.orange_dye",
+      "output": "block.minecraft.blue_bed",
+      "size": "2",
       "ingredients": [
+        [
+          "block.minecraft.white_bed"
+        ],
+        [
+          "item.minecraft.blue_dye"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.black_bed",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.white_bed"
+        ],
+        [
+          "item.minecraft.black_dye"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.red_bed",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.white_bed"
+        ],
         [
           "item.minecraft.red_dye"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.yellow_bed",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.white_bed"
         ],
         [
           "item.minecraft.yellow_dye"
@@ -4509,474 +3325,182 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "item.minecraft.orange_dye",
+      "output": "block.minecraft.pink_bed",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.orange_tulip"
+          "block.minecraft.white_bed"
+        ],
+        [
+          "item.minecraft.pink_dye"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.gray_bed",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.white_bed"
+        ],
+        [
+          "item.minecraft.gray_dye"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.purple_bed",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.white_bed"
+        ],
+        [
+          "item.minecraft.purple_dye"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_blue_bed",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.white_bed"
+        ],
+        [
+          "item.minecraft.light_blue_dye"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_bed",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.white_bed"
+        ],
+        [
+          "item.minecraft.cyan_dye"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.magenta_bed",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.white_bed"
+        ],
+        [
+          "item.minecraft.magenta_dye"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_gray_bed",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.white_bed"
+        ],
+        [
+          "item.minecraft.light_gray_dye"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.light_gray_dye",
+      "output": "item.minecraft.flower_banner_pattern",
+      "size": "2",
       "ingredients": [
         [
-          "item.minecraft.black_dye"
+          "item.minecraft.paper"
         ],
-        [
-          "item.minecraft.white_dye"
-        ],
-        [
-          "item.minecraft.white_dye"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.light_gray_dye",
-      "ingredients": [
-        [
-          "item.minecraft.gray_dye"
-        ],
-        [
-          "item.minecraft.white_dye"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.light_gray_dye",
-      "ingredients": [
         [
           "block.minecraft.oxeye_daisy"
         ]
       ]
-    },
+    }
+  ],
+  [
     {
-      "output": "item.minecraft.light_gray_dye",
+      "output": "item.minecraft.yellow_dye",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.azure_bluet"
+          "block.minecraft.sunflower"
         ]
       ]
     },
     {
-      "output": "item.minecraft.light_gray_dye",
+      "output": "item.minecraft.yellow_dye",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.white_tulip"
+          "block.minecraft.dandelion"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.mossy_cobblestone",
+      "output": "block.minecraft.warped_hyphae",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.cobblestone"
+          "block.minecraft.warped_stem"
         ],
         [
-          "block.minecraft.vine"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.iron_ingot",
-      "ingredients": [
+          "block.minecraft.warped_stem"
+        ],
         [
-          "block.minecraft.iron_block"
+          "block.minecraft.warped_stem"
+        ],
+        [
+          "block.minecraft.warped_stem"
         ]
       ]
     },
     {
-      "output": "item.minecraft.iron_ingot",
+      "output": "block.minecraft.jungle_wood",
+      "size": "2",
       "ingredients": [
         [
-          "item.minecraft.iron_nugget"
+          "block.minecraft.jungle_log"
         ],
         [
-          "item.minecraft.iron_nugget"
+          "block.minecraft.jungle_log"
         ],
         [
-          "item.minecraft.iron_nugget"
+          "block.minecraft.jungle_log"
         ],
         [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.chiseled_nether_bricks",
-      "ingredients": [
-        [
-          "block.minecraft.nether_brick_slab"
-        ],
-        [
-          "block.minecraft.nether_brick_slab"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.dark_oak_sign",
-      "ingredients": [
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "item.minecraft.stick"
+          "block.minecraft.jungle_log"
         ]
       ]
     },
     {
-      "output": "block.minecraft.acacia_sign",
+      "output": "block.minecraft.crimson_hyphae",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.acacia_planks"
+          "block.minecraft.crimson_stem"
         ],
         [
-          "block.minecraft.acacia_planks"
+          "block.minecraft.crimson_stem"
         ],
         [
-          "block.minecraft.acacia_planks"
+          "block.minecraft.crimson_stem"
         ],
         [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.warped_sign",
-      "ingredients": [
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.jungle_sign",
-      "ingredients": [
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.oak_sign",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.spruce_sign",
-      "ingredients": [
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.crimson_sign",
-      "ingredients": [
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.birch_sign",
-      "ingredients": [
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.netherite_ingot",
-      "ingredients": [
-        [
-          "item.minecraft.netherite_scrap"
-        ],
-        [
-          "item.minecraft.netherite_scrap"
-        ],
-        [
-          "item.minecraft.netherite_scrap"
-        ],
-        [
-          "item.minecraft.netherite_scrap"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.netherite_ingot",
-      "ingredients": [
-        [
-          "block.minecraft.netherite_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.andesite",
-      "ingredients": [
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.hopper",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "block.minecraft.chest"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.stripped_birch_wood",
-      "ingredients": [
-        [
-          "block.minecraft.stripped_birch_log"
-        ],
-        [
-          "block.minecraft.stripped_birch_log"
-        ],
-        [
-          "block.minecraft.stripped_birch_log"
-        ],
-        [
-          "block.minecraft.stripped_birch_log"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.spruce_wood",
-      "ingredients": [
-        [
-          "block.minecraft.spruce_log"
-        ],
-        [
-          "block.minecraft.spruce_log"
-        ],
-        [
-          "block.minecraft.spruce_log"
-        ],
-        [
-          "block.minecraft.spruce_log"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.birch_wood",
-      "ingredients": [
-        [
-          "block.minecraft.birch_log"
-        ],
-        [
-          "block.minecraft.birch_log"
-        ],
-        [
-          "block.minecraft.birch_log"
-        ],
-        [
-          "block.minecraft.birch_log"
+          "block.minecraft.crimson_stem"
         ]
       ]
     },
     {
       "output": "block.minecraft.stripped_warped_hyphae",
+      "size": "2",
       "ingredients": [
         [
           "block.minecraft.stripped_warped_stem"
@@ -4989,62 +3513,12 @@ var recipe_groups = [
         ],
         [
           "block.minecraft.stripped_warped_stem"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.warped_hyphae",
-      "ingredients": [
-        [
-          "block.minecraft.warped_stem"
-        ],
-        [
-          "block.minecraft.warped_stem"
-        ],
-        [
-          "block.minecraft.warped_stem"
-        ],
-        [
-          "block.minecraft.warped_stem"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.stripped_dark_oak_wood",
-      "ingredients": [
-        [
-          "block.minecraft.stripped_dark_oak_log"
-        ],
-        [
-          "block.minecraft.stripped_dark_oak_log"
-        ],
-        [
-          "block.minecraft.stripped_dark_oak_log"
-        ],
-        [
-          "block.minecraft.stripped_dark_oak_log"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.dark_oak_wood",
-      "ingredients": [
-        [
-          "block.minecraft.dark_oak_log"
-        ],
-        [
-          "block.minecraft.dark_oak_log"
-        ],
-        [
-          "block.minecraft.dark_oak_log"
-        ],
-        [
-          "block.minecraft.dark_oak_log"
         ]
       ]
     },
     {
       "output": "block.minecraft.stripped_crimson_hyphae",
+      "size": "2",
       "ingredients": [
         [
           "block.minecraft.stripped_crimson_stem"
@@ -5061,7 +3535,80 @@ var recipe_groups = [
       ]
     },
     {
+      "output": "block.minecraft.birch_wood",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.birch_log"
+        ],
+        [
+          "block.minecraft.birch_log"
+        ],
+        [
+          "block.minecraft.birch_log"
+        ],
+        [
+          "block.minecraft.birch_log"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.stripped_birch_wood",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.stripped_birch_log"
+        ],
+        [
+          "block.minecraft.stripped_birch_log"
+        ],
+        [
+          "block.minecraft.stripped_birch_log"
+        ],
+        [
+          "block.minecraft.stripped_birch_log"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.acacia_wood",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_log"
+        ],
+        [
+          "block.minecraft.acacia_log"
+        ],
+        [
+          "block.minecraft.acacia_log"
+        ],
+        [
+          "block.minecraft.acacia_log"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.dark_oak_wood",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_log"
+        ],
+        [
+          "block.minecraft.dark_oak_log"
+        ],
+        [
+          "block.minecraft.dark_oak_log"
+        ],
+        [
+          "block.minecraft.dark_oak_log"
+        ]
+      ]
+    },
+    {
       "output": "block.minecraft.stripped_jungle_wood",
+      "size": "2",
       "ingredients": [
         [
           "block.minecraft.stripped_jungle_log"
@@ -5079,6 +3626,7 @@ var recipe_groups = [
     },
     {
       "output": "block.minecraft.stripped_spruce_wood",
+      "size": "2",
       "ingredients": [
         [
           "block.minecraft.stripped_spruce_log"
@@ -5095,24 +3643,62 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "block.minecraft.crimson_hyphae",
+      "output": "block.minecraft.spruce_wood",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.crimson_stem"
+          "block.minecraft.spruce_log"
         ],
         [
-          "block.minecraft.crimson_stem"
+          "block.minecraft.spruce_log"
         ],
         [
-          "block.minecraft.crimson_stem"
+          "block.minecraft.spruce_log"
         ],
         [
-          "block.minecraft.crimson_stem"
+          "block.minecraft.spruce_log"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.stripped_dark_oak_wood",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.stripped_dark_oak_log"
+        ],
+        [
+          "block.minecraft.stripped_dark_oak_log"
+        ],
+        [
+          "block.minecraft.stripped_dark_oak_log"
+        ],
+        [
+          "block.minecraft.stripped_dark_oak_log"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.stripped_acacia_wood",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.stripped_acacia_log"
+        ],
+        [
+          "block.minecraft.stripped_acacia_log"
+        ],
+        [
+          "block.minecraft.stripped_acacia_log"
+        ],
+        [
+          "block.minecraft.stripped_acacia_log"
         ]
       ]
     },
     {
       "output": "block.minecraft.oak_wood",
+      "size": "2",
       "ingredients": [
         [
           "block.minecraft.oak_log"
@@ -5130,6 +3716,7 @@ var recipe_groups = [
     },
     {
       "output": "block.minecraft.stripped_oak_wood",
+      "size": "2",
       "ingredients": [
         [
           "block.minecraft.stripped_oak_log"
@@ -5144,359 +3731,90 @@ var recipe_groups = [
           "block.minecraft.stripped_oak_log"
         ]
       ]
-    },
+    }
+  ],
+  [
     {
-      "output": "block.minecraft.acacia_wood",
+      "output": "block.minecraft.polished_granite",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.acacia_log"
+          "block.minecraft.granite"
         ],
         [
-          "block.minecraft.acacia_log"
+          "block.minecraft.granite"
         ],
         [
-          "block.minecraft.acacia_log"
+          "block.minecraft.granite"
         ],
         [
-          "block.minecraft.acacia_log"
+          "block.minecraft.granite"
         ]
       ]
-    },
+    }
+  ],
+  [
     {
-      "output": "block.minecraft.jungle_wood",
+      "output": "item.minecraft.red_dye",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.jungle_log"
-        ],
-        [
-          "block.minecraft.jungle_log"
-        ],
-        [
-          "block.minecraft.jungle_log"
-        ],
-        [
-          "block.minecraft.jungle_log"
+          "block.minecraft.poppy"
         ]
       ]
     },
     {
-      "output": "block.minecraft.stripped_acacia_wood",
+      "output": "item.minecraft.red_dye",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.stripped_acacia_log"
-        ],
-        [
-          "block.minecraft.stripped_acacia_log"
-        ],
-        [
-          "block.minecraft.stripped_acacia_log"
-        ],
-        [
-          "block.minecraft.stripped_acacia_log"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.diamond_axe",
-      "ingredients": [
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.andesite_slab",
-      "ingredients": [
-        [
-          "block.minecraft.andesite"
-        ],
-        [
-          "block.minecraft.andesite"
-        ],
-        [
-          "block.minecraft.andesite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.jack_o_lantern",
-      "ingredients": [
-        [
-          "block.minecraft.carved_pumpkin"
-        ],
-        [
-          "block.minecraft.torch"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.mossy_stone_bricks",
-      "ingredients": [
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.vine"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.flower_banner_pattern",
-      "ingredients": [
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "block.minecraft.oxeye_daisy"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.prismarine_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.jungle_button",
-      "ingredients": [
-        [
-          "block.minecraft.jungle_planks"
+          "block.minecraft.rose_bush"
         ]
       ]
     },
     {
-      "output": "block.minecraft.dark_oak_button",
+      "output": "item.minecraft.red_dye",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.dark_oak_planks"
+          "block.minecraft.red_tulip"
         ]
       ]
     },
     {
-      "output": "block.minecraft.acacia_button",
+      "output": "item.minecraft.red_dye",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.acacia_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.warped_button",
-      "ingredients": [
-        [
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.oak_button",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.spruce_button",
-      "ingredients": [
-        [
-          "block.minecraft.spruce_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.crimson_button",
-      "ingredients": [
-        [
-          "block.minecraft.crimson_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.birch_button",
-      "ingredients": [
-        [
-          "block.minecraft.birch_planks"
+          "item.minecraft.beetroot"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.clay",
+      "output": "item.minecraft.redstone",
+      "size": "1",
       "ingredients": [
         [
-          "item.minecraft.clay_ball"
-        ],
-        [
-          "item.minecraft.clay_ball"
-        ],
-        [
-          "item.minecraft.clay_ball"
-        ],
-        [
-          "item.minecraft.clay_ball"
+          "block.minecraft.redstone_block"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.iron_boots",
+      "output": "item.minecraft.mushroom_stew",
+      "size": "2",
       "ingredients": [
         [
-          "item.minecraft.iron_ingot"
+          "block.minecraft.brown_mushroom"
         ],
         [
-          "item.minecraft.iron_ingot"
+          "block.minecraft.red_mushroom"
         ],
         [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.honey_bottle",
-      "ingredients": [
-        [
-          "block.minecraft.honey_block"
-        ],
-        [
-          "item.minecraft.glass_bottle"
-        ],
-        [
-          "item.minecraft.glass_bottle"
-        ],
-        [
-          "item.minecraft.glass_bottle"
-        ],
-        [
-          "item.minecraft.glass_bottle"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.quartz_block",
-      "ingredients": [
-        [
-          "item.minecraft.quartz"
-        ],
-        [
-          "item.minecraft.quartz"
-        ],
-        [
-          "item.minecraft.quartz"
-        ],
-        [
-          "item.minecraft.quartz"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.iron_nugget",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.brick_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.bricks"
-        ],
-        [
-          "block.minecraft.bricks"
-        ],
-        [
-          "block.minecraft.bricks"
-        ],
-        [
-          "block.minecraft.bricks"
-        ],
-        [
-          "block.minecraft.bricks"
-        ],
-        [
-          "block.minecraft.bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.turtle_helmet",
-      "ingredients": [
-        [
-          "item.minecraft.scute"
-        ],
-        [
-          "item.minecraft.scute"
-        ],
-        [
-          "item.minecraft.scute"
-        ],
-        [
-          "item.minecraft.scute"
-        ],
-        [
-          "item.minecraft.scute"
+          "item.minecraft.bowl"
         ]
       ]
     }
@@ -5504,6 +3822,7 @@ var recipe_groups = [
   [
     {
       "output": "block.minecraft.lectern",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.oak_slab",
@@ -5553,26 +3872,9 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "item.minecraft.iron_chestplate",
+      "output": "block.minecraft.heavy_weighted_pressure_plate",
+      "size": "2",
       "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
         [
           "item.minecraft.iron_ingot"
         ],
@@ -5584,233 +3886,28 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.birch_fence",
+      "output": "block.minecraft.chiseled_polished_blackstone",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.birch_planks"
+          "block.minecraft.polished_blackstone_slab"
         ],
         [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.jungle_fence",
-      "ingredients": [
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.dark_oak_fence",
-      "ingredients": [
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.oak_fence",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.warped_fence",
-      "ingredients": [
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.crimson_fence",
-      "ingredients": [
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.spruce_fence",
-      "ingredients": [
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.acacia_fence",
-      "ingredients": [
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.acacia_planks"
+          "block.minecraft.polished_blackstone_slab"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.dark_prismarine",
-      "ingredients": [
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.black_dye"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.birch_fence_gate",
+      "output": "block.minecraft.acacia_fence_gate",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.stick"
         ],
         [
-          "block.minecraft.birch_planks"
+          "block.minecraft.acacia_planks"
         ],
         [
           "item.minecraft.stick"
@@ -5819,7 +3916,7 @@ var recipe_groups = [
           "item.minecraft.stick"
         ],
         [
-          "block.minecraft.birch_planks"
+          "block.minecraft.acacia_planks"
         ],
         [
           "item.minecraft.stick"
@@ -5827,13 +3924,14 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "block.minecraft.warped_fence_gate",
+      "output": "block.minecraft.dark_oak_fence_gate",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.stick"
         ],
         [
-          "block.minecraft.warped_planks"
+          "block.minecraft.dark_oak_planks"
         ],
         [
           "item.minecraft.stick"
@@ -5842,7 +3940,31 @@ var recipe_groups = [
           "item.minecraft.stick"
         ],
         [
-          "block.minecraft.warped_planks"
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.crimson_fence_gate",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.crimson_planks"
         ],
         [
           "item.minecraft.stick"
@@ -5851,6 +3973,7 @@ var recipe_groups = [
     },
     {
       "output": "block.minecraft.oak_fence_gate",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.stick"
@@ -5874,6 +3997,7 @@ var recipe_groups = [
     },
     {
       "output": "block.minecraft.spruce_fence_gate",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.stick"
@@ -5896,13 +4020,14 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "block.minecraft.dark_oak_fence_gate",
+      "output": "block.minecraft.birch_fence_gate",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.stick"
         ],
         [
-          "block.minecraft.dark_oak_planks"
+          "block.minecraft.birch_planks"
         ],
         [
           "item.minecraft.stick"
@@ -5911,7 +4036,7 @@ var recipe_groups = [
           "item.minecraft.stick"
         ],
         [
-          "block.minecraft.dark_oak_planks"
+          "block.minecraft.birch_planks"
         ],
         [
           "item.minecraft.stick"
@@ -5920,6 +4045,7 @@ var recipe_groups = [
     },
     {
       "output": "block.minecraft.jungle_fence_gate",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.stick"
@@ -5942,19 +4068,49 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "block.minecraft.crimson_fence_gate",
+      "output": "block.minecraft.warped_fence_gate",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.stick"
         ],
         [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.crimson_sign",
+      "size": "3",
+      "ingredients": [
+        [
           "block.minecraft.crimson_planks"
         ],
         [
-          "item.minecraft.stick"
+          "block.minecraft.crimson_planks"
         ],
         [
-          "item.minecraft.stick"
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
         ],
         [
           "block.minecraft.crimson_planks"
@@ -5965,75 +4121,225 @@ var recipe_groups = [
       ]
     },
     {
-      "output": "block.minecraft.acacia_fence_gate",
+      "output": "block.minecraft.spruce_sign",
+      "size": "3",
       "ingredients": [
         [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
           "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.acacia_sign",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
         ],
         [
           "block.minecraft.acacia_planks"
         ],
         [
           "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.skull_banner_pattern",
-      "ingredients": [
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "block.minecraft.wither_skeleton_skull"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.bone_meal",
-      "ingredients": [
-        [
-          "item.minecraft.bone"
         ]
       ]
     },
     {
-      "output": "item.minecraft.bone_meal",
+      "output": "block.minecraft.dark_oak_sign",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.bone_block"
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.oak_sign",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.warped_sign",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.birch_sign",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.jungle_sign",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "item.minecraft.stick"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.stone_pickaxe",
+      "output": "item.minecraft.blue_dye",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
+          "item.minecraft.lapis_lazuli"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.blue_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.cornflower"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.diamond_hoe",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.diamond"
         ],
         [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
+          "item.minecraft.diamond"
         ],
         [
           "item.minecraft.stick"
@@ -6046,241 +4352,437 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "item.minecraft.wooden_axe",
+      "output": "block.minecraft.lime_stained_glass",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
+          "block.minecraft.glass"
         ],
         [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
+          "block.minecraft.glass"
         ],
         [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.stick"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.stick"
+          "item.minecraft.lime_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "item.minecraft.magenta_dye",
+      "output": "block.minecraft.magenta_stained_glass",
+      "size": "3",
       "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.magenta_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_blue_stained_glass",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.light_blue_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.white_stained_glass",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.white_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.blue_stained_glass",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
         [
           "item.minecraft.blue_dye"
         ],
         [
-          "item.minecraft.red_dye"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.red_dye"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.white_dye"
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
         ]
       ]
     },
     {
-      "output": "item.minecraft.magenta_dye",
+      "output": "block.minecraft.purple_stained_glass",
+      "size": "3",
       "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
         [
           "item.minecraft.purple_dye"
         ],
         [
-          "item.minecraft.pink_dye"
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
         ]
       ]
     },
     {
-      "output": "item.minecraft.magenta_dye",
+      "output": "block.minecraft.gray_stained_glass",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.lilac"
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.gray_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
         ]
       ]
     },
     {
-      "output": "item.minecraft.magenta_dye",
+      "output": "block.minecraft.black_stained_glass",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.allium"
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.black_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
         ]
       ]
     },
     {
-      "output": "item.minecraft.magenta_dye",
+      "output": "block.minecraft.brown_stained_glass",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.blue_dye"
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.brown_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_stained_glass",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.cyan_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.red_stained_glass",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
         ],
         [
           "item.minecraft.red_dye"
         ],
         [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.orange_stained_glass",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.orange_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.pink_stained_glass",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
           "item.minecraft.pink_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "block.minecraft.slime_block",
-      "ingredients": [
-        [
-          "item.minecraft.slime_ball"
-        ],
-        [
-          "item.minecraft.slime_ball"
-        ],
-        [
-          "item.minecraft.slime_ball"
-        ],
-        [
-          "item.minecraft.slime_ball"
-        ],
-        [
-          "item.minecraft.slime_ball"
-        ],
-        [
-          "item.minecraft.slime_ball"
-        ],
-        [
-          "item.minecraft.slime_ball"
-        ],
-        [
-          "item.minecraft.slime_ball"
-        ],
-        [
-          "item.minecraft.slime_ball"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_blackstone",
-      "ingredients": [
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_blackstone_brick_slab",
-      "ingredients": [
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.golden_leggings",
-      "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.iron_block",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.beacon",
+      "output": "block.minecraft.green_stained_glass",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.glass"
@@ -6294,2935 +4796,86 @@ var recipe_groups = [
         [
           "block.minecraft.glass"
         ],
-        [
-          "item.minecraft.nether_star"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.dried_kelp",
-      "ingredients": [
-        [
-          "block.minecraft.dried_kelp_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.mossy_stone_brick_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.pink_dye",
-      "ingredients": [
-        [
-          "block.minecraft.peony"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.pink_dye",
-      "ingredients": [
-        [
-          "block.minecraft.pink_tulip"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.pink_dye",
-      "ingredients": [
-        [
-          "item.minecraft.red_dye"
-        ],
-        [
-          "item.minecraft.white_dye"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.lime_bed",
-      "ingredients": [
-        [
-          "block.minecraft.lime_wool"
-        ],
-        [
-          "block.minecraft.lime_wool"
-        ],
-        [
-          "block.minecraft.lime_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.purple_bed",
-      "ingredients": [
-        [
-          "block.minecraft.purple_wool"
-        ],
-        [
-          "block.minecraft.purple_wool"
-        ],
-        [
-          "block.minecraft.purple_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.gray_bed",
-      "ingredients": [
-        [
-          "block.minecraft.gray_wool"
-        ],
-        [
-          "block.minecraft.gray_wool"
-        ],
-        [
-          "block.minecraft.gray_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.red_bed",
-      "ingredients": [
-        [
-          "block.minecraft.red_wool"
-        ],
-        [
-          "block.minecraft.red_wool"
-        ],
-        [
-          "block.minecraft.red_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.blue_bed",
-      "ingredients": [
-        [
-          "block.minecraft.blue_wool"
-        ],
-        [
-          "block.minecraft.blue_wool"
-        ],
-        [
-          "block.minecraft.blue_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.cyan_bed",
-      "ingredients": [
-        [
-          "block.minecraft.cyan_wool"
-        ],
-        [
-          "block.minecraft.cyan_wool"
-        ],
-        [
-          "block.minecraft.cyan_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_blue_bed",
-      "ingredients": [
-        [
-          "block.minecraft.light_blue_wool"
-        ],
-        [
-          "block.minecraft.light_blue_wool"
-        ],
-        [
-          "block.minecraft.light_blue_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.yellow_bed",
-      "ingredients": [
-        [
-          "block.minecraft.yellow_wool"
-        ],
-        [
-          "block.minecraft.yellow_wool"
-        ],
-        [
-          "block.minecraft.yellow_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.brown_bed",
-      "ingredients": [
-        [
-          "block.minecraft.brown_wool"
-        ],
-        [
-          "block.minecraft.brown_wool"
-        ],
-        [
-          "block.minecraft.brown_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.orange_bed",
-      "ingredients": [
-        [
-          "block.minecraft.orange_wool"
-        ],
-        [
-          "block.minecraft.orange_wool"
-        ],
-        [
-          "block.minecraft.orange_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.magenta_bed",
-      "ingredients": [
-        [
-          "block.minecraft.magenta_wool"
-        ],
-        [
-          "block.minecraft.magenta_wool"
-        ],
-        [
-          "block.minecraft.magenta_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.green_bed",
-      "ingredients": [
-        [
-          "block.minecraft.green_wool"
-        ],
-        [
-          "block.minecraft.green_wool"
-        ],
-        [
-          "block.minecraft.green_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.pink_bed",
-      "ingredients": [
-        [
-          "block.minecraft.pink_wool"
-        ],
-        [
-          "block.minecraft.pink_wool"
-        ],
-        [
-          "block.minecraft.pink_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.light_gray_bed",
-      "ingredients": [
-        [
-          "block.minecraft.light_gray_wool"
-        ],
-        [
-          "block.minecraft.light_gray_wool"
-        ],
-        [
-          "block.minecraft.light_gray_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.white_bed",
-      "ingredients": [
-        [
-          "block.minecraft.white_wool"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ],
-        [
-          "block.minecraft.white_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.black_bed",
-      "ingredients": [
-        [
-          "block.minecraft.black_wool"
-        ],
-        [
-          "block.minecraft.black_wool"
-        ],
-        [
-          "block.minecraft.black_wool"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.smooth_red_sandstone_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.smooth_red_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_red_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_red_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_red_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_red_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_red_sandstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.golden_apple",
-      "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.apple"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.slime_ball",
-      "ingredients": [
-        [
-          "block.minecraft.slime_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.powered_rail",
-      "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_blackstone_wall",
-      "ingredients": [
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.heavy_weighted_pressure_plate",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.lime_dye",
-      "ingredients": [
         [
           "item.minecraft.green_dye"
         ],
         [
-          "item.minecraft.white_dye"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.observer",
-      "ingredients": [
-        [
-          "block.minecraft.cobblestone"
+          "block.minecraft.glass"
         ],
         [
-          "block.minecraft.cobblestone"
+          "block.minecraft.glass"
         ],
         [
-          "block.minecraft.cobblestone"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.quartz"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.ladder",
-      "ingredients": [
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.smooth_quartz_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.smooth_quartz"
-        ],
-        [
-          "block.minecraft.smooth_quartz"
-        ],
-        [
-          "block.minecraft.smooth_quartz"
-        ],
-        [
-          "block.minecraft.smooth_quartz"
-        ],
-        [
-          "block.minecraft.smooth_quartz"
-        ],
-        [
-          "block.minecraft.smooth_quartz"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.mossy_cobblestone_wall",
-      "ingredients": [
-        [
-          "block.minecraft.mossy_cobblestone"
-        ],
-        [
-          "block.minecraft.mossy_cobblestone"
-        ],
-        [
-          "block.minecraft.mossy_cobblestone"
-        ],
-        [
-          "block.minecraft.mossy_cobblestone"
-        ],
-        [
-          "block.minecraft.mossy_cobblestone"
-        ],
-        [
-          "block.minecraft.mossy_cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.stone_brick_slab",
-      "ingredients": [
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.detector_rail",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "block.minecraft.stone_pressure_plate"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.diorite_wall",
-      "ingredients": [
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.jungle_pressure_plate",
-      "ingredients": [
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
+          "block.minecraft.glass"
         ]
       ]
     },
     {
-      "output": "block.minecraft.spruce_pressure_plate",
+      "output": "block.minecraft.yellow_stained_glass",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.spruce_planks"
+          "block.minecraft.glass"
         ],
         [
-          "block.minecraft.spruce_planks"
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.yellow_dye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
         ]
       ]
     },
     {
-      "output": "block.minecraft.dark_oak_pressure_plate",
+      "output": "block.minecraft.light_gray_stained_glass",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.dark_oak_planks"
+          "block.minecraft.glass"
         ],
         [
-          "block.minecraft.dark_oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.acacia_pressure_plate",
-      "ingredients": [
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.crimson_pressure_plate",
-      "ingredients": [
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.warped_pressure_plate",
-      "ingredients": [
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.birch_pressure_plate",
-      "ingredients": [
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.oak_pressure_plate",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.bread",
-      "ingredients": [
-        [
-          "item.minecraft.wheat"
-        ],
-        [
-          "item.minecraft.wheat"
-        ],
-        [
-          "item.minecraft.wheat"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.soul_campfire",
-      "ingredients": [
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.soul_sand",
-          "block.minecraft.soul_soil"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood",
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood",
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood",
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood",
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood",
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae",
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ],
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood",
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood",
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood",
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood",
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood",
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae",
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ],
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood",
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood",
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood",
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood",
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood",
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae",
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.dark_oak_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.warped_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.oak_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.birch_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.jungle_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.spruce_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.acacia_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.crimson_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.stone_hoe",
-      "ingredients": [
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.blue_ice",
-      "ingredients": [
-        [
-          "block.minecraft.packed_ice"
-        ],
-        [
-          "block.minecraft.packed_ice"
-        ],
-        [
-          "block.minecraft.packed_ice"
-        ],
-        [
-          "block.minecraft.packed_ice"
-        ],
-        [
-          "block.minecraft.packed_ice"
-        ],
-        [
-          "block.minecraft.packed_ice"
-        ],
-        [
-          "block.minecraft.packed_ice"
-        ],
-        [
-          "block.minecraft.packed_ice"
-        ],
-        [
-          "block.minecraft.packed_ice"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.crimson_door",
-      "ingredients": [
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.jungle_door",
-      "ingredients": [
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.acacia_door",
-      "ingredients": [
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.dark_oak_door",
-      "ingredients": [
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.oak_door",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.warped_door",
-      "ingredients": [
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.birch_door",
-      "ingredients": [
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.spruce_door",
-      "ingredients": [
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.granite",
-      "ingredients": [
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "item.minecraft.quartz"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.iron_pickaxe",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.respawn_anchor",
-      "ingredients": [
-        [
-          "block.minecraft.crying_obsidian"
-        ],
-        [
-          "block.minecraft.crying_obsidian"
-        ],
-        [
-          "block.minecraft.crying_obsidian"
-        ],
-        [
-          "block.minecraft.glowstone"
-        ],
-        [
-          "block.minecraft.glowstone"
-        ],
-        [
-          "block.minecraft.glowstone"
-        ],
-        [
-          "block.minecraft.crying_obsidian"
-        ],
-        [
-          "block.minecraft.crying_obsidian"
-        ],
-        [
-          "block.minecraft.crying_obsidian"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.sandstone_wall",
-      "ingredients": [
-        [
-          "block.minecraft.sandstone"
-        ],
-        [
-          "block.minecraft.sandstone"
-        ],
-        [
-          "block.minecraft.sandstone"
-        ],
-        [
-          "block.minecraft.sandstone"
-        ],
-        [
-          "block.minecraft.sandstone"
-        ],
-        [
-          "block.minecraft.sandstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.granite_wall",
-      "ingredients": [
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.black_dye",
-      "ingredients": [
-        [
-          "item.minecraft.ink_sac"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.black_dye",
-      "ingredients": [
-        [
-          "block.minecraft.wither_rose"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.mossy_stone_brick_wall",
-      "ingredients": [
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.coal_block",
-      "ingredients": [
-        [
-          "item.minecraft.coal"
-        ],
-        [
-          "item.minecraft.coal"
-        ],
-        [
-          "item.minecraft.coal"
-        ],
-        [
-          "item.minecraft.coal"
-        ],
-        [
-          "item.minecraft.coal"
-        ],
-        [
-          "item.minecraft.coal"
-        ],
-        [
-          "item.minecraft.coal"
-        ],
-        [
-          "item.minecraft.coal"
-        ],
-        [
-          "item.minecraft.coal"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.nether_brick_fence",
-      "ingredients": [
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "item.minecraft.nether_brick"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "item.minecraft.nether_brick"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.purpur_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.purpur_block",
-          "block.minecraft.purpur_pillar"
-        ],
-        [
-          "block.minecraft.purpur_block",
-          "block.minecraft.purpur_pillar"
-        ],
-        [
-          "block.minecraft.purpur_block",
-          "block.minecraft.purpur_pillar"
-        ],
-        [
-          "block.minecraft.purpur_block",
-          "block.minecraft.purpur_pillar"
-        ],
-        [
-          "block.minecraft.purpur_block",
-          "block.minecraft.purpur_pillar"
-        ],
-        [
-          "block.minecraft.purpur_block",
-          "block.minecraft.purpur_pillar"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.snow_block",
-      "ingredients": [
-        [
-          "item.minecraft.snowball"
-        ],
-        [
-          "item.minecraft.snowball"
-        ],
-        [
-          "item.minecraft.snowball"
-        ],
-        [
-          "item.minecraft.snowball"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.mojang_banner_pattern",
-      "ingredients": [
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.enchanted_golden_apple"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.paper",
-      "ingredients": [
-        [
-          "block.minecraft.sugar_cane"
-        ],
-        [
-          "block.minecraft.sugar_cane"
-        ],
-        [
-          "block.minecraft.sugar_cane"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.cartography_table",
-      "ingredients": [
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.tnt",
-      "ingredients": [
-        [
-          "item.minecraft.gunpowder"
-        ],
-        [
-          "block.minecraft.sand",
-          "block.minecraft.red_sand"
-        ],
-        [
-          "item.minecraft.gunpowder"
-        ],
-        [
-          "block.minecraft.sand",
-          "block.minecraft.red_sand"
-        ],
-        [
-          "item.minecraft.gunpowder"
-        ],
-        [
-          "block.minecraft.sand",
-          "block.minecraft.red_sand"
-        ],
-        [
-          "item.minecraft.gunpowder"
-        ],
-        [
-          "block.minecraft.sand",
-          "block.minecraft.red_sand"
-        ],
-        [
-          "item.minecraft.gunpowder"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.nether_brick_wall",
-      "ingredients": [
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.anvil",
-      "ingredients": [
-        [
-          "block.minecraft.iron_block"
-        ],
-        [
-          "block.minecraft.iron_block"
-        ],
-        [
-          "block.minecraft.iron_block"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.iron_door",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.writable_book",
-      "ingredients": [
-        [
-          "item.minecraft.book"
-        ],
-        [
-          "item.minecraft.ink_sac"
-        ],
-        [
-          "item.minecraft.feather"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.sandstone",
-      "ingredients": [
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ],
-        [
-          "block.minecraft.sand"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.wooden_shovel",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.blaze_powder",
-      "ingredients": [
-        [
-          "item.minecraft.blaze_rod"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.wooden_pickaxe",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.end_stone_brick_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.red_sandstone_slab",
-      "ingredients": [
-        [
-          "block.minecraft.red_sandstone",
-          "block.minecraft.chiseled_red_sandstone"
-        ],
-        [
-          "block.minecraft.red_sandstone",
-          "block.minecraft.chiseled_red_sandstone"
-        ],
-        [
-          "block.minecraft.red_sandstone",
-          "block.minecraft.chiseled_red_sandstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.sea_lantern",
-      "ingredients": [
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_crystals"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_crystals"
-        ],
-        [
-          "item.minecraft.prismarine_crystals"
-        ],
-        [
-          "item.minecraft.prismarine_crystals"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_crystals"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.flint_and_steel",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.flint"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.fire_charge",
-      "ingredients": [
-        [
-          "item.minecraft.gunpowder"
-        ],
-        [
-          "item.minecraft.blaze_powder"
-        ],
-        [
-          "item.minecraft.coal",
-          "item.minecraft.charcoal"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.smooth_stone_slab",
-      "ingredients": [
-        [
-          "block.minecraft.smooth_stone"
-        ],
-        [
-          "block.minecraft.smooth_stone"
-        ],
-        [
-          "block.minecraft.smooth_stone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.shears",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.fletching_table",
-      "ingredients": [
-        [
-          "item.minecraft.flint"
-        ],
-        [
-          "item.minecraft.flint"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.stonecutter",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.rabbit_stew",
-      "ingredients": [
-        [
-          "item.minecraft.baked_potato"
-        ],
-        [
-          "item.minecraft.cooked_rabbit"
-        ],
-        [
-          "item.minecraft.bowl"
-        ],
-        [
-          "item.minecraft.carrot"
-        ],
-        [
-          "block.minecraft.red_mushroom"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.rabbit_stew",
-      "ingredients": [
-        [
-          "item.minecraft.baked_potato"
-        ],
-        [
-          "item.minecraft.cooked_rabbit"
-        ],
-        [
-          "item.minecraft.bowl"
-        ],
-        [
-          "item.minecraft.carrot"
-        ],
-        [
-          "block.minecraft.brown_mushroom"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.dispenser",
-      "ingredients": [
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "item.minecraft.bow"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.campfire",
-      "ingredients": [
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.coal",
-          "item.minecraft.charcoal"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood",
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood",
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood",
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood",
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood",
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae",
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ],
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood",
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood",
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood",
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood",
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood",
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae",
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ],
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood",
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood",
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood",
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood",
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood",
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae",
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.note_block",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.andesite_wall",
-      "ingredients": [
-        [
-          "block.minecraft.andesite"
-        ],
-        [
-          "block.minecraft.andesite"
-        ],
-        [
-          "block.minecraft.andesite"
-        ],
-        [
-          "block.minecraft.andesite"
-        ],
-        [
-          "block.minecraft.andesite"
-        ],
-        [
-          "block.minecraft.andesite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.diamond_boots",
-      "ingredients": [
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.golden_carrot",
-      "ingredients": [
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.gold_nugget"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.gold_nugget"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.carrot"
+          "item.minecraft.light_gray_dye"
         ],
         [
-          "item.minecraft.gold_nugget"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.gold_nugget"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.gold_nugget"
+          "block.minecraft.glass"
         ],
         [
-          "item.minecraft.gold_nugget"
+          "block.minecraft.glass"
         ]
       ]
     }
@@ -9230,6 +4883,7 @@ var recipe_groups = [
   [
     {
       "output": "block.minecraft.sticky_piston",
+      "size": "2",
       "ingredients": [
         [
           "item.minecraft.slime_ball"
@@ -9242,536 +4896,45 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "item.minecraft.stick",
+      "output": "item.minecraft.emerald",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.bamboo"
-        ],
-        [
-          "block.minecraft.bamboo"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.stick",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
+          "block.minecraft.emerald_block"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.lapis_block",
-      "ingredients": [
-        [
-          "item.minecraft.lapis_lazuli"
-        ],
-        [
-          "item.minecraft.lapis_lazuli"
-        ],
-        [
-          "item.minecraft.lapis_lazuli"
-        ],
-        [
-          "item.minecraft.lapis_lazuli"
-        ],
-        [
-          "item.minecraft.lapis_lazuli"
-        ],
-        [
-          "item.minecraft.lapis_lazuli"
-        ],
-        [
-          "item.minecraft.lapis_lazuli"
-        ],
-        [
-          "item.minecraft.lapis_lazuli"
-        ],
-        [
-          "item.minecraft.lapis_lazuli"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.crafting_table",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.glistering_melon_slice",
-      "ingredients": [
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.melon_slice"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_granite",
-      "ingredients": [
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_blackstone_slab",
-      "ingredients": [
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.diamond",
-      "ingredients": [
-        [
-          "block.minecraft.diamond_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.red_sandstone_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.red_sandstone",
-          "block.minecraft.chiseled_red_sandstone",
-          "block.minecraft.cut_red_sandstone"
-        ],
-        [
-          "block.minecraft.red_sandstone",
-          "block.minecraft.chiseled_red_sandstone",
-          "block.minecraft.cut_red_sandstone"
-        ],
-        [
-          "block.minecraft.red_sandstone",
-          "block.minecraft.chiseled_red_sandstone",
-          "block.minecraft.cut_red_sandstone"
-        ],
-        [
-          "block.minecraft.red_sandstone",
-          "block.minecraft.chiseled_red_sandstone",
-          "block.minecraft.cut_red_sandstone"
-        ],
-        [
-          "block.minecraft.red_sandstone",
-          "block.minecraft.chiseled_red_sandstone",
-          "block.minecraft.cut_red_sandstone"
-        ],
-        [
-          "block.minecraft.red_sandstone",
-          "block.minecraft.chiseled_red_sandstone",
-          "block.minecraft.cut_red_sandstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.mossy_cobblestone_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.mossy_cobblestone"
-        ],
-        [
-          "block.minecraft.mossy_cobblestone"
-        ],
-        [
-          "block.minecraft.mossy_cobblestone"
-        ],
-        [
-          "block.minecraft.mossy_cobblestone"
-        ],
-        [
-          "block.minecraft.mossy_cobblestone"
-        ],
-        [
-          "block.minecraft.mossy_cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.red_dye",
-      "ingredients": [
-        [
-          "block.minecraft.red_tulip"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.red_dye",
-      "ingredients": [
-        [
-          "block.minecraft.poppy"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.red_dye",
-      "ingredients": [
-        [
-          "block.minecraft.rose_bush"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.red_dye",
-      "ingredients": [
-        [
-          "item.minecraft.beetroot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.daylight_detector",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.quartz"
-        ],
-        [
-          "item.minecraft.quartz"
-        ],
-        [
-          "item.minecraft.quartz"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.coarse_dirt",
-      "ingredients": [
-        [
-          "block.minecraft.dirt"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.gravel"
-        ],
-        [
-          "block.minecraft.dirt"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.enchanting_table",
-      "ingredients": [
-        [
-          "item.minecraft.book"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.iron_shovel",
+      "output": "block.minecraft.smithing_table",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.stick"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.diamond_leggings",
-      "ingredients": [
-        [
-          "item.minecraft.diamond"
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
         ],
         [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.honeycomb_block",
-      "ingredients": [
-        [
-          "item.minecraft.honeycomb"
-        ],
-        [
-          "item.minecraft.honeycomb"
-        ],
-        [
-          "item.minecraft.honeycomb"
-        ],
-        [
-          "item.minecraft.honeycomb"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_basalt",
-      "ingredients": [
-        [
-          "block.minecraft.basalt"
-        ],
-        [
-          "block.minecraft.basalt"
-        ],
-        [
-          "block.minecraft.basalt"
-        ],
-        [
-          "block.minecraft.basalt"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.trapped_chest",
-      "ingredients": [
-        [
-          "block.minecraft.chest"
-        ],
-        [
-          "block.minecraft.tripwire_hook"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.melon_seeds",
-      "ingredients": [
-        [
-          "item.minecraft.melon_slice"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.clock",
-      "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.loom",
-      "ingredients": [
-        [
-          "item.minecraft.string"
-        ],
-        [
-          "item.minecraft.string"
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
         ],
         [
           "block.minecraft.oak_planks",
@@ -9799,6 +4962,7 @@ var recipe_groups = [
   [
     {
       "output": "item.minecraft.gray_dye",
+      "size": "2",
       "ingredients": [
         [
           "item.minecraft.black_dye"
@@ -9811,1999 +4975,8 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.polished_granite_slab",
-      "ingredients": [
-        [
-          "block.minecraft.polished_granite"
-        ],
-        [
-          "block.minecraft.polished_granite"
-        ],
-        [
-          "block.minecraft.polished_granite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.iron_leggings",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.end_crystal",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.ender_eye"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "item.minecraft.ghast_tear"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.granite_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.wooden_sword",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.activator_rail",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "block.minecraft.redstone_torch"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.diamond_shovel",
-      "ingredients": [
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.red_sandstone",
-      "ingredients": [
-        [
-          "block.minecraft.red_sand"
-        ],
-        [
-          "block.minecraft.red_sand"
-        ],
-        [
-          "block.minecraft.red_sand"
-        ],
-        [
-          "block.minecraft.red_sand"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.chest",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.golden_axe",
-      "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.cauldron",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.soul_torch",
-      "ingredients": [
-        [
-          "item.minecraft.coal",
-          "item.minecraft.charcoal"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.soul_sand",
-          "block.minecraft.soul_soil"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.chiseled_quartz_block",
-      "ingredients": [
-        [
-          "block.minecraft.quartz_slab"
-        ],
-        [
-          "block.minecraft.quartz_slab"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.iron_axe",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.tripwire_hook",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.dark_prismarine_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.dark_prismarine"
-        ],
-        [
-          "block.minecraft.dark_prismarine"
-        ],
-        [
-          "block.minecraft.dark_prismarine"
-        ],
-        [
-          "block.minecraft.dark_prismarine"
-        ],
-        [
-          "block.minecraft.dark_prismarine"
-        ],
-        [
-          "block.minecraft.dark_prismarine"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.crimson_trapdoor",
-      "ingredients": [
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ],
-        [
-          "block.minecraft.crimson_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.spruce_trapdoor",
-      "ingredients": [
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ],
-        [
-          "block.minecraft.spruce_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.birch_trapdoor",
-      "ingredients": [
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ],
-        [
-          "block.minecraft.birch_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.oak_trapdoor",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ],
-        [
-          "block.minecraft.oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.jungle_trapdoor",
-      "ingredients": [
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ],
-        [
-          "block.minecraft.jungle_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.warped_trapdoor",
-      "ingredients": [
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.dark_oak_trapdoor",
-      "ingredients": [
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ],
-        [
-          "block.minecraft.dark_oak_planks"
-        ]
-      ]
-    },
-    {
-      "output": "block.minecraft.acacia_trapdoor",
-      "ingredients": [
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ],
-        [
-          "block.minecraft.acacia_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.smoker",
-      "ingredients": [
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood",
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood",
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood",
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood",
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood",
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae",
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ],
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood",
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood",
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood",
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood",
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood",
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae",
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ],
-        [
-          "block.minecraft.furnace"
-        ],
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood",
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood",
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood",
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood",
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood",
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae",
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ],
-        [
-          "block.minecraft.dark_oak_log",
-          "block.minecraft.dark_oak_wood",
-          "block.minecraft.stripped_dark_oak_log",
-          "block.minecraft.stripped_dark_oak_wood",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_wood",
-          "block.minecraft.stripped_oak_log",
-          "block.minecraft.stripped_oak_wood",
-          "block.minecraft.acacia_log",
-          "block.minecraft.acacia_wood",
-          "block.minecraft.stripped_acacia_log",
-          "block.minecraft.stripped_acacia_wood",
-          "block.minecraft.birch_log",
-          "block.minecraft.birch_wood",
-          "block.minecraft.stripped_birch_log",
-          "block.minecraft.stripped_birch_wood",
-          "block.minecraft.jungle_log",
-          "block.minecraft.jungle_wood",
-          "block.minecraft.stripped_jungle_log",
-          "block.minecraft.stripped_jungle_wood",
-          "block.minecraft.spruce_log",
-          "block.minecraft.spruce_wood",
-          "block.minecraft.stripped_spruce_log",
-          "block.minecraft.stripped_spruce_wood",
-          "block.minecraft.crimson_stem",
-          "block.minecraft.stripped_crimson_stem",
-          "block.minecraft.crimson_hyphae",
-          "block.minecraft.stripped_crimson_hyphae",
-          "block.minecraft.warped_stem",
-          "block.minecraft.stripped_warped_stem",
-          "block.minecraft.warped_hyphae",
-          "block.minecraft.stripped_warped_hyphae"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.diamond_helmet",
-      "ingredients": [
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.light_weighted_pressure_plate",
-      "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.golden_hoe",
-      "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.spectral_arrow",
-      "ingredients": [
-        [
-          "item.minecraft.glowstone_dust"
-        ],
-        [
-          "item.minecraft.glowstone_dust"
-        ],
-        [
-          "item.minecraft.arrow"
-        ],
-        [
-          "item.minecraft.glowstone_dust"
-        ],
-        [
-          "item.minecraft.glowstone_dust"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.leather_leggings",
-      "ingredients": [
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.golden_shovel",
-      "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.yellow_dye",
-      "ingredients": [
-        [
-          "block.minecraft.dandelion"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.yellow_dye",
-      "ingredients": [
-        [
-          "block.minecraft.sunflower"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.brick_wall",
-      "ingredients": [
-        [
-          "block.minecraft.bricks"
-        ],
-        [
-          "block.minecraft.bricks"
-        ],
-        [
-          "block.minecraft.bricks"
-        ],
-        [
-          "block.minecraft.bricks"
-        ],
-        [
-          "block.minecraft.bricks"
-        ],
-        [
-          "block.minecraft.bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.iron_trapdoor",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.hopper_minecart",
-      "ingredients": [
-        [
-          "block.minecraft.hopper"
-        ],
-        [
-          "item.minecraft.minecart"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.stone_bricks",
-      "ingredients": [
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.beehive",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.honeycomb"
-        ],
-        [
-          "item.minecraft.honeycomb"
-        ],
-        [
-          "item.minecraft.honeycomb"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.quartz_bricks",
-      "ingredients": [
-        [
-          "block.minecraft.quartz_block"
-        ],
-        [
-          "block.minecraft.quartz_block"
-        ],
-        [
-          "block.minecraft.quartz_block"
-        ],
-        [
-          "block.minecraft.quartz_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.cobblestone_slab",
-      "ingredients": [
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.minecart",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.redstone",
-      "ingredients": [
-        [
-          "block.minecraft.redstone_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.stone_slab",
-      "ingredients": [
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.mushroom_stew",
-      "ingredients": [
-        [
-          "block.minecraft.brown_mushroom"
-        ],
-        [
-          "block.minecraft.red_mushroom"
-        ],
-        [
-          "item.minecraft.bowl"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.dark_prismarine_slab",
-      "ingredients": [
-        [
-          "block.minecraft.dark_prismarine"
-        ],
-        [
-          "block.minecraft.dark_prismarine"
-        ],
-        [
-          "block.minecraft.dark_prismarine"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.white_wool",
-      "ingredients": [
-        [
-          "item.minecraft.string"
-        ],
-        [
-          "item.minecraft.string"
-        ],
-        [
-          "item.minecraft.string"
-        ],
-        [
-          "item.minecraft.string"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.shulker_box",
-      "ingredients": [
-        [
-          "item.minecraft.shulker_shell"
-        ],
-        [
-          "block.minecraft.chest"
-        ],
-        [
-          "item.minecraft.shulker_shell"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.coal",
-      "ingredients": [
-        [
-          "block.minecraft.coal_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.cookie",
-      "ingredients": [
-        [
-          "item.minecraft.wheat"
-        ],
-        [
-          "item.minecraft.cocoa_beans"
-        ],
-        [
-          "item.minecraft.wheat"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.furnace",
-      "ingredients": [
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.ender_chest",
-      "ingredients": [
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "item.minecraft.ender_eye"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ],
-        [
-          "block.minecraft.obsidian"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.nether_brick_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ],
-        [
-          "block.minecraft.nether_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.cake",
-      "ingredients": [
-        [
-          "item.minecraft.milk_bucket"
-        ],
-        [
-          "item.minecraft.milk_bucket"
-        ],
-        [
-          "item.minecraft.milk_bucket"
-        ],
-        [
-          "item.minecraft.sugar"
-        ],
-        [
-          "item.minecraft.egg"
-        ],
-        [
-          "item.minecraft.sugar"
-        ],
-        [
-          "item.minecraft.wheat"
-        ],
-        [
-          "item.minecraft.wheat"
-        ],
-        [
-          "item.minecraft.wheat"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_diorite_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.polished_diorite"
-        ],
-        [
-          "block.minecraft.polished_diorite"
-        ],
-        [
-          "block.minecraft.polished_diorite"
-        ],
-        [
-          "block.minecraft.polished_diorite"
-        ],
-        [
-          "block.minecraft.polished_diorite"
-        ],
-        [
-          "block.minecraft.polished_diorite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.brown_dye",
-      "ingredients": [
-        [
-          "item.minecraft.cocoa_beans"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.chiseled_polished_blackstone",
-      "ingredients": [
-        [
-          "block.minecraft.polished_blackstone_slab"
-        ],
-        [
-          "block.minecraft.polished_blackstone_slab"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.pumpkin_seeds",
-      "ingredients": [
-        [
-          "block.minecraft.pumpkin"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.melon",
-      "ingredients": [
-        [
-          "item.minecraft.melon_slice"
-        ],
-        [
-          "item.minecraft.melon_slice"
-        ],
-        [
-          "item.minecraft.melon_slice"
-        ],
-        [
-          "item.minecraft.melon_slice"
-        ],
-        [
-          "item.minecraft.melon_slice"
-        ],
-        [
-          "item.minecraft.melon_slice"
-        ],
-        [
-          "item.minecraft.melon_slice"
-        ],
-        [
-          "item.minecraft.melon_slice"
-        ],
-        [
-          "item.minecraft.melon_slice"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.stone_shovel",
-      "ingredients": [
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.mossy_stone_brick_slab",
-      "ingredients": [
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ],
-        [
-          "block.minecraft.mossy_stone_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.barrel",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.gold_ingot",
-      "ingredients": [
-        [
-          "block.minecraft.gold_block"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.gold_ingot",
-      "ingredients": [
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ],
-        [
-          "item.minecraft.gold_nugget"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.blackstone_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.crossbow",
-      "ingredients": [
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.string"
-        ],
-        [
-          "block.minecraft.tripwire_hook"
-        ],
-        [
-          "item.minecraft.string"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.red_nether_brick_wall",
-      "ingredients": [
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.quartz_slab",
-      "ingredients": [
-        [
-          "block.minecraft.chiseled_quartz_block",
-          "block.minecraft.quartz_block",
-          "block.minecraft.quartz_pillar"
-        ],
-        [
-          "block.minecraft.chiseled_quartz_block",
-          "block.minecraft.quartz_block",
-          "block.minecraft.quartz_pillar"
-        ],
-        [
-          "block.minecraft.chiseled_quartz_block",
-          "block.minecraft.quartz_block",
-          "block.minecraft.quartz_pillar"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.piston",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.pumpkin_pie",
-      "ingredients": [
-        [
-          "block.minecraft.pumpkin"
-        ],
-        [
-          "item.minecraft.sugar"
-        ],
-        [
-          "item.minecraft.egg"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.stone_pressure_plate",
-      "ingredients": [
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.shield",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.fishing_rod",
-      "ingredients": [
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.string"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.string"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.blackstone_wall",
-      "ingredients": [
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.red_nether_brick_slab",
-      "ingredients": [
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.quartz_pillar",
-      "ingredients": [
-        [
-          "block.minecraft.quartz_block"
-        ],
-        [
-          "block.minecraft.quartz_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.ender_eye",
-      "ingredients": [
-        [
-          "item.minecraft.ender_pearl"
-        ],
-        [
-          "item.minecraft.blaze_powder"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.prismarine_brick_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.prismarine_bricks"
-        ],
-        [
-          "block.minecraft.prismarine_bricks"
-        ],
-        [
-          "block.minecraft.prismarine_bricks"
-        ],
-        [
-          "block.minecraft.prismarine_bricks"
-        ],
-        [
-          "block.minecraft.prismarine_bricks"
-        ],
-        [
-          "block.minecraft.prismarine_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
       "output": "item.minecraft.painting",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.stick"
@@ -11852,72 +5025,581 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.dried_kelp_block",
+      "output": "block.minecraft.red_terracotta",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.dried_kelp"
+          "block.minecraft.terracotta"
         ],
         [
-          "item.minecraft.dried_kelp"
+          "block.minecraft.terracotta"
         ],
         [
-          "item.minecraft.dried_kelp"
+          "block.minecraft.terracotta"
         ],
         [
-          "item.minecraft.dried_kelp"
+          "block.minecraft.terracotta"
         ],
         [
-          "item.minecraft.dried_kelp"
+          "item.minecraft.red_dye"
         ],
         [
-          "item.minecraft.dried_kelp"
+          "block.minecraft.terracotta"
         ],
         [
-          "item.minecraft.dried_kelp"
+          "block.minecraft.terracotta"
         ],
         [
-          "item.minecraft.dried_kelp"
+          "block.minecraft.terracotta"
         ],
         [
-          "item.minecraft.dried_kelp"
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.cyan_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_gray_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.light_gray_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.white_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.white_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.yellow_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.yellow_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.magenta_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.magenta_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_blue_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.light_blue_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.gray_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.gray_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.orange_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.orange_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.purple_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.purple_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.brown_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.brown_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.green_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.green_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.black_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.black_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.blue_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.blue_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.lime_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.lime_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.pink_terracotta",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "item.minecraft.pink_dye"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
+        ],
+        [
+          "block.minecraft.terracotta"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.andesite_stairs",
+      "output": "block.minecraft.diorite_stairs",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.andesite"
+          "block.minecraft.diorite"
         ],
         [
-          "block.minecraft.andesite"
+          "block.minecraft.diorite"
         ],
         [
-          "block.minecraft.andesite"
+          "block.minecraft.diorite"
         ],
         [
-          "block.minecraft.andesite"
+          "block.minecraft.diorite"
         ],
         [
-          "block.minecraft.andesite"
+          "block.minecraft.diorite"
         ],
         [
-          "block.minecraft.andesite"
+          "block.minecraft.diorite"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.smithing_table",
+      "output": "item.minecraft.iron_nugget",
+      "size": "1",
       "ingredients": [
         [
           "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.fletching_table",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.flint"
         ],
         [
-          "item.minecraft.iron_ingot"
+          "item.minecraft.flint"
         ],
         [
           "block.minecraft.oak_planks",
@@ -11964,489 +5646,877 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "item.minecraft.gold_nugget",
+      "output": "item.minecraft.jungle_boat",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.gold_ingot"
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.spruce_boat",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.oak_boat",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.dark_oak_boat",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.birch_boat",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.acacia_boat",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.warped_fungus_on_a_stick",
+      "output": "block.minecraft.black_wool",
+      "size": "2",
       "ingredients": [
         [
-          "item.minecraft.fishing_rod"
+          "item.minecraft.black_dye"
         ],
         [
-          "block.minecraft.warped_fungus"
+          "block.minecraft.white_wool"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "item.minecraft.golden_pickaxe",
+      "output": "block.minecraft.pink_wool",
+      "size": "2",
       "ingredients": [
         [
-          "item.minecraft.gold_ingot"
+          "item.minecraft.pink_dye"
         ],
         [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
+          "block.minecraft.white_wool"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "block.minecraft.end_stone_brick_wall",
+      "output": "block.minecraft.red_wool",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.end_stone_bricks"
+          "item.minecraft.red_dye"
         ],
         [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
+          "block.minecraft.white_wool"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "block.minecraft.polished_blackstone_brick_wall",
+      "output": "block.minecraft.brown_wool",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.polished_blackstone_bricks"
+          "item.minecraft.brown_dye"
         ],
         [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
+          "block.minecraft.white_wool"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "block.minecraft.stone_brick_wall",
+      "output": "block.minecraft.light_blue_wool",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.stone_bricks"
+          "item.minecraft.light_blue_dye"
         ],
         [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
-        ],
-        [
-          "block.minecraft.stone_bricks"
+          "block.minecraft.white_wool"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "block.minecraft.end_stone_bricks",
+      "output": "block.minecraft.magenta_wool",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.end_stone"
+          "item.minecraft.magenta_dye"
         ],
         [
-          "block.minecraft.end_stone"
-        ],
-        [
-          "block.minecraft.end_stone"
-        ],
-        [
-          "block.minecraft.end_stone"
+          "block.minecraft.white_wool"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "item.minecraft.purple_dye",
+      "output": "block.minecraft.lime_wool",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.lime_dye"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.gray_wool",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.gray_dye"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.orange_wool",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.orange_dye"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.purple_wool",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.purple_dye"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.green_wool",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.green_dye"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_wool",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.cyan_dye"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.blue_wool",
+      "size": "2",
       "ingredients": [
         [
           "item.minecraft.blue_dye"
         ],
         [
+          "block.minecraft.white_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_gray_wool",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.light_gray_dye"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.yellow_wool",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.yellow_dye"
+        ],
+        [
+          "block.minecraft.white_wool"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.mossy_stone_brick_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.yellow_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.yellow_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.black_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.black_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.purple_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.purple_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.orange_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.orange_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.lime_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.lime_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.green_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.green_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.red_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
           "item.minecraft.red_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_gray_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.light_gray_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.white_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.white_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.light_blue_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.light_blue_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.gray_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gray_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.pink_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.pink_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.blue_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.blue_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.brown_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.brown_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.cyan_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.cyan_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.magenta_concrete_powder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.magenta_dye"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.emerald",
+      "output": "item.minecraft.lapis_lazuli",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.emerald_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.comparator",
-      "ingredients": [
-        [
-          "block.minecraft.redstone_torch"
-        ],
-        [
-          "block.minecraft.redstone_torch"
-        ],
-        [
-          "item.minecraft.quartz"
-        ],
-        [
-          "block.minecraft.redstone_torch"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.armor_stand",
-      "ingredients": [
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.smooth_stone_slab"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.diorite_slab",
-      "ingredients": [
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.furnace_minecart",
-      "ingredients": [
-        [
-          "block.minecraft.furnace"
-        ],
-        [
-          "item.minecraft.minecart"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.granite_slab",
-      "ingredients": [
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ],
-        [
-          "block.minecraft.granite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.quartz_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.chiseled_quartz_block",
-          "block.minecraft.quartz_block",
-          "block.minecraft.quartz_pillar"
-        ],
-        [
-          "block.minecraft.chiseled_quartz_block",
-          "block.minecraft.quartz_block",
-          "block.minecraft.quartz_pillar"
-        ],
-        [
-          "block.minecraft.chiseled_quartz_block",
-          "block.minecraft.quartz_block",
-          "block.minecraft.quartz_pillar"
-        ],
-        [
-          "block.minecraft.chiseled_quartz_block",
-          "block.minecraft.quartz_block",
-          "block.minecraft.quartz_pillar"
-        ],
-        [
-          "block.minecraft.chiseled_quartz_block",
-          "block.minecraft.quartz_block",
-          "block.minecraft.quartz_pillar"
-        ],
-        [
-          "block.minecraft.chiseled_quartz_block",
-          "block.minecraft.quartz_block",
-          "block.minecraft.quartz_pillar"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_blackstone_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ],
-        [
-          "block.minecraft.polished_blackstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.beetroot_soup",
-      "ingredients": [
-        [
-          "item.minecraft.bowl"
-        ],
-        [
-          "item.minecraft.beetroot"
-        ],
-        [
-          "item.minecraft.beetroot"
-        ],
-        [
-          "item.minecraft.beetroot"
-        ],
-        [
-          "item.minecraft.beetroot"
-        ],
-        [
-          "item.minecraft.beetroot"
-        ],
-        [
-          "item.minecraft.beetroot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.cut_sandstone",
-      "ingredients": [
-        [
-          "block.minecraft.sandstone"
-        ],
-        [
-          "block.minecraft.sandstone"
-        ],
-        [
-          "block.minecraft.sandstone"
-        ],
-        [
-          "block.minecraft.sandstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_andesite_slab",
-      "ingredients": [
-        [
-          "block.minecraft.polished_andesite"
-        ],
-        [
-          "block.minecraft.polished_andesite"
-        ],
-        [
-          "block.minecraft.polished_andesite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.snow",
-      "ingredients": [
-        [
-          "block.minecraft.snow_block"
-        ],
-        [
-          "block.minecraft.snow_block"
-        ],
-        [
-          "block.minecraft.snow_block"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.red_nether_brick_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ],
-        [
-          "block.minecraft.red_nether_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.smooth_quartz_slab",
-      "ingredients": [
-        [
-          "block.minecraft.smooth_quartz"
-        ],
-        [
-          "block.minecraft.smooth_quartz"
-        ],
-        [
-          "block.minecraft.smooth_quartz"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.iron_bars",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.glowstone",
-      "ingredients": [
-        [
-          "item.minecraft.glowstone_dust"
-        ],
-        [
-          "item.minecraft.glowstone_dust"
-        ],
-        [
-          "item.minecraft.glowstone_dust"
-        ],
-        [
-          "item.minecraft.glowstone_dust"
+          "block.minecraft.lapis_block"
         ]
       ]
     }
@@ -12454,6 +6524,7 @@ var recipe_groups = [
   [
     {
       "output": "item.minecraft.bowl",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.oak_planks",
@@ -12490,7 +6561,941 @@ var recipe_groups = [
   ],
   [
     {
+      "output": "block.minecraft.chiseled_sandstone",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.sandstone_slab"
+        ],
+        [
+          "block.minecraft.sandstone_slab"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.cut_sandstone_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cut_sandstone"
+        ],
+        [
+          "block.minecraft.cut_sandstone"
+        ],
+        [
+          "block.minecraft.cut_sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.writable_book",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.book"
+        ],
+        [
+          "item.minecraft.ink_sac"
+        ],
+        [
+          "item.minecraft.feather"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.iron_bars",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_blackstone_brick_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ],
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ],
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ],
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ],
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ],
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.granite",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "item.minecraft.quartz"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.cut_red_sandstone_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cut_red_sandstone"
+        ],
+        [
+          "block.minecraft.cut_red_sandstone"
+        ],
+        [
+          "block.minecraft.cut_red_sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.coarse_dirt",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.dirt"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.gravel"
+        ],
+        [
+          "block.minecraft.dirt"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.dark_prismarine_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.dark_prismarine"
+        ],
+        [
+          "block.minecraft.dark_prismarine"
+        ],
+        [
+          "block.minecraft.dark_prismarine"
+        ],
+        [
+          "block.minecraft.dark_prismarine"
+        ],
+        [
+          "block.minecraft.dark_prismarine"
+        ],
+        [
+          "block.minecraft.dark_prismarine"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.sandstone_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.sandstone",
+          "block.minecraft.chiseled_sandstone"
+        ],
+        [
+          "block.minecraft.sandstone",
+          "block.minecraft.chiseled_sandstone"
+        ],
+        [
+          "block.minecraft.sandstone",
+          "block.minecraft.chiseled_sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.piston",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.glistering_melon_slice",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.melon_slice"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.iron_shovel",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_andesite",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.chiseled_red_sandstone",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.red_sandstone_slab"
+        ],
+        [
+          "block.minecraft.red_sandstone_slab"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.carrot_on_a_stick",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.fishing_rod"
+        ],
+        [
+          "item.minecraft.carrot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.birch_trapdoor",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.oak_trapdoor",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.warped_trapdoor",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.dark_oak_trapdoor",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.acacia_trapdoor",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.jungle_trapdoor",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.spruce_trapdoor",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.crimson_trapdoor",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.netherite_ingot",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.netherite_block"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.netherite_ingot",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.netherite_scrap"
+        ],
+        [
+          "item.minecraft.netherite_scrap"
+        ],
+        [
+          "item.minecraft.netherite_scrap"
+        ],
+        [
+          "item.minecraft.netherite_scrap"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.stone_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.red_sandstone_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.red_sandstone",
+          "block.minecraft.chiseled_red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone",
+          "block.minecraft.chiseled_red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone",
+          "block.minecraft.chiseled_red_sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.soul_torch",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.coal",
+          "item.minecraft.charcoal"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.soul_sand",
+          "block.minecraft.soul_soil"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.purpur_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.purpur_block",
+          "block.minecraft.purpur_pillar"
+        ],
+        [
+          "block.minecraft.purpur_block",
+          "block.minecraft.purpur_pillar"
+        ],
+        [
+          "block.minecraft.purpur_block",
+          "block.minecraft.purpur_pillar"
+        ],
+        [
+          "block.minecraft.purpur_block",
+          "block.minecraft.purpur_pillar"
+        ],
+        [
+          "block.minecraft.purpur_block",
+          "block.minecraft.purpur_pillar"
+        ],
+        [
+          "block.minecraft.purpur_block",
+          "block.minecraft.purpur_pillar"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.quartz_block",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.quartz"
+        ],
+        [
+          "item.minecraft.quartz"
+        ],
+        [
+          "item.minecraft.quartz"
+        ],
+        [
+          "item.minecraft.quartz"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.oak_door",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.birch_door",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.crimson_door",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.jungle_door",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.acacia_door",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.warped_door",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.dark_oak_door",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.spruce_door",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.diamond_boots",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.bow",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.string"
+        ]
+      ]
+    }
+  ],
+  [
+    {
       "output": "item.minecraft.cyan_dye",
+      "size": "2",
       "ingredients": [
         [
           "item.minecraft.blue_dye"
@@ -12503,515 +7508,8 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.lantern",
-      "ingredients": [
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "block.minecraft.torch"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.stone_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.leather",
-      "ingredients": [
-        [
-          "item.minecraft.rabbit_hide"
-        ],
-        [
-          "item.minecraft.rabbit_hide"
-        ],
-        [
-          "item.minecraft.rabbit_hide"
-        ],
-        [
-          "item.minecraft.rabbit_hide"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.diamond_pickaxe",
-      "ingredients": [
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.magma_block",
-      "ingredients": [
-        [
-          "item.minecraft.magma_cream"
-        ],
-        [
-          "item.minecraft.magma_cream"
-        ],
-        [
-          "item.minecraft.magma_cream"
-        ],
-        [
-          "item.minecraft.magma_cream"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.stone_button",
-      "ingredients": [
-        [
-          "block.minecraft.stone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.diorite",
-      "ingredients": [
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "item.minecraft.quartz"
-        ],
-        [
-          "item.minecraft.quartz"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.soul_lantern",
-      "ingredients": [
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "block.minecraft.soul_torch"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.packed_ice",
-      "ingredients": [
-        [
-          "block.minecraft.ice"
-        ],
-        [
-          "block.minecraft.ice"
-        ],
-        [
-          "block.minecraft.ice"
-        ],
-        [
-          "block.minecraft.ice"
-        ],
-        [
-          "block.minecraft.ice"
-        ],
-        [
-          "block.minecraft.ice"
-        ],
-        [
-          "block.minecraft.ice"
-        ],
-        [
-          "block.minecraft.ice"
-        ],
-        [
-          "block.minecraft.ice"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.conduit",
-      "ingredients": [
-        [
-          "item.minecraft.nautilus_shell"
-        ],
-        [
-          "item.minecraft.nautilus_shell"
-        ],
-        [
-          "item.minecraft.nautilus_shell"
-        ],
-        [
-          "item.minecraft.nautilus_shell"
-        ],
-        [
-          "item.minecraft.heart_of_the_sea"
-        ],
-        [
-          "item.minecraft.nautilus_shell"
-        ],
-        [
-          "item.minecraft.nautilus_shell"
-        ],
-        [
-          "item.minecraft.nautilus_shell"
-        ],
-        [
-          "item.minecraft.nautilus_shell"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.lead",
-      "ingredients": [
-        [
-          "item.minecraft.string"
-        ],
-        [
-          "item.minecraft.string"
-        ],
-        [
-          "item.minecraft.string"
-        ],
-        [
-          "item.minecraft.slime_ball"
-        ],
-        [
-          "item.minecraft.string"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.arrow",
-      "ingredients": [
-        [
-          "item.minecraft.flint"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.feather"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.compass",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.diorite_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ],
-        [
-          "block.minecraft.diorite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.bookshelf",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.book"
-        ],
-        [
-          "item.minecraft.book"
-        ],
-        [
-          "item.minecraft.book"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.glass_pane",
-      "ingredients": [
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ],
-        [
-          "block.minecraft.glass"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.dropper",
-      "ingredients": [
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_andesite_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.polished_andesite"
-        ],
-        [
-          "block.minecraft.polished_andesite"
-        ],
-        [
-          "block.minecraft.polished_andesite"
-        ],
-        [
-          "block.minecraft.polished_andesite"
-        ],
-        [
-          "block.minecraft.polished_andesite"
-        ],
-        [
-          "block.minecraft.polished_andesite"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.smooth_red_sandstone_slab",
-      "ingredients": [
-        [
-          "block.minecraft.smooth_red_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_red_sandstone"
-        ],
-        [
-          "block.minecraft.smooth_red_sandstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.blast_furnace",
+      "output": "item.minecraft.iron_chestplate",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.iron_ingot"
@@ -13026,32 +7524,30 @@ var recipe_groups = [
           "item.minecraft.iron_ingot"
         ],
         [
-          "block.minecraft.furnace"
+          "item.minecraft.iron_ingot"
         ],
         [
           "item.minecraft.iron_ingot"
         ],
         [
-          "block.minecraft.smooth_stone"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "block.minecraft.smooth_stone"
-        ],
-        [
-          "block.minecraft.smooth_stone"
+          "item.minecraft.iron_ingot"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.diamond_sword",
+      "output": "item.minecraft.golden_sword",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.diamond"
+          "item.minecraft.gold_ingot"
         ],
         [
-          "item.minecraft.diamond"
+          "item.minecraft.gold_ingot"
         ],
         [
           "item.minecraft.stick"
@@ -13061,406 +7557,49 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "item.minecraft.lapis_lazuli",
+      "output": "item.minecraft.shears",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.lapis_block"
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.stone_axe",
+      "output": "block.minecraft.activator_rail",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.cobblestone",
-          "block.minecraft.blackstone"
+          "item.minecraft.iron_ingot"
         ],
         [
           "item.minecraft.stick"
         ],
         [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.bricks",
-      "ingredients": [
-        [
-          "item.minecraft.brick"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.brick"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.brick"
+          "block.minecraft.redstone_torch"
         ],
         [
-          "item.minecraft.brick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.prismarine_bricks",
-      "ingredients": [
-        [
-          "item.minecraft.prismarine_shard"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.tnt_minecart",
-      "ingredients": [
-        [
-          "block.minecraft.tnt"
-        ],
-        [
-          "item.minecraft.minecart"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.bow",
-      "ingredients": [
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.string"
+          "item.minecraft.iron_ingot"
         ],
         [
           "item.minecraft.stick"
         ],
         [
-          "item.minecraft.string"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.string"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.gold_block",
-      "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.chiseled_red_sandstone",
-      "ingredients": [
-        [
-          "block.minecraft.red_sandstone_slab"
-        ],
-        [
-          "block.minecraft.red_sandstone_slab"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.prismarine_wall",
-      "ingredients": [
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.light_blue_dye",
-      "ingredients": [
-        [
-          "item.minecraft.blue_dye"
-        ],
-        [
-          "item.minecraft.white_dye"
-        ]
-      ]
-    },
-    {
-      "output": "item.minecraft.light_blue_dye",
-      "ingredients": [
-        [
-          "block.minecraft.blue_orchid"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.redstone_block",
-      "ingredients": [
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_blackstone_button",
-      "ingredients": [
-        [
-          "block.minecraft.polished_blackstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.jukebox",
-      "ingredients": [
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "item.minecraft.diamond"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ],
-        [
-          "block.minecraft.oak_planks",
-          "block.minecraft.spruce_planks",
-          "block.minecraft.birch_planks",
-          "block.minecraft.jungle_planks",
-          "block.minecraft.acacia_planks",
-          "block.minecraft.dark_oak_planks",
-          "block.minecraft.crimson_planks",
-          "block.minecraft.warped_planks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.purpur_slab",
-      "ingredients": [
-        [
-          "block.minecraft.purpur_block",
-          "block.minecraft.purpur_pillar"
-        ],
-        [
-          "block.minecraft.purpur_block",
-          "block.minecraft.purpur_pillar"
-        ],
-        [
-          "block.minecraft.purpur_block",
-          "block.minecraft.purpur_pillar"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.emerald_block",
-      "ingredients": [
-        [
-          "item.minecraft.emerald"
-        ],
-        [
-          "item.minecraft.emerald"
-        ],
-        [
-          "item.minecraft.emerald"
-        ],
-        [
-          "item.minecraft.emerald"
-        ],
-        [
-          "item.minecraft.emerald"
-        ],
-        [
-          "item.minecraft.emerald"
-        ],
-        [
-          "item.minecraft.emerald"
-        ],
-        [
-          "item.minecraft.emerald"
-        ],
-        [
-          "item.minecraft.emerald"
+          "item.minecraft.iron_ingot"
         ]
       ]
     }
@@ -13468,6 +7607,7 @@ var recipe_groups = [
   [
     {
       "output": "block.minecraft.grindstone",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.stick"
@@ -13503,55 +7643,41 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.scaffolding",
+      "output": "item.minecraft.wooden_pickaxe",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.bamboo"
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
         ],
         [
-          "item.minecraft.string"
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
         ],
         [
-          "block.minecraft.bamboo"
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
         ],
         [
-          "block.minecraft.bamboo"
-        ],
-        [
-          "block.minecraft.bamboo"
-        ],
-        [
-          "block.minecraft.bamboo"
-        ],
-        [
-          "block.minecraft.bamboo"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.flower_pot",
-      "ingredients": [
-        [
-          "item.minecraft.brick"
-        ],
-        [
-          "item.minecraft.brick"
-        ],
-        [
-          "item.minecraft.brick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.torch",
-      "ingredients": [
-        [
-          "item.minecraft.coal",
-          "item.minecraft.charcoal"
+          "item.minecraft.stick"
         ],
         [
           "item.minecraft.stick"
@@ -13561,7 +7687,204 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.diamond_block",
+      "output": "block.minecraft.daylight_detector",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.quartz"
+        ],
+        [
+          "item.minecraft.quartz"
+        ],
+        [
+          "item.minecraft.quartz"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.blaze_powder",
+      "size": "1",
+      "ingredients": [
+        [
+          "item.minecraft.blaze_rod"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_diorite_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_diorite"
+        ],
+        [
+          "block.minecraft.polished_diorite"
+        ],
+        [
+          "block.minecraft.polished_diorite"
+        ],
+        [
+          "block.minecraft.polished_diorite"
+        ],
+        [
+          "block.minecraft.polished_diorite"
+        ],
+        [
+          "block.minecraft.polished_diorite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.wooden_sword",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.light_blue_dye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.blue_dye"
+        ],
+        [
+          "item.minecraft.white_dye"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.light_blue_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.blue_orchid"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.lead",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.slime_ball"
+        ],
+        [
+          "item.minecraft.string"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.red_nether_brick_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.red_nether_bricks"
+        ],
+        [
+          "block.minecraft.red_nether_bricks"
+        ],
+        [
+          "block.minecraft.red_nether_bricks"
+        ],
+        [
+          "block.minecraft.red_nether_bricks"
+        ],
+        [
+          "block.minecraft.red_nether_bricks"
+        ],
+        [
+          "block.minecraft.red_nether_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.diamond_helmet",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.diamond"
@@ -13569,6 +7892,537 @@ var recipe_groups = [
         [
           "item.minecraft.diamond"
         ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.wooden_shovel",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.quartz_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.chiseled_quartz_block",
+          "block.minecraft.quartz_block",
+          "block.minecraft.quartz_pillar"
+        ],
+        [
+          "block.minecraft.chiseled_quartz_block",
+          "block.minecraft.quartz_block",
+          "block.minecraft.quartz_pillar"
+        ],
+        [
+          "block.minecraft.chiseled_quartz_block",
+          "block.minecraft.quartz_block",
+          "block.minecraft.quartz_pillar"
+        ],
+        [
+          "block.minecraft.chiseled_quartz_block",
+          "block.minecraft.quartz_block",
+          "block.minecraft.quartz_pillar"
+        ],
+        [
+          "block.minecraft.chiseled_quartz_block",
+          "block.minecraft.quartz_block",
+          "block.minecraft.quartz_pillar"
+        ],
+        [
+          "block.minecraft.chiseled_quartz_block",
+          "block.minecraft.quartz_block",
+          "block.minecraft.quartz_pillar"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.tripwire_hook",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.chest",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.brick_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.bricks"
+        ],
+        [
+          "block.minecraft.bricks"
+        ],
+        [
+          "block.minecraft.bricks"
+        ],
+        [
+          "block.minecraft.bricks"
+        ],
+        [
+          "block.minecraft.bricks"
+        ],
+        [
+          "block.minecraft.bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.smoker",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood",
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood",
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood",
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood",
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood",
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae",
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
+        ],
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood",
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood",
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood",
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood",
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood",
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae",
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
+        ],
+        [
+          "block.minecraft.furnace"
+        ],
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood",
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood",
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood",
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood",
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood",
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae",
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
+        ],
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood",
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood",
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood",
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood",
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood",
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae",
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.jack_o_lantern",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.carved_pumpkin"
+        ],
+        [
+          "block.minecraft.torch"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.melon_seeds",
+      "size": "1",
+      "ingredients": [
+        [
+          "item.minecraft.melon_slice"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.iron_leggings",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.rabbit_stew",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.baked_potato"
+        ],
+        [
+          "item.minecraft.cooked_rabbit"
+        ],
+        [
+          "item.minecraft.bowl"
+        ],
+        [
+          "item.minecraft.carrot"
+        ],
+        [
+          "block.minecraft.brown_mushroom"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.rabbit_stew",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.baked_potato"
+        ],
+        [
+          "item.minecraft.cooked_rabbit"
+        ],
+        [
+          "item.minecraft.bowl"
+        ],
+        [
+          "item.minecraft.carrot"
+        ],
+        [
+          "block.minecraft.red_mushroom"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.golden_chestplate",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.stonecutter",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.bucket",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.diamond_leggings",
+      "size": "3",
+      "ingredients": [
         [
           "item.minecraft.diamond"
         ],
@@ -13595,10 +8449,464 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "item.minecraft.chest_minecart",
+      "output": "item.minecraft.diamond_shovel",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.chest"
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.spruce_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.oak_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.crimson_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.acacia_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.jungle_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.birch_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.warped_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.dark_oak_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.diorite",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "item.minecraft.quartz"
+        ],
+        [
+          "item.minecraft.quartz"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.snow_block",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.snowball"
+        ],
+        [
+          "item.minecraft.snowball"
+        ],
+        [
+          "item.minecraft.snowball"
+        ],
+        [
+          "item.minecraft.snowball"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.end_stone_brick_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.sandstone_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.sandstone"
+        ],
+        [
+          "block.minecraft.sandstone"
+        ],
+        [
+          "block.minecraft.sandstone"
+        ],
+        [
+          "block.minecraft.sandstone"
+        ],
+        [
+          "block.minecraft.sandstone"
+        ],
+        [
+          "block.minecraft.sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.acacia_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.dark_oak_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.warped_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.crimson_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.birch_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.oak_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.spruce_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.spruce_planks"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.jungle_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.nether_brick_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "block.minecraft.nether_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.andesite_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.furnace_minecart",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.furnace"
         ],
         [
           "item.minecraft.minecart"
@@ -13608,237 +8916,18 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.composter",
+      "output": "item.minecraft.sugar",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
-        ],
-        [
-          "block.minecraft.oak_slab",
-          "block.minecraft.spruce_slab",
-          "block.minecraft.birch_slab",
-          "block.minecraft.jungle_slab",
-          "block.minecraft.acacia_slab",
-          "block.minecraft.dark_oak_slab",
-          "block.minecraft.crimson_slab",
-          "block.minecraft.warped_slab"
+          "block.minecraft.sugar_cane"
         ]
       ]
-    }
-  ],
-  [
+    },
     {
-      "output": "item.minecraft.golden_helmet",
+      "output": "item.minecraft.sugar",
+      "size": "1",
       "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.end_stone_brick_slab",
-      "ingredients": [
-        [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
-        ],
-        [
-          "block.minecraft.end_stone_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.purpur_block",
-      "ingredients": [
-        [
-          "item.minecraft.popped_chorus_fruit"
-        ],
-        [
-          "item.minecraft.popped_chorus_fruit"
-        ],
-        [
-          "item.minecraft.popped_chorus_fruit"
-        ],
-        [
-          "item.minecraft.popped_chorus_fruit"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.bucket",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.leather_helmet",
-      "ingredients": [
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.lever",
-      "ingredients": [
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.iron_hoe",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.blackstone_slab",
-      "ingredients": [
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ],
-        [
-          "block.minecraft.blackstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.honey_block",
-      "ingredients": [
-        [
-          "item.minecraft.honey_bottle"
-        ],
-        [
-          "item.minecraft.honey_bottle"
-        ],
-        [
-          "item.minecraft.honey_bottle"
-        ],
         [
           "item.minecraft.honey_bottle"
         ]
@@ -13847,217 +8936,353 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.purpur_pillar",
+      "output": "block.minecraft.spruce_fence",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.purpur_slab"
-        ],
-        [
-          "block.minecraft.purpur_slab"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.cobblestone_wall",
-      "ingredients": [
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ],
-        [
-          "block.minecraft.cobblestone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.bone_block",
-      "ingredients": [
-        [
-          "item.minecraft.bone_meal"
-        ],
-        [
-          "item.minecraft.bone_meal"
-        ],
-        [
-          "item.minecraft.bone_meal"
-        ],
-        [
-          "item.minecraft.bone_meal"
-        ],
-        [
-          "item.minecraft.bone_meal"
-        ],
-        [
-          "item.minecraft.bone_meal"
-        ],
-        [
-          "item.minecraft.bone_meal"
-        ],
-        [
-          "item.minecraft.bone_meal"
-        ],
-        [
-          "item.minecraft.bone_meal"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.golden_boots",
-      "ingredients": [
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.prismarine_slab",
-      "ingredients": [
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ],
-        [
-          "block.minecraft.prismarine"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.book",
-      "ingredients": [
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "item.minecraft.leather"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.redstone_lamp",
-      "ingredients": [
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "block.minecraft.glowstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.rail",
-      "ingredients": [
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_ingot"
+          "block.minecraft.spruce_planks"
         ],
         [
           "item.minecraft.stick"
         ],
         [
-          "item.minecraft.iron_ingot"
+          "block.minecraft.spruce_planks"
         ],
         [
-          "item.minecraft.iron_ingot"
+          "block.minecraft.spruce_planks"
         ],
         [
-          "item.minecraft.iron_ingot"
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.spruce_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.oak_fence",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.acacia_fence",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.acacia_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.crimson_fence",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.crimson_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.warped_fence",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.jungle_fence",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.jungle_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.birch_fence",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.birch_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.dark_oak_fence",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.dark_oak_planks"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.polished_granite_stairs",
+      "output": "item.minecraft.bone_meal",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.polished_granite"
-        ],
+          "block.minecraft.bone_block"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.bone_meal",
+      "size": "1",
+      "ingredients": [
         [
-          "block.minecraft.polished_granite"
-        ],
-        [
-          "block.minecraft.polished_granite"
-        ],
-        [
-          "block.minecraft.polished_granite"
-        ],
-        [
-          "block.minecraft.polished_granite"
-        ],
-        [
-          "block.minecraft.polished_granite"
+          "item.minecraft.bone"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.mossy_cobblestone_slab",
+      "output": "item.minecraft.black_dye",
+      "size": "1",
       "ingredients": [
         [
-          "block.minecraft.mossy_cobblestone"
+          "block.minecraft.wither_rose"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.black_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "item.minecraft.ink_sac"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.redstone_torch",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.redstone"
         ],
         [
-          "block.minecraft.mossy_cobblestone"
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.magenta_dye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.blue_dye"
         ],
         [
-          "block.minecraft.mossy_cobblestone"
+          "item.minecraft.red_dye"
+        ],
+        [
+          "item.minecraft.pink_dye"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.magenta_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.lilac"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.magenta_dye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.blue_dye"
+        ],
+        [
+          "item.minecraft.red_dye"
+        ],
+        [
+          "item.minecraft.red_dye"
+        ],
+        [
+          "item.minecraft.white_dye"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.magenta_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.allium"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.magenta_dye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.purple_dye"
+        ],
+        [
+          "item.minecraft.pink_dye"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.tnt_minecart",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.tnt"
+        ],
+        [
+          "item.minecraft.minecart"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_blackstone_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
         ]
       ]
     }
@@ -14065,6 +9290,7 @@ var recipe_groups = [
   [
     {
       "output": "block.minecraft.nether_bricks",
+      "size": "2",
       "ingredients": [
         [
           "item.minecraft.nether_brick"
@@ -14083,192 +9309,54 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.polished_diorite",
+      "output": "block.minecraft.prismarine_wall",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.diorite"
+          "block.minecraft.prismarine"
         ],
         [
-          "block.minecraft.diorite"
+          "block.minecraft.prismarine"
         ],
         [
-          "block.minecraft.diorite"
+          "block.minecraft.prismarine"
         ],
         [
-          "block.minecraft.diorite"
+          "block.minecraft.prismarine"
+        ],
+        [
+          "block.minecraft.prismarine"
+        ],
+        [
+          "block.minecraft.prismarine"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.red_sandstone_wall",
+      "output": "block.minecraft.brick_slab",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.red_sandstone"
+          "block.minecraft.bricks"
         ],
         [
-          "block.minecraft.red_sandstone"
+          "block.minecraft.bricks"
         ],
         [
-          "block.minecraft.red_sandstone"
-        ],
-        [
-          "block.minecraft.red_sandstone"
-        ],
-        [
-          "block.minecraft.red_sandstone"
-        ],
-        [
-          "block.minecraft.red_sandstone"
+          "block.minecraft.bricks"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.chain",
+      "output": "item.minecraft.gold_nugget",
+      "size": "1",
       "ingredients": [
         [
-          "item.minecraft.iron_nugget"
-        ],
-        [
-          "item.minecraft.iron_ingot"
-        ],
-        [
-          "item.minecraft.iron_nugget"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.target",
-      "ingredients": [
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "block.minecraft.hay_block"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "item.minecraft.redstone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.polished_blackstone_brick_stairs",
-      "ingredients": [
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ],
-        [
-          "block.minecraft.polished_blackstone_bricks"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.nether_wart_block",
-      "ingredients": [
-        [
-          "item.minecraft.nether_wart"
-        ],
-        [
-          "item.minecraft.nether_wart"
-        ],
-        [
-          "item.minecraft.nether_wart"
-        ],
-        [
-          "item.minecraft.nether_wart"
-        ],
-        [
-          "item.minecraft.nether_wart"
-        ],
-        [
-          "item.minecraft.nether_wart"
-        ],
-        [
-          "item.minecraft.nether_wart"
-        ],
-        [
-          "item.minecraft.nether_wart"
-        ],
-        [
-          "item.minecraft.nether_wart"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.chiseled_stone_bricks",
-      "ingredients": [
-        [
-          "block.minecraft.stone_brick_slab"
-        ],
-        [
-          "block.minecraft.stone_brick_slab"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "block.minecraft.repeater",
-      "ingredients": [
-        [
-          "block.minecraft.redstone_torch"
-        ],
-        [
-          "item.minecraft.redstone"
-        ],
-        [
-          "block.minecraft.redstone_torch"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ],
-        [
-          "block.minecraft.stone"
-        ]
-      ]
-    }
-  ],
-  [
-    {
-      "output": "item.minecraft.creeper_banner_pattern",
-      "ingredients": [
-        [
-          "item.minecraft.paper"
-        ],
-        [
-          "block.minecraft.creeper_head"
+          "item.minecraft.gold_ingot"
         ]
       ]
     }
@@ -14276,6 +9364,7 @@ var recipe_groups = [
   [
     {
       "output": "block.minecraft.smooth_sandstone_slab",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.smooth_sandstone"
@@ -14291,10 +9380,241 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.end_rod",
+      "output": "item.minecraft.leather_horse_armor",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.blaze_rod"
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.sandstone",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ],
+        [
+          "block.minecraft.sand"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.chiseled_stone_bricks",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.stone_brick_slab"
+        ],
+        [
+          "block.minecraft.stone_brick_slab"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.lever",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.iron_ingot",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.iron_block"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.iron_ingot",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.purpur_pillar",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.purpur_slab"
+        ],
+        [
+          "block.minecraft.purpur_slab"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.stone_brick_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.stone_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.shulker_box",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.shulker_shell"
+        ],
+        [
+          "block.minecraft.chest"
+        ],
+        [
+          "item.minecraft.shulker_shell"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.emerald_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.emerald"
+        ],
+        [
+          "item.minecraft.emerald"
+        ],
+        [
+          "item.minecraft.emerald"
+        ],
+        [
+          "item.minecraft.emerald"
+        ],
+        [
+          "item.minecraft.emerald"
+        ],
+        [
+          "item.minecraft.emerald"
+        ],
+        [
+          "item.minecraft.emerald"
+        ],
+        [
+          "item.minecraft.emerald"
+        ],
+        [
+          "item.minecraft.emerald"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.coal",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.coal_block"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.purpur_block",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.popped_chorus_fruit"
+        ],
+        [
+          "item.minecraft.popped_chorus_fruit"
+        ],
+        [
+          "item.minecraft.popped_chorus_fruit"
         ],
         [
           "item.minecraft.popped_chorus_fruit"
@@ -14304,70 +9624,151 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.brick_slab",
+      "output": "block.minecraft.nether_brick_slab",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.bricks"
+          "block.minecraft.nether_bricks"
         ],
         [
-          "block.minecraft.bricks"
+          "block.minecraft.nether_bricks"
         ],
         [
-          "block.minecraft.bricks"
+          "block.minecraft.nether_bricks"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.leather_chestplate",
+      "output": "block.minecraft.smooth_red_sandstone_slab",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.leather"
+          "block.minecraft.smooth_red_sandstone"
         ],
         [
-          "item.minecraft.leather"
+          "block.minecraft.smooth_red_sandstone"
         ],
         [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.leather"
+          "block.minecraft.smooth_red_sandstone"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.iron_sword",
+      "output": "block.minecraft.polished_blackstone_brick_stairs",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.iron_ingot"
+          "block.minecraft.polished_blackstone_bricks"
         ],
         [
-          "item.minecraft.iron_ingot"
+          "block.minecraft.polished_blackstone_bricks"
         ],
         [
-          "item.minecraft.stick"
+          "block.minecraft.polished_blackstone_bricks"
+        ],
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ],
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ],
+        [
+          "block.minecraft.polished_blackstone_bricks"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.golden_sword",
+      "output": "item.minecraft.beetroot_soup",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.bowl"
+        ],
+        [
+          "item.minecraft.beetroot"
+        ],
+        [
+          "item.minecraft.beetroot"
+        ],
+        [
+          "item.minecraft.beetroot"
+        ],
+        [
+          "item.minecraft.beetroot"
+        ],
+        [
+          "item.minecraft.beetroot"
+        ],
+        [
+          "item.minecraft.beetroot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.glass_bottle",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.honeycomb_block",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.honeycomb"
+        ],
+        [
+          "item.minecraft.honeycomb"
+        ],
+        [
+          "item.minecraft.honeycomb"
+        ],
+        [
+          "item.minecraft.honeycomb"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.prismarine_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.prismarine"
+        ],
+        [
+          "block.minecraft.prismarine"
+        ],
+        [
+          "block.minecraft.prismarine"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.golden_leggings",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.gold_ingot"
@@ -14376,38 +9777,71 @@ var recipe_groups = [
           "item.minecraft.gold_ingot"
         ],
         [
-          "item.minecraft.stick"
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.diamond_chestplate",
+      "output": "block.minecraft.hopper",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.diamond"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.diamond"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.diamond"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.diamond"
+          "block.minecraft.chest"
         ],
         [
-          "item.minecraft.diamond"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.diamond"
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.smooth_red_sandstone_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.smooth_red_sandstone"
         ],
         [
-          "item.minecraft.diamond"
+          "block.minecraft.smooth_red_sandstone"
         ],
         [
-          "item.minecraft.diamond"
+          "block.minecraft.smooth_red_sandstone"
+        ],
+        [
+          "block.minecraft.smooth_red_sandstone"
+        ],
+        [
+          "block.minecraft.smooth_red_sandstone"
+        ],
+        [
+          "block.minecraft.smooth_red_sandstone"
         ]
       ]
     }
@@ -14415,6 +9849,7 @@ var recipe_groups = [
   [
     {
       "output": "block.minecraft.lodestone",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.chiseled_stone_bricks"
@@ -14448,7 +9883,140 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "item.minecraft.wooden_hoe",
+      "output": "block.minecraft.honey_block",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.honey_bottle"
+        ],
+        [
+          "item.minecraft.honey_bottle"
+        ],
+        [
+          "item.minecraft.honey_bottle"
+        ],
+        [
+          "item.minecraft.honey_bottle"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.blackstone_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.sandstone_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.sandstone",
+          "block.minecraft.chiseled_sandstone",
+          "block.minecraft.cut_sandstone"
+        ],
+        [
+          "block.minecraft.sandstone",
+          "block.minecraft.chiseled_sandstone",
+          "block.minecraft.cut_sandstone"
+        ],
+        [
+          "block.minecraft.sandstone",
+          "block.minecraft.chiseled_sandstone",
+          "block.minecraft.cut_sandstone"
+        ],
+        [
+          "block.minecraft.sandstone",
+          "block.minecraft.chiseled_sandstone",
+          "block.minecraft.cut_sandstone"
+        ],
+        [
+          "block.minecraft.sandstone",
+          "block.minecraft.chiseled_sandstone",
+          "block.minecraft.cut_sandstone"
+        ],
+        [
+          "block.minecraft.sandstone",
+          "block.minecraft.chiseled_sandstone",
+          "block.minecraft.cut_sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.comparator",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.redstone_torch"
+        ],
+        [
+          "block.minecraft.redstone_torch"
+        ],
+        [
+          "item.minecraft.quartz"
+        ],
+        [
+          "block.minecraft.redstone_torch"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.stone_sword",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.jukebox",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.oak_planks",
@@ -14471,6 +10039,135 @@ var recipe_groups = [
           "block.minecraft.warped_planks"
         ],
         [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.bricks",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.brick"
+        ],
+        [
+          "item.minecraft.brick"
+        ],
+        [
+          "item.minecraft.brick"
+        ],
+        [
+          "item.minecraft.brick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.anvil",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.iron_block"
+        ],
+        [
+          "block.minecraft.iron_block"
+        ],
+        [
+          "block.minecraft.iron_block"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.diamond_axe",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
           "item.minecraft.stick"
         ],
         [
@@ -14481,23 +10178,189 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "item.minecraft.glass_bottle",
+      "output": "item.minecraft.cookie",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.glass"
+          "item.minecraft.wheat"
         ],
         [
-          "block.minecraft.glass"
+          "item.minecraft.cocoa_beans"
         ],
         [
-          "block.minecraft.glass"
+          "item.minecraft.wheat"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.cobblestone_stairs",
+      "output": "block.minecraft.polished_andesite_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_andesite"
+        ],
+        [
+          "block.minecraft.polished_andesite"
+        ],
+        [
+          "block.minecraft.polished_andesite"
+        ],
+        [
+          "block.minecraft.polished_andesite"
+        ],
+        [
+          "block.minecraft.polished_andesite"
+        ],
+        [
+          "block.minecraft.polished_andesite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_diorite",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.diorite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.prismarine_brick_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.prismarine_bricks"
+        ],
+        [
+          "block.minecraft.prismarine_bricks"
+        ],
+        [
+          "block.minecraft.prismarine_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.prismarine_brick_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.prismarine_bricks"
+        ],
+        [
+          "block.minecraft.prismarine_bricks"
+        ],
+        [
+          "block.minecraft.prismarine_bricks"
+        ],
+        [
+          "block.minecraft.prismarine_bricks"
+        ],
+        [
+          "block.minecraft.prismarine_bricks"
+        ],
+        [
+          "block.minecraft.prismarine_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.slime_ball",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.slime_block"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.quartz_bricks",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.quartz_block"
+        ],
+        [
+          "block.minecraft.quartz_block"
+        ],
+        [
+          "block.minecraft.quartz_block"
+        ],
+        [
+          "block.minecraft.quartz_block"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.fire_charge",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.gunpowder"
+        ],
+        [
+          "item.minecraft.blaze_powder"
+        ],
+        [
+          "item.minecraft.coal",
+          "item.minecraft.charcoal"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.stone_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.observer",
+      "size": "3",
       "ingredients": [
         [
           "block.minecraft.cobblestone"
@@ -14509,99 +10372,213 @@ var recipe_groups = [
           "block.minecraft.cobblestone"
         ],
         [
-          "block.minecraft.cobblestone"
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.quartz"
         ],
         [
           "block.minecraft.cobblestone"
         ],
         [
           "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.cut_red_sandstone_slab",
+      "output": "item.minecraft.iron_hoe",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.cut_red_sandstone"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "block.minecraft.cut_red_sandstone"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "block.minecraft.cut_red_sandstone"
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.prismarine",
+      "output": "block.minecraft.stone_brick_slab",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.prismarine_shard"
+          "block.minecraft.stone_bricks"
         ],
         [
-          "item.minecraft.prismarine_shard"
+          "block.minecraft.stone_bricks"
         ],
         [
-          "item.minecraft.prismarine_shard"
-        ],
-        [
-          "item.minecraft.prismarine_shard"
+          "block.minecraft.stone_bricks"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.red_nether_bricks",
+      "output": "item.minecraft.compass",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.nether_brick"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.nether_wart"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.nether_wart"
+          "item.minecraft.redstone"
         ],
         [
-          "item.minecraft.nether_brick"
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.chiseled_sandstone",
+      "output": "block.minecraft.end_rod",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.sandstone_slab"
+          "item.minecraft.blaze_rod"
         ],
         [
-          "block.minecraft.sandstone_slab"
+          "item.minecraft.popped_chorus_fruit"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.cut_red_sandstone",
+      "output": "item.minecraft.stone_axe",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.red_sandstone"
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
         ],
         [
-          "block.minecraft.red_sandstone"
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
         ],
         [
-          "block.minecraft.red_sandstone"
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
         ],
         [
-          "block.minecraft.red_sandstone"
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.warped_fungus_on_a_stick",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.fishing_rod"
+        ],
+        [
+          "block.minecraft.warped_fungus"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.nether_brick_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "block.minecraft.nether_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.golden_shovel",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.andesite",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_basalt",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.basalt"
+        ],
+        [
+          "block.minecraft.basalt"
+        ],
+        [
+          "block.minecraft.basalt"
+        ],
+        [
+          "block.minecraft.basalt"
         ]
       ]
     }
@@ -14609,6 +10586,7 @@ var recipe_groups = [
   [
     {
       "output": "block.minecraft.hay_block",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.wheat"
@@ -14643,6 +10621,7 @@ var recipe_groups = [
   [
     {
       "output": "item.minecraft.magma_cream",
+      "size": "2",
       "ingredients": [
         [
           "item.minecraft.blaze_powder"
@@ -14655,7 +10634,3363 @@ var recipe_groups = [
   ],
   [
     {
+      "output": "item.minecraft.diamond_chestplate",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.turtle_helmet",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.scute"
+        ],
+        [
+          "item.minecraft.scute"
+        ],
+        [
+          "item.minecraft.scute"
+        ],
+        [
+          "item.minecraft.scute"
+        ],
+        [
+          "item.minecraft.scute"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_granite_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_granite"
+        ],
+        [
+          "block.minecraft.polished_granite"
+        ],
+        [
+          "block.minecraft.polished_granite"
+        ],
+        [
+          "block.minecraft.polished_granite"
+        ],
+        [
+          "block.minecraft.polished_granite"
+        ],
+        [
+          "block.minecraft.polished_granite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.purple_dye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.blue_dye"
+        ],
+        [
+          "item.minecraft.red_dye"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.cartography_table",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.red_nether_brick_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.red_nether_bricks"
+        ],
+        [
+          "block.minecraft.red_nether_bricks"
+        ],
+        [
+          "block.minecraft.red_nether_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.bread",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.wheat"
+        ],
+        [
+          "item.minecraft.wheat"
+        ],
+        [
+          "item.minecraft.wheat"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.stone_brick_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.stone_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.creeper_banner_pattern",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "block.minecraft.creeper_head"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.chain",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.smooth_quartz_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.smooth_quartz"
+        ],
+        [
+          "block.minecraft.smooth_quartz"
+        ],
+        [
+          "block.minecraft.smooth_quartz"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.enchanting_table",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.book"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.dark_prismarine_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.dark_prismarine"
+        ],
+        [
+          "block.minecraft.dark_prismarine"
+        ],
+        [
+          "block.minecraft.dark_prismarine"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_blackstone_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.wooden_axe",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.cauldron",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.smooth_sandstone_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.smooth_sandstone"
+        ],
+        [
+          "block.minecraft.smooth_sandstone"
+        ],
+        [
+          "block.minecraft.smooth_sandstone"
+        ],
+        [
+          "block.minecraft.smooth_sandstone"
+        ],
+        [
+          "block.minecraft.smooth_sandstone"
+        ],
+        [
+          "block.minecraft.smooth_sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.crimson_button",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.crimson_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.birch_button",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.birch_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.warped_button",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.dark_oak_button",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.dark_oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.acacia_button",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.acacia_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.oak_button",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.jungle_button",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.jungle_planks"
+        ]
+      ]
+    },
+    {
+      "output": "block.minecraft.spruce_button",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.spruce_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.diamond_sword",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.iron_pickaxe",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.redstone_lamp",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "block.minecraft.glowstone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.snow",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.snow_block"
+        ],
+        [
+          "block.minecraft.snow_block"
+        ],
+        [
+          "block.minecraft.snow_block"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.coal_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.coal"
+        ],
+        [
+          "item.minecraft.coal"
+        ],
+        [
+          "item.minecraft.coal"
+        ],
+        [
+          "item.minecraft.coal"
+        ],
+        [
+          "item.minecraft.coal"
+        ],
+        [
+          "item.minecraft.coal"
+        ],
+        [
+          "item.minecraft.coal"
+        ],
+        [
+          "item.minecraft.coal"
+        ],
+        [
+          "item.minecraft.coal"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.map",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.compass"
+        ],
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.paper"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.lime_dye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.green_dye"
+        ],
+        [
+          "item.minecraft.white_dye"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.mossy_stone_bricks",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.stone_bricks"
+        ],
+        [
+          "block.minecraft.vine"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.stick",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.bamboo"
+        ],
+        [
+          "block.minecraft.bamboo"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.stick",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.stone_shovel",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.soul_lantern",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "block.minecraft.soul_torch"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.nether_wart_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.nether_wart"
+        ],
+        [
+          "item.minecraft.nether_wart"
+        ],
+        [
+          "item.minecraft.nether_wart"
+        ],
+        [
+          "item.minecraft.nether_wart"
+        ],
+        [
+          "item.minecraft.nether_wart"
+        ],
+        [
+          "item.minecraft.nether_wart"
+        ],
+        [
+          "item.minecraft.nether_wart"
+        ],
+        [
+          "item.minecraft.nether_wart"
+        ],
+        [
+          "item.minecraft.nether_wart"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.gold_ingot",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.gold_block"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.gold_ingot",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.granite_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_blackstone",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.melon",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.melon_slice"
+        ],
+        [
+          "item.minecraft.melon_slice"
+        ],
+        [
+          "item.minecraft.melon_slice"
+        ],
+        [
+          "item.minecraft.melon_slice"
+        ],
+        [
+          "item.minecraft.melon_slice"
+        ],
+        [
+          "item.minecraft.melon_slice"
+        ],
+        [
+          "item.minecraft.melon_slice"
+        ],
+        [
+          "item.minecraft.melon_slice"
+        ],
+        [
+          "item.minecraft.melon_slice"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.golden_carrot",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.carrot"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ],
+        [
+          "item.minecraft.gold_nugget"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.honey_bottle",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.honey_block"
+        ],
+        [
+          "item.minecraft.glass_bottle"
+        ],
+        [
+          "item.minecraft.glass_bottle"
+        ],
+        [
+          "item.minecraft.glass_bottle"
+        ],
+        [
+          "item.minecraft.glass_bottle"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.minecart",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.gold_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.shield",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.furnace",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.clay",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.clay_ball"
+        ],
+        [
+          "item.minecraft.clay_ball"
+        ],
+        [
+          "item.minecraft.clay_ball"
+        ],
+        [
+          "item.minecraft.clay_ball"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.leather_leggings",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.prismarine_bricks",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.golden_apple",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.apple"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.paper",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.sugar_cane"
+        ],
+        [
+          "block.minecraft.sugar_cane"
+        ],
+        [
+          "block.minecraft.sugar_cane"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.mossy_stone_brick_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.chest_minecart",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.chest"
+        ],
+        [
+          "item.minecraft.minecart"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.bone_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.bone_meal"
+        ],
+        [
+          "item.minecraft.bone_meal"
+        ],
+        [
+          "item.minecraft.bone_meal"
+        ],
+        [
+          "item.minecraft.bone_meal"
+        ],
+        [
+          "item.minecraft.bone_meal"
+        ],
+        [
+          "item.minecraft.bone_meal"
+        ],
+        [
+          "item.minecraft.bone_meal"
+        ],
+        [
+          "item.minecraft.bone_meal"
+        ],
+        [
+          "item.minecraft.bone_meal"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.dark_prismarine",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.black_dye"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.dispenser",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "item.minecraft.bow"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.diamond_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.smooth_quartz_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.smooth_quartz"
+        ],
+        [
+          "block.minecraft.smooth_quartz"
+        ],
+        [
+          "block.minecraft.smooth_quartz"
+        ],
+        [
+          "block.minecraft.smooth_quartz"
+        ],
+        [
+          "block.minecraft.smooth_quartz"
+        ],
+        [
+          "block.minecraft.smooth_quartz"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.mojang_banner_pattern",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.enchanted_golden_apple"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.iron_sword",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.leather",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.rabbit_hide"
+        ],
+        [
+          "item.minecraft.rabbit_hide"
+        ],
+        [
+          "item.minecraft.rabbit_hide"
+        ],
+        [
+          "item.minecraft.rabbit_hide"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.quartz_pillar",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.quartz_block"
+        ],
+        [
+          "block.minecraft.quartz_block"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.barrel",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.mossy_cobblestone_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.brick_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.bricks"
+        ],
+        [
+          "block.minecraft.bricks"
+        ],
+        [
+          "block.minecraft.bricks"
+        ],
+        [
+          "block.minecraft.bricks"
+        ],
+        [
+          "block.minecraft.bricks"
+        ],
+        [
+          "block.minecraft.bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.iron_helmet",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.target",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "block.minecraft.hay_block"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.purpur_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.purpur_block",
+          "block.minecraft.purpur_pillar"
+        ],
+        [
+          "block.minecraft.purpur_block",
+          "block.minecraft.purpur_pillar"
+        ],
+        [
+          "block.minecraft.purpur_block",
+          "block.minecraft.purpur_pillar"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.crossbow",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "block.minecraft.tripwire_hook"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.cobblestone_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.andesite_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ],
+        [
+          "block.minecraft.andesite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.glass_pane",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.white_wool",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.string"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_blackstone_button",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.polished_blackstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.lapis_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.lapis_lazuli"
+        ],
+        [
+          "item.minecraft.lapis_lazuli"
+        ],
+        [
+          "item.minecraft.lapis_lazuli"
+        ],
+        [
+          "item.minecraft.lapis_lazuli"
+        ],
+        [
+          "item.minecraft.lapis_lazuli"
+        ],
+        [
+          "item.minecraft.lapis_lazuli"
+        ],
+        [
+          "item.minecraft.lapis_lazuli"
+        ],
+        [
+          "item.minecraft.lapis_lazuli"
+        ],
+        [
+          "item.minecraft.lapis_lazuli"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.diamond",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.diamond_block"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.mossy_cobblestone_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.flint_and_steel",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.flint"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.cut_sandstone",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.sandstone"
+        ],
+        [
+          "block.minecraft.sandstone"
+        ],
+        [
+          "block.minecraft.sandstone"
+        ],
+        [
+          "block.minecraft.sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.sea_lantern",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_crystals"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_crystals"
+        ],
+        [
+          "item.minecraft.prismarine_crystals"
+        ],
+        [
+          "item.minecraft.prismarine_crystals"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_crystals"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.end_stone_brick_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.spectral_arrow",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.glowstone_dust"
+        ],
+        [
+          "item.minecraft.glowstone_dust"
+        ],
+        [
+          "item.minecraft.arrow"
+        ],
+        [
+          "item.minecraft.glowstone_dust"
+        ],
+        [
+          "item.minecraft.glowstone_dust"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_diorite_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_diorite"
+        ],
+        [
+          "block.minecraft.polished_diorite"
+        ],
+        [
+          "block.minecraft.polished_diorite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_blackstone_brick_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ],
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ],
+        [
+          "block.minecraft.polished_blackstone_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.iron_trapdoor",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.dropper",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.rail",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.beacon",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.nether_star"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.trapped_chest",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.chest"
+        ],
+        [
+          "block.minecraft.tripwire_hook"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.leather_chestplate",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.soul_campfire",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.soul_sand",
+          "block.minecraft.soul_soil"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood",
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood",
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood",
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood",
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood",
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae",
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
+        ],
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood",
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood",
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood",
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood",
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood",
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae",
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
+        ],
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood",
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood",
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood",
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood",
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood",
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae",
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_blackstone_bricks",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.mossy_cobblestone",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.vine"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.bookshelf",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.book"
+        ],
+        [
+          "item.minecraft.book"
+        ],
+        [
+          "item.minecraft.book"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.pink_dye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.red_dye"
+        ],
+        [
+          "item.minecraft.white_dye"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.pink_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.pink_tulip"
+        ]
+      ]
+    },
+    {
+      "output": "item.minecraft.pink_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.peony"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.book",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "item.minecraft.leather"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.iron_door",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.loom",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.composter",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ],
+        [
+          "block.minecraft.oak_slab",
+          "block.minecraft.spruce_slab",
+          "block.minecraft.birch_slab",
+          "block.minecraft.jungle_slab",
+          "block.minecraft.acacia_slab",
+          "block.minecraft.dark_oak_slab",
+          "block.minecraft.crimson_slab",
+          "block.minecraft.warped_slab"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.diorite_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.diorite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.chiseled_quartz_block",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.quartz_slab"
+        ],
+        [
+          "block.minecraft.quartz_slab"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.golden_boots",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.blackstone_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.blue_ice",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.packed_ice"
+        ],
+        [
+          "block.minecraft.packed_ice"
+        ],
+        [
+          "block.minecraft.packed_ice"
+        ],
+        [
+          "block.minecraft.packed_ice"
+        ],
+        [
+          "block.minecraft.packed_ice"
+        ],
+        [
+          "block.minecraft.packed_ice"
+        ],
+        [
+          "block.minecraft.packed_ice"
+        ],
+        [
+          "block.minecraft.packed_ice"
+        ],
+        [
+          "block.minecraft.packed_ice"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.dried_kelp",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.dried_kelp_block"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_granite_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_granite"
+        ],
+        [
+          "block.minecraft.polished_granite"
+        ],
+        [
+          "block.minecraft.polished_granite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.ender_eye",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.ender_pearl"
+        ],
+        [
+          "item.minecraft.blaze_powder"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.brown_dye",
+      "size": "1",
+      "ingredients": [
+        [
+          "item.minecraft.cocoa_beans"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.note_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.golden_helmet",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.cut_red_sandstone",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.granite_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.iron_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.prismarine",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ],
+        [
+          "item.minecraft.prismarine_shard"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.stone_pickaxe",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.beehive",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.honeycomb"
+        ],
+        [
+          "item.minecraft.honeycomb"
+        ],
+        [
+          "item.minecraft.honeycomb"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.skull_banner_pattern",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.paper"
+        ],
+        [
+          "block.minecraft.wither_skeleton_skull"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.end_stone_brick_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ],
+        [
+          "block.minecraft.end_stone_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.lantern",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "block.minecraft.torch"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ],
+        [
+          "item.minecraft.iron_nugget"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.arrow",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.flint"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.feather"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.mossy_stone_brick_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ],
+        [
+          "block.minecraft.mossy_stone_bricks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.slime_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.slime_ball"
+        ],
+        [
+          "item.minecraft.slime_ball"
+        ],
+        [
+          "item.minecraft.slime_ball"
+        ],
+        [
+          "item.minecraft.slime_ball"
+        ],
+        [
+          "item.minecraft.slime_ball"
+        ],
+        [
+          "item.minecraft.slime_ball"
+        ],
+        [
+          "item.minecraft.slime_ball"
+        ],
+        [
+          "item.minecraft.slime_ball"
+        ],
+        [
+          "item.minecraft.slime_ball"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.wooden_hoe",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
       "output": "block.minecraft.brewing_stand",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.blaze_rod"
@@ -14674,44 +14009,34 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.prismarine_brick_slab",
+      "output": "item.minecraft.fermented_spider_eye",
+      "size": "2",
       "ingredients": [
         [
-          "block.minecraft.prismarine_bricks"
+          "item.minecraft.spider_eye"
         ],
         [
-          "block.minecraft.prismarine_bricks"
+          "block.minecraft.brown_mushroom"
         ],
         [
-          "block.minecraft.prismarine_bricks"
+          "item.minecraft.sugar"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.item_frame",
+      "output": "item.minecraft.golden_pickaxe",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.stick"
+          "item.minecraft.gold_ingot"
         ],
         [
-          "item.minecraft.stick"
+          "item.minecraft.gold_ingot"
         ],
         [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.leather"
-        ],
-        [
-          "item.minecraft.stick"
-        ],
-        [
-          "item.minecraft.stick"
+          "item.minecraft.gold_ingot"
         ],
         [
           "item.minecraft.stick"
@@ -14724,64 +14049,413 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.polished_andesite",
+      "output": "block.minecraft.conduit",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.andesite"
+          "item.minecraft.nautilus_shell"
         ],
         [
-          "block.minecraft.andesite"
+          "item.minecraft.nautilus_shell"
         ],
         [
-          "block.minecraft.andesite"
+          "item.minecraft.nautilus_shell"
         ],
         [
-          "block.minecraft.andesite"
+          "item.minecraft.nautilus_shell"
+        ],
+        [
+          "item.minecraft.heart_of_the_sea"
+        ],
+        [
+          "item.minecraft.nautilus_shell"
+        ],
+        [
+          "item.minecraft.nautilus_shell"
+        ],
+        [
+          "item.minecraft.nautilus_shell"
+        ],
+        [
+          "item.minecraft.nautilus_shell"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.sandstone_stairs",
+      "output": "block.minecraft.powered_rail",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.sandstone",
-          "block.minecraft.chiseled_sandstone",
-          "block.minecraft.cut_sandstone"
+          "item.minecraft.gold_ingot"
         ],
         [
-          "block.minecraft.sandstone",
-          "block.minecraft.chiseled_sandstone",
-          "block.minecraft.cut_sandstone"
+          "item.minecraft.gold_ingot"
         ],
         [
-          "block.minecraft.sandstone",
-          "block.minecraft.chiseled_sandstone",
-          "block.minecraft.cut_sandstone"
+          "item.minecraft.gold_ingot"
         ],
         [
-          "block.minecraft.sandstone",
-          "block.minecraft.chiseled_sandstone",
-          "block.minecraft.cut_sandstone"
+          "item.minecraft.stick"
         ],
         [
-          "block.minecraft.sandstone",
-          "block.minecraft.chiseled_sandstone",
-          "block.minecraft.cut_sandstone"
+          "item.minecraft.gold_ingot"
         ],
         [
-          "block.minecraft.sandstone",
-          "block.minecraft.chiseled_sandstone",
-          "block.minecraft.cut_sandstone"
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.gold_ingot"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.nether_brick_slab",
+      "output": "block.minecraft.mossy_cobblestone_wall",
+      "size": "3",
       "ingredients": [
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ],
+        [
+          "block.minecraft.mossy_cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.clock",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.magma_block",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.magma_cream"
+        ],
+        [
+          "item.minecraft.magma_cream"
+        ],
+        [
+          "item.minecraft.magma_cream"
+        ],
+        [
+          "item.minecraft.magma_cream"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.red_sandstone",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.red_sand"
+        ],
+        [
+          "block.minecraft.red_sand"
+        ],
+        [
+          "block.minecraft.red_sand"
+        ],
+        [
+          "block.minecraft.red_sand"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.wheat",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.hay_block"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.quartz_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.chiseled_quartz_block",
+          "block.minecraft.quartz_block",
+          "block.minecraft.quartz_pillar"
+        ],
+        [
+          "block.minecraft.chiseled_quartz_block",
+          "block.minecraft.quartz_block",
+          "block.minecraft.quartz_pillar"
+        ],
+        [
+          "block.minecraft.chiseled_quartz_block",
+          "block.minecraft.quartz_block",
+          "block.minecraft.quartz_pillar"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.prismarine_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.prismarine"
+        ],
+        [
+          "block.minecraft.prismarine"
+        ],
+        [
+          "block.minecraft.prismarine"
+        ],
+        [
+          "block.minecraft.prismarine"
+        ],
+        [
+          "block.minecraft.prismarine"
+        ],
+        [
+          "block.minecraft.prismarine"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.red_sandstone_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.packed_ice",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.ice"
+        ],
+        [
+          "block.minecraft.ice"
+        ],
+        [
+          "block.minecraft.ice"
+        ],
+        [
+          "block.minecraft.ice"
+        ],
+        [
+          "block.minecraft.ice"
+        ],
+        [
+          "block.minecraft.ice"
+        ],
+        [
+          "block.minecraft.ice"
+        ],
+        [
+          "block.minecraft.ice"
+        ],
+        [
+          "block.minecraft.ice"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.red_sandstone_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.red_sandstone",
+          "block.minecraft.chiseled_red_sandstone",
+          "block.minecraft.cut_red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone",
+          "block.minecraft.chiseled_red_sandstone",
+          "block.minecraft.cut_red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone",
+          "block.minecraft.chiseled_red_sandstone",
+          "block.minecraft.cut_red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone",
+          "block.minecraft.chiseled_red_sandstone",
+          "block.minecraft.cut_red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone",
+          "block.minecraft.chiseled_red_sandstone",
+          "block.minecraft.cut_red_sandstone"
+        ],
+        [
+          "block.minecraft.red_sandstone",
+          "block.minecraft.chiseled_red_sandstone",
+          "block.minecraft.cut_red_sandstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.stone_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.chiseled_nether_bricks",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.nether_brick_slab"
+        ],
+        [
+          "block.minecraft.nether_brick_slab"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_andesite_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.polished_andesite"
+        ],
+        [
+          "block.minecraft.polished_andesite"
+        ],
+        [
+          "block.minecraft.polished_andesite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.blast_furnace",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "block.minecraft.furnace"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "block.minecraft.smooth_stone"
+        ],
+        [
+          "block.minecraft.smooth_stone"
+        ],
+        [
+          "block.minecraft.smooth_stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.nether_brick_fence",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.nether_bricks"
+        ],
+        [
+          "item.minecraft.nether_brick"
+        ],
         [
           "block.minecraft.nether_bricks"
         ],
@@ -14789,6 +14463,9 @@ var recipe_groups = [
           "block.minecraft.nether_bricks"
         ],
         [
+          "item.minecraft.nether_brick"
+        ],
+        [
           "block.minecraft.nether_bricks"
         ]
       ]
@@ -14796,88 +14473,443 @@ var recipe_groups = [
   ],
   [
     {
-      "output": "block.minecraft.cut_sandstone_slab",
+      "output": "block.minecraft.red_nether_brick_stairs",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.cut_sandstone"
+          "block.minecraft.red_nether_bricks"
         ],
         [
-          "block.minecraft.cut_sandstone"
+          "block.minecraft.red_nether_bricks"
         ],
         [
-          "block.minecraft.cut_sandstone"
+          "block.minecraft.red_nether_bricks"
+        ],
+        [
+          "block.minecraft.red_nether_bricks"
+        ],
+        [
+          "block.minecraft.red_nether_bricks"
+        ],
+        [
+          "block.minecraft.red_nether_bricks"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.golden_chestplate",
+      "output": "item.minecraft.iron_boots",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.gold_ingot"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.gold_ingot"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.gold_ingot"
+          "item.minecraft.iron_ingot"
         ],
         [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
-        ],
-        [
-          "item.minecraft.gold_ingot"
+          "item.minecraft.iron_ingot"
         ]
       ]
     }
   ],
   [
     {
-      "output": "block.minecraft.polished_blackstone_bricks",
+      "output": "block.minecraft.campfire",
+      "size": "3",
       "ingredients": [
         [
-          "block.minecraft.polished_blackstone"
+          "item.minecraft.stick"
         ],
         [
-          "block.minecraft.polished_blackstone"
+          "item.minecraft.stick"
         ],
         [
-          "block.minecraft.polished_blackstone"
+          "item.minecraft.coal",
+          "item.minecraft.charcoal"
         ],
         [
-          "block.minecraft.polished_blackstone"
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood",
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood",
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood",
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood",
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood",
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae",
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
+        ],
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood",
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood",
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood",
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood",
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood",
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae",
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
+        ],
+        [
+          "block.minecraft.dark_oak_log",
+          "block.minecraft.dark_oak_wood",
+          "block.minecraft.stripped_dark_oak_log",
+          "block.minecraft.stripped_dark_oak_wood",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_wood",
+          "block.minecraft.stripped_oak_log",
+          "block.minecraft.stripped_oak_wood",
+          "block.minecraft.acacia_log",
+          "block.minecraft.acacia_wood",
+          "block.minecraft.stripped_acacia_log",
+          "block.minecraft.stripped_acacia_wood",
+          "block.minecraft.birch_log",
+          "block.minecraft.birch_wood",
+          "block.minecraft.stripped_birch_log",
+          "block.minecraft.stripped_birch_wood",
+          "block.minecraft.jungle_log",
+          "block.minecraft.jungle_wood",
+          "block.minecraft.stripped_jungle_log",
+          "block.minecraft.stripped_jungle_wood",
+          "block.minecraft.spruce_log",
+          "block.minecraft.spruce_wood",
+          "block.minecraft.stripped_spruce_log",
+          "block.minecraft.stripped_spruce_wood",
+          "block.minecraft.crimson_stem",
+          "block.minecraft.stripped_crimson_stem",
+          "block.minecraft.crimson_hyphae",
+          "block.minecraft.stripped_crimson_hyphae",
+          "block.minecraft.warped_stem",
+          "block.minecraft.stripped_warped_stem",
+          "block.minecraft.warped_hyphae",
+          "block.minecraft.stripped_warped_hyphae"
         ]
       ]
     }
   ],
   [
     {
-      "output": "item.minecraft.iron_helmet",
+      "output": "block.minecraft.redstone_block",
+      "size": "3",
       "ingredients": [
         [
-          "item.minecraft.iron_ingot"
+          "item.minecraft.redstone"
         ],
         [
-          "item.minecraft.iron_ingot"
+          "item.minecraft.redstone"
         ],
         [
-          "item.minecraft.iron_ingot"
+          "item.minecraft.redstone"
         ],
         [
-          "item.minecraft.iron_ingot"
+          "item.minecraft.redstone"
         ],
         [
-          "item.minecraft.iron_ingot"
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ],
+        [
+          "item.minecraft.redstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.golden_axe",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.cobblestone_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.respawn_anchor",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.crying_obsidian"
+        ],
+        [
+          "block.minecraft.crying_obsidian"
+        ],
+        [
+          "block.minecraft.crying_obsidian"
+        ],
+        [
+          "block.minecraft.glowstone"
+        ],
+        [
+          "block.minecraft.glowstone"
+        ],
+        [
+          "block.minecraft.glowstone"
+        ],
+        [
+          "block.minecraft.crying_obsidian"
+        ],
+        [
+          "block.minecraft.crying_obsidian"
+        ],
+        [
+          "block.minecraft.crying_obsidian"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.glowstone",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.glowstone_dust"
+        ],
+        [
+          "item.minecraft.glowstone_dust"
+        ],
+        [
+          "item.minecraft.glowstone_dust"
+        ],
+        [
+          "item.minecraft.glowstone_dust"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.crafting_table",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ],
+        [
+          "block.minecraft.oak_planks",
+          "block.minecraft.spruce_planks",
+          "block.minecraft.birch_planks",
+          "block.minecraft.jungle_planks",
+          "block.minecraft.acacia_planks",
+          "block.minecraft.dark_oak_planks",
+          "block.minecraft.crimson_planks",
+          "block.minecraft.warped_planks"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.scaffolding",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.bamboo"
+        ],
+        [
+          "item.minecraft.string"
+        ],
+        [
+          "block.minecraft.bamboo"
+        ],
+        [
+          "block.minecraft.bamboo"
+        ],
+        [
+          "block.minecraft.bamboo"
+        ],
+        [
+          "block.minecraft.bamboo"
+        ],
+        [
+          "block.minecraft.bamboo"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.cake",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.milk_bucket"
+        ],
+        [
+          "item.minecraft.milk_bucket"
+        ],
+        [
+          "item.minecraft.milk_bucket"
+        ],
+        [
+          "item.minecraft.sugar"
+        ],
+        [
+          "item.minecraft.egg"
+        ],
+        [
+          "item.minecraft.sugar"
+        ],
+        [
+          "item.minecraft.wheat"
+        ],
+        [
+          "item.minecraft.wheat"
+        ],
+        [
+          "item.minecraft.wheat"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.smooth_stone_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.smooth_stone"
+        ],
+        [
+          "block.minecraft.smooth_stone"
+        ],
+        [
+          "block.minecraft.smooth_stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.torch",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.coal",
+          "item.minecraft.charcoal"
+        ],
+        [
+          "item.minecraft.stick"
         ]
       ]
     }
@@ -14885,6 +14917,7 @@ var recipe_groups = [
   [
     {
       "output": "item.minecraft.leather_boots",
+      "size": "3",
       "ingredients": [
         [
           "item.minecraft.leather"
@@ -14897,6 +14930,607 @@ var recipe_groups = [
         ],
         [
           "item.minecraft.leather"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.polished_blackstone_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.polished_blackstone"
+        ],
+        [
+          "block.minecraft.polished_blackstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.end_stone_bricks",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.end_stone"
+        ],
+        [
+          "block.minecraft.end_stone"
+        ],
+        [
+          "block.minecraft.end_stone"
+        ],
+        [
+          "block.minecraft.end_stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.red_nether_bricks",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.nether_brick"
+        ],
+        [
+          "item.minecraft.nether_wart"
+        ],
+        [
+          "item.minecraft.nether_wart"
+        ],
+        [
+          "item.minecraft.nether_brick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.light_weighted_pressure_plate",
+      "size": "2",
+      "ingredients": [
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.flower_pot",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.brick"
+        ],
+        [
+          "item.minecraft.brick"
+        ],
+        [
+          "item.minecraft.brick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.tnt",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gunpowder"
+        ],
+        [
+          "block.minecraft.sand",
+          "block.minecraft.red_sand"
+        ],
+        [
+          "item.minecraft.gunpowder"
+        ],
+        [
+          "block.minecraft.sand",
+          "block.minecraft.red_sand"
+        ],
+        [
+          "item.minecraft.gunpowder"
+        ],
+        [
+          "block.minecraft.sand",
+          "block.minecraft.red_sand"
+        ],
+        [
+          "item.minecraft.gunpowder"
+        ],
+        [
+          "block.minecraft.sand",
+          "block.minecraft.red_sand"
+        ],
+        [
+          "item.minecraft.gunpowder"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.armor_stand",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "block.minecraft.smooth_stone_slab"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.ender_chest",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "item.minecraft.ender_eye"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ],
+        [
+          "block.minecraft.obsidian"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.iron_axe",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.iron_ingot"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.stone_bricks",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ],
+        [
+          "block.minecraft.stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.pumpkin_pie",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.pumpkin"
+        ],
+        [
+          "item.minecraft.sugar"
+        ],
+        [
+          "item.minecraft.egg"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.leather_helmet",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.leather"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.dried_kelp_block",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.dried_kelp"
+        ],
+        [
+          "item.minecraft.dried_kelp"
+        ],
+        [
+          "item.minecraft.dried_kelp"
+        ],
+        [
+          "item.minecraft.dried_kelp"
+        ],
+        [
+          "item.minecraft.dried_kelp"
+        ],
+        [
+          "item.minecraft.dried_kelp"
+        ],
+        [
+          "item.minecraft.dried_kelp"
+        ],
+        [
+          "item.minecraft.dried_kelp"
+        ],
+        [
+          "item.minecraft.dried_kelp"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.blackstone_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.blackstone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.ladder",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.golden_hoe",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.gold_ingot"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.granite_slab",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ],
+        [
+          "block.minecraft.granite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.diamond_pickaxe",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.diamond"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.diorite_wall",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.diorite"
+        ],
+        [
+          "block.minecraft.diorite"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.item_frame",
+      "size": "3",
+      "ingredients": [
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.leather"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.cobblestone_stairs",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ],
+        [
+          "block.minecraft.cobblestone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "block.minecraft.stone_button",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.stone"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.end_crystal",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.ender_eye"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "block.minecraft.glass"
+        ],
+        [
+          "item.minecraft.ghast_tear"
+        ],
+        [
+          "block.minecraft.glass"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.hopper_minecart",
+      "size": "2",
+      "ingredients": [
+        [
+          "block.minecraft.hopper"
+        ],
+        [
+          "item.minecraft.minecart"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.pumpkin_seeds",
+      "size": "1",
+      "ingredients": [
+        [
+          "block.minecraft.pumpkin"
+        ]
+      ]
+    }
+  ],
+  [
+    {
+      "output": "item.minecraft.stone_hoe",
+      "size": "3",
+      "ingredients": [
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "block.minecraft.cobblestone",
+          "block.minecraft.blackstone"
+        ],
+        [
+          "item.minecraft.stick"
+        ],
+        [
+          "item.minecraft.stick"
         ]
       ]
     }

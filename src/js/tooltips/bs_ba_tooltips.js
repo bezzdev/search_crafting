@@ -973,6 +973,6 @@ var items = {
   "block.minecraft.polished_blackstone_brick_slab": "ploča od cigli poliranog crnog kamena",
   "block.minecraft.polished_blackstone_brick_stairs": "stepenice od cigli poliranog crnog kamena",
   "block.minecraft.cracked_polished_blackstone_bricks": "napukle cigle poliranog crnog kamena",
-  "block.minecraft.respawn_anchor": "sidro reinkarnacije"
+  "block.minecraft.respawn_anchor": "sidro reinkarnacije",
 }
 export const bs_ba = items; 

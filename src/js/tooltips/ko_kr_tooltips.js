@@ -975,4 +975,4 @@ var items = {
   "block.minecraft.cracked_polished_blackstone_bricks": "금 간 윤나는 흑암 벽돌",
   "block.minecraft.respawn_anchor": "리스폰 정박기",
 }
-export const ko_kr = items;
+export const ko_kr = items; 
