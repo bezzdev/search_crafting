@@ -105,17 +105,53 @@ export default {
         enabled: true,
         size: 3,
         goals: [
-          "block.minecraft.white_bed",
-          "block.minecraft.respawn_anchor"
+          "item.minecraft.golden_carrot",
         ],
         inventory: [
           "block.minecraft.oak_planks",
           "block.minecraft.white_wool",
           "block.minecraft.obsidian",
           "block.minecraft.crying_obsidian",
-          "block.minecraft.glowstone",
           "item.minecraft.ender_pearl",
-          "item.minecraft.blaze_rod"
+          "item.minecraft.blaze_rod",
+          "item.minecraft.carrot",
+          "item.minecraft.gold_nugget",
+          "item.minecraft.gold_ingot"
+        ]
+      },
+      {
+        enabled: true,
+        size: 3,
+        goals: [
+          "block.minecraft.white_wool",
+          "block.minecraft.glowstone"
+        ],
+        inventory: [
+          "block.minecraft.oak_planks",
+          "block.minecraft.obsidian",
+          "block.minecraft.crying_obsidian",
+          "item.minecraft.ender_pearl",
+          "item.minecraft.blaze_rod",
+          "block.minecraft.white_bed",
+          "item.minecraft.glowstone_dust",
+          "item.minecraft.string",
+        ]
+      },
+      {
+        enabled: true,
+        size: 3,
+        goals: [
+          "block.minecraft.white_bed",
+          "block.minecraft.respawn_anchor"
+        ],
+        inventory: [
+          "block.minecraft.oak_planks",
+          "block.minecraft.obsidian",
+          "block.minecraft.crying_obsidian",
+          "item.minecraft.ender_pearl",
+          "item.minecraft.blaze_rod",
+          "block.minecraft.white_wool",
+          "block.minecraft.glowstone"
         ]
       }
     ],
