@@ -3,17 +3,38 @@
     <v-expansion-panel-header>
       <item v-for="goal in craft.goals" :key="goal + '_header'" :item="goal" />
       <template v-slot:actions>
-        <v-btn v-if="edit" @click.native.stop @click="deleteCraft" icon>
-          <v-icon color="primary" class="no-rotate">
-            mdi-delete
-          </v-icon>
-        </v-btn>
-        <v-btn v-if="edit" @click.native.stop @click="duplicateCraft" icon>
-          <v-icon color="blue" class="no-rotate">
-            mdi-content-copy
-          </v-icon>
-        </v-btn>
-        <v-simple-checkbox v-if="!edit" v-model="craft.enabled" :ripple="false" color="primary" class="no-rotate" />
+        <div>
+          <v-tooltip bottom v-if="edit">
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" @click.native.stop @click="deleteCraft" icon>
+                <v-icon color="primary" class="no-rotate">
+                  mdi-delete
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>Delete Group</span>
+          </v-tooltip>
+        </div>
+        <div>
+          <v-tooltip bottom v-if="edit">
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" @click.native.stop @click="duplicateCraft" icon>
+                <v-icon color="blue" class="no-rotate">
+                  mdi-content-copy
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>Duplicate Group</span>
+          </v-tooltip>
+        </div>
+        <div>
+          <v-tooltip bottom v-if="!edit">
+            <template v-slot:activator="{ on }">
+              <v-simple-checkbox v-on="on" v-model="craft.enabled" :ripple="false" color="primary" class="no-rotate" />
+            </template>
+            <span>{{ craft.enabled ? 'Temporarily remove from the search' : 'Enable in the search' }}</span>
+          </v-tooltip>
+        </div>
         <v-icon>
           $expand
         </v-icon>
@@ -48,11 +69,16 @@
           {{ goal }}
         </v-list-item-content>
         <v-list-item-action>
-          <v-btn @click="removeGoal(goal)" icon color="red">
-            <v-icon>
-              mdi-delete
-            </v-icon>
-          </v-btn>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" @click="removeGoal(goal)" icon color="red">
+                <v-icon>
+                  mdi-delete
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>Delete</span>
+          </v-tooltip>
         </v-list-item-action>
       </v-list-item>
       <v-list-item v-for="temp_goal, tg in temp_goals" :key="tg">
@@ -60,11 +86,16 @@
           <v-autocomplete v-model="temp_goal.key" :items="goal_autocomplete"/>
         </v-list-item-content>
         <v-list-item-action>
-          <v-btn @click="removeTempGoal(temp_goal)" icon color="red">
-            <v-icon>
-              mdi-delete
-            </v-icon>
-          </v-btn>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" @click="removeTempGoal(temp_goal)" icon color="red">
+                <v-icon>
+                  mdi-delete
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>Delete</span>
+          </v-tooltip>
         </v-list-item-action>
       </v-list-item>
       <v-list-item>
@@ -72,11 +103,16 @@
           <v-row>
             <v-spacer/>
             <v-col cols="auto">
-              <v-btn @click="addGoal" icon color="green">
-                <v-icon>
-                  mdi-plus
-                </v-icon>
-              </v-btn>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on }">
+                  <v-btn v-on="on" @click="addGoal" icon color="green">
+                    <v-icon>
+                      mdi-plus
+                    </v-icon>
+                  </v-btn>
+                </template>
+                <span>Add Crafting Goal</span>
+              </v-tooltip>
             </v-col>
             <v-spacer/>
           </v-row>
@@ -89,11 +125,16 @@
           {{ inventory }}
         </v-list-item-content>
         <v-list-item-action>
-          <v-btn @click="removeInventory(inventory)" icon color="red">
-            <v-icon>
-              mdi-delete
-            </v-icon>
-          </v-btn>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" @click="removeInventory(inventory)" icon color="red">
+                <v-icon>
+                  mdi-delete
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>Delete</span>
+          </v-tooltip>
         </v-list-item-action>
       </v-list-item>
       <v-list-item v-for="temp_inventor, ti in temp_inventory" :key="ti">
@@ -101,11 +142,16 @@
           <v-autocomplete v-model="temp_inventor.key" :items="inventory_autocomplete"/>
         </v-list-item-content>
         <v-list-item-action>
-          <v-btn @click="removeTempInventory(temp_inventor)" icon color="red">
-            <v-icon>
-              mdi-delete
-            </v-icon>
-          </v-btn>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" @click="removeTempInventory(temp_inventor)" icon color="red">
+                <v-icon>
+                  mdi-delete
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>Delete</span>
+          </v-tooltip>
         </v-list-item-action>
       </v-list-item>
       <v-list-item>
@@ -113,11 +159,16 @@
           <v-row>
             <v-spacer/>
             <v-col cols="auto">
-              <v-btn @click="addInventory" icon color="green">
-                <v-icon>
-                  mdi-plus
-                </v-icon>
-              </v-btn>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on }">
+                  <v-btn v-on="on" @click="addInventory" icon color="green">
+                    <v-icon>
+                      mdi-plus
+                    </v-icon>
+                  </v-btn>
+                </template>
+                <span>Add Inventory Item</span>
+              </v-tooltip>
             </v-col>
             <v-spacer/>
           </v-row>
@@ -128,12 +179,22 @@
         <v-list-item-content>
           <v-row>
             <v-col cols="auto">
-              <v-btn @click="toggleCrafting" tile v-if="craft.size == 3">
-                <item item="block.minecraft.crafting_table"  />
-              </v-btn>
-              <v-btn @click="toggleCrafting" tile v-else>
-                <item item="block.minecraft.no_crafting_table"  />
-              </v-btn>
+              <v-tooltip bottom v-if="craft.size == 3">
+                <template v-slot:activator="{ on }">
+                  <v-btn v-on="on" @click="toggleCrafting" tile icon>
+                    <item item="block.minecraft.crafting_table"  />
+                  </v-btn>
+                </template>
+                <span>Changed to 2x2 only</span>
+              </v-tooltip>
+              <v-tooltip bottom v-else>
+                <template v-slot:activator="{ on }">
+                  <v-btn v-on="on" @click="toggleCrafting" tile icon>
+                    <item item="block.minecraft.no_crafting_table"  />
+                  </v-btn>
+                </template>
+                <span>Changed to 3x3 available</span>
+              </v-tooltip>
             </v-col>
             <v-spacer/>
           </v-row>

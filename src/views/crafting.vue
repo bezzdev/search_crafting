@@ -15,9 +15,14 @@
         </v-toolbar>
         <v-expansion-panels>
           <craft :ref="'craft-' + c" v-for="craft, c in crafting" :key="c" :craft="craft" :edit="edit" @delete="deleteCraft" @duplicate="duplicateCraft" @itemsChanged="itemsChanged" @enabled="enabledChanged" />
-          <v-btn v-if="edit" icon large @click="addCraft">
-            <v-icon>mdi-plus</v-icon>
-          </v-btn>
+          <v-tooltip v-if="edit" bottom>
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" icon large @click="addCraft">
+                <v-icon>mdi-plus</v-icon>
+              </v-btn>
+            </template>
+            <span>Add Group</span>
+          </v-tooltip>
         </v-expansion-panels>
       </v-col>
       <v-col cols="6">

@@ -11,16 +11,25 @@
     </v-tooltip>
     <v-spacer/>
 
-    <a href="https://twitter.com/bezzdev">
+    <a class="bezz" href="https://twitter.com/bezzdev" target="_blank" >
       <span class="pr-2">@bezzdev</span>
       <v-avatar
         tile
-        size="32"
-        color="grey">
+        size="32">
         <v-img src="bezz.jpg" aspect-ratio="1"/>
       </v-avatar>
     </a>
-
+    <v-divider class="mx-2" vertical/>
+    <a class="" href="https://github.com/bezzdev/search_crafting" target="_blank" >
+      <v-icon large>
+        mdi-github
+      </v-icon>
+    </a>
+    <v-divider class="ml-2 mr-3" vertical/>
+    <v-avatar
+      tile class="">
+      <v-img src="scotland.svg" contain height="40" max-width="64px"/>
+    </v-avatar>
     <!-- <a href="https://twitter.com/bezzdev">@bezzdev</a> -->
   </v-app-bar>
 </template>
@@ -43,4 +52,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.bezz {
+  text-decoration: none !important;
+}
 </style>

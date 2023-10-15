@@ -1,5 +1,11 @@
 <template>
-  <v-img class="d-inline-flex" aspect-ratio="1" max-height="32" max-width="32" contain :src="image" lazy-src="icons/command_block.png"></v-img>
+  <v-tooltip bottom color="deep-purple darken-4">
+    <template v-slot:activator="{ on }">
+      <v-img v-on="on" class="d-inline-flex" aspect-ratio="1" max-height="32" max-width="32" contain :src="image" lazy-src="icons/command_block.png"></v-img>
+    </template>
+    <span>{{ item }}</span>
+  </v-tooltip>
+  <!-- <v-img class="d-inline-flex" aspect-ratio="1" max-height="32" max-width="32" contain :src="image" lazy-src="icons/command_block.png"></v-img> -->
 </template>
 <script>
 export default {
