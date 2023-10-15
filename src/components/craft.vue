@@ -36,7 +36,8 @@
       <v-subheader>Settings</v-subheader>
       <v-list-item>
         <v-list-item-content>
-          <item :item="craftingIcon" />
+          <item v-if="craft.size == 3" item="block.minecraft.crafting_table"  />
+          <item v-else item="block.minecraft.no_crafting_table"  />
         </v-list-item-content>
       </v-list-item>
     </v-expansion-panel-content>
@@ -127,8 +128,11 @@
         <v-list-item-content>
           <v-row>
             <v-col cols="auto">
-              <v-btn @click="toggleCrafting" tile>
-                <item :item="craftingIcon" />
+              <v-btn @click="toggleCrafting" tile v-if="craft.size == 3">
+                <item item="block.minecraft.crafting_table"  />
+              </v-btn>
+              <v-btn @click="toggleCrafting" tile v-else>
+                <item item="block.minecraft.no_crafting_table"  />
               </v-btn>
             </v-col>
             <v-spacer/>
@@ -164,12 +168,6 @@ export default {
     },
     enabled () {
       return this.craft.enabled;
-    },
-    craftingIcon () {
-      if (this.craft.size < 3) {
-        return "block.minecraft.no_crafting_table";
-      }
-      return "block.minecraft.crafting_table";
     }
   },
   watch: {
