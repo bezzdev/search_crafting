@@ -13,8 +13,9 @@ Specify what items you want to craft and what items you have.<br>
 
 Currently uses data from MC 1.16.1 <br>
 
-
-
+## Tech Stack
+This project uses Vue.js + Vuetify <br>
+Uses crafting recipe groups and item tooltip strings extracted for each language. <br>
 
 ## Project setup
 ```
