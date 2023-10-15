@@ -98,7 +98,7 @@
       </v-list-item>
       <v-list-item v-for="temp_inventor, ti in temp_inventory" :key="ti">
         <v-list-item-content>
-          <v-autocomplete v-model="temp_inventor.key" :items="goal_autocomplete"/>
+          <v-autocomplete v-model="temp_inventor.key" :items="inventory_autocomplete"/>
         </v-list-item-content>
         <v-list-item-action>
           <v-btn @click="removeTempInventory(temp_inventor)" icon color="red">
