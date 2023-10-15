@@ -2,8 +2,8 @@
   <v-app>
     <v-main>
       <toolbar/>
-      <router-view v-show="loading"/>
-      <v-row v-show="!loading" align="center" class="text-center" style="height: 800px;">
+      <router-view v-show="!loading"/>
+      <v-row v-show="loading" align="center" class="text-center" style="height: 800px;">
         <v-col>
           <v-progress-circular indeterminate size="80" color="primary" />
         </v-col>

@@ -282,15 +282,20 @@ export default {
       this.$store.commit('setOptions', this.options)
     },
     filterLanguage: function (languageResult) {
-      if (this.options.search == '')
-        return true
-      if(languageResult.language_name.toLowerCase().includes(this.options.search.toLowerCase()))
-        return true
-      if(languageResult.language_region.toLowerCase().includes(this.options.search.toLowerCase()))
-        return true
-      if(languageResult.localized.toLowerCase().includes(this.options.search.toLowerCase()))
-        return true
-      return false
+      var search = ''
+      if (this.options && this.options.search) {
+        if (this.options.search == '')
+          return true
+
+        search = this.options.search;
+        if(languageResult.language_name.toLowerCase().includes(search.toLowerCase()))
+          return true
+        if(languageResult.language_region.toLowerCase().includes(search.toLowerCase()))
+          return true
+        if(languageResult.localized.toLowerCase().includes(search.toLowerCase()))
+          return true
+      }
+      return true;
     },
     getRelevantGroupsForInventory: function (groups, size, inventory) {
       var relevant = []
@@ -560,7 +565,7 @@ export default {
       self.setResultsOutdated();
     }
 
-    self.$store.commit('setLoding', false)
+    self.$store.commit('setLoading', false)
 
     setInterval(function() {
       if (self.resultsOutdated) {
