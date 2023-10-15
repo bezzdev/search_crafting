@@ -1,4 +1,7 @@
-# apollo_client
+# search_crafting
+You do not have to download this project to use it.
+A live version can be viewed here: 
+<https://searchcrafting.bezz.dev/>
 
 ## Project setup
 ```
