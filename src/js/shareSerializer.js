@@ -1,5 +1,6 @@
 var deserialize1 = function (encoded, items) {
-  var json = JSON.parse(atob(encoded))
+  var rawJson = atob(encoded)
+  var json = JSON.parse(rawJson)
   json.crafting.forEach(function (craft) {
     craft.goals = craft.goals.map(g => items[g])
     craft.inventory = craft.inventory.map(i => items[i])
@@ -8,9 +9,8 @@ var deserialize1 = function (encoded, items) {
 }
 
 var deserialize2 = function(encoded, items) {
-  // var items = this.$store.getters.getItems;
-
-  var json = JSON.parse(atob(encoded))
+  var rawJson = atob(encoded)
+  var json = JSON.parse(rawJson)
   
   var result = {
     crafting: json.c.map(craft => {

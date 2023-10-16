@@ -517,16 +517,17 @@ export default {
     var self = this;
     self.$store.commit('setItems', Object.keys(en_gb));
     
+    // load data from cache
     var loadedCrafting = self.$store.getters.getCrafting;
     if (loadedCrafting != null && loadedCrafting.length > 0) {
       self.crafting = loadedCrafting;
     }
-
     var loadedOptions = self.$store.getters.getOptions;
     if (loadedOptions != null) {
       self.options = loadedOptions;
     }
     
+    // load share data
     if(self.$route.query.data) {
       var encoded = self.$route.query.data;
       
@@ -540,15 +541,17 @@ export default {
         if (json.options) {
           self.options = json.options
         }
-        self.$router.replace({'query': null});
         self.getResults();
       }
+      self.$router.replace({'query': null});
     } else {
       self.setResultsOutdated();
     }
 
+    // finish loading
     self.$store.commit('setLoading', false)
 
+    // get new results
     setInterval(function() {
       if (self.resultsOutdated) {
         self.$store.commit('setCrafting', self.crafting)
