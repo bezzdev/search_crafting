@@ -66,7 +66,7 @@
                           mdi-information
                         </v-icon>
                       </template>
-                      <span>Apply a penality based on the search length</span>
+                      <span>Apply a penalty based on the search length</span>
                     </v-tooltip>
                   </template>
                 </v-switch>
@@ -97,7 +97,7 @@
                           mdi-information
                         </v-icon>
                       </template>
-                      <span>Penality for each character in the search</span>
+                      <span>Penalty for each character in the search</span>
                     </v-tooltip>
                   </template>
                 </v-text-field>
@@ -111,7 +111,7 @@
                           mdi-information
                         </v-icon>
                       </template>
-                      <span>Penality for each junk item in the search results</span>
+                      <span>Penalty for each junk item in the search results</span>
                     </v-tooltip>
                   </template>
                 </v-text-field>
@@ -125,7 +125,7 @@
                           mdi-information
                         </v-icon>
                       </template>
-                      <span>Penality for failing to find a valid search</span>
+                      <span>Penalty for failing to find a valid search</span>
                     </v-tooltip>
                   </template>
                 </v-text-field>
