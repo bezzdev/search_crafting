@@ -97,7 +97,7 @@
                           mdi-information
                         </v-icon>
                       </template>
-                      <span>Penalty for each character in the search</span>
+                      <span>Penalty for each additional character in the search</span>
                     </v-tooltip>
                   </template>
                 </v-text-field>
@@ -389,15 +389,17 @@ export default {
       var search = ''
       if (this.options && this.options.search) {
         if (this.options.search == '')
-          return true
+          return true;
 
         search = this.options.search;
         if(languageResult.language_name.toLowerCase().includes(search.toLowerCase()))
-          return true
+          return true;
         if(languageResult.language_region.toLowerCase().includes(search.toLowerCase()))
-          return true
+          return true;
         if(languageResult.localized.toLowerCase().includes(search.toLowerCase()))
-          return true
+          return true;
+
+        return false;
       }
       return true;
     },
@@ -524,13 +526,13 @@ export default {
       })
       return recipes;
     },
-    scoreSearch: function(search, goals, results) {
-      var remainder = results.length - goals.length;
-      var letters = search.length;
+    scoreSearch: function(search, junk) {
+      var remainder = junk;
+      var letters = search;
       if (!this.options.score_search_lengths)
         letters = 1;
   
-      return (this.options.letter_penalty * letters) + (remainder * this.options.junk_penalty); 
+      return (this.options.letter_penalty * (letters - 1)) + (remainder * this.options.junk_penalty); 
     },
     getResults: function () {
       var self = this;
@@ -565,6 +567,7 @@ export default {
           language_key: language.key,
           translations: translations,
           crafting: [],
+          unique_character_count: 0,
           score: 0
         }
 
@@ -577,7 +580,7 @@ export default {
 
             searches.forEach(function(search) {
               var results = self.searchGroups(groups, translations, search);
-              var score = self.scoreSearch(search, craft.goals, results);
+              var score = self.scoreSearch(search.length, results.length - craft.goals.length);
               if (score == -0.64) {
                 console.log()
               }
@@ -629,7 +632,17 @@ export default {
           } else {
             translation_result.score += self.options.fail_penalty * craft.weight
           }
+
         })
+        var characters = []
+        var searches = translation_result.crafting.filter(c => c.best_search != null)
+          .map(c => c.best_search.search_term)
+        searches.forEach(s => characters = characters.concat(s.split('')))
+
+        var unique_characters = characters.filter(function(value, index, array) {
+          return array.indexOf(value) === index;
+        })
+        translation_result.unique_character_count = unique_characters.length;
 
         self.results.push(translation_result)
       })

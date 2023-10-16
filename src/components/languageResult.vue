@@ -1,12 +1,12 @@
 <template>
   <v-expansion-panel>
     <v-expansion-panel-header>
-      ( {{ result.score.toFixed(2) }} ) {{ result.localized }} = {{ result.language_name }} ( {{ result.language_region }} )
+      ( {{ result.score.toFixed(2) }} ) ( {{ result.unique_character_count }} ) {{ result.localized }} = {{ result.language_name }} ( {{ result.language_region }} )
     </v-expansion-panel-header>
     <v-expansion-panel-content>
       <v-subheader>
-        Best search letters {{ bestCharacters }} <br>
-        Calculated efficiency score ( {{ result.score.toFixed(2) }} )
+        Unique characters needed: {{ result.unique_character_count }} - Searches: {{ bestCharacters }} <br>
+        Calculated efficiency score: ( {{ result.score.toFixed(2) }} )
       </v-subheader>
       <v-lazy>
         <v-expansion-panels class="px-2">
