@@ -356,7 +356,7 @@ export default {
     },
     duplicateCraft: function(craft) {
       var dupe = {
-        enabled: true,
+        enabled: craft.enabled,
         size: craft.size,
         goals: [
         ],
@@ -366,8 +366,10 @@ export default {
 
       dupe.goals = [].concat(craft.goals)
       dupe.inventory = [].concat(craft.inventory)
+      
+      var index = this.crafting.indexOf(craft)
+      this.crafting.splice(index + 1, 0, dupe);
 
-      this.crafting.push(dupe)
       this.craftingChanged = true;
     },
     enabledChanged: function () {
