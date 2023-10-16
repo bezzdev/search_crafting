@@ -6,6 +6,30 @@
         <div>
           <v-tooltip bottom v-if="edit">
             <template v-slot:activator="{ on }">
+              <v-btn v-on="on" @click.native.stop @click="moveUp" icon>
+                <v-icon color="white" class="no-rotate">
+                  mdi-arrow-up
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>Move Up</span>
+          </v-tooltip>
+        </div>
+        <div>
+          <v-tooltip bottom v-if="edit">
+            <template v-slot:activator="{ on }">
+              <v-btn v-on="on" @click.native.stop @click="moveDown" icon>
+                <v-icon color="white" class="no-rotate">
+                  mdi-arrow-down
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>Move Down</span>
+          </v-tooltip>
+        </div>
+        <div>
+          <v-tooltip bottom v-if="edit">
+            <template v-slot:activator="{ on }">
               <v-btn v-on="on" @click.native.stop @click="deleteCraft" icon>
                 <v-icon color="primary" class="no-rotate">
                   mdi-delete
@@ -262,6 +286,12 @@ export default {
     },
     removeTempInventory: function (inventory) {
       this.temp_inventory.splice(this.temp_inventory.indexOf(inventory), 1);
+    },
+    moveUp: function () {
+      this.$emit('moveUp', this.craft)
+    },
+    moveDown: function () {
+      this.$emit('moveDown', this.craft)
     },
     deleteCraft: function () {
       this.$emit('delete', this.craft)

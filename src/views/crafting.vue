@@ -10,13 +10,10 @@
           <v-btn v-else @click="setEditMode(false)" tile color="green">
             Save
           </v-btn>
-          <v-switch v-model="options.one_character_only" class="ml-4" hide-details label="Find Single Character Only" @change="setResultsOutdated"/>
-          <v-switch v-model="options.score_search_lengths" class="ml-2" hide-details label="Search Length Matters" @change="setResultsOutdated"/>
           <v-spacer />
-          
           <v-tooltip v-if="!edit" bottom>
             <template v-slot:activator="{ on }">
-              <v-btn  v-on="on" @click="share" text>
+              <v-btn v-on="on" @click="share" text>
                 Share
                 <v-icon class="ml-2">
                   mdi-share
@@ -26,8 +23,16 @@
             <span>Copy a link to this setup</span>
           </v-tooltip>
         </v-toolbar>
+        
         <v-expansion-panels>
-          <craft :ref="'craft-' + c" v-for="craft, c in crafting" :key="c" :craft="craft" :edit="edit" @delete="deleteCraft" @duplicate="duplicateCraft" @itemsChanged="itemsChanged" @enabled="enabledChanged" />
+          <craft :ref="'craft-' + c" v-for="craft, c in crafting" :key="c" :craft="craft" :edit="edit" 
+            @moveUp="moveUp"
+            @moveDown="moveDown"
+            @delete="deleteCraft"
+            @duplicate="duplicateCraft" 
+            @itemsChanged="itemsChanged" 
+            @enabled="enabledChanged" 
+          />
           <v-tooltip v-if="edit" bottom>
             <template v-slot:activator="{ on }">
               <v-btn v-on="on" icon large @click="addCraft">
@@ -40,17 +45,111 @@
       </v-col>
       <v-col cols="12" sm="7" lg="6">
         <v-toolbar class="mb-2">
+          <v-btn @click="toggleSettings" icon color="white" class="mr-2">
+            <v-icon>
+              mdi-cog
+            </v-icon>
+          </v-btn>
           <v-text-field label="search" v-model="options.search" hide-details single-line @change="searchChanged" />
-        </v-toolbar>  
-        <v-expansion-panels v-if="!loading">
-          <languageResult v-show="filterLanguage(result)" v-for="result, r in results" :key="r" :result="result" />
-        </v-expansion-panels>
-        <div class="text-center" v-else>
+          <v-checkbox class="ml-2 pt-4" label="auto" v-model="options.auto_search" dense />
+        </v-toolbar>
+        <v-card class="mb-2" v-show="settingsOpen">
+          <v-card-text>
+            <v-row>
+              <v-col cols="4">
+                <v-switch v-model="options.score_search_lengths" class="ml-2" label="label" @change="setResultsOutdated">
+                  <template v-slot:label>
+                    Search Length Matters
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on" class="ml-2">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Apply a penality based on the search length</span>
+                    </v-tooltip>
+                  </template>
+                </v-switch>
+              </v-col>
+              <v-col cols="4">
+                <v-switch v-model="options.one_character_only" class="ml-4" label="label" hide-details @change="setResultsOutdated">
+                  <template v-slot:label>
+                    Find Single Character Only
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on" class="ml-2">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Only 1 character searches are valid</span>
+                    </v-tooltip>
+                  </template>
+                </v-switch>
+              </v-col>
+            </v-row>
+            <v-row class="px-2 pt-2">
+              <v-col cols="4">
+                <v-text-field v-model="options.letter_penalty" label="Search Length Penalty" @change="setResultsOutdated" dense>
+                  <template v-slot:append>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Penality for each character in the search</span>
+                    </v-tooltip>
+                  </template>
+                </v-text-field>
+              </v-col>
+              <v-col cols="4">
+                <v-text-field v-model="options.junk_penalty" label="Junk Item Penalty" @change="setResultsOutdated" dense>
+                  <template v-slot:append>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Penality for each junk item in the search results</span>
+                    </v-tooltip>
+                  </template>
+                </v-text-field>
+              </v-col>
+              <v-col cols="4">
+                <v-text-field v-model="options.fail_penalty" label="Search Fail Penalty" @change="setResultsOutdated" dense>
+                  <template v-slot:append>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Penality for failing to find a valid search</span>
+                    </v-tooltip>
+                  </template>
+                </v-text-field>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+        <div class="text-center" v-if="resultsOutdated && options.auto_search">
           <v-progress-circular
             indeterminate
             color="primary"
           ></v-progress-circular>
         </div>
+        <v-row v-if="resultsOutdated && !options.auto_search" align="center" class="text-center" style="height: 200px;">
+          <v-col>
+            <v-btn @click="manuallySearch" tile class="mb-2" color="primary">
+              Search
+            </v-btn>
+            <div>Auto Search is turned off</div>
+          </v-col>
+        </v-row>
+        <v-expansion-panels v-if="!loading && !resultsOutdated">
+          <languageResult v-show="filterLanguage(result)" v-for="result, r in results" :key="r" :result="result" />
+        </v-expansion-panels>
       </v-col>
       <v-spacer/>
     </v-row>
@@ -66,6 +165,7 @@ import { Languages } from '../js/languages.js';
 import { LanguageTooltips } from '../js/languageTooltips.js';
 import { en_gb } from '../js/names/en_gb.js';
 import { ShareSerialize, ShareDeserialize } from '../js/shareSerializer'
+import { OptionsLoader } from '../js/optionsLoader'
 
 export default {
   name: 'Crafting',
@@ -177,11 +277,16 @@ export default {
     options: {
       one_character_only: false,
       score_search_lengths: true,
-      search: ''
+      search: '',
+      auto_search: true,
+      letter_penalty: 0.6,
+      junk_penalty: 10,
+      fail_penalty: 1000
     },
     badCharacters: ["□"],
     results: [],
     edit: false,
+    settingsOpen: false,
     resultsOutdated: false,
     craftingChanged: false,
     loading: false,
@@ -189,11 +294,6 @@ export default {
   computed: {
   },
   watch: {
-    resultsOutdated: function(val) {
-      if (val) {
-        this.loading = true;
-      }
-    }
   },
   methods: {
     setEditMode: function (val) {
@@ -205,6 +305,9 @@ export default {
 
         this.setResultsOutdated();
       }
+    },
+    toggleSettings: function () {
+      this.settingsOpen = !this.settingsOpen;
     },
     share: function () {
       var items = this.$store.getters.getItems;
@@ -229,6 +332,20 @@ export default {
         inventory: [
         ]        
       })
+    },
+    moveUp: function (craft) {
+      var index = this.crafting.indexOf(craft)
+      if (index > 0) {
+        this.crafting.splice(index, 1);
+        this.crafting.splice(index - 1, 0, craft);
+      }
+    },
+    moveDown: function (craft) {
+      var index = this.crafting.indexOf(craft)
+      if (index < this.crafting.length - 1) {
+        this.crafting.splice(index, 1);
+        this.crafting.splice(index + 1, 0, craft);
+      }
     },
     deleteCraft: function(craft) {
       this.crafting.splice(this.crafting.indexOf(craft), 1);
@@ -274,6 +391,10 @@ export default {
           return true
       }
       return true;
+    },
+    manuallySearch: function () {
+      this.resultsOutdated = false;
+      this.getResults();
     },
     getRelevantGroupsForInventory: function (groups, size, inventory) {
       var relevant = []
@@ -399,7 +520,8 @@ export default {
       var letters = search.length;
       if (!this.options.score_search_lengths)
         letters = 1;
-      return Math.pow(0.6 * letters, 2) + (remainder); 
+  
+      return (this.options.letter_penalty * letters) + (remainder * this.options.junk_penalty); 
     },
     getResults: function () {
       var self = this;
@@ -494,7 +616,7 @@ export default {
           if (best_search != null) {
             translation_result.score += best_search.score
           } else {
-            translation_result.score += 100.0
+            translation_result.score += self.options.fail_penalty
           }
         })
 
@@ -524,7 +646,7 @@ export default {
     }
     var loadedOptions = self.$store.getters.getOptions;
     if (loadedOptions != null) {
-      self.options = loadedOptions;
+      self.options = OptionsLoader(loadedOptions);
     }
     
     // load share data
@@ -539,7 +661,7 @@ export default {
           self.crafting = json.crafting
         }
         if (json.options) {
-          self.options = json.options
+          self.options =  OptionsLoader(json.options);
         }
         self.getResults();
       }
@@ -556,8 +678,11 @@ export default {
       if (self.resultsOutdated) {
         self.$store.commit('setCrafting', self.crafting)
         self.$store.commit('setOptions', self.options)
-        self.resultsOutdated = false;
-        self.getResults();
+
+        if (self.options.auto_search) {
+          self.resultsOutdated = false;
+          self.getResults();
+        }
       }
     }, 500)
   }

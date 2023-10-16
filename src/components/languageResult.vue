@@ -15,7 +15,7 @@
               <v-expansion-panel-header>
                 <v-row dense style="width: 100%;">
                   <v-col cols="auto" style="width: 100px;">
-                    <div class="pt-2 pr-2 d-inline-flex">( {{ formatSearchTerm(craft.best_search.search_term) }} )</div>
+                    <div class="pt-2 d-inline-flex search-character">({{formatSearchTerm(craft.best_search.search_term)}})</div>
                     <div class="pt-2 d-inline-flex">({{ craft.best_search.score.toFixed(2) }})</div>
                   </v-col>
                   <v-col cols="10">
@@ -36,7 +36,7 @@
                 <v-divider class="pb-4" />
                 <v-row v-for="search, s in craft.best_searches" :key="search.search_term" dense style="width: 100%;">
                   <v-col cols="auto" style="width: 100px;">
-                    <div class="pt-2 pr-2 d-inline-flex">( {{ formatSearchTerm(search.search_term) }} )</div>
+                    <div class="pt-2 d-inline-flex search-character">({{ formatSearchTerm(search.search_term) }})</div>
                     <div class="pt-2 d-inline-flex">({{ search.score.toFixed(2) }})</div>
                   </v-col>
                   <v-col cols="10">
@@ -115,7 +115,7 @@ export default {
   }),
   computed: {
     bestCharacters() {
-      return "( " + this.result.crafting.filter(c => c.best_search != null).map(c => c.best_search.search_term).join(' ') + " )"
+      return "(" + this.result.crafting.filter(c => c.best_search != null).map(c => c.best_search.search_term).join(',') + ")"
     }
   },
   watch: {
@@ -138,4 +138,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.search-character {
+  cursor: default;
+  user-select: text;
+  padding-left: 8px;
+  padding-right: 4px;
+  padding-bottom: 10px;
+}
 </style>
