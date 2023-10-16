@@ -20,8 +20,8 @@
                   </v-col>
                   <v-col cols="10">
                     <item v-for="goal in craft.goals" :key="'g-'+c+'-'+goal" :item="goal" />
-                    <div class="pt-2 d-inline-flex" v-if="!(craft.best_search.results.length - craft.goals.length == 0)">
-                      <v-icon large>mdi-plus</v-icon>
+                    <div class="mx-4 d-inline-flex" v-if="!(craft.best_search.results.length - craft.goals.length == 0)">
+                      <v-icon>mdi-plus</v-icon>
                     </div>
                     <item v-for="result in nonGoalItems(craft.goals, craft.best_search.results)" :key="'c-'+c+'-'+result" :item="result" />
                   </v-col>
@@ -43,8 +43,8 @@
                     <!-- <item v-for="result in search.results" :key="'c-'+c+'s-'+s+'-'+result" :item="result" /> -->
 
                     <item v-for="goal in craft.goals" :key="'c-'+c+'s-'+s+'-'+goal" :item="goal" />
-                    <div class="pt-2 d-inline-flex" v-if="!(search.results.length == craft.goals.length)">
-                      <v-icon large>mdi-plus</v-icon>
+                    <div class="mx-4 d-inline-flex" v-if="!(search.results.length == craft.goals.length)">
+                      <v-icon>mdi-plus</v-icon>
                     </div>
                     <item v-for="result in nonGoalItems(craft.goals, search.results)" :key="'c-'+c+'s-'+s+'-'+result" :item="result" />
                   </v-col>
