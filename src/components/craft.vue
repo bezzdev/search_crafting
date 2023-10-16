@@ -81,8 +81,15 @@
       <v-subheader>Settings</v-subheader>
       <v-list-item>
         <v-list-item-content>
-          <item v-if="craft.size == 3" item="block.minecraft.crafting_table"  />
-          <item v-else item="block.minecraft.no_crafting_table"  />
+          <v-row align="center">
+            <v-col cols="auto">
+              <item v-if="craft.size == 3" item="block.minecraft.crafting_table" />
+              <item v-else item="block.minecraft.no_crafting_table" />
+            </v-col>
+            <v-col>
+              <div class="ml-2">Language Score Weight: {{craft.weight.toFixed(2)}}</div>
+            </v-col>
+          </v-row>
         </v-list-item-content>
       </v-list-item>
     </v-expansion-panel-content>
@@ -201,7 +208,7 @@
       <v-subheader>Settings</v-subheader>
       <v-list-item>
         <v-list-item-content>
-          <v-row>
+          <v-row align="center">
             <v-col cols="auto">
               <v-tooltip bottom v-if="craft.size == 3">
                 <template v-slot:activator="{ on }">
@@ -219,6 +226,10 @@
                 </template>
                 <span>Changed to 3x3 available</span>
               </v-tooltip>
+            </v-col>
+            <v-col cols="4">
+              <div class="ml-2 pt-2">Language Score Weight: {{craft.weight.toFixed(2)}}</div>
+              <v-slider v-model="craft.weight" min="0" max="1" step="0" dense hide-details height="32" />
             </v-col>
             <v-spacer/>
           </v-row>

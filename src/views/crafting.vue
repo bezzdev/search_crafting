@@ -89,7 +89,7 @@
             </v-row>
             <v-row class="px-2 pt-2">
               <v-col cols="4">
-                <v-text-field v-model="options.letter_penalty" label="Search Length Penalty" @change="setResultsOutdated" dense>
+                <v-text-field v-model="options.letter_penalty" label="Search Length Penalty" @change="setResultsOutdated" type="number" dense>
                   <template v-slot:append>
                     <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
@@ -103,7 +103,7 @@
                 </v-text-field>
               </v-col>
               <v-col cols="4">
-                <v-text-field v-model="options.junk_penalty" label="Junk Item Penalty" @change="setResultsOutdated" dense>
+                <v-text-field v-model="options.junk_penalty" label="Junk Item Penalty" @change="setResultsOutdated" type="number" dense>
                   <template v-slot:append>
                     <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
@@ -117,7 +117,7 @@
                 </v-text-field>
               </v-col>
               <v-col cols="4">
-                <v-text-field v-model="options.fail_penalty" label="Search Fail Penalty" @change="setResultsOutdated" dense>
+                <v-text-field v-model="options.fail_penalty" label="Search Fail Penalty" @change="setResultsOutdated" type="number" dense>
                   <template v-slot:append>
                     <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
@@ -165,6 +165,7 @@ import { Languages } from '../js/languages.js';
 import { LanguageTooltips } from '../js/languageTooltips.js';
 import { en_gb } from '../js/names/en_gb.js';
 import { ShareSerialize, ShareDeserialize } from '../js/shareSerializer'
+import { CraftingLoader } from '../js/craftingLoader'
 import { OptionsLoader } from '../js/optionsLoader'
 
 export default {
@@ -179,6 +180,7 @@ export default {
       {
         enabled: true,
         size: 3,
+        weight: 1.0,
         goals: [
           "item.minecraft.iron_pickaxe",
           "item.minecraft.iron_axe",
@@ -195,6 +197,7 @@ export default {
       {
         enabled: true,
         size: 3,
+        weight: 1.0,
         goals: [
           "item.minecraft.bucket",
         ],
@@ -209,6 +212,7 @@ export default {
       {
         enabled: true,
         size: 2,
+        weight: 1.0,
         goals: [
           "item.minecraft.flint_and_steel"
         ],
@@ -223,6 +227,7 @@ export default {
       {
         enabled: true,
         size: 3,
+        weight: 0.0,
         goals: [
           "item.minecraft.golden_carrot",
         ],
@@ -241,6 +246,7 @@ export default {
       {
         enabled: true,
         size: 3,
+        weight: 1.0,
         goals: [
           "block.minecraft.white_wool",
           "block.minecraft.glowstone"
@@ -259,6 +265,7 @@ export default {
       {
         enabled: true,
         size: 3,
+        weight: 1.0,
         goals: [
           "block.minecraft.white_bed",
           "block.minecraft.respawn_anchor"
@@ -616,9 +623,9 @@ export default {
           }
 
           if (best_search != null) {
-            translation_result.score += best_search.score
+            translation_result.score += best_search.score * craft.weight
           } else {
-            translation_result.score += self.options.fail_penalty
+            translation_result.score += self.options.fail_penalty * craft.weight
           }
         })
 
@@ -644,7 +651,7 @@ export default {
     // load data from cache
     var loadedCrafting = self.$store.getters.getCrafting;
     if (loadedCrafting != null && loadedCrafting.length > 0) {
-      self.crafting = loadedCrafting;
+      self.crafting = CraftingLoader(loadedCrafting);
     }
     var loadedOptions = self.$store.getters.getOptions;
     if (loadedOptions != null) {
@@ -660,7 +667,7 @@ export default {
 
       if (json) {
         if (json.crafting) {
-          self.crafting = json.crafting
+          self.crafting = CraftingLoader(json.crafting);
         }
         if (json.options) {
           self.options =  OptionsLoader(json.options);

@@ -1,19 +1,25 @@
 var optionsLoader = function (options) {
-  if (('one_character_only' in options) == false)
+  if (!checkProperty(options, 'one_character_only'))
     options.one_character_only = false
-  if (('score_search_lengths' in options) == false)
+  if (!checkProperty(options, 'score_search_lengths'))
     options.score_search_lengths = true
-  if (('search' in options) == false)
+  if (!checkProperty(options, 'search'))
     options.search = ''
-  if (('auto_search' in options) == false)
+  if (!checkProperty(options, 'auto_search'))
     options.auto_search = true
-  if (('letter_penalty' in options) == false)
+  if (!checkProperty(options, 'letter_penalty'))
     options.letter_penalty = 0.6
-  if (('junk_penalty' in options) == false)
+  if (!checkProperty(options, 'junk_penalty'))
     options.junk_penalty = 10
-  if (('fail_penalty' in options) == false)
+  if (!checkProperty(options, 'fail_penalty'))
     options.fail_penalty = 1000
   return options;
+}
+
+var checkProperty = function(obj, prop) {
+  if ((prop in obj) == false || obj[prop] == undefined)
+    return false;
+  return true;
 }
 
 export const OptionsLoader = optionsLoader;
