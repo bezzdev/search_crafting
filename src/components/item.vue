@@ -3,14 +3,13 @@
     <template v-slot:activator="{ on }">
       <v-img v-on="on" class="d-inline-flex" aspect-ratio="1" max-height="32" max-width="32" contain :src="image" lazy-src="icons/command_block.png"></v-img>
     </template>
-    <span>{{ item }}</span>
+    <span>{{ tooltip }}</span>
   </v-tooltip>
-  <!-- <v-img class="d-inline-flex" aspect-ratio="1" max-height="32" max-width="32" contain :src="image" lazy-src="icons/command_block.png"></v-img> -->
 </template>
 <script>
 export default {
   name: 'Blank',
-  props: ['item'],
+  props: ['item', 'language'],
   components: {
   },
   data: () => ({
@@ -18,6 +17,12 @@ export default {
   computed: {
     image () {
       return this.getImage(this.getItemName(this.item))
+    },
+    tooltip () {
+      if (this.language) {
+        return this.language[this.item];
+      }
+      return this.item;
     }
   },
   watch: {

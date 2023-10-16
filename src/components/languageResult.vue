@@ -19,11 +19,11 @@
                     <div class="pt-2 d-inline-flex">({{ craft.best_search.score.toFixed(2) }})</div>
                   </v-col>
                   <v-col cols="10">
-                    <item v-for="goal in craft.goals" :key="'g-'+c+'-'+goal" :item="goal" />
+                    <item v-for="goal in craft.goals" :key="'g-'+c+'-'+goal" :item="goal" :language="result.translations" />
                     <div class="mx-4 d-inline-flex" v-if="!(craft.best_search.results.length - craft.goals.length == 0)">
                       <v-icon>mdi-plus</v-icon>
                     </div>
-                    <item v-for="result in nonGoalItems(craft.goals, craft.best_search.results)" :key="'c-'+c+'-'+result" :item="result" />
+                    <item v-for="junk in nonGoalItems(craft.goals, craft.best_search.results)" :key="'c-'+c+'-'+junk" :item="junk" :language="result.translations" />
                   </v-col>
                 </v-row>
                 <template v-slot:actions>
@@ -40,13 +40,11 @@
                     <div class="pt-2 d-inline-flex">({{ search.score.toFixed(2) }})</div>
                   </v-col>
                   <v-col cols="10">
-                    <!-- <item v-for="result in search.results" :key="'c-'+c+'s-'+s+'-'+result" :item="result" /> -->
-
-                    <item v-for="goal in craft.goals" :key="'c-'+c+'s-'+s+'-'+goal" :item="goal" />
+                    <item v-for="goal in craft.goals" :key="'c-'+c+'s-'+s+'-'+goal" :item="goal" :language="result.translations" />
                     <div class="mx-4 d-inline-flex" v-if="!(search.results.length == craft.goals.length)">
                       <v-icon>mdi-plus</v-icon>
                     </div>
-                    <item v-for="result in nonGoalItems(craft.goals, search.results)" :key="'c-'+c+'s-'+s+'-'+result" :item="result" />
+                    <item v-for="junk in nonGoalItems(craft.goals, search.results)" :key="'c-'+c+'s-'+s+'-'+junk" :item="junk" :language="result.translations" />
                   </v-col>
                 </v-row>
               </v-expansion-panel-content>
@@ -68,7 +66,7 @@
                       <div class="pt-2" v-else>Not Craftable</div>                      
                     </v-col>
                     <v-col cols="10">
-                      <item v-for="goal in craft.goals" :key="'g-'+c+'-'+goal" :item="goal" />
+                      <item v-for="goal in craft.goals" :key="'g-'+c+'-'+goal" :item="goal" :language="result.translations" />
                     </v-col>
                   </v-row>
                 </v-list-item-content>

@@ -147,8 +147,8 @@
             <div>Auto Search is turned off</div>
           </v-col>
         </v-row>
-        <v-expansion-panels v-if="!loading && !resultsOutdated">
-          <languageResult v-show="filterLanguage(result)" v-for="result, r in results" :key="r" :result="result" />
+        <v-expansion-panels v-show="!loading && !resultsOutdated">
+          <languageResult v-show="filterLanguage(result)" v-for="result in results" :key="result.language_key" :result="result" />
         </v-expansion-panels>
       </v-col>
       <v-spacer/>
@@ -556,15 +556,17 @@ export default {
       var enabled_crafts = valid_crafts.filter(c => c.enabled);
       
       test_languages.forEach(function(language) {
+        var translations = LanguageTooltips[language.key];
+
         var translation_result = {
           language_name: language.name,
           language_region: language.region,
           localized: language.localized,
           language_key: language.key,
+          translations: translations,
           crafting: [],
           score: 0
         }
-        var translations = LanguageTooltips[language.key];
 
         enabled_crafts.forEach(function(craft) {
           if (craft.valid) {
