@@ -240,7 +240,7 @@ export default {
     duplicateCraft: function(craft) {
       var dupe = {
         enabled: true,
-        size: 3,
+        size: craft.size,
         goals: [
         ],
         inventory: [
