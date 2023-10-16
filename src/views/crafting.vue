@@ -65,6 +65,7 @@ import { Languages } from '../js/languages.js';
 // import { LanguageNames } from '../js/languageNames.js';
 import { LanguageTooltips } from '../js/languageTooltips.js';
 import { en_gb } from '../js/names/en_gb.js';
+import { ShareSerialize, ShareDeserialize } from '../js/shareSerializer'
 
 export default {
   name: 'Crafting',
@@ -207,37 +208,14 @@ export default {
     },
     share: function () {
       var items = this.$store.getters.getItems;
-      var shareObject = {
-        crafting: this.crafting.map(function (craft) {
-          return { 
-            enabled: craft.enabled, 
-            size: craft.size, 
-            goals: craft.goals.map(g => items.indexOf(g)), 
-            inventory: craft.inventory.map(i => items.indexOf(i))
-          }
-        }),
-        options: {
-          one_character_only: this.options.one_character_only,
-          score_search_lengths: this.options.score_search_lengths,
-          search: this.options.search
-        }
-      }
 
-      var json = JSON.stringify(shareObject);
-      var encoded = btoa(json);
+      var encoded = ShareSerialize({
+        crafting: this.crafting,
+        options: this.options
+      }, items);
 
       var link = process.env.VUE_APP_CLIENT_PROTOCOL + process.env.VUE_APP_CLIENT_URL + "?data=" + encoded;
       navigator.clipboard.writeText(link);
-    },
-    deserialize: function (encoded) {
-      var items = this.$store.getters.getItems;
-
-      var json = JSON.parse(atob(encoded))
-      json.crafting.forEach(function (craft) {
-        craft.goals = craft.goals.map(g => items[g])
-        craft.inventory = craft.inventory.map(i => items[i])
-      })
-      return json;
     },
     setResultsOutdated: function () {
       this.resultsOutdated = true;
@@ -552,15 +530,19 @@ export default {
     if(self.$route.query.data) {
       var encoded = self.$route.query.data;
       
-      var json = self.deserialize(encoded)
-      if (json.crafting) {
-        self.crafting = json.crafting
+      var items = this.$store.getters.getItems;
+      var json = ShareDeserialize(encoded, items)
+
+      if (json) {
+        if (json.crafting) {
+          self.crafting = json.crafting
+        }
+        if (json.options) {
+          self.options = json.options
+        }
+        self.$router.replace({'query': null});
+        self.getResults();
       }
-      if (json.options) {
-        self.options = json.options
-      }
-      self.$router.replace({'query': null});
-      self.getResults();
     } else {
       self.setResultsOutdated();
     }
