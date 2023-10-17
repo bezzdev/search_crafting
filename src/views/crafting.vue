@@ -86,6 +86,24 @@
                   </template>
                 </v-switch>
               </v-col>
+              <v-col cols="4">
+                <v-switch v-model="options.optimize_unique_characters" class="ml-2" label="label" @change="setResultsOutdated">
+                  <template v-slot:label>
+                    Optimize Character Set
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on" class="ml-2">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <div class="text-center">
+                        Minimize the required unique characters by using equal cost alternatives<br>
+                        May slow down search speed significantly
+                      </div>
+                    </v-tooltip>
+                  </template>
+                </v-switch>
+              </v-col>
             </v-row>
             <v-row class="px-2 pt-2">
               <v-col cols="4">
@@ -148,7 +166,7 @@
           </v-col>
         </v-row>
         <v-expansion-panels v-show="!loading && !resultsOutdated">
-          <languageResult v-show="filterLanguage(result)" v-for="result in results" :key="result.language_key" :result="result" />
+          <languageResult v-for="result in filteredResults" :key="result.language_key" :result="result" />
         </v-expansion-panels>
       </v-col>
       <v-spacer/>
@@ -284,6 +302,7 @@ export default {
     options: {
       one_character_only: false,
       score_search_lengths: true,
+      optimize_unique_characters: true,
       search: '',
       auto_search: true,
       letter_penalty: 0.6,
@@ -299,6 +318,9 @@ export default {
     loading: false,
   }),
   computed: {
+    filteredResults () {
+      return this.results.filter(r => this.filterLanguage(r))
+    }
   },
   watch: {
   },
@@ -560,13 +582,152 @@ export default {
   
       return (this.options.letter_penalty * (letters - 1)) + (remainder * this.options.junk_penalty); 
     },
+    getUniqueCharacters: function (items) {
+      // get all characters
+      var characters = []
+      items.forEach(function (item) {
+        characters = characters.concat(item.split(''))
+      })
+
+      // get unique characters
+      var unique_characters = characters.filter(function(value, index, array) {
+        return array.indexOf(value) === index;
+      })
+      return unique_characters;
+    },
+    getBestCharacterPermutation: function (fixed_characters, choices, search_variations) {
+      let self = this;
+
+      var current = search_variations[0];
+
+      var best_cost = -1;
+      var best_choices = null;
+      current.forEach(function (option) {
+        var additional_characters = option.split('').filter(c => !fixed_characters.includes(c));
+        var new_characters = fixed_characters.concat(additional_characters)
+        
+        var new_choices = [].concat(choices)
+        new_choices.push(option)
+
+        if (search_variations.length > 1) {
+          var next_options = [].concat(search_variations)
+          next_options.splice(0, 1);
+          
+          var result = self.getBestCharacterPermutation(new_characters, new_choices, next_options)
+          var cost = result.cost;
+
+          if (best_choices == null || cost < best_cost) {
+            best_cost = cost;
+            best_choices = result.choices;
+          }
+        } else {
+          var bottom_cost = new_characters.length;
+
+          if (best_choices == null || bottom_cost < best_cost) {
+            best_cost = bottom_cost;
+            best_choices = new_choices;
+          }
+        }
+      })
+
+      return { choices: best_choices, cost: best_cost };
+    },
+    minimizeLanguageCharacters: function (translation_result) {
+      var self = this;
+      var interchangeable = []
+      
+      // find interchangeable results
+      translation_result.crafting.forEach(function(craft) {
+        if (craft.best_search != null && craft.best_searches.length > 0) {
+          if (craft.best_search.score == craft.best_searches[0].score) {
+            interchangeable.push(craft)
+          }
+        }
+      });
+      
+      // get all characters
+      var searches = translation_result.crafting.filter(craft => !interchangeable.includes(craft) && craft.best_search != null).map(c => c.best_search.search_term)
+      var unique_characters = this.getUniqueCharacters(searches) 
+      
+      var not_solved = []
+
+      translation_result.crafting.forEach(function(craft) {
+        if (craft.best_search != null && craft.best_searches.length > 0) {
+          if (craft.best_search.score == craft.best_searches[0].score) {
+            // current solution is already good
+            if(craft.best_search.search_term.split('').every(c => unique_characters.includes(c))) {
+              return;
+            } else {
+              // otherwise
+
+              // find a valid replacement
+              var valid_replacement = craft.best_searches.find(s => s.search_term.split('').every(c => unique_characters.includes(c)))
+              if (valid_replacement != null) {
+                // override the best_search
+                craft.best_searches.splice(0, 0, craft.best_search);
+                craft.best_search = valid_replacement;
+                craft.best_searches.splice(craft.best_searches.indexOf(valid_replacement, 1));
+                return;
+              }
+            }
+            // try to find a best permutation later
+            not_solved.push(craft)
+          }
+        }
+      })
+
+      interchangeable = not_solved
+
+      if (interchangeable.length > 0) {
+        var permutations = 1
+        interchangeable.forEach(function (inter) {
+          var options = inter.best_searches.filter(s => s.score == inter.best_searches[0].score).length + 1;
+          permutations = permutations * options;
+        })
+        
+        if (permutations < 25000) {
+          interchangeable.forEach(function (inter) {
+            inter.best_searches.splice(0, 0, inter.best_search)
+            inter.best_search = null;
+          })
+
+          // calculate unique characters
+          searches = translation_result.crafting.filter(craft => craft.best_search != null).map(c => c.best_search.search_term)
+          unique_characters = self.getUniqueCharacters(searches) 
+
+          // work out best permutation of the interchangeable search options
+          var search_options = interchangeable.map(function(interchange) {
+            var score_to_match = interchange.best_searches[0].score;
+            return interchange.best_searches.filter(function(search) {
+              return search.score == score_to_match
+            }).map(function(s) {
+              return s.search_term;
+            })
+          })
+          var best_permutation = self.getBestCharacterPermutation(unique_characters, [], search_options);
+
+          for(var i = 0; i < interchangeable.length; i++) {
+            var interchange = interchangeable[i] 
+            var found_best = interchange.best_searches.find(s => s.search_term == best_permutation.choices[i])
+            interchange.best_search = found_best;
+            interchange.best_searches = interchange.best_searches.filter(s => s.search_term != best_permutation.choices[i])
+
+            var additional_characters = found_best.search_term.split('').filter(c => !unique_characters.includes(c));
+            unique_characters = unique_characters.concat(additional_characters)
+          }
+
+          translation_result.unique_characters = unique_characters;
+          translation_result.unique_character_count = unique_characters.length;
+        }
+      }
+    },
     getResults: function () {
       var self = this;
       self.loading = true;
       self.results = []
 
       var keys = Languages.map(l => l.key)
-      // keys = ['en_gb']
+      // keys = ['fra_de']
       var test_languages = keys.map(k => Languages.find(l => l.key == k))
 
       var valid_crafts = self.crafting.filter(c => c.goals.length > 0 && c.inventory.length > 0);
@@ -595,6 +756,7 @@ export default {
           translations: translations,
           crafting: [],
           unique_character_count: 0,
+          unique_characters: [],
           score: 0
         }
 
@@ -659,16 +821,11 @@ export default {
           } else {
             translation_result.score += self.options.fail_penalty * craft.weight
           }
-
         })
-        var characters = []
-        var searches = translation_result.crafting.filter(c => c.best_search != null)
-          .map(c => c.best_search.search_term)
-        searches.forEach(s => characters = characters.concat(s.split('')))
 
-        var unique_characters = characters.filter(function(value, index, array) {
-          return array.indexOf(value) === index;
-        })
+        // calculate unique characters
+        var unique_characters = self.getUniqueCharacters(translation_result.crafting.filter(craft => craft.best_search != null).map(c => c.best_search.search_term))
+        translation_result.unique_characters = unique_characters;
         translation_result.unique_character_count = unique_characters.length;
 
         self.results.push(translation_result)
@@ -682,6 +839,12 @@ export default {
         }
         return 0;
       })
+
+      if (self.options.optimize_unique_characters) {
+        self.results.forEach(function(result) {
+          self.minimizeLanguageCharacters(result)
+        })
+      }
 
       self.loading = false;
     }

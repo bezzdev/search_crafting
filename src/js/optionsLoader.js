@@ -3,6 +3,8 @@ var optionsLoader = function (options) {
     options.one_character_only = false
   if (!checkProperty(options, 'score_search_lengths'))
     options.score_search_lengths = true
+  if (!checkProperty(options, 'optimize_unique_characters'))
+    options.optimize_unique_characters = true
   if (!checkProperty(options, 'search'))
     options.search = ''
   if (!checkProperty(options, 'auto_search'))

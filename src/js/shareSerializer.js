@@ -58,6 +58,34 @@ var deserialize3 = function(encoded, items) {
   return result;
 }
 
+var deserialize4 = function(encoded, items) {
+  var rawJson = atob(encoded)
+  var json = JSON.parse(rawJson)
+  
+  var result = {
+    crafting: json.c.map(craft => {
+      return {
+        enabled: craft.e,
+        size: craft.s,
+        goals: craft.g.map(g => items[g]),
+        inventory: craft.i.map(i => items[i])
+      }
+    }),
+    options: {
+      one_character_only: json.o.o,
+      score_search_lengths: json.o.l,
+      optimize_unique_characters: json.o.u,
+      search: json.o.s,
+      auto_search: json.o.as,
+      letter_penalty: json.o.lp,
+      junk_penalty: json.o.jp,
+      fail_penalty: json.o.fp 
+    }
+  }
+
+  return result;
+}
+
 var shareSerialize = function (data, items) {
   var shareObject = {
     c: data.crafting.map(function (craft) {
@@ -71,6 +99,7 @@ var shareSerialize = function (data, items) {
     o: {
       o: data.options.one_character_only,
       l: data.options.score_search_lengths,
+      u: data.options.optimize_unique_characters,
       s: data.options.search,
       as: data.options.auto_search,
       lp: data.options.letter_penalty,
@@ -89,16 +118,20 @@ var shareSerialize = function (data, items) {
 var shareDeserialize = function (encoded, items) {
   var deserialized = null;
   try {
-    deserialized = deserialize3(encoded, items)
-  } catch (e3) {
+    deserialized = deserialize4(encoded, items)
+  } catch (e4) {
     try {
-      deserialized = deserialize2(encoded, items)
-    } catch (e2) {
+      deserialized = deserialize3(encoded, items)
+    } catch (e3) {
       try {
-        deserialized = deserialize1(encoded, items)
-      } catch (e1) {
-        console.log("could not deserialize")
-      }  
+        deserialized = deserialize2(encoded, items)
+      } catch (e2) {
+        try {
+          deserialized = deserialize1(encoded, items)
+        } catch (e1) {
+          console.log("could not deserialize")
+        }  
+      }
     }
   }
 

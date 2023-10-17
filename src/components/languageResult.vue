@@ -4,10 +4,15 @@
       ( {{ result.score.toFixed(2) }} ) ( {{ result.unique_character_count }} ) {{ result.localized }} = {{ result.language_name }} ( {{ result.language_region }} )
     </v-expansion-panel-header>
     <v-expansion-panel-content>
-      <v-subheader>
-        Unique characters needed: {{ result.unique_character_count }} - Searches: {{ bestCharacters }} <br>
+      <div class="language-description">
+        Unique characters needed: {{ result.unique_character_count }} ({{ result.unique_characters.join('') }})
+      </div>
+      <div class="language-description">
+        Searches: {{ bestCharacters }}
+      </div>
+      <div class="language-description mb-2">
         Calculated efficiency score: ( {{ result.score.toFixed(2) }} )
-      </v-subheader>
+      </div>
       <v-lazy>
         <v-expansion-panels class="px-2">
           <v-expansion-panel v-for="craft, c in result.crafting" :key="c" :readonly="craft.best_searches.length == 0">
@@ -142,5 +147,9 @@ export default {
   padding-left: 8px;
   padding-right: 4px;
   padding-bottom: 10px;
+}
+.language-description {
+  padding: 0 16px;
+  color: #bfbfbf;
 }
 </style>
