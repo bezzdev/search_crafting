@@ -334,6 +334,7 @@ export default {
       this.crafting.push({
         enabled: true,
         size: 3,
+        weight: 1.0,
         goals: [
         ],
         inventory: [
@@ -365,6 +366,7 @@ export default {
       var dupe = {
         enabled: craft.enabled,
         size: craft.size,
+        weight: craft.weight,
         goals: [
         ],
         inventory: [
@@ -434,12 +436,39 @@ export default {
       })
       return relevant;
     },
+    getLongerSearches: function (translations, searches) {
+      let self = this;
+      var new_searches = []
+      var new_valid_searches = []
+
+      searches.forEach(function(search) {
+        translations.forEach(function(translation) {
+          for(var i = 0; i < translation.length - search.length; i++) {
+            if (translation.substring(i, i + search.length) == search) {
+              var new_char = translation[i + search.length];
+              if(!self.badCharacters.includes(new_char)) {
+                var new_search = search + new_char;
+                if (!new_searches.includes(new_search)) {
+                  new_searches.push(new_search)
+                }
+              }
+            }
+          }
+        })
+      })
+      new_searches.forEach(function(search) {
+        if(translations.every(function (translation) { return translation.includes(search); })) {
+          new_valid_searches.push(search); 
+        }
+      })
+      return new_valid_searches;
+    },
     getSearchesForItems: function (items, translations) {
       var self = this;
       
       var item_translations = []
       var characters = []
-      var valid_characters = []
+      var valid_searches = []
 
       items.forEach(function(item) {
         var translation = translations[item].toLowerCase();
@@ -456,41 +485,20 @@ export default {
 
       characters.forEach(function(char) {
         if(item_translations.every(function (translation) { return translation.includes(char); })) {
-          valid_characters.push(char); 
+          valid_searches.push(char); 
         }
       })
 
 
       if (!this.options.one_character_only) {
-        // handling for search lengths > 1
-        var characters2 = []
-        var valid_characters2 = []
+        var two_length_searches = self.getLongerSearches(item_translations, valid_searches);
+        //var three_length_searches = self.getLongerSearches(item_translations, two_length_searches);
 
-        valid_characters.forEach(function(char) {
-          items.forEach(function(item) {
-            var translation = translations[item].toLowerCase();
-            for(var i = 0; i < translation.length - 1; i++) {
-              if (translation[i] == char) {
-                var newChar2 = translation[i+1];
-                if(!self.badCharacters.includes(newChar2)) {
-                  var newSearch = char + newChar2;
-                  if (!characters2.includes(newSearch)) {
-                    characters2.push(newSearch)
-                  }
-                }
-              }
-            }
-          })
-        })
-        characters2.forEach(function(char2) {
-          if(item_translations.every(function (translation) { return translation.includes(char2); })) {
-            valid_characters2.push(char2); 
-          }
-        })
-        valid_characters = valid_characters.concat(valid_characters2); 
+        valid_searches = valid_searches.concat(two_length_searches);
+        // valid_searches = valid_searches.concat(three_length_searches); 
       }
 
-      return valid_characters
+      return valid_searches
     },
     searchGroups: function (groups, translations, search) {
       var found = []
@@ -609,7 +617,7 @@ export default {
 
             if (scored_search_results.length > 1) {
               best_searches = scored_search_results.slice(1, 3);
-              best_searches = best_searches.filter(s => s.score < best_search.score * 5)
+              best_searches = best_searches.filter(s => s.score < (best_search.score * 5) + 1)
             }
 
             translation_result.crafting.push({
