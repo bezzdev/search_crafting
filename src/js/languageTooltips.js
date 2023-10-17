@@ -22,6 +22,7 @@ import { enws } from './tooltips/enws_tooltips.js';
 import { en_au } from './tooltips/en_au_tooltips.js';
 import { en_ca } from './tooltips/en_ca_tooltips.js';
 import { en_gb } from './tooltips/en_gb_tooltips.js';
+import { en_us } from './tooltips/en_us_tooltips.js';
 import { en_nz } from './tooltips/en_nz_tooltips.js';
 import { en_pt } from './tooltips/en_pt_tooltips.js';
 import { en_ud } from './tooltips/en_ud_tooltips.js';
@@ -146,6 +147,7 @@ var language_tooltips = {
   'en_au': en_au,
   'en_ca': en_ca,
   'en_gb': en_gb,
+  'en_us': en_us,
   'en_nz': en_nz,
   'en_pt': en_pt,
   'en_ud': en_ud,

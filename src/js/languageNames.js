@@ -22,6 +22,7 @@ import { enws } from './names/enws.js';
 import { en_au } from './names/en_au.js';
 import { en_ca } from './names/en_ca.js';
 import { en_gb } from './names/en_gb.js';
+import { en_us } from './names/en_us.js';
 import { en_nz } from './names/en_nz.js';
 import { en_pt } from './names/en_pt.js';
 import { en_ud } from './names/en_ud.js';
@@ -146,6 +147,7 @@ var language_names = {
   'en_au': en_au,
   'en_ca': en_ca,
   'en_gb': en_gb,
+  'en_us': en_us,
   'en_nz': en_nz,
   'en_pt': en_pt,
   'en_ud': en_ud,
