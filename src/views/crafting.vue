@@ -436,62 +436,80 @@ export default {
       })
       return relevant;
     },
-    getLongerSearches: function (translations, searches) {
+    getLongerSearches: function (goals, groups, translations, searches) { // translations, searches) {
       let self = this;
-      var new_searches = []
-      var new_valid_searches = []
 
-      searches.forEach(function(search) {
-        translations.forEach(function(translation) {
-          for(var i = 0; i < translation.length - search.length; i++) {
-            if (translation.substring(i, i + search.length) == search) {
-              var new_char = translation[i + search.length];
-              if(!self.badCharacters.includes(new_char)) {
-                var new_search = search + new_char;
-                if (!new_searches.includes(new_search)) {
-                  new_searches.push(new_search)
+      var new_searches = []
+      goals.forEach(function(item) {
+        groups.filter(group => group.some(recipe => recipe.output == item)).forEach(function(group) {
+          group.forEach(function(recipe) {
+            var translation = translations[recipe.output].toLowerCase();
+
+            searches.forEach(function(search) {
+              for(var i = 0; i < translation.length; i++) {
+                if (translation.substring(i, i + search.length) == search) {
+                  var new_char = translation[i + search.length];
+                  if(!self.badCharacters.includes(new_char)) {
+                    var new_search = search + new_char;
+                    if (!new_searches.includes(new_search)) {
+                      new_searches.push(new_search)
+                    }
+                  }
                 }
               }
-            }
-          }
+            })
+          })
         })
       })
-      new_searches.forEach(function(search) {
-        if(translations.every(function (translation) { return translation.includes(search); })) {
-          new_valid_searches.push(search); 
+
+      var valid_searches = self.validateSearches(goals, groups, translations, new_searches)
+      return valid_searches;
+    },
+    validateSearches: function (goals, groups, translations, searches) {
+      var valid_searches = []
+      searches.forEach(function(search) {
+        if(goals.every(function(goal) {
+          var found = groups.find(function(group) { 
+            return group.some(function(recipe) {
+              return recipe.output == goal
+            }) && group.some(function(recipe) { 
+              return translations[recipe.output].includes(search)
+            })
+          })
+          return found != null;
+        })) {
+          valid_searches.push(search); 
         }
       })
-      return new_valid_searches;
+      return valid_searches;
     },
-    getSearchesForItems: function (items, translations) {
+    getSearchesForItems: function (goals, groups, translations) {
       var self = this;
       
-      var item_translations = []
-      var characters = []
-      var valid_searches = []
+      // var item_translations = []
+      var searches = []
 
-      items.forEach(function(item) {
-        var translation = translations[item].toLowerCase();
-        item_translations.push(translation);
+      goals.forEach(function(item) {
+        groups.filter(group => group.some(recipe => recipe.output == item)).forEach(function(group) {
+          group.forEach(function(recipe) {
+            var translation = translations[recipe.output].toLowerCase();
+            // item_translations.push(translation);
 
-        for(var c = 0; c < translation.length; c++) {
-          var ch = translation[c]
-          if (!characters.includes(ch) && !self.badCharacters.includes(ch)) {
-            // get all matching characters for these keys
-            characters.push(ch);
-          }
-        }
+            for(var c = 0; c < translation.length; c++) {
+              var ch = translation[c]
+              if (!searches.includes(ch) && !self.badCharacters.includes(ch)) {
+                // get all matching characters for these keys
+                searches.push(ch);
+              }
+            }
+          })
+        })
       })
 
-      characters.forEach(function(char) {
-        if(item_translations.every(function (translation) { return translation.includes(char); })) {
-          valid_searches.push(char); 
-        }
-      })
-
+      var valid_searches = self.validateSearches(goals, groups, translations, searches)
 
       if (!this.options.one_character_only) {
-        var two_length_searches = self.getLongerSearches(item_translations, valid_searches);
+        var two_length_searches = self.getLongerSearches(goals, groups, translations, valid_searches);
         //var three_length_searches = self.getLongerSearches(item_translations, two_length_searches);
 
         valid_searches = valid_searches.concat(two_length_searches);
@@ -548,6 +566,7 @@ export default {
       self.results = []
 
       var keys = Languages.map(l => l.key)
+      // keys = ['en_gb']
       var test_languages = keys.map(k => Languages.find(l => l.key == k))
 
       var valid_crafts = self.crafting.filter(c => c.goals.length > 0 && c.inventory.length > 0);
@@ -582,7 +601,7 @@ export default {
         enabled_crafts.forEach(function(craft) {
           if (craft.valid) {
             var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.size, craft.inventory)
-            var searches = self.getSearchesForItems(craft.goals, translations);
+            var searches = self.getSearchesForItems(craft.goals, groups, translations);
 
             var scored_search_results = []
 
