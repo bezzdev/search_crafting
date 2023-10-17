@@ -635,8 +635,8 @@ export default {
             }
 
             if (scored_search_results.length > 1) {
-              best_searches = scored_search_results.slice(1, 3);
-              best_searches = best_searches.filter(s => s.score < (best_search.score * 5) + 1)
+              scored_search_results.splice(0, 1);
+              best_searches = scored_search_results.filter(s => s.score < (best_search.score * 2) + 1)
             }
 
             translation_result.crafting.push({
