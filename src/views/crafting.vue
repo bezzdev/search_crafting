@@ -666,7 +666,7 @@ export default {
                 // override the best_search
                 craft.best_searches.splice(0, 0, craft.best_search);
                 craft.best_search = valid_replacement;
-                craft.best_searches.splice(craft.best_searches.indexOf(valid_replacement, 1));
+                craft.best_searches.splice(craft.best_searches.indexOf(valid_replacement), 1);
                 return;
               }
             }
