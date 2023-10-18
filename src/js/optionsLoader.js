@@ -13,6 +13,8 @@ var optionsLoader = function (options) {
     options.letter_penalty = 0.6
   if (!checkProperty(options, 'junk_penalty'))
     options.junk_penalty = 10
+  if (!checkProperty(options, 'has_junk_penalty'))
+    options.has_junk_penalty = 100
   if (!checkProperty(options, 'fail_penalty'))
     options.fail_penalty = 1000
   return options;
