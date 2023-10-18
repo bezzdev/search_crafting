@@ -1,7 +1,7 @@
 <template>
   <v-expansion-panel>
     <v-expansion-panel-header>
-      ( {{ result.score.toFixed(2) }} ) ( {{ result.unique_character_count }} ) {{ result.localized }} = {{ result.language_name }} ( {{ result.language_region }} )
+      ( {{ formatScore(result.score) }} ) ( {{ result.unique_character_count }} ) {{ result.localized }} = {{ result.language_name }} ( {{ result.language_region }} )
     </v-expansion-panel-header>
     <v-expansion-panel-content>
       <div class="language-description">
@@ -11,17 +11,17 @@
         Searches: {{ bestCharacters }}
       </div>
       <div class="language-description mb-2">
-        Calculated efficiency score: ( {{ result.score.toFixed(2) }} )
+        Calculated efficiency score: ( {{ formatScore(result.score) }} )
       </div>
       <v-lazy>
-        <v-expansion-panels class="px-2">
+        <v-expansion-panels class="px-2" v-if="result">
           <v-expansion-panel v-for="craft, c in result.crafting" :key="c" :readonly="craft.best_searches.length == 0">
             <template v-if="craft.best_search">
               <v-expansion-panel-header>
                 <v-row dense style="width: 100%;">
                   <v-col cols="auto" style="width: 100px;">
                     <div class="pt-2 d-inline-flex search-character">({{formatSearchTerm(craft.best_search.search_term)}})</div>
-                    <div class="pt-2 d-inline-flex">({{ craft.best_search.score.toFixed(2) }})</div>
+                    <div class="pt-2 d-inline-flex">({{ formatScore(craft.best_search.score) }})</div>
                   </v-col>
                   <v-col cols="10">
                     <item v-for="goal in craft.goals" :key="'g-'+c+'-'+goal" :item="goal" :language="result.translations" />
@@ -42,7 +42,7 @@
                 <v-row v-for="search, s in craft.best_searches" :key="search.search_term" dense style="width: 100%;">
                   <v-col cols="auto" style="width: 100px;">
                     <div class="pt-2 d-inline-flex search-character">({{ formatSearchTerm(search.search_term) }})</div>
-                    <div class="pt-2 d-inline-flex">({{ search.score.toFixed(2) }})</div>
+                    <div class="pt-2 d-inline-flex">({{ formatScore(search.score) }})</div>
                   </v-col>
                   <v-col cols="10">
                     <item v-for="goal in craft.goals" :key="'c-'+c+'s-'+s+'-'+goal" :item="goal" :language="result.translations" />
@@ -131,9 +131,14 @@ export default {
       return results.filter(i => !goals.includes(i));
     },
     formatSearchTerm: function (term) {
-      if (term == " ")
-        return "\xa0 \xa0";
+      // if (term == " ")
+      //   return "\xa0 \xa0";
       return term;
+    },
+    formatScore: function(score) {
+      if (score.toFixed)
+        return score.toFixed(2);
+      return score;
     }
   },
   mounted () {
