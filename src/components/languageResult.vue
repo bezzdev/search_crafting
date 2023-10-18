@@ -19,7 +19,7 @@
             <template v-if="craft.best_search">
               <v-expansion-panel-header>
                 <v-row dense style="width: 100%;">
-                  <v-col cols="auto" style="width: 100px;">
+                  <v-col cols="2" style="width: 100px;">
                     <div class="pt-2 d-inline-flex search-character">({{formatSearchTerm(craft.best_search.search_term)}})</div>
                     <div class="pt-2 d-inline-flex">({{ formatScore(craft.best_search.score) }})</div>
                   </v-col>
@@ -37,10 +37,10 @@
                   </v-icon>
                 </template>
               </v-expansion-panel-header>
-              <v-expansion-panel-content class="px-3">
+              <v-expansion-panel-content class="px-4">
                 <v-divider class="pb-4" />
                 <v-row v-for="search, s in craft.best_searches" :key="search.search_term" dense style="width: 100%;">
-                  <v-col cols="auto" style="width: 100px;">
+                  <v-col cols="2" style="width: 100px;">
                     <div class="pt-2 d-inline-flex search-character">({{ formatSearchTerm(search.search_term) }})</div>
                     <div class="pt-2 d-inline-flex">({{ formatScore(search.score) }})</div>
                   </v-col>

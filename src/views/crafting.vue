@@ -135,6 +135,20 @@
                 </v-text-field>
               </v-col>
               <v-col cols="4">
+                <v-text-field v-model="options.has_junk_penalty" label="Has Junk Penalty" @change="setResultsOutdated" type="number" dense>
+                  <template v-slot:append>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Penalty for having any junk in the search results</span>
+                    </v-tooltip>
+                  </template>
+                </v-text-field>
+              </v-col>
+              <v-col cols="4">
                 <v-text-field v-model="options.fail_penalty" label="Search Fail Penalty" @change="setResultsOutdated" type="number" dense>
                   <template v-slot:append>
                     <v-tooltip bottom>
@@ -198,7 +212,7 @@ export default {
       {
         enabled: true,
         size: 3,
-        weight: 1.0,
+        weight: 0.0,
         goals: [
           "item.minecraft.iron_pickaxe",
           "item.minecraft.iron_axe",
@@ -215,7 +229,7 @@ export default {
       {
         enabled: true,
         size: 3,
-        weight: 1.0,
+        weight: 2.0,
         goals: [
           "item.minecraft.bucket",
         ],
@@ -244,8 +258,28 @@ export default {
       },
       {
         enabled: true,
+        size: 2,
+        weight: 1.0,
+        goals: [
+          "block.minecraft.white_wool",
+          "block.minecraft.glowstone"
+        ],
+        inventory: [
+          "block.minecraft.oak_planks",
+          "block.minecraft.obsidian",
+          "block.minecraft.crying_obsidian",
+          "item.minecraft.ender_pearl",
+          "item.minecraft.glowstone_dust",
+          "block.minecraft.glowstone",
+          "item.minecraft.string",
+          "block.minecraft.white_wool",
+          "item.minecraft.gold_ingot",
+        ]
+      },
+      {
+        enabled: true,
         size: 3,
-        weight: 0.0,
+        weight: 0.5,
         goals: [
           "item.minecraft.golden_carrot",
         ],
@@ -263,11 +297,10 @@ export default {
       },
       {
         enabled: true,
-        size: 3,
+        size: 2,
         weight: 1.0,
         goals: [
-          "block.minecraft.white_wool",
-          "block.minecraft.glowstone"
+          "item.minecraft.ender_eye",
         ],
         inventory: [
           "block.minecraft.oak_planks",
@@ -275,15 +308,39 @@ export default {
           "block.minecraft.crying_obsidian",
           "item.minecraft.ender_pearl",
           "item.minecraft.blaze_rod",
-          "block.minecraft.white_bed",
+          "item.minecraft.blaze_powder",
           "item.minecraft.glowstone_dust",
           "item.minecraft.string",
+          "block.minecraft.white_wool",
+          "block.minecraft.glowstone"
         ]
       },
       {
         enabled: true,
         size: 3,
         weight: 1.0,
+        goals: [
+          "item.minecraft.ender_eye",
+          "block.minecraft.white_bed",
+          "block.minecraft.respawn_anchor"
+        ],
+        inventory: [
+          "block.minecraft.oak_planks",
+          "block.minecraft.obsidian",
+          "block.minecraft.crying_obsidian",
+          "item.minecraft.ender_pearl",
+          "item.minecraft.blaze_rod",
+          "item.minecraft.blaze_powder",
+          "item.minecraft.glowstone_dust",
+          "item.minecraft.string",
+          "block.minecraft.white_wool",
+          "block.minecraft.glowstone"
+        ]
+      },
+      {
+        enabled: true,
+        size: 3,
+        weight: 2.0,
         goals: [
           "block.minecraft.white_bed",
           "block.minecraft.respawn_anchor"
@@ -294,6 +351,9 @@ export default {
           "block.minecraft.crying_obsidian",
           "item.minecraft.ender_pearl",
           "item.minecraft.blaze_rod",
+          "item.minecraft.blaze_powder",
+          "item.minecraft.glowstone_dust",
+          "item.minecraft.string",
           "block.minecraft.white_wool",
           "block.minecraft.glowstone"
         ]
@@ -305,10 +365,12 @@ export default {
       optimize_unique_characters: true,
       search: '',
       auto_search: true,
-      letter_penalty: 0.6,
-      junk_penalty: 10,
+      letter_penalty: 1.0,
+      junk_penalty: 25.0,
+      has_junk_penalty: 80.0,
       fail_penalty: 1000
     },
+    penalty_values: null,
     badCharacters: ["□"],
     results: [],
     edit: false,
@@ -577,10 +639,17 @@ export default {
     scoreSearch: function(search, junk) {
       var remainder = junk;
       var letters = search;
+      
       if (!this.options.score_search_lengths)
         letters = 1;
-  
-      return (this.options.letter_penalty * (letters - 1)) + (remainder * this.options.junk_penalty); 
+
+      var letter_penalty = this.penalty_values.letter_penalty * (letters - 1);
+
+      var junk_penalty = remainder * this.penalty_values.junk_penalty;
+      if (remainder > 0) {
+        junk_penalty += this.penalty_values.has_junk_penalty
+      }
+      return letter_penalty + junk_penalty
     },
     getUniqueCharacters: function (items) {
       // get all characters
@@ -661,7 +730,7 @@ export default {
               // otherwise
 
               // find a valid replacement
-              var valid_replacement = craft.best_searches.find(s => s.search_term.split('').every(c => unique_characters.includes(c)))
+              var valid_replacement = craft.best_searches.find(s => s.score == craft.best_search.score && s.search_term.split('').every(c => unique_characters.includes(c)))
               if (valid_replacement != null) {
                 // override the best_search
                 craft.best_searches.splice(0, 0, craft.best_search);
@@ -726,8 +795,15 @@ export default {
       self.loading = true;
       self.results = []
 
+      self.penalty_values = {
+        letter_penalty: parseFloat(self.options.letter_penalty),
+        junk_penalty: parseFloat(self.options.junk_penalty),
+        has_junk_penalty: parseFloat(self.options.has_junk_penalty),
+        fail_penalty: parseFloat(self.options.fail_penalty)
+      }
+
       var keys = Languages.map(l => l.key)
-      // keys = ['fra_de']
+      // keys = ['uk_ua']
       var test_languages = keys.map(k => Languages.find(l => l.key == k))
 
       var valid_crafts = self.crafting.filter(c => c.goals.length > 0 && c.inventory.length > 0);
@@ -798,7 +874,10 @@ export default {
 
             if (scored_search_results.length > 1) {
               scored_search_results.splice(0, 1);
-              best_searches = scored_search_results.filter(s => s.score < (best_search.score * 2) + 1)
+              var same_scores = scored_search_results.filter(s => s.score == best_search.score).length
+
+              var take = Math.max(same_scores, 5);
+              best_searches = scored_search_results.slice(0, take);
             }
 
             translation_result.crafting.push({
@@ -819,7 +898,7 @@ export default {
           if (best_search != null) {
             translation_result.score += best_search.score * craft.weight
           } else {
-            translation_result.score += self.options.fail_penalty * craft.weight
+            translation_result.score += self.penalty_values.fail_penalty * craft.weight
           }
         })
 

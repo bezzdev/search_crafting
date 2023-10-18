@@ -229,7 +229,7 @@
             </v-col>
             <v-col cols="4">
               <div class="ml-2 pt-2">Language Score Weight: {{craft.weight.toFixed(2)}}</div>
-              <v-slider v-model="craft.weight" @change="weightChanged" min="0" max="1" step="0" dense hide-details height="32" />
+              <v-slider v-model="craft.weight" @change="weightChanged" min="0" max="2" step="0.01" dense hide-details height="32" />
             </v-col>
             <v-spacer/>
           </v-row>

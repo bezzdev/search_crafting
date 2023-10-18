@@ -10,13 +10,13 @@ var optionsLoader = function (options) {
   if (!checkProperty(options, 'auto_search'))
     options.auto_search = true
   if (!checkProperty(options, 'letter_penalty'))
-    options.letter_penalty = 0.6
+    options.letter_penalty = 1.0
   if (!checkProperty(options, 'junk_penalty'))
-    options.junk_penalty = 10
+    options.junk_penalty = 25.0
   if (!checkProperty(options, 'has_junk_penalty'))
-    options.has_junk_penalty = 100
+    options.has_junk_penalty = 80.0
   if (!checkProperty(options, 'fail_penalty'))
-    options.fail_penalty = 1000
+    options.fail_penalty = 1000.0
   return options;
 }
 
