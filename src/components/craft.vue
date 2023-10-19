@@ -51,6 +51,20 @@
             <span>Duplicate Group</span>
           </v-tooltip>
         </div>
+        <div class="pr-2 mr-4">
+          <v-tooltip bottom v-if="!edit">
+            <template v-slot:activator="{ on }">
+              <div v-on="on">
+                <v-icon class="no-rotate">
+                  mdi-weight
+                </v-icon>
+                <span> = </span>
+                <span> {{ weightLabel }}</span>
+              </div>
+            </template>
+            <span>Scoring Weight</span>
+          </v-tooltip>
+        </div>
         <div>
           <v-tooltip bottom v-if="!edit">
             <template v-slot:activator="{ on }">
@@ -87,7 +101,13 @@
               <item v-else item="block.minecraft.no_crafting_table" />
             </v-col>
             <v-col>
-              <div class="ml-2">Language Score Weight: {{craft.weight.toFixed(2)}}</div>
+              <div>
+                <v-icon class="no-rotate">
+                  mdi-weight
+                </v-icon>
+                <span> = </span>
+                <span> {{ weightLabel }}</span>
+              </div>
             </v-col>
           </v-row>
         </v-list-item-content>
@@ -210,26 +230,37 @@
         <v-list-item-content>
           <v-row align="center">
             <v-col cols="auto">
-              <v-tooltip bottom v-if="craft.size == 3">
+              <v-tooltip top v-if="craft.size == 3">
                 <template v-slot:activator="{ on }">
                   <v-btn v-on="on" @click="toggleCrafting" tile icon>
                     <item item="block.minecraft.crafting_table"  />
                   </v-btn>
                 </template>
-                <span>Changed to 2x2 only</span>
+                <span>Change to 2x2 only</span>
               </v-tooltip>
-              <v-tooltip bottom v-else>
+              <v-tooltip top v-else>
                 <template v-slot:activator="{ on }">
                   <v-btn v-on="on" @click="toggleCrafting" tile icon>
                     <item item="block.minecraft.no_crafting_table"  />
                   </v-btn>
                 </template>
-                <span>Changed to 3x3 available</span>
+                <span>Change to 3x3 available</span>
               </v-tooltip>
             </v-col>
-            <v-col cols="4">
-              <div class="ml-2 pt-2">Language Score Weight: {{craft.weight.toFixed(2)}}</div>
-              <v-slider v-model="craft.weight" @change="weightChanged" min="0" max="2" step="0.01" dense hide-details height="32" />
+            <v-col cols="2">
+              <v-tooltip top>
+                <template v-slot:activator="{ on }">
+                  <div v-on="on" class="text-center">
+                    <v-icon class="no-rotate">
+                      mdi-weight
+                    </v-icon>
+                    <span> = </span>
+                    <span> {{ weightLabel }}</span>
+                  </div>
+                </template>
+                <span>Scoring Weight</span>
+              </v-tooltip>
+              <v-slider v-model="craft.weight" @change="weightChanged" min="0" max="2" step="0.1" dense hide-details height="32" />
             </v-col>
             <v-spacer/>
           </v-row>
@@ -264,6 +295,9 @@ export default {
     },
     enabled () {
       return this.craft.enabled;
+    },
+    weightLabel () {
+      return this.craft.weight.toFixed(2)
     }
   },
   watch: {

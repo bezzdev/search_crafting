@@ -219,11 +219,17 @@ export default {
           "item.minecraft.iron_shovel",
         ],
         inventory: [
+          "block.minecraft.dirt",
+          "block.minecraft.oak_log",
           "block.minecraft.oak_planks",
           "item.minecraft.stick",
+          "item.minecraft.iron_nugget",
           "item.minecraft.iron_ingot",
+          "item.minecraft.gold_nugget",
           "item.minecraft.gold_ingot",
-          "item.minecraft.flint"
+          "item.minecraft.diamond",
+          "item.minecraft.wheat",
+          "item.minecraft.carrot",
         ]
       },
       {
@@ -234,11 +240,17 @@ export default {
           "item.minecraft.bucket",
         ],
         inventory: [
+          "block.minecraft.dirt",
+          "block.minecraft.oak_log",
           "block.minecraft.oak_planks",
           "item.minecraft.stick",
+          "item.minecraft.iron_nugget",
           "item.minecraft.iron_ingot",
+          "item.minecraft.gold_nugget",
           "item.minecraft.gold_ingot",
-          "item.minecraft.flint"
+          "item.minecraft.diamond",
+          "item.minecraft.wheat",
+          "item.minecraft.carrot",
         ]        
       },
       {
@@ -249,11 +261,19 @@ export default {
           "item.minecraft.flint_and_steel"
         ],
         inventory: [
+          "block.minecraft.dirt",
+          "block.minecraft.oak_log",
           "block.minecraft.oak_planks",
           "item.minecraft.stick",
+          "item.minecraft.iron_nugget",
           "item.minecraft.iron_ingot",
+          "item.minecraft.gold_nugget",
           "item.minecraft.gold_ingot",
-          "item.minecraft.flint"
+          "item.minecraft.diamond",
+          "item.minecraft.wheat",
+          "item.minecraft.carrot",
+          "item.minecraft.flint",
+          "item.minecraft.bucket"
         ]       
       },
       {
@@ -265,7 +285,18 @@ export default {
           "block.minecraft.glowstone"
         ],
         inventory: [
+          "block.minecraft.dirt",
+          "block.minecraft.oak_log",
           "block.minecraft.oak_planks",
+          "item.minecraft.stick",
+          "item.minecraft.iron_nugget",
+          "item.minecraft.iron_ingot",
+          "item.minecraft.gold_nugget",
+          "item.minecraft.gold_ingot",
+          "item.minecraft.diamond",
+          "item.minecraft.wheat",
+          "item.minecraft.carrot",
+          "item.minecraft.bucket",
           "block.minecraft.obsidian",
           "block.minecraft.crying_obsidian",
           "item.minecraft.ender_pearl",
@@ -273,7 +304,49 @@ export default {
           "block.minecraft.glowstone",
           "item.minecraft.string",
           "block.minecraft.white_wool",
+          "block.minecraft.gravel",
+          "block.minecraft.soul_sand",
+          "block.minecraft.nether_bricks",
+          "block.minecraft.blackstone",
+          "block.minecraft.polished_blackstone_bricks",
+          "item.minecraft.nether_brick"
+        ]
+      },
+      {
+        enabled: false,
+        size: 2,
+        weight: 1.0,
+        goals: [
+          "block.minecraft.white_wool",
+          "block.minecraft.glowstone",
+          "block.minecraft.nether_bricks"
+        ],
+        inventory: [
+          "block.minecraft.dirt",
+          "block.minecraft.oak_log",
+          "block.minecraft.oak_planks",
+          "item.minecraft.stick",
+          "item.minecraft.iron_nugget",
+          "item.minecraft.iron_ingot",
+          "item.minecraft.gold_nugget",
           "item.minecraft.gold_ingot",
+          "item.minecraft.diamond",
+          "item.minecraft.wheat",
+          "item.minecraft.carrot",
+          "item.minecraft.bucket",
+          "block.minecraft.obsidian",
+          "block.minecraft.crying_obsidian",
+          "item.minecraft.ender_pearl",
+          "item.minecraft.glowstone_dust",
+          "block.minecraft.glowstone",
+          "item.minecraft.string",
+          "block.minecraft.white_wool",
+          "block.minecraft.gravel",
+          "block.minecraft.soul_sand",
+          "block.minecraft.nether_bricks",
+          "block.minecraft.blackstone",
+          "block.minecraft.polished_blackstone_bricks",
+          "item.minecraft.nether_brick"
         ]
       },
       {
@@ -284,15 +357,30 @@ export default {
           "item.minecraft.golden_carrot",
         ],
         inventory: [
+          "block.minecraft.dirt",
+          "block.minecraft.oak_log",
           "block.minecraft.oak_planks",
-          "block.minecraft.white_wool",
+          "item.minecraft.stick",
+          "item.minecraft.iron_nugget",
+          "item.minecraft.iron_ingot",
+          "item.minecraft.gold_nugget",
+          "item.minecraft.gold_ingot",
+          "item.minecraft.diamond",
+          "item.minecraft.wheat",
+          "item.minecraft.carrot",
+          "item.minecraft.bucket",
           "block.minecraft.obsidian",
           "block.minecraft.crying_obsidian",
           "item.minecraft.ender_pearl",
-          "item.minecraft.blaze_rod",
-          "item.minecraft.carrot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot"
+          "item.minecraft.glowstone_dust",
+          "block.minecraft.glowstone",
+          "item.minecraft.string",
+          "block.minecraft.white_wool",
+          "block.minecraft.gravel",
+          "block.minecraft.soul_sand",
+          "block.minecraft.nether_bricks",
+          "block.minecraft.blackstone",
+          "block.minecraft.polished_blackstone_bricks"
         ]
       },
       {
@@ -303,38 +391,32 @@ export default {
           "item.minecraft.ender_eye",
         ],
         inventory: [
+          "block.minecraft.dirt",
+          "block.minecraft.oak_log",
           "block.minecraft.oak_planks",
+          "item.minecraft.stick",
+          "item.minecraft.iron_nugget",
+          "item.minecraft.iron_ingot",
+          "item.minecraft.gold_nugget",
+          "item.minecraft.gold_ingot",
+          "item.minecraft.diamond",
+          "item.minecraft.wheat",
+          "item.minecraft.carrot",
+          "item.minecraft.bucket",
           "block.minecraft.obsidian",
           "block.minecraft.crying_obsidian",
           "item.minecraft.ender_pearl",
-          "item.minecraft.blaze_rod",
-          "item.minecraft.blaze_powder",
           "item.minecraft.glowstone_dust",
+          "block.minecraft.glowstone",
           "item.minecraft.string",
           "block.minecraft.white_wool",
-          "block.minecraft.glowstone"
-        ]
-      },
-      {
-        enabled: true,
-        size: 3,
-        weight: 1.0,
-        goals: [
-          "item.minecraft.ender_eye",
-          "block.minecraft.white_bed",
-          "block.minecraft.respawn_anchor"
-        ],
-        inventory: [
-          "block.minecraft.oak_planks",
-          "block.minecraft.obsidian",
-          "block.minecraft.crying_obsidian",
-          "item.minecraft.ender_pearl",
-          "item.minecraft.blaze_rod",
+          "block.minecraft.gravel",
+          "block.minecraft.soul_sand",
+          "block.minecraft.nether_bricks",
+          "block.minecraft.blackstone",
+          "block.minecraft.polished_blackstone_bricks",
           "item.minecraft.blaze_powder",
-          "item.minecraft.glowstone_dust",
-          "item.minecraft.string",
-          "block.minecraft.white_wool",
-          "block.minecraft.glowstone"
+          "item.minecraft.blaze_rod",
         ]
       },
       {
@@ -346,18 +428,70 @@ export default {
           "block.minecraft.respawn_anchor"
         ],
         inventory: [
+          "block.minecraft.dirt",
           "block.minecraft.oak_planks",
+          "item.minecraft.stick",
+          "item.minecraft.iron_nugget",
+          "item.minecraft.iron_ingot",
+          "item.minecraft.gold_nugget",
+          "item.minecraft.gold_ingot",
+          "item.minecraft.diamond",
+          "item.minecraft.wheat",
+          "item.minecraft.carrot",
+          "item.minecraft.bucket",
           "block.minecraft.obsidian",
           "block.minecraft.crying_obsidian",
           "item.minecraft.ender_pearl",
-          "item.minecraft.blaze_rod",
-          "item.minecraft.blaze_powder",
           "item.minecraft.glowstone_dust",
+          "block.minecraft.glowstone",
           "item.minecraft.string",
           "block.minecraft.white_wool",
-          "block.minecraft.glowstone"
+          "block.minecraft.gravel",
+          "block.minecraft.soul_sand",
+          "block.minecraft.nether_bricks",
+          "block.minecraft.blackstone",
+          "block.minecraft.polished_blackstone_bricks",
+          "item.minecraft.blaze_powder",
+          "item.minecraft.blaze_rod",
         ]
-      }
+      },
+      {
+        enabled: false,
+        size: 3,
+        weight: 1.0,
+        goals: [
+          "item.minecraft.ender_eye",
+          "block.minecraft.white_bed",
+          "block.minecraft.respawn_anchor"
+        ],
+        inventory: [
+          "block.minecraft.dirt",
+          "block.minecraft.oak_planks",
+          "item.minecraft.stick",
+          "item.minecraft.iron_nugget",
+          "item.minecraft.iron_ingot",
+          "item.minecraft.gold_nugget",
+          "item.minecraft.gold_ingot",
+          "item.minecraft.diamond",
+          "item.minecraft.wheat",
+          "item.minecraft.carrot",
+          "item.minecraft.bucket",
+          "block.minecraft.obsidian",
+          "block.minecraft.crying_obsidian",
+          "item.minecraft.ender_pearl",
+          "item.minecraft.glowstone_dust",
+          "block.minecraft.glowstone",
+          "item.minecraft.string",
+          "block.minecraft.white_wool",
+          "block.minecraft.gravel",
+          "block.minecraft.soul_sand",
+          "block.minecraft.nether_bricks",
+          "block.minecraft.blackstone",
+          "block.minecraft.polished_blackstone_bricks",
+          "item.minecraft.blaze_powder",
+          "item.minecraft.blaze_rod",
+        ]
+      },
     ],
     options: {
       one_character_only: false,
