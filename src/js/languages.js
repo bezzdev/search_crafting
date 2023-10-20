@@ -85,7 +85,7 @@ var languages = [
   { name: 'Te Reo Māori', region: 'Aotearoa', key: 'mi_nz', localized: 'Māori' },
   { name: 'Tiếng Việt', region: 'Việt Nam', key: 'vi_vn', localized: 'Vietnamese' },
   { name: 'Türkçe', region: 'Türkiye', key: 'tr_tr', localized: 'Turkish' },
-  { name: 'Vèneto', region: 'Veneto', key: 'vec_it', localized: 'Veneto' },
+  { name: 'Vèneto', region: 'Veneto', key: 'vec_it', localized: 'Venetian' },
   { name: 'Vlaams', region: 'België', key: 'nl_be', localized: 'Dutch (Belgium)' },
   { name: 'Yorùbá', region: 'Nàìjíríà', key: 'yo_ng', localized: 'Yoruba' },
   { name: 'la .lojban.', region: 'la jbogu\'e', key: 'jbo_en', localized: 'Lojban' },

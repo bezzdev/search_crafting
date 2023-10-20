@@ -1,7 +1,7 @@
 <template>
   <v-tooltip bottom color="deep-purple darken-4">
     <template v-slot:activator="{ on }">
-      <v-img v-on="on" class="d-inline-flex" aspect-ratio="1" max-height="32" max-width="32" contain :src="image" lazy-src="icons/command_block.png"></v-img>
+      <v-img v-on="on" class="d-inline-flex" aspect-ratio="1" height="32" width="32" max-height="32" max-width="32" contain :src="image" lazy-src="icons/command_block.png"></v-img>
     </template>
     <span>{{ tooltip }}</span>
   </v-tooltip>
@@ -9,7 +9,7 @@
 <script>
 export default {
   name: 'Blank',
-  props: ['item', 'language'],
+  props: ['item', 'language', 'hover'],
   components: {
   },
   data: () => ({
@@ -22,6 +22,8 @@ export default {
       if (this.language) {
         return this.language[this.item];
       }
+      if (this.hover)
+        return this.hover;
       return this.item;
     }
   },

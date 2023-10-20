@@ -23,11 +23,7 @@ export default new Vuex.Store({
     items: [],
     loading: true,
     crafting: [],
-    options: {
-      one_character_only: false,
-      score_search_lengths: true,
-      search: ''
-    }
+    options: null
   },
   getters: {
     getItems: state => {

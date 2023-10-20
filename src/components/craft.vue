@@ -1,6 +1,6 @@
 <template>
   <v-expansion-panel>
-    <v-expansion-panel-header>
+    <v-expansion-panel-header class="craft-header">
       <item v-for="goal in craft.goals" :key="goal + '_header'" :item="goal" />
       <template v-slot:actions>
         <div>
@@ -51,10 +51,14 @@
             <span>Duplicate Group</span>
           </v-tooltip>
         </div>
+        <div v-if="!edit" class="mr-4">
+          <item v-if="craft.size == 3"  item="block.minecraft.crafting_table" hover="3x3 available" />
+          <item  v-else item="block.minecraft.no_crafting_table" hover="2x2 only"  />
+        </div>
         <div class="pr-2 mr-4">
           <v-tooltip bottom v-if="!edit">
             <template v-slot:activator="{ on }">
-              <div v-on="on">
+              <div v-on="on" class="pt-1">
                 <v-icon class="no-rotate">
                   mdi-weight
                 </v-icon>
@@ -82,14 +86,14 @@
       <v-subheader>Crafting Goals</v-subheader>
       <v-list-item>
         <v-list-item-content>
-          <item v-for="goal in craft.goals" :key="goal" :item="goal" />
+          <item v-for="goal in craft.goals" :key="goal + '_goal'" :item="goal" />
         </v-list-item-content>
       </v-list-item>
       <v-divider></v-divider>
       <v-subheader>Inventory</v-subheader>
       <v-list-item>
         <v-list-item-content>
-          <item v-for="inventory in craft.inventory" :key="inventory" :item="inventory" />
+          <item v-for="inventory in craft.inventory" :key="inventory + '_inventory'" :item="inventory" />
         </v-list-item-content>
       </v-list-item>
       <v-subheader>Settings</v-subheader>
@@ -97,8 +101,8 @@
         <v-list-item-content>
           <v-row align="center">
             <v-col cols="auto">
-              <item v-if="craft.size == 3" item="block.minecraft.crafting_table" />
-              <item v-else item="block.minecraft.no_crafting_table" />
+              <item v-if="craft.size == 3" item="block.minecraft.crafting_table" hover="3x3"  />
+              <item v-else item="block.minecraft.no_crafting_table" hover="2x2" />
             </v-col>
             <v-col>
               <div>
@@ -230,22 +234,12 @@
         <v-list-item-content>
           <v-row align="center">
             <v-col cols="auto">
-              <v-tooltip top v-if="craft.size == 3">
-                <template v-slot:activator="{ on }">
-                  <v-btn v-on="on" @click="toggleCrafting" tile icon>
-                    <item item="block.minecraft.crafting_table"  />
-                  </v-btn>
-                </template>
-                <span>Change to 2x2 only</span>
-              </v-tooltip>
-              <v-tooltip top v-else>
-                <template v-slot:activator="{ on }">
-                  <v-btn v-on="on" @click="toggleCrafting" tile icon>
-                    <item item="block.minecraft.no_crafting_table"  />
-                  </v-btn>
-                </template>
-                <span>Change to 3x3 available</span>
-              </v-tooltip>
+              <v-btn v-if="craft.size == 3" @click="toggleCrafting" tile icon>
+                <item item="block.minecraft.crafting_table" hover="change to 2x2 only" />
+              </v-btn>
+              <v-btn v-else @click="toggleCrafting" tile icon>
+                <item item="block.minecraft.no_crafting_table" hover="Change to 3x3 available" />
+              </v-btn>
             </v-col>
             <v-col cols="2">
               <v-tooltip top>
@@ -278,8 +272,6 @@ export default {
     item
   },
   data: () => ({
-    add_goal: '',
-    add_inventory: '',
     temp_goals: [],
     temp_inventory: []
   }),
@@ -309,8 +301,6 @@ export default {
     addGoal: function () {
       this.temp_goals.push({ key: "" });
       this.$emit('itemsChanged')
-      //this.craft.goals.push(this.add_goal)
-      //this.add_goal = '';
     },
     removeGoal: function (goal) {
       this.craft.goals.splice(this.craft.goals.indexOf(goal), 1);
@@ -322,8 +312,6 @@ export default {
     addInventory: function () {
       this.temp_inventory.push({ key: "" })
       this.$emit('itemsChanged')
-      // this.craft.inventory.push(this.add_inventory)
-      // this.add_inventory = ''
     },
     removeInventory: function (inventory) {
       this.craft.inventory.splice(this.craft.inventory.indexOf(inventory), 1);
@@ -377,6 +365,11 @@ export default {
 <style lang="scss" scoped>
 </style>
 <style lang="scss">
+.craft-header {
+  min-height: 40px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
 .no-rotate i {
   transform: none !important
 }

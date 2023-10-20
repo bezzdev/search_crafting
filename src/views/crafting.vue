@@ -23,9 +23,13 @@
             <span>Copy a link to this setup</span>
           </v-tooltip>
         </v-toolbar>
-        
+        <v-expansion-panels class="mb-2">
+          <permitted ref="permitted" :permitted="options.permitted_items" :edit="edit" 
+            @itemsChanged="itemsChanged"
+          />
+        </v-expansion-panels>
         <v-expansion-panels>
-          <craft :ref="'craft-' + c" v-for="craft, c in crafting" :key="c" :craft="craft" :edit="edit" 
+          <craft ref="craft" v-for="craft, c in crafting" :key="c" :craft="craft" :edit="edit" 
             @moveUp="moveUp"
             @moveDown="moveDown"
             @delete="deleteCraft"
@@ -106,7 +110,7 @@
               </v-col>
             </v-row>
             <v-row class="px-2 pt-2">
-              <v-col cols="4">
+              <v-col cols="3">
                 <v-text-field v-model="options.letter_penalty" label="Search Length Penalty" @change="setResultsOutdated" type="number" dense>
                   <template v-slot:append>
                     <v-tooltip bottom>
@@ -120,7 +124,7 @@
                   </template>
                 </v-text-field>
               </v-col>
-              <v-col cols="4">
+              <v-col cols="3">
                 <v-text-field v-model="options.junk_penalty" label="Junk Item Penalty" @change="setResultsOutdated" type="number" dense>
                   <template v-slot:append>
                     <v-tooltip bottom>
@@ -134,7 +138,7 @@
                   </template>
                 </v-text-field>
               </v-col>
-              <v-col cols="4">
+              <v-col cols="3">
                 <v-text-field v-model="options.has_junk_penalty" label="Has Junk Penalty" @change="setResultsOutdated" type="number" dense>
                   <template v-slot:append>
                     <v-tooltip bottom>
@@ -148,7 +152,7 @@
                   </template>
                 </v-text-field>
               </v-col>
-              <v-col cols="4">
+              <v-col cols="3">
                 <v-text-field v-model="options.fail_penalty" label="Search Fail Penalty" @change="setResultsOutdated" type="number" dense>
                   <template v-slot:append>
                     <v-tooltip bottom>
@@ -161,6 +165,62 @@
                     </v-tooltip>
                   </template>
                 </v-text-field>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col cols="4">
+                <v-switch v-model="options.allow_permitted_items" class="ml-2" label="label" @change="setResultsOutdated">
+                  <template v-slot:label>
+                    Allow Permitted Items
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on" class="ml-2">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <div class="text-center">
+                        Permitted items will not negatively affect the efficiency score
+                      </div>
+                    </v-tooltip>
+                  </template>
+                </v-switch>
+              </v-col>
+              <v-col cols="4">
+                <v-switch v-model="options.permit_goal_items" class="ml-2" label="label" @change="setResultsOutdated">
+                  <template v-slot:label>
+                    Include Goal Items
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on" class="ml-2">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <div class="text-center">
+                        Goal items from other crafts will be included in the permitted list
+                      </div>
+                    </v-tooltip>
+                  </template>
+                </v-switch>
+              </v-col>
+              <v-col cols="4">
+                <v-text-field class="pl-4 pr-2" v-model="options.permitted_items_benefit" label="Permitted Item Benefit" @change="setResultsOutdated" type="number">
+                  <template v-slot:append>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Score benefit for finding these additional items</span>
+                    </v-tooltip>
+                  </template>
+                </v-text-field>
+              </v-col>
+            </v-row>
+            <v-row class="px-2 mt-0">
+              <v-col cols="12">
+                <v-subheader class="pl-0" style="height: 32px">Permitted Items</v-subheader>
+                <item v-for="item in permittedItems" :key="item + '_excluded'" :item="item" />
               </v-col>
             </v-row>
           </v-card-text>
@@ -189,7 +249,10 @@
 </template>
 <script>
 import craft from "../components/craft.vue"
+import permitted from "../components/permitted.vue"
+
 import languageResult from '../components/languageResult.vue'
+import item from "../components/item.vue"
 
 import { RecipeGroups } from '../js/recipeGroups.js';
 import { Languages } from '../js/languages.js';
@@ -199,311 +262,20 @@ import { en_gb } from '../js/names/en_gb.js';
 import { ShareSerialize, ShareDeserialize } from '../js/shareSerializer'
 import { CraftingLoader } from '../js/craftingLoader'
 import { OptionsLoader } from '../js/optionsLoader'
+import { DefaultSetup } from '../js/defaultSetup'
 
 export default {
   name: 'Crafting',
   props: [],
   components: {
     craft,
-    languageResult
+    permitted,
+    languageResult,
+    item
   },
   data: () => ({
-    crafting: [
-      {
-        enabled: true,
-        size: 3,
-        weight: 0.0,
-        goals: [
-          "item.minecraft.iron_pickaxe",
-          "item.minecraft.iron_axe",
-          "item.minecraft.iron_shovel",
-        ],
-        inventory: [
-          "block.minecraft.dirt",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_nugget",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
-          "item.minecraft.wheat",
-          "item.minecraft.carrot",
-        ]
-      },
-      {
-        enabled: true,
-        size: 3,
-        weight: 2.0,
-        goals: [
-          "item.minecraft.bucket",
-        ],
-        inventory: [
-          "block.minecraft.dirt",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_nugget",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
-          "item.minecraft.wheat",
-          "item.minecraft.carrot",
-        ]        
-      },
-      {
-        enabled: true,
-        size: 2,
-        weight: 1.0,
-        goals: [
-          "item.minecraft.flint_and_steel"
-        ],
-        inventory: [
-          "block.minecraft.dirt",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_nugget",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
-          "item.minecraft.wheat",
-          "item.minecraft.carrot",
-          "item.minecraft.flint",
-          "item.minecraft.bucket"
-        ]       
-      },
-      {
-        enabled: true,
-        size: 2,
-        weight: 1.0,
-        goals: [
-          "block.minecraft.white_wool",
-          "block.minecraft.glowstone"
-        ],
-        inventory: [
-          "block.minecraft.dirt",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_nugget",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
-          "item.minecraft.wheat",
-          "item.minecraft.carrot",
-          "item.minecraft.bucket",
-          "block.minecraft.obsidian",
-          "block.minecraft.crying_obsidian",
-          "item.minecraft.ender_pearl",
-          "item.minecraft.glowstone_dust",
-          "block.minecraft.glowstone",
-          "item.minecraft.string",
-          "block.minecraft.white_wool",
-          "block.minecraft.gravel",
-          "block.minecraft.soul_sand",
-          "block.minecraft.nether_bricks",
-          "block.minecraft.blackstone",
-          "block.minecraft.polished_blackstone_bricks",
-          "item.minecraft.nether_brick"
-        ]
-      },
-      {
-        enabled: false,
-        size: 2,
-        weight: 1.0,
-        goals: [
-          "block.minecraft.white_wool",
-          "block.minecraft.glowstone",
-          "block.minecraft.nether_bricks"
-        ],
-        inventory: [
-          "block.minecraft.dirt",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_nugget",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
-          "item.minecraft.wheat",
-          "item.minecraft.carrot",
-          "item.minecraft.bucket",
-          "block.minecraft.obsidian",
-          "block.minecraft.crying_obsidian",
-          "item.minecraft.ender_pearl",
-          "item.minecraft.glowstone_dust",
-          "block.minecraft.glowstone",
-          "item.minecraft.string",
-          "block.minecraft.white_wool",
-          "block.minecraft.gravel",
-          "block.minecraft.soul_sand",
-          "block.minecraft.nether_bricks",
-          "block.minecraft.blackstone",
-          "block.minecraft.polished_blackstone_bricks",
-          "item.minecraft.nether_brick"
-        ]
-      },
-      {
-        enabled: true,
-        size: 3,
-        weight: 0.5,
-        goals: [
-          "item.minecraft.golden_carrot",
-        ],
-        inventory: [
-          "block.minecraft.dirt",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_nugget",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
-          "item.minecraft.wheat",
-          "item.minecraft.carrot",
-          "item.minecraft.bucket",
-          "block.minecraft.obsidian",
-          "block.minecraft.crying_obsidian",
-          "item.minecraft.ender_pearl",
-          "item.minecraft.glowstone_dust",
-          "block.minecraft.glowstone",
-          "item.minecraft.string",
-          "block.minecraft.white_wool",
-          "block.minecraft.gravel",
-          "block.minecraft.soul_sand",
-          "block.minecraft.nether_bricks",
-          "block.minecraft.blackstone",
-          "block.minecraft.polished_blackstone_bricks"
-        ]
-      },
-      {
-        enabled: true,
-        size: 2,
-        weight: 1.0,
-        goals: [
-          "item.minecraft.ender_eye",
-        ],
-        inventory: [
-          "block.minecraft.dirt",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_nugget",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
-          "item.minecraft.wheat",
-          "item.minecraft.carrot",
-          "item.minecraft.bucket",
-          "block.minecraft.obsidian",
-          "block.minecraft.crying_obsidian",
-          "item.minecraft.ender_pearl",
-          "item.minecraft.glowstone_dust",
-          "block.minecraft.glowstone",
-          "item.minecraft.string",
-          "block.minecraft.white_wool",
-          "block.minecraft.gravel",
-          "block.minecraft.soul_sand",
-          "block.minecraft.nether_bricks",
-          "block.minecraft.blackstone",
-          "block.minecraft.polished_blackstone_bricks",
-          "item.minecraft.blaze_powder",
-          "item.minecraft.blaze_rod",
-        ]
-      },
-      {
-        enabled: true,
-        size: 3,
-        weight: 2.0,
-        goals: [
-          "block.minecraft.white_bed",
-          "block.minecraft.respawn_anchor"
-        ],
-        inventory: [
-          "block.minecraft.dirt",
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_nugget",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
-          "item.minecraft.wheat",
-          "item.minecraft.carrot",
-          "item.minecraft.bucket",
-          "block.minecraft.obsidian",
-          "block.minecraft.crying_obsidian",
-          "item.minecraft.ender_pearl",
-          "item.minecraft.glowstone_dust",
-          "block.minecraft.glowstone",
-          "item.minecraft.string",
-          "block.minecraft.white_wool",
-          "block.minecraft.gravel",
-          "block.minecraft.soul_sand",
-          "block.minecraft.nether_bricks",
-          "block.minecraft.blackstone",
-          "block.minecraft.polished_blackstone_bricks",
-          "item.minecraft.blaze_powder",
-          "item.minecraft.blaze_rod",
-        ]
-      },
-      {
-        enabled: false,
-        size: 3,
-        weight: 1.0,
-        goals: [
-          "item.minecraft.ender_eye",
-          "block.minecraft.white_bed",
-          "block.minecraft.respawn_anchor"
-        ],
-        inventory: [
-          "block.minecraft.dirt",
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_nugget",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
-          "item.minecraft.wheat",
-          "item.minecraft.carrot",
-          "item.minecraft.bucket",
-          "block.minecraft.obsidian",
-          "block.minecraft.crying_obsidian",
-          "item.minecraft.ender_pearl",
-          "item.minecraft.glowstone_dust",
-          "block.minecraft.glowstone",
-          "item.minecraft.string",
-          "block.minecraft.white_wool",
-          "block.minecraft.gravel",
-          "block.minecraft.soul_sand",
-          "block.minecraft.nether_bricks",
-          "block.minecraft.blackstone",
-          "block.minecraft.polished_blackstone_bricks",
-          "item.minecraft.blaze_powder",
-          "item.minecraft.blaze_rod",
-        ]
-      },
-    ],
-    options: {
-      one_character_only: false,
-      score_search_lengths: true,
-      optimize_unique_characters: true,
-      search: '',
-      auto_search: true,
-      letter_penalty: 1.0,
-      junk_penalty: 25.0,
-      has_junk_penalty: 80.0,
-      fail_penalty: 1000
-    },
+    crafting: [],
+    options: null,
     penalty_values: null,
     badCharacters: ["□"],
     results: [],
@@ -516,6 +288,18 @@ export default {
   computed: {
     filteredResults () {
       return this.results.filter(r => this.filterLanguage(r))
+    },
+    permittedItems () {
+      if (this.crafting != null) {
+        if (!this.options.permit_goal_items) {
+          return this.options.permitted_items;
+        } else {
+          return this.crafting.filter(craft => craft.enabled).flatMap(craft => craft.goals).concat(this.options.permitted_items).filter(function(value, index, array) {
+            return array.indexOf(value) === index;
+          })
+        }
+      }
+      return [];
     }
   },
   watch: {
@@ -525,8 +309,9 @@ export default {
       this.edit = val;
       if (this.edit == false && this.craftingChanged) {
 
+        this.$refs["permitted"].applyChanges();
         for(var c = 0; c < this.crafting.length; c++)
-          this.$refs["craft-"+c][0].applyChanges();
+          this.$refs["craft"][c].applyChanges();
 
         this.setResultsOutdated();
       }
@@ -770,7 +555,7 @@ export default {
       })
       return recipes;
     },
-    scoreSearch: function(search, junk) {
+    scoreSearch: function(search, junk, boost) {
       var remainder = junk;
       var letters = search;
       
@@ -783,7 +568,7 @@ export default {
       if (remainder > 0) {
         junk_penalty += this.penalty_values.has_junk_penalty
       }
-      return letter_penalty + junk_penalty
+      return letter_penalty + junk_penalty + boost
     },
     getUniqueCharacters: function (items) {
       // get all characters
@@ -933,7 +718,8 @@ export default {
         letter_penalty: parseFloat(self.options.letter_penalty),
         junk_penalty: parseFloat(self.options.junk_penalty),
         has_junk_penalty: parseFloat(self.options.has_junk_penalty),
-        fail_penalty: parseFloat(self.options.fail_penalty)
+        fail_penalty: parseFloat(self.options.fail_penalty),
+        permitted_items_benefit:  parseFloat(self.options.permitted_items_benefit)
       }
 
       var keys = Languages.map(l => l.key)
@@ -942,7 +728,7 @@ export default {
 
       var valid_crafts = self.crafting.filter(c => c.goals.length > 0 && c.inventory.length > 0);
       valid_crafts.forEach(function (craft) {
-        var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.size, craft.inventory)
+        var groups = self.getRelevantGroupsForInventory(RecipeGroups, parseInt(craft.size), craft.inventory)
         
         var valid = true;
         craft.goals.forEach(function (goal) {
@@ -979,7 +765,17 @@ export default {
 
             searches.forEach(function(search) {
               var results = self.searchGroups(groups, translations, search);
-              var score = self.scoreSearch(search.length, results.length - craft.goals.length);
+
+              var junk = results.filter(g => !g.some(r => craft.goals.includes(r.output)) )
+              var boost = 0
+              if(self.options.allow_permitted_items) {
+                var without_additional = junk.filter(g => !g.some(r => self.permittedItems.includes(r.output)))
+                var additional = junk.length - without_additional.length;
+                boost = -self.penalty_values.permitted_items_benefit * additional;
+                junk = without_additional;
+              }
+
+              var score = self.scoreSearch(search.length, junk.length, boost);
               if (score == -0.64) {
                 console.log()
               }
@@ -1066,6 +862,11 @@ export default {
     var self = this;
     self.$store.commit('setItems', Object.keys(en_gb));
     
+    // default setup
+    var defaults = DefaultSetup();
+    self.crafting = defaults.crafting;
+    self.options = defaults.options;
+
     // load data from cache
     var loadedCrafting = self.$store.getters.getCrafting;
     if (loadedCrafting != null && loadedCrafting.length > 0) {
@@ -1073,7 +874,7 @@ export default {
     }
     var loadedOptions = self.$store.getters.getOptions;
     if (loadedOptions != null) {
-      self.options = OptionsLoader(loadedOptions);
+      self.options = OptionsLoader(loadedOptions, defaults.options);
     }
     
     // load share data
@@ -1088,7 +889,7 @@ export default {
           self.crafting = CraftingLoader(json.crafting);
         }
         if (json.options) {
-          self.options =  OptionsLoader(json.options);
+          self.options =  OptionsLoader(json.options, defaults.options);
         }
         self.getResults();
       }
