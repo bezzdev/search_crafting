@@ -1,4 +1,4 @@
-# Search Crafting Language Finder
+# Search Crafting Language Optimizer
 You do not have to download this project to use it.<br>
 A live version can be viewed here:<br>
 <https://searchcrafting.bezz.dev/><br>
