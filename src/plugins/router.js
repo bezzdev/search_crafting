@@ -5,6 +5,24 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/about',
+    name: 'About',
+    meta: {
+      toolbar: true,
+      absoluteToolbar: true
+    },
+    component: () => import('../views/about.vue')
+  },
+  {
+    path: '/changelog',
+    name: 'Changelog',
+    meta: {
+      toolbar: true,
+      absoluteToolbar: true
+    },
+    component: () => import('../views/changelog.vue')
+  },
+  {
     path: '/',
     name: 'Crafting',
     meta: {

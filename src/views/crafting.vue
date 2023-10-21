@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid v-if="loaded && options != null">
     <v-row>
       <v-spacer/>
       <v-col cols="12" sm="5" lg="6">
@@ -24,7 +24,7 @@
           </v-tooltip>
         </v-toolbar>
         <v-expansion-panels class="mb-2">
-          <permitted ref="permitted" :permitted="options.permitted_items" :edit="edit" 
+          <permitted v-if="options" ref="permitted" :permitted="options.permitted_items" :edit="edit" 
             @itemsChanged="itemsChanged"
           />
         </v-expansion-panels>
@@ -286,11 +286,14 @@ export default {
     loading: false,
   }),
   computed: {
+    loaded () {
+      return this.$store.getters.getLoaded
+    },
     filteredResults () {
       return this.results.filter(r => this.filterLanguage(r))
     },
     permittedItems () {
-      if (this.crafting != null) {
+      if (this.crafting != null && this.options != null && this.options.permitted_items != null) {
         if (!this.options.permit_goal_items) {
           return this.options.permitted_items;
         } else {
@@ -899,7 +902,7 @@ export default {
     }
 
     // finish loading
-    self.$store.commit('setLoading', false)
+    self.$store.commit('setLoaded', true)
 
     // get new results
     setInterval(function() {

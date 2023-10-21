@@ -69,7 +69,7 @@
             <span>Scoring Weight</span>
           </v-tooltip>
         </div>
-        <div>
+        <div class="pt-1">
           <v-tooltip bottom v-if="!edit">
             <template v-slot:activator="{ on }">
               <v-simple-checkbox v-on="on" v-model="craft.enabled" :ripple="false" color="primary" class="no-rotate" />

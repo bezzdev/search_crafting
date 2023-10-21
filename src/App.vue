@@ -2,8 +2,9 @@
   <v-app>
     <v-main>
       <toolbar/>
-      <router-view v-show="!loading"/>
-      <v-row v-show="loading" align="center" class="text-center" style="height: 800px;">
+      <sidebar/>
+      <router-view v-show="loaded"/>
+      <v-row v-show="!loaded" align="center" class="text-center" style="height: 800px;">
         <v-col>
           <v-progress-circular indeterminate size="80" color="primary" />
         </v-col>
@@ -13,16 +14,18 @@
 </template>
 <script>
 import toolbar from './components/toolbar.vue';
+import sidebar from './components/sidebar.vue';
 export default {
   name: 'App',
   components: {
-    toolbar
+    toolbar,
+    sidebar
   },
   data: () => ({
   }),
   computed: {
-    loading () {
-      return this.$store.getters.getLoading
+    loaded () {
+      return this.$store.getters.getLoaded
     }
   },
   watch: {

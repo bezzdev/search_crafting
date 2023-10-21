@@ -21,36 +21,43 @@ export default new Vuex.Store({
   plugins: [vuexLocalStorage.plugin],
   state: {
     items: [],
-    loading: true,
+    loaded: true,
     crafting: [],
-    options: null
+    options: null,
+    menu: false
   },
   getters: {
     getItems: state => {
       return state.items;
     },
-    getLoading: state => {
-      return state.loading
+    getLoaded: state => {
+      return state.loaded
     },
     getCrafting: state => {
       return state.crafting;
     },
     getOptions: state => {
       return state.options;
+    },
+    getMenu: state => {
+      return state.menu
     }
   },
   mutations: {
     setItems (state, val) {
       state.items = val;
     },
-    setLoading (state, val) {
-      state.loading = val;
+    setLoaded (state, val) {
+      state.loaded = val;
     },
     setCrafting (state, val) {
       state.crafting = val;
     },
     setOptions (state, val) {
       state.options = val;
+    },
+    setMenu (state, val) {
+      state.menu = val;
     }
   },
   actions: {

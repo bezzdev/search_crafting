@@ -1,5 +1,10 @@
 <template>
   <v-app-bar app>
+    <v-btn icon class="px-2 mr-2" @click="toggleMenu">
+      <v-icon>
+        mdi-menu
+      </v-icon>
+    </v-btn>
     Minecraft Search Crafting
     <v-tooltip right>
       <template v-slot:activator="{ on }">
@@ -42,10 +47,16 @@ export default {
   data: () => ({
   }),
   computed: {
+    menu () {
+      return this.$store.getters.getMenu
+    }
   },
   watch: {
   },
   methods: {
+    toggleMenu: function() {
+      this.$store.commit('setMenu', !this.menu)
+    }
   },
   mounted () {
   }

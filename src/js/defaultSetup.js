@@ -244,42 +244,6 @@ var defaultSetup = function() {
         ]
       },
       {
-        enabled: false,
-        size: 2,
-        weight: 1.0,
-        goals: [
-          "item.minecraft.blaze_powder",
-          "item.minecraft.ender_eye",
-        ],
-        inventory: [
-          "block.minecraft.dirt",
-          "block.minecraft.oak_log",
-          "block.minecraft.oak_planks",
-          "item.minecraft.stick",
-          "item.minecraft.iron_nugget",
-          "item.minecraft.iron_ingot",
-          "item.minecraft.gold_nugget",
-          "item.minecraft.gold_ingot",
-          "item.minecraft.wheat",
-          "item.minecraft.carrot",
-          "item.minecraft.bucket",
-          "block.minecraft.obsidian",
-          "block.minecraft.crying_obsidian",
-          "item.minecraft.ender_pearl",
-          "item.minecraft.glowstone_dust",
-          "block.minecraft.glowstone",
-          "item.minecraft.string",
-          "block.minecraft.white_wool",
-          "block.minecraft.gravel",
-          "block.minecraft.soul_sand",
-          "block.minecraft.nether_bricks",
-          "block.minecraft.blackstone",
-          "block.minecraft.polished_blackstone_bricks",
-          "item.minecraft.blaze_powder",
-          "item.minecraft.blaze_rod",
-        ]
-      },
-      {
         enabled: true,
         size: 3,
         weight: 1.0,
@@ -368,6 +332,9 @@ var defaultSetup = function() {
         "item.minecraft.shield",
         "item.minecraft.oak_boat",
         "item.minecraft.bread",
+        "item.minecraft.ender_eye",
+        "item.minecraft.golden_boots",
+        "item.minecraft.golden_helmet"
       ]
     }
   }
