@@ -36,6 +36,9 @@ export default new Vuex.Store({
               "- added about page <br>" +
               "- added changelog page <br>" +
               "- added reset option <br>" +
+              "- added support for permitted items <br>" +
+              " -- permitted items will not be classed as junk <br>" +
+              " -- permitted items can be scored positively br>" +
               "<br>" +
               "Bug fixes <br>" +
               "- fixed loading race condition <br>"
@@ -46,7 +49,7 @@ export default new Vuex.Store({
         title: "Version 5",
         text: "Features <br>" +
               "- added 'optimize character-set' setting <br>" +
-              " - this will try to minimize the total unique search characters used for a language by finding optimal same cost substitutes <br>" +
+              " -- this will try to minimize the total unique search characters used for a language by finding optimal same cost substitutes <br>" +
               "- added translated tooltips <br>" +
               "- more alternative searches <br>" +
               "<br>" +
