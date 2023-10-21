@@ -31,7 +31,7 @@
             </h3>
             <p>
             I wanted to make a tool that would allow for full control of the search criteria.
-            For the best results this would have to take into account the player's inventory at the time of searching, as it has a major affect on the results.
+            For the best results this would have to take into account the player's inventory at the time of searching, as it has a major affect on shown recipes.
             <br>The main factors that control search results are: can the player craft the item, is the recipe unlocked, and finally does the item match the search query.
             Search query matching consists of Recipe Groups and Item Tooltips.
             </p>

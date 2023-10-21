@@ -332,9 +332,9 @@ var defaultSetup = function() {
         "item.minecraft.shield",
         "item.minecraft.oak_boat",
         "item.minecraft.bread",
-        "item.minecraft.ender_eye",
         "item.minecraft.golden_boots",
-        "item.minecraft.golden_helmet"
+        "item.minecraft.golden_helmet",
+        "item.minecraft.cauldron"
       ]
     }
   }

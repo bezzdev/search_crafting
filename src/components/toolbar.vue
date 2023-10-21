@@ -4,6 +4,9 @@
       <v-icon>
         mdi-menu
       </v-icon>
+      <v-icon v-if="isNewChangelog" small color="red lighten-1" class="changelog-icon">
+        mdi-alert-circle
+      </v-icon>
     </v-btn>
     Minecraft Search Crafting
     <v-tooltip right>
@@ -49,6 +52,9 @@ export default {
   computed: {
     menu () {
       return this.$store.getters.getMenu
+    },
+    isNewChangelog () {
+      return this.$store.getters.getIsNewChangelog;
     }
   },
   watch: {
@@ -65,5 +71,12 @@ export default {
 <style lang="scss" scoped>
 .bezz {
   text-decoration: none !important;
+}
+.changelog-icon {
+  position: absolute !important;
+  top: -2px;
+  right: 0px;
+  height: 12px !important;
+  width: 12px !important;
 }
 </style>

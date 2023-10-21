@@ -13,7 +13,8 @@ const vuexLocalStorage = new VuexPersist({
   // filter: mutation => (true)
   reducer: (state) => ({
     crafting: state.crafting,
-    options: state.options
+    options: state.options,
+    readChangelog: state.readChangelog
   }),
 })
 
@@ -24,7 +25,83 @@ export default new Vuex.Store({
     loaded: true,
     crafting: [],
     options: null,
-    menu: false
+    menu: false,
+    readChangelog: -1,
+    changelog: [
+      {
+        id: 6,
+        date: "Wed, Oct 21 - 2023",
+        title: "Version 6",
+        text: "Features <br>" +
+              "- added about page <br>" +
+              "- added changelog page <br>" +
+              "- added reset option <br>" +
+              "<br>" +
+              "Bug fixes <br>" +
+              "- fixed loading race condition <br>"
+      },
+      {
+        id: 5,
+        date: "Wed, Oct 18 - 2023",
+        title: "Version 5",
+        text: "Features <br>" +
+              "- added 'optimize character-set' setting <br>" +
+              " - this will try to minimize the total unique search characters used for a language by finding optimal same cost substitutes <br>" +
+              "- added translated tooltips <br>" +
+              "- more alternative searches <br>" +
+              "<br>" +
+              "Bug fixes <br>" +
+              "- fixed Austrian language name <br>" +
+              "- added missing en_us <br>" +
+              "- fixed bug with wool/wood alternatives <br>" +
+              "- fixed craft calculation weight not being duplicated <br>"
+      },
+      {
+        id: 4,
+        date: "Wed, Oct 16 - 2023",
+        title: "Version 4",
+        text: "Features <br>" +
+              "- move groups up / down <br>" +
+              "- can now disable auto search <br>" +
+              "- better character selectability <br>" +
+              "- added configurable penalty values <br>" +
+              "<br>" +
+              "Bug fixes <br>" +
+              "- searches that include a space now display correctly <br>"
+      },
+      {
+        id: 3,
+        date: "Wed, Oct 15 - 2023",
+        title: "Version 3",
+        text: "Features <br>" +
+              "- added share button <br>" +
+              "<br>" +
+              "Bug fixes <br>" +
+              "- can't add items to inventory that are in your crafting goal <br>" +
+              "- can't change crafting size from 2x2 / 3x3 <br>"
+      },
+      {
+        id: 2,
+        date: "Wed, Oct 14 - 2023",
+        title: "Version 2",
+        text: "Features <br>" +
+              "- integrated tooltip data <br>" +
+              "- configuration caching"
+      },
+      {
+        id: 1,
+        date: "Wed, Oct 12 - 2023",
+        title: "Version 0",
+        text: "A basic version of the project was built and hosted live. <br>" +
+              "This only searched against item names and was very limited."
+      },
+      {
+        id: 0,
+        date: "Wed, Oct 11 - 2023",
+        title: "Init",
+        text: "The inital idea for the project was formed"
+      }
+    ]
   },
   getters: {
     getItems: state => {
@@ -41,6 +118,15 @@ export default new Vuex.Store({
     },
     getMenu: state => {
       return state.menu
+    },
+    getReadChangelog: state => {
+      return state.readChangelog
+    },
+    getIsNewChangelog: state => {
+      return state.readChangelog < state.changelog[0].id
+    },
+    getChangelog: state => {
+      return state.changelog;
     }
   },
   mutations: {
@@ -58,6 +144,9 @@ export default new Vuex.Store({
     },
     setMenu (state, val) {
       state.menu = val;
+    },
+    setReadChangelog (state, val) {
+      state.readChangelog = val;
     }
   },
   actions: {
