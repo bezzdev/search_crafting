@@ -29,6 +29,13 @@ export default new Vuex.Store({
     readChangelog: -1,
     changelog: [
       {
+        id: 7,
+        date: "Thur, Nov 02 - 2023",
+        title: "Version 7",
+        text: "Features <br>" +
+              "- added language warnings for broken and missleading languages"
+      },
+      {
         id: 6,
         date: "Wed, Oct 21 - 2023",
         title: "Version 6",
@@ -38,7 +45,7 @@ export default new Vuex.Store({
               "- added reset option <br>" +
               "- added support for permitted items <br>" +
               " -- permitted items will not be classed as junk <br>" +
-              " -- permitted items can be scored positively br>" +
+              " -- permitted items can be scored positively <br>" +
               "<br>" +
               "Bug fixes <br>" +
               "- fixed loading race condition <br>"
