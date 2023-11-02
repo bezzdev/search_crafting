@@ -2,6 +2,19 @@
   <v-expansion-panel>
     <v-expansion-panel-header>
       ( {{ formatScore(result.score) }} ) ( {{ result.unique_character_count }} ) {{ result.localized }} = {{ result.language_name }} ( {{ result.language_region }} )
+      <template v-slot:actions>
+        <v-tooltip v-if="result.warning" top>
+          <template v-slot:activator="{ on }">
+            <v-icon v-on="on" class="no-rotate pr-2" color="yellow">
+              mdi-alert
+            </v-icon>
+          </template>
+          <span> {{ result.warning }} </span>
+        </v-tooltip>
+        <v-icon>
+          $expand
+        </v-icon>
+      </template>
     </v-expansion-panel-header>
     <v-expansion-panel-content>
       <div class="language-description">

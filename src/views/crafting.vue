@@ -516,7 +516,7 @@ export default {
 
       if (!this.options.one_character_only) {
         var two_length_searches = self.getLongerSearches(goals, groups, translations, valid_searches);
-        //var three_length_searches = self.getLongerSearches(item_translations, two_length_searches);
+        //var three_length_searches = self.getLongerSearches(goals, groups, translations, two_length_searches);
 
         valid_searches = valid_searches.concat(two_length_searches);
         // valid_searches = valid_searches.concat(three_length_searches); 
@@ -565,7 +565,9 @@ export default {
       if (!this.options.score_search_lengths)
         letters = 1;
 
-      var letter_penalty = this.penalty_values.letter_penalty * (letters - 1);
+      var letter_penalty = 0;
+      for(var l = 1; l < letters; l++)
+        letter_penalty += Math.pow(this.penalty_values.letter_penalty, (l));
 
       var junk_penalty = remainder * this.penalty_values.junk_penalty;
       if (remainder > 0) {
@@ -750,6 +752,7 @@ export default {
         var translation_result = {
           language_name: language.name,
           language_region: language.region,
+          warning: language.warning,
           localized: language.localized,
           language_key: language.key,
           translations: translations,
