@@ -33,7 +33,7 @@ export default new Vuex.Store({
         date: "Thur, Nov 02 - 2023",
         title: "Version 7",
         text: "Features <br>" +
-              "- added language warnings for broken and missleading languages"
+              "- added language warnings for broken and misleading languages"
       },
       {
         id: 6,

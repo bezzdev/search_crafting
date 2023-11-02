@@ -103,7 +103,7 @@ var languages = [
   { name: '繁體中文', region: '台灣', key: 'zh_tw', localized: 'Chinese (Taiwan)', warning: "Multiple keystrokes may be required to type a single character in this language." },
   { name: 'हिंदी', region: 'भारत', key: 'hi_in', localized: 'Hindi', warning: null },
   { name: 'ಕನ್ನಡ', region: 'ಭಾರತ', key: 'kn_in', localized: 'Kannada', warning: null },
-  { name: 'فارسی', region: 'ايران', key: 'fa_ir', localized: 'Farsi', warning: "This language may not work in game" },
+  { name: 'فارسی', region: 'ايران', key: 'fa_ir', localized: 'Farsi', warning: "This language may not work in game." },
   { name: 'עברית', region: 'ישראל', key: 'he_il', localized: 'Hebrew', warning: null },
   { name: 'தமிழ்', region: 'இந்தியா', key: 'ta_in', localized: 'Tamil', warning: null },
   { name: 'Српски', region: 'Србија', key: 'sr_sp', localized: 'Serbian', warning: null },
