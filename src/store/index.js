@@ -29,6 +29,17 @@ export default new Vuex.Store({
     readChangelog: -1,
     changelog: [
       {
+        id: 8,
+        date: "Sat, Nov 04 - 2023",
+        title: "Version 8",
+        text: "Features <br>" +
+              "- added support for up to 8 length searches <br>" +
+              "<br>" +
+              "Bug fixes <br>" +
+              "- fixed sometimes displaying wrong language summary unique characters <br>" +
+              "- sharing now includes the crafting weight influence <br>"
+      },
+      {
         id: 7,
         date: "Thur, Nov 02 - 2023",
         title: "Version 7",

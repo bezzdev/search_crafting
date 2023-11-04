@@ -22,7 +22,7 @@ var deserialize2 = function(encoded, items) {
       }
     }),
     options: {
-      one_character_only: json.o.o,
+      max_characters: json.o.o ? 1 : 2,
       score_search_lengths: json.o.l,
       search: json.o.s
     }
@@ -45,7 +45,7 @@ var deserialize3 = function(encoded, items) {
       }
     }),
     options: {
-      one_character_only: json.o.o,
+      max_characters: json.o.o ? 1 : 2,
       score_search_lengths: json.o.l,
       search: json.o.s,
       auto_search: json.o.as,
@@ -72,7 +72,7 @@ var deserialize4 = function(encoded, items) {
       }
     }),
     options: {
-      one_character_only: json.o.o,
+      max_characters: json.o.o ? 1 : 2,
       score_search_lengths: json.o.l,
       optimize_unique_characters: json.o.u,
       search: json.o.s,
@@ -100,7 +100,7 @@ var deserialize5 = function(encoded, items) {
       }
     }),
     options: {
-      one_character_only: json.o.o,
+      max_characters: json.o.o ? 1 : 2,
       score_search_lengths: json.o.l,
       optimize_unique_characters: json.o.u,
       search: json.o.s,
@@ -129,7 +129,7 @@ var deserialize6 = function(encoded, items) {
       }
     }),
     options: {
-      one_character_only: json.o.o,
+      max_characters: json.o.o ? 1 : 2,
       score_search_lengths: json.o.l,
       optimize_unique_characters: json.o.u,
       search: json.o.s,
@@ -162,7 +162,7 @@ var deserialize7 = function(encoded, items) {
       }
     }),
     options: {
-      one_character_only: json.o.o,
+      max_characters: json.o.o ? 1 : 2,
       score_search_lengths: json.o.l,
       optimize_unique_characters: json.o.u,
       search: json.o.s,
@@ -181,6 +181,41 @@ var deserialize7 = function(encoded, items) {
   return result;
 }
 
+var deserialize8 = function(encoded, items) {
+  var rawJson = atob(encoded)
+  var json = JSON.parse(rawJson)
+  
+  var result = {
+    crafting: json.c.map(craft => {
+      return {
+        enabled: craft.e,
+        size: craft.s,
+        goals: craft.g.map(g => items[g]),
+        inventory: craft.i.map(i => items[i]),
+        weight: craft.w
+      }
+    }),
+    options: {
+      max_characters: json.o.c,
+      score_search_lengths: json.o.l,
+      optimize_unique_characters: json.o.u,
+      search: json.o.s,
+      auto_search: json.o.as,
+      letter_penalty: json.o.lp,
+      junk_penalty: json.o.jp,
+      has_junk_penalty: json.o.hjp,
+      fail_penalty: json.o.fp,
+      allow_permitted_items: json.o.api,
+      permit_goal_items: json.o.pgi,
+      permitted_items_benefit: json.o.pib,
+      permitted_items: json.o.pi.map(p => items[p])
+    }
+  }
+
+  return result;
+}
+
+
 var shareSerialize = function (data, items) {
   var shareObject = {
     c: data.crafting.map(function (craft) {
@@ -188,11 +223,12 @@ var shareSerialize = function (data, items) {
         e: craft.enabled, 
         s: craft.size, 
         g: craft.goals.map(g => items.indexOf(g)), 
-        i: craft.inventory.map(i => items.indexOf(i))
+        i: craft.inventory.map(i => items.indexOf(i)),
+        w: craft.weight
       }
     }),
     o: {
-      o: data.options.one_character_only,
+      c: data.options.max_characters,
       l: data.options.score_search_lengths,
       u: data.options.optimize_unique_characters,
       s: data.options.search,
@@ -218,28 +254,32 @@ var shareSerialize = function (data, items) {
 var shareDeserialize = function (encoded, items) {
   var deserialized = null;
   try {
-    deserialized = deserialize7(encoded, items)
-  } catch (e7) {
+    deserialized = deserialize8(encoded, items)
+  } catch (e8) {
     try {
-      deserialized = deserialize6(encoded, items)
-    } catch (e6) {
+      deserialized = deserialize7(encoded, items)
+    } catch (e7) {
       try {
-        deserialized = deserialize5(encoded, items)
-      } catch (e5) {
+        deserialized = deserialize6(encoded, items)
+      } catch (e6) {
         try {
-          deserialized = deserialize4(encoded, items)
-        } catch (e4) {
+          deserialized = deserialize5(encoded, items)
+        } catch (e5) {
           try {
-            deserialized = deserialize3(encoded, items)
-          } catch (e3) {
+            deserialized = deserialize4(encoded, items)
+          } catch (e4) {
             try {
-              deserialized = deserialize2(encoded, items)
-            } catch (e2) {
+              deserialized = deserialize3(encoded, items)
+            } catch (e3) {
               try {
-                deserialized = deserialize1(encoded, items)
-              } catch (e1) {
-                console.log("could not deserialize")
-              }  
+                deserialized = deserialize2(encoded, items)
+              } catch (e2) {
+                try {
+                  deserialized = deserialize1(encoded, items)
+                } catch (e1) {
+                  console.log("could not deserialize")
+                }  
+              }
             }
           }
         }

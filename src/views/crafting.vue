@@ -76,19 +76,25 @@
                 </v-switch>
               </v-col>
               <v-col cols="4">
-                <v-switch v-model="options.one_character_only" class="ml-4" label="label" hide-details @change="setResultsOutdated">
-                  <template v-slot:label>
-                    Find Single Character Only
-                    <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                        <v-icon v-on="on" class="ml-2">
-                          mdi-information
-                        </v-icon>
-                      </template>
-                      <span>Only 1 character searches are valid</span>
-                    </v-tooltip>
+                <v-subheader class="pl-0">
+                  Maximum Search Length: {{ options.max_characters }}
+                  <v-tooltip bottom>
+                    <template v-slot:activator="{ on }">
+                      <v-icon v-on="on" class="ml-2">
+                        mdi-information
+                      </v-icon>
+                    </template>
+                    <span>The maximum length of a search.</span>
+                  </v-tooltip>
+                </v-subheader>
+                <v-slider v-model="options.max_characters" step="1" min="1" max="8" ticks="always" @change="setResultsOutdated">
+                  <template v-slot:prepend>
+                    <span>1</span>
                   </template>
-                </v-switch>
+                  <template v-slot:append>
+                    <span>8</span>
+                  </template> 
+                </v-slider>
               </v-col>
               <v-col cols="4">
                 <v-switch v-model="options.optimize_unique_characters" class="ml-2" label="label" @change="setResultsOutdated">
@@ -256,7 +262,6 @@ import item from "../components/item.vue"
 
 import { RecipeGroups } from '../js/recipeGroups.js';
 import { Languages } from '../js/languages.js';
-// import { LanguageNames } from '../js/languageNames.js';
 import { LanguageTooltips } from '../js/languageTooltips.js';
 import { en_gb } from '../js/names/en_gb.js';
 import { ShareSerialize, ShareDeserialize } from '../js/shareSerializer'
@@ -276,7 +281,7 @@ export default {
   data: () => ({
     crafting: [],
     options: null,
-    penalty_values: null,
+    option_values: null,
     badCharacters: ["□"],
     results: [],
     edit: false,
@@ -514,12 +519,10 @@ export default {
 
       var valid_searches = self.validateSearches(goals, groups, translations, searches)
 
-      if (!this.options.one_character_only) {
+      if (this.option_values.max_characters >= 2) {
         var two_length_searches = self.getLongerSearches(goals, groups, translations, valid_searches);
-        //var three_length_searches = self.getLongerSearches(goals, groups, translations, two_length_searches);
 
         valid_searches = valid_searches.concat(two_length_searches);
-        // valid_searches = valid_searches.concat(three_length_searches); 
       }
 
       return valid_searches
@@ -565,13 +568,11 @@ export default {
       if (!this.options.score_search_lengths)
         letters = 1;
 
-      var letter_penalty = 0;
-      for(var l = 1; l < letters; l++)
-        letter_penalty += Math.pow(this.penalty_values.letter_penalty, (l));
+      var letter_penalty = this.option_values.letter_penalty * Math.pow(letters - 1, 3);
 
-      var junk_penalty = remainder * this.penalty_values.junk_penalty;
+      var junk_penalty = remainder * this.option_values.junk_penalty;
       if (remainder > 0) {
-        junk_penalty += this.penalty_values.has_junk_penalty
+        junk_penalty += this.option_values.has_junk_penalty
       }
       return letter_penalty + junk_penalty + boost
     },
@@ -704,27 +705,51 @@ export default {
             var found_best = interchange.best_searches.find(s => s.search_term == best_permutation.choices[i])
             interchange.best_search = found_best;
             interchange.best_searches = interchange.best_searches.filter(s => s.search_term != best_permutation.choices[i])
-
-            var additional_characters = found_best.search_term.split('').filter(c => !unique_characters.includes(c));
-            unique_characters = unique_characters.concat(additional_characters)
           }
-
-          translation_result.unique_characters = unique_characters;
-          translation_result.unique_character_count = unique_characters.length;
         }
       }
+
+      unique_characters = self.getUniqueCharacters(translation_result.crafting.filter(craft => craft.best_search != null).map(c => c.best_search.search_term))
+      translation_result.unique_characters = unique_characters;
+      translation_result.unique_character_count = unique_characters.length;
+    },
+    scoreSearches: function (craft, groups, translations, searches) {
+      var self = this;
+      var scored_search_results = []
+      searches.forEach(function(search) {
+        var results = self.searchGroups(groups, translations, search);
+
+        var junk = results.filter(g => !g.some(r => craft.goals.includes(r.output)) )
+        var boost = 0
+        if(self.options.allow_permitted_items) {
+          var without_additional = junk.filter(g => !g.some(r => self.permittedItems.includes(r.output)))
+          var additional = junk.length - without_additional.length;
+          boost = -self.option_values.permitted_items_benefit * additional;
+          junk = without_additional;
+        }
+
+        var score = self.scoreSearch(search.length, junk.length, boost);
+
+        scored_search_results.push({
+          search_term: search,
+          results: self.getRecipesForGroups(results, craft.inventory),
+          score: score
+        })
+      })
+      return scored_search_results;
     },
     getResults: function () {
       var self = this;
       self.loading = true;
       self.results = []
 
-      self.penalty_values = {
+      self.option_values = {
         letter_penalty: parseFloat(self.options.letter_penalty),
         junk_penalty: parseFloat(self.options.junk_penalty),
         has_junk_penalty: parseFloat(self.options.has_junk_penalty),
         fail_penalty: parseFloat(self.options.fail_penalty),
-        permitted_items_benefit:  parseFloat(self.options.permitted_items_benefit)
+        permitted_items_benefit:  parseFloat(self.options.permitted_items_benefit),
+        max_characters: parseInt(self.options.max_characters)
       }
 
       var keys = Languages.map(l => l.key)
@@ -768,29 +793,26 @@ export default {
             var searches = self.getSearchesForItems(craft.goals, groups, translations);
 
             var scored_search_results = []
+            var latest_results = self.scoreSearches(craft, groups, translations, searches);
 
-            searches.forEach(function(search) {
-              var results = self.searchGroups(groups, translations, search);
+            scored_search_results = scored_search_results.concat(latest_results);
 
-              var junk = results.filter(g => !g.some(r => craft.goals.includes(r.output)) )
-              var boost = 0
-              if(self.options.allow_permitted_items) {
-                var without_additional = junk.filter(g => !g.some(r => self.permittedItems.includes(r.output)))
-                var additional = junk.length - without_additional.length;
-                boost = -self.penalty_values.permitted_items_benefit * additional;
-                junk = without_additional;
+            if (self.option_values.max_characters >= 2) {
+              var acceptable = craft.goals.length;
+
+              for(var i = 3; i <= self.option_values.max_characters; i++) {
+                var found = latest_results.find(r => r.results.length == acceptable) != null;
+                if (!found) {
+                  var next_searches = self.getLongerSearches(craft.goals, groups, translations, searches);
+                  searches = next_searches;
+                  
+                  latest_results = self.scoreSearches(craft, groups, translations, searches);
+                  scored_search_results = scored_search_results.concat(latest_results);
+                } else {
+                  break;
+                }
               }
-
-              var score = self.scoreSearch(search.length, junk.length, boost);
-              if (score == -0.64) {
-                console.log()
-              }
-              scored_search_results.push({
-                search_term: search,
-                results: self.getRecipesForGroups(results, craft.inventory),
-                score: score
-              })
-            })
+            }
 
             var best_searches = []
             var best_search = null
@@ -834,7 +856,7 @@ export default {
           if (best_search != null) {
             translation_result.score += best_search.score * craft.weight
           } else {
-            translation_result.score += self.penalty_values.fail_penalty * craft.weight
+            translation_result.score += self.option_values.fail_penalty * craft.weight
           }
         })
 

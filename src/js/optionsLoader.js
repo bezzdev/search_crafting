@@ -1,6 +1,6 @@
 var optionsLoader = function (options, defaults) {
-  if (!checkProperty(options, 'one_character_only'))
-    options.one_character_only = defaults.one_character_only
+  if (!checkProperty(options, 'max_characters'))
+    options.max_characters = defaults.max_characters
   if (!checkProperty(options, 'score_search_lengths'))
     options.score_search_lengths = defaults.score_search_lengths
   if (!checkProperty(options, 'optimize_unique_characters'))

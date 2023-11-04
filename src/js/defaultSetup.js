@@ -314,12 +314,12 @@ var defaultSetup = function() {
       }
     ],
     options: {
-      one_character_only: false,
+      max_characters: 2,
       score_search_lengths: true,
       optimize_unique_characters: true,
       search: '',
       auto_search: true,
-      letter_penalty: 1.0,
+      letter_penalty: 5.0,
       junk_penalty: 25.0,
       has_junk_penalty: 80.0,
       fail_penalty: 1000,
