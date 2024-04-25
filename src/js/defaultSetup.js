@@ -4,11 +4,10 @@ var defaultSetup = function() {
       {
         enabled: true,
         size: 3,
-        weight: 0.0,
+        weight: 1.0,
         goals: [
-          "item.minecraft.iron_pickaxe",
+          "item.minecraft.iron_ingot",
           "item.minecraft.iron_axe",
-          "item.minecraft.iron_shovel",
         ],
         inventory: [
           "block.minecraft.dirt",
@@ -19,7 +18,6 @@ var defaultSetup = function() {
           "item.minecraft.iron_ingot",
           "item.minecraft.gold_nugget",
           "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
           "item.minecraft.wheat",
           "item.minecraft.carrot",
         ]
@@ -27,7 +25,7 @@ var defaultSetup = function() {
       {
         enabled: true,
         size: 3,
-        weight: 2.0,
+        weight: 1.0,
         goals: [
           "item.minecraft.bucket",
         ],
@@ -40,7 +38,6 @@ var defaultSetup = function() {
           "item.minecraft.iron_ingot",
           "item.minecraft.gold_nugget",
           "item.minecraft.gold_ingot",
-          "item.minecraft.diamond",
           "item.minecraft.wheat",
           "item.minecraft.carrot",
         ]        
@@ -48,7 +45,7 @@ var defaultSetup = function() {
       {
         enabled: true,
         size: 2,
-        weight: 2.0,
+        weight: 1.0,
         goals: [
           "item.minecraft.flint_and_steel"
         ],
@@ -280,7 +277,7 @@ var defaultSetup = function() {
       {
         enabled: true,
         size: 3,
-        weight: 2.0,
+        weight: 1.0,
         goals: [
           "block.minecraft.white_bed",
           "block.minecraft.respawn_anchor"
@@ -320,8 +317,8 @@ var defaultSetup = function() {
       search: '',
       auto_search: true,
       letter_penalty: 5.0,
-      junk_penalty: 25.0,
-      has_junk_penalty: 80.0,
+      junk_penalty: 10.0,
+      has_junk_penalty: 100.0,
       fail_penalty: 1000,
       allow_permitted_items: true,
       permit_goal_items: true,

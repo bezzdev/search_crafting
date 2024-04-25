@@ -29,6 +29,16 @@ export default new Vuex.Store({
     readChangelog: -1,
     changelog: [
       {
+        id: 9,
+        date: "Thur, April 25 - 2024",
+        title: "Version 9",
+        text: "Features <br>" +
+              "- updated default crafts<br>" +
+              "<br>" +
+              "Bug fixes <br>" +
+              "- fixed changlog day of week to match date <br>"
+      },
+      {
         id: 8,
         date: "Sat, Nov 04 - 2023",
         title: "Version 8",
@@ -48,7 +58,7 @@ export default new Vuex.Store({
       },
       {
         id: 6,
-        date: "Wed, Oct 21 - 2023",
+        date: "Sat, Oct 21 - 2023",
         title: "Version 6",
         text: "Features <br>" +
               "- added about page <br>" +
@@ -79,7 +89,7 @@ export default new Vuex.Store({
       },
       {
         id: 4,
-        date: "Wed, Oct 16 - 2023",
+        date: "Mon, Oct 16 - 2023",
         title: "Version 4",
         text: "Features <br>" +
               "- move groups up / down <br>" +
@@ -92,7 +102,7 @@ export default new Vuex.Store({
       },
       {
         id: 3,
-        date: "Wed, Oct 15 - 2023",
+        date: "Sun, Oct 15 - 2023",
         title: "Version 3",
         text: "Features <br>" +
               "- added share button <br>" +
@@ -103,7 +113,7 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        date: "Wed, Oct 14 - 2023",
+        date: "Sat, Oct 14 - 2023",
         title: "Version 2",
         text: "Features <br>" +
               "- integrated tooltip data <br>" +
@@ -111,7 +121,7 @@ export default new Vuex.Store({
       },
       {
         id: 1,
-        date: "Wed, Oct 12 - 2023",
+        date: "Thur, Oct 12 - 2023",
         title: "Version 0",
         text: "A basic version of the project was built and hosted live. <br>" +
               "This only searched against item names and was very limited."
