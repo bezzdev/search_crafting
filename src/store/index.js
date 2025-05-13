@@ -29,6 +29,13 @@ export default new Vuex.Store({
     readChangelog: -1,
     changelog: [
       {
+        id: 10,
+        date: "Wed, May 14 - 2025",
+        title: "Version 10",
+        text: "Features <br>" +
+              "- added support for craft overlapping (backspace)<br>"
+      },
+      {
         id: 9,
         date: "Thur, April 25 - 2024",
         title: "Version 9",

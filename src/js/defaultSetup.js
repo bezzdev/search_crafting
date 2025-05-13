@@ -320,8 +320,8 @@ var defaultSetup = function() {
       junk_penalty: 10.0,
       has_junk_penalty: 100.0,
       fail_penalty: 1000,
-      allow_permitted_items: true,
-      permit_goal_items: true,
+      allow_permitted_items: false,
+      permit_goal_items: false,
       permitted_items_benefit: 10,
       permitted_items: [
         "item.minecraft.bow",
@@ -332,7 +332,9 @@ var defaultSetup = function() {
         "item.minecraft.golden_boots",
         "item.minecraft.golden_helmet",
         "item.minecraft.cauldron"
-      ]
+      ],
+      overlap_crafting: false,
+      overlap_penalty: 20,
     }
   }
 }

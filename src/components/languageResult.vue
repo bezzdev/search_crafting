@@ -35,6 +35,18 @@
                   <v-col cols="2" style="width: 100px;">
                     <div class="pt-2 d-inline-flex search-character">({{formatSearchTerm(craft.best_search.search_term)}})</div>
                     <div class="pt-2 d-inline-flex">({{ formatScore(craft.best_search.score) }})</div>
+                    <div class="overlap-icon-container">
+                      <div class="overlap-icon" style="top: -26px;" v-if="craft.best_search.overlap">
+                        <v-tooltip bottom>
+                          <template v-slot:activator="{ on }">
+                            <v-icon v-on="on" small>
+                              mdi-information
+                            </v-icon>
+                          </template>
+                          <span>This search requires overlapping (the &#60; symbol means backspace)</span>
+                        </v-tooltip>
+                      </div>
+                    </div>
                   </v-col>
                   <v-col cols="10">
                     <item v-for="goal in craft.goals" :key="'c'+c+'-g-'+goal" :item="goal" :language="result.translations" />
@@ -56,6 +68,18 @@
                   <v-col cols="2" style="width: 100px;">
                     <div class="pt-2 d-inline-flex search-character">({{ formatSearchTerm(search.search_term) }})</div>
                     <div class="pt-2 d-inline-flex">({{ formatScore(search.score) }})</div>
+                    <div class="overlap-icon-container">
+                      <div class="overlap-icon" v-if="craft.best_search.overlap">
+                        <v-tooltip bottom>
+                          <template v-slot:activator="{ on }">
+                            <v-icon v-on="on" small>
+                              mdi-information
+                            </v-icon>
+                          </template>
+                          <span>This search requires overlapping (the &#60; symbol means backspace)</span>
+                        </v-tooltip>
+                      </div>
+                    </div>
                   </v-col>
                   <v-col cols="10">
                     <item v-for="goal in craft.goals" :key="'c'+c+'-g-'+s+'-'+goal" :item="goal" :language="result.translations" />
@@ -174,5 +198,13 @@ export default {
   min-height: 32px;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+.overlap-icon-container {
+  position: relative;
+}
+.overlap-icon {
+  position: absolute;
+  left: -16px;
+  top: -34px;
 }
 </style>

@@ -25,7 +25,10 @@ var optionsLoader = function (options, defaults) {
     options.permitted_items_benefit = defaults.permitted_items_benefit
   if (!checkProperty(options, 'permitted_items'))
     options.permitted_items = defaults.permitted_items
-    
+  if (!checkProperty(options, 'overlap_crafting'))
+    options.overlap_crafting = defaults.overlap_crafting
+  if (!checkProperty(options, 'overlap_penalty'))
+    options.overlap_penalty = defaults.overlap_penalty
   return options;
 }
 

@@ -216,6 +216,43 @@ var deserialize8 = function(encoded, items) {
 }
 
 
+var deserialize9 = function(encoded, items) {
+  var rawJson = atob(encoded)
+  var json = JSON.parse(rawJson)
+  
+  var result = {
+    crafting: json.c.map(craft => {
+      return {
+        enabled: craft.e,
+        size: craft.s,
+        goals: craft.g.map(g => items[g]),
+        inventory: craft.i.map(i => items[i]),
+        weight: craft.w
+      }
+    }),
+    options: {
+      max_characters: json.o.c,
+      score_search_lengths: json.o.l,
+      optimize_unique_characters: json.o.u,
+      search: json.o.s,
+      auto_search: json.o.as,
+      letter_penalty: json.o.lp,
+      junk_penalty: json.o.jp,
+      has_junk_penalty: json.o.hjp,
+      fail_penalty: json.o.fp,
+      allow_permitted_items: json.o.api,
+      permit_goal_items: json.o.pgi,
+      permitted_items_benefit: json.o.pib,
+      permitted_items: json.o.pi.map(p => items[p]),
+      overlap_crafting: json.o.co,
+      overlap_penalty: json.o.op
+    }
+  }
+
+  return result;
+}
+
+
 var shareSerialize = function (data, items) {
   var shareObject = {
     c: data.crafting.map(function (craft) {
@@ -240,7 +277,9 @@ var shareSerialize = function (data, items) {
       api: data.options.allow_permitted_items,
       pgi: data.options.permit_goal_items,
       pib: data.options.permitted_items_benefit,
-      pi: data.options.permitted_items.map(p => items.indexOf(p))
+      pi: data.options.permitted_items.map(p => items.indexOf(p)),
+      co: data.options.overlap_crafting,
+      op: data.options.overlap_penalty
     }
   }
 
@@ -253,32 +292,39 @@ var shareSerialize = function (data, items) {
 
 var shareDeserialize = function (encoded, items) {
   var deserialized = null;
+
+  deserialize9
+
   try {
-    deserialized = deserialize8(encoded, items)
-  } catch (e8) {
+    deserialized = deserialize9(encoded, items)
+  } catch (e9) {
     try {
-      deserialized = deserialize7(encoded, items)
-    } catch (e7) {
+      deserialized = deserialize8(encoded, items)
+    } catch (e8) {
       try {
-        deserialized = deserialize6(encoded, items)
-      } catch (e6) {
+        deserialized = deserialize7(encoded, items)
+      } catch (e7) {
         try {
-          deserialized = deserialize5(encoded, items)
-        } catch (e5) {
+          deserialized = deserialize6(encoded, items)
+        } catch (e6) {
           try {
-            deserialized = deserialize4(encoded, items)
-          } catch (e4) {
+            deserialized = deserialize5(encoded, items)
+          } catch (e5) {
             try {
-              deserialized = deserialize3(encoded, items)
-            } catch (e3) {
+              deserialized = deserialize4(encoded, items)
+            } catch (e4) {
               try {
-                deserialized = deserialize2(encoded, items)
-              } catch (e2) {
+                deserialized = deserialize3(encoded, items)
+              } catch (e3) {
                 try {
-                  deserialized = deserialize1(encoded, items)
-                } catch (e1) {
-                  console.log("could not deserialize")
-                }  
+                  deserialized = deserialize2(encoded, items)
+                } catch (e2) {
+                  try {
+                    deserialized = deserialize1(encoded, items)
+                  } catch (e1) {
+                    console.log("could not deserialize")
+                  }  
+                }
               }
             }
           }
