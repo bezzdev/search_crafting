@@ -69,7 +69,7 @@
                     <div class="pt-2 d-inline-flex search-character">({{ formatSearchTerm(search.search_term) }})</div>
                     <div class="pt-2 d-inline-flex">({{ formatScore(search.score) }})</div>
                     <div class="overlap-icon-container">
-                      <div class="overlap-icon" v-if="craft.best_search.overlap">
+                      <div class="overlap-icon" v-if="search.overlap">
                         <v-tooltip bottom>
                           <template v-slot:activator="{ on }">
                             <v-icon v-on="on" small>
