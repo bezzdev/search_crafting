@@ -29,6 +29,16 @@ export default new Vuex.Store({
     readChangelog: -1,
     changelog: [
       {
+        id: 11,
+        date: "Wed, July 2 - 2025",
+        title: "Version 11",
+        text: "Features <br>" +
+              "- More thorough searching for longer search lengths<br>" +
+              "-- we no longer stop increasing search lengths once a valid search is found, this allows us to find alternative valid searches of longer lengths<br><br>" +
+              "- Better text rendering of non-latin language scripts in search results<br>" +
+              "-- we try to separate characters in scripts that usually combine multiple keystrokes into one character"
+      },
+      {
         id: 10,
         date: "Wed, May 14 - 2025",
         title: "Version 10",

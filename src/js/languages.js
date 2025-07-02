@@ -111,7 +111,7 @@ var languages = [
   { name: 'ייִדיש', region: 'אשכנזישע יידן', key: 'yi_de', localized: 'Yiddish', warning: null },
   { name: 'Татарча', region: 'Рәсәй', key: 'tt_ru', localized: 'Tatar', warning: null },
   { name: 'Русский', region: 'Россия', key: 'ru_ru', localized: 'Russian', warning: null },
-  { name: 'العربية', region: 'العالم العربي', key: 'ar_sa', localized: 'Arabic', warning: null },
+  { name: 'العربية', region: 'العالم العربي', key: 'ar_sa', localized: 'Arabic', warning: "This language may not work in game." },
   { name: 'Հայերեն', region: 'Հայաստան', key: 'hy_am', localized: 'Armenian', warning: null },
   { name: 'Қазақша', region: 'Қазақстан', key: 'kk_kz', localized: 'Kazakh', warning: null },
   { name: 'ქართული', region: 'საქართველო', key: 'ka_ge', localized: 'Georgian', warning: null },

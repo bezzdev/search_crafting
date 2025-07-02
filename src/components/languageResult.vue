@@ -18,7 +18,7 @@
     </v-expansion-panel-header>
     <v-expansion-panel-content>
       <div class="language-description">
-        Unique characters needed: {{ result.unique_character_count }} ({{ result.unique_characters.join('') }})
+        Unique characters needed: {{ result.unique_character_count }} ({{ result.unique_characters.join(' ') }})
       </div>
       <div class="language-description">
         Searches: {{ bestCharacters }}
@@ -33,7 +33,7 @@
               <v-expansion-panel-header class="search-header">
                 <v-row dense style="width: 100%;">
                   <v-col cols="2" style="width: 100px;">
-                    <div class="pt-2 d-inline-flex search-character">({{formatSearchTerm(craft.best_search.search_term)}})</div>
+                    <div class="pt-2 d-inline-flex search-character">{{formatSearchTerm(craft.best_search.search_term)}}</div>
                     <div class="pt-2 d-inline-flex">({{ formatScore(craft.best_search.score) }})</div>
                     <div class="overlap-icon-container">
                       <div class="overlap-icon" style="top: -26px;" v-if="craft.best_search.overlap">
@@ -66,7 +66,7 @@
                 <v-divider class="pb-4" />
                 <v-row v-for="search, s in craft.best_searches" :key="search.search_term" dense style="width: 100%;">
                   <v-col cols="2" style="width: 100px;">
-                    <div class="pt-2 d-inline-flex search-character">({{ formatSearchTerm(search.search_term) }})</div>
+                    <div class="pt-2 d-inline-flex search-character">{{ formatSearchTerm(search.search_term) }}</div>
                     <div class="pt-2 d-inline-flex">({{ formatScore(search.score) }})</div>
                     <div class="overlap-icon-container">
                       <div class="overlap-icon" v-if="search.overlap">
@@ -155,7 +155,7 @@ export default {
   }),
   computed: {
     bestCharacters() {
-      return "(" + this.result.crafting.filter(c => c.best_search != null).map(c => c.best_search.search_term).join(',') + ")"
+      return this.result.crafting.filter(c => c.best_search != null).map(c => "" + c.best_search.search_term.split('').join(' ') + "").join(', ')
     }
   },
   watch: {
@@ -170,7 +170,7 @@ export default {
     formatSearchTerm: function (term) {
       // if (term == " ")
       //   return "\xa0 \xa0";
-      return term;
+      return "" + term.split('').join('') + "";
     },
     formatScore: function(score) {
       if (score.toFixed)
@@ -189,6 +189,7 @@ export default {
   padding-left: 8px;
   padding-right: 4px;
   padding-bottom: 10px;
+  letter-spacing: 0.25em;
 }
 .language-description {
   padding: 0 16px;

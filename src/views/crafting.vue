@@ -786,7 +786,7 @@ export default {
       }
 
       var keys = Languages.map(l => l.key)
-      // keys = ['lb_lu']
+
       var test_languages = keys.map(k => Languages.find(l => l.key == k))
 
       var valid_crafts = self.crafting.filter(c => c.goals.length > 0 && c.inventory.length > 0);
@@ -824,6 +824,7 @@ export default {
           if (craft.valid) {
             var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.size, craft.inventory)
             var searches = self.getSearchesForItems(craft.goals, groups, translations);
+            var last_searches = searches;
 
             var scored_search_results = []
             var latest_results = self.scoreSearches(craft.goals, craft, groups, translations, searches);
@@ -833,13 +834,14 @@ export default {
             var acceptable = craft.goals.length;
             if (self.option_values.max_characters >= 2) {
               for(var i = 3; i <= self.option_values.max_characters; i++) {
-                var found = latest_results.find(r => r.results.length == acceptable) != null;
+                var found = latest_results.filter(r => r.results.length == acceptable) > 5;
                 if (!found) {
-                  var next_searches = self.getLongerSearches(craft.goals, groups, translations, searches);
-                  searches = next_searches;
+                  var next_searches = self.getLongerSearches(craft.goals, groups, translations, last_searches);
+                  next_searches = next_searches.filter(s => !searches.includes(s));
                   
-                  latest_results = self.scoreSearches(craft.goals, craft, groups, translations, searches);
+                  latest_results = self.scoreSearches(craft.goals, craft, groups, translations, next_searches);
                   scored_search_results = scored_search_results.concat(latest_results);
+                  last_searches = next_searches;
                 } else {
                   break;
                 }
