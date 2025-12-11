@@ -9,7 +9,7 @@ Specify what items you want to craft and what items you have.<br>
  - 1-2 character length searches<br>
  - specify goal crafts and inventory<br>
  - refreshing the page does not lose your data<br>
- - does not handle advancement based recipes (coming soon)<br>
+ - does not handle advancement based recipes<br>
 
 Currently uses data from MC 1.16.1 <br>
 
