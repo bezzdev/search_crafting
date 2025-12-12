@@ -18,7 +18,7 @@
     </v-expansion-panel-header>
     <v-expansion-panel-content>
       <div class="language-description">
-        Unique characters needed: {{ result.unique_character_count }} ({{ result.unique_characters.join(' ') }})
+        Unique characters needed: {{ result.unique_character_count }} ({{ result.unique_characters.join('').replaceAll(' ', '_').split().join(' ') }})
       </div>
       <div class="language-description">
         Searches: {{ bestCharacters }}
@@ -28,7 +28,7 @@
       </div>
       <v-lazy>
         <v-expansion-panels class="px-2" v-if="result">
-          <v-expansion-panel v-for="craft, c in result.crafting" :key="c" :readonly="craft.best_searches.length == 0">
+          <v-expansion-panel v-for="craft, c in result.crafts" :key="c" :readonly="craft.best_searches.length == 0">
             <template v-if="craft.best_search">
               <v-expansion-panel-header class="search-header">
                 <v-row dense style="width: 100%;">
@@ -117,7 +117,7 @@
           </v-expansion-panel>
         </v-expansion-panels>
       </v-lazy>
-      <!-- <v-list v-for="craft, c in result.crafting" :key="c">
+      <!-- <v-list v-for="craft, c in result.crafts" :key="c">
         <v-list-item>
           <v-list-item-content>
             <item v-for="goal in craft.goals" :key="goal" :item="goal" />
@@ -155,7 +155,7 @@ export default {
   }),
   computed: {
     bestCharacters() {
-      return this.result.crafting.filter(c => c.best_search != null).map(c => "" + c.best_search.search_term.split('').join(' ') + "").join(', ')
+      return this.result.crafts.filter(c => c.best_search != null).map(c => "" + c.best_search.search_term.replaceAll(' ', '_').split('').join(' ') + "").join(', ')
     }
   },
   watch: {
@@ -170,7 +170,7 @@ export default {
     formatSearchTerm: function (term) {
       // if (term == " ")
       //   return "\xa0 \xa0";
-      return "" + term.split('').join('') + "";
+      return "" + term.replaceAll(' ', '_').split('').join('') + "";
     },
     formatScore: function(score) {
       if (score.toFixed)
