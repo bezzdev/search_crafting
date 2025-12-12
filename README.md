@@ -9,9 +9,11 @@ Specify what items you want to craft and what items you have.<br>
  - 1-2 character length searches<br>
  - specify goal crafts and inventory<br>
  - refreshing the page does not lose your data<br>
- - does not handle advancement based recipes (coming soon)<br>
+ - does not handle advancement based recipes<br>
 
 Currently uses data from MC 1.16.1 <br>
+
+The raw data used in the search algorithm can be found here: <http://github.com/bezzdev/search_crafting/tree/master/src/js/tooltips>
 
 ## Tech Stack
 This project uses Vue.js + Vuetify <br>
