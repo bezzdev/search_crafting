@@ -118,7 +118,10 @@ var crafting = {
     var self = this;
     
     // var item_translations = []
-    var searches = [':']
+    var searches = []
+    if (self.options.colon_crafting) {
+      searches.push(':');
+    }
 
     // get all 1 character searches
     goals.forEach(function(item) {

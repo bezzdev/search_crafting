@@ -223,12 +223,6 @@
                 </v-text-field>
               </v-col>
             </v-row>
-            <v-row class="px-2 mt-0">
-              <v-col cols="12">
-                <v-subheader class="pl-0" style="height: 32px">Permitted Items</v-subheader>
-                <item v-for="item in permittedItems" :key="item + '_excluded'" :item="item" />
-              </v-col>
-            </v-row>
             <v-row>
               <v-col cols="4">
                 <v-switch v-model="options.overlap_crafting" class="ml-2" label="label" @change="setResultsOutdated">
@@ -259,9 +253,27 @@
                   </template>
                 </v-text-field>
               </v-col>
+              <v-col>
+                <v-switch v-model="options.colon_crafting" class="ml-2" label="label" @change="setResultsOutdated">
+                  <template v-slot:label>
+                    Colon Crafting
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on" class="ml-2">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Allow the use of the preappended ':' to search for items using their namespaced name</span>
+                    </v-tooltip>
+                  </template>
+                </v-switch>
+              </v-col>
             </v-row>
           </v-card-text>
         </v-card>
+        <v-expansion-panels class="mb-2" v-if="valid_languages.length != all_languages.length">
+          <disabled-languages :languages="all_languages" :enabledLanguages="valid_languages" @disableAll="disableAllLanguages" @enableAll="enableAllLanguages"></disabled-languages>
+        </v-expansion-panels>
         <div class="text-center" v-if="resultsOutdated && options.auto_search">
           <v-progress-circular
             indeterminate
@@ -290,10 +302,10 @@
 <script>
 import craft from "../components/craft.vue"
 import permitted from "../components/permitted.vue"
+import disabledLanguages from "../components/disabledLanguages.vue"
 
 import languageResult from '../components/languageResult.vue'
 import disabledLanguageResult from '../components/disabledLanguageResult.vue'
-import item from "../components/item.vue"
 import { en_gb } from '../js/names/en_gb.js';
 import { ShareSerialize, ShareDeserialize } from '../js/shareSerializer'
 import { CraftingLoader } from '../js/craftingLoader'
@@ -308,12 +320,13 @@ export default {
   components: {
     craft,
     permitted,
+    disabledLanguages,
     languageResult,
     disabledLanguageResult,
-    item
   },
   data: () => ({
     crafts: [],
+    all_languages: [],
     valid_languages: [],
     options: null,
     option_values: null,
@@ -450,6 +463,15 @@ export default {
       }
       return true;
     },
+    disableLanguage: function(language_key) {
+      let self = this;
+      if (self.valid_languages.includes(language_key)) {
+        self.valid_languages.splice(self.valid_languages.indexOf(language_key), 1);
+        if (self.results) {
+          self.results.find(r => r.language_key == language_key).disabled = true;
+        }
+      }
+    },
     enableLanguage: function(language_key) {
       let self = this;
       if (!self.valid_languages.includes(language_key)) {
@@ -459,14 +481,27 @@ export default {
         }
       }
     },
-    disableLanguage: function(language_key) {
+    disableAllLanguages: function () {
       let self = this;
-      if (self.valid_languages.includes(language_key)) {
-        self.valid_languages.splice(self.valid_languages.indexOf(language_key), 1);
-        if (self.results) {
-          self.results.find(r => r.language_key == language_key).disabled = true;
+      self.all_languages.forEach(key => {
+        if (self.valid_languages.includes(key)) {
+          self.valid_languages.splice(self.valid_languages.indexOf(key), 1);
+          if (self.results) {
+            self.results.find(r => r.language_key == key).disabled = true;
+          }
         }
-      }
+      })
+    },
+    enableAllLanguages: function () {
+      let self = this;
+      self.all_languages.forEach(key => {
+        if (!self.valid_languages.includes(key)) {
+          self.valid_languages.push(key);
+          if (self.results) {
+            self.results.find(r => r.language_key == key).disabled = false;
+          }
+        }
+      })
     },
     manuallySearch: function () {
       this.resultsOutdated = false;
@@ -489,6 +524,7 @@ export default {
     var defaults = DefaultSetup();
     self.crafts = defaults.crafting;
     self.options = defaults.options;
+    self.all_languages = Languages.map(l => l.key);
     self.valid_languages = Languages.map(l => l.key);//.filter(l => l == "ko_kr");
 
     // load data from cache
