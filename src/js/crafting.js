@@ -516,7 +516,7 @@ var crafting = {
               scored_search_results.splice(0, 1);
               var same_scores = scored_search_results.filter(s => s.score == best_search.score).length
 
-              var take = Math.max(same_scores, 5);
+              var take = Math.max(same_scores, 6);
               best_searches = scored_search_results.slice(0, take);
             }
 
