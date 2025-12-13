@@ -5,6 +5,8 @@ import router from './plugins/router'
 import store from './store'
 
 Vue.config.productionTip = false
+Vue.config.devtools = true
+
 new Vue({
   vuetify,
   router,
