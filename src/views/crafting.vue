@@ -231,7 +231,7 @@
             </v-row>
             <v-row>
               <v-col cols="4">
-                <v-switch v-model="options.overlap_crafts" class="ml-2" label="label" @change="setResultsOutdated">
+                <v-switch v-model="options.overlap_crafting" class="ml-2" label="label" @change="setResultsOutdated">
                   <template v-slot:label>
                     Craft Overlap
                     <v-tooltip bottom>
@@ -277,7 +277,10 @@
           </v-col>
         </v-row>
         <v-expansion-panels v-show="!loading && !resultsOutdated">
-          <languageResult v-for="result in filteredResults" :key="result.language_key" :result="result" />
+          <template v-for="result in filteredResults">
+            <languageResult v-if="!result.disabled" :result="result" :key="result.language_key" @disableLanguage="disableLanguage" :edit="edit" />
+            <disabledLanguageResult v-if="result.disabled" :result="result" :key="result.language_key" @enableLanguage="enableLanguage" />
+          </template>
         </v-expansion-panels>
       </v-col>
       <v-spacer/>
@@ -289,6 +292,7 @@ import craft from "../components/craft.vue"
 import permitted from "../components/permitted.vue"
 
 import languageResult from '../components/languageResult.vue'
+import disabledLanguageResult from '../components/disabledLanguageResult.vue'
 import item from "../components/item.vue"
 import { en_gb } from '../js/names/en_gb.js';
 import { ShareSerialize, ShareDeserialize } from '../js/shareSerializer'
@@ -296,6 +300,7 @@ import { CraftingLoader } from '../js/craftingLoader'
 import { OptionsLoader } from '../js/optionsLoader'
 import { DefaultSetup } from '../js/defaultSetup'
 import { Crafting } from '../js/crafting.js';
+import { Languages } from '../js//languages.js';
 
 export default {
   name: 'Crafting',
@@ -304,10 +309,12 @@ export default {
     craft,
     permitted,
     languageResult,
+    disabledLanguageResult,
     item
   },
   data: () => ({
     crafts: [],
+    valid_languages: [],
     options: null,
     option_values: null,
     results: [],
@@ -322,7 +329,7 @@ export default {
       return this.$store.getters.getLoaded
     },
     filteredResults () {
-      return this.results.filter(r => this.filterLanguage(r))
+      return this.results.filter(r => (!r.disabled || this.edit) && this.filterLanguage(r))
     },
     permittedItems () {
       if (this.crafts != null && this.options != null && this.options.permitted_items != null) {
@@ -443,6 +450,24 @@ export default {
       }
       return true;
     },
+    enableLanguage: function(language_key) {
+      let self = this;
+      if (!self.valid_languages.includes(language_key)) {
+        self.valid_languages.push(language_key);
+        if (self.results) {
+          self.results.find(r => r.language_key == language_key).disabled = false;
+        }
+      }
+    },
+    disableLanguage: function(language_key) {
+      let self = this;
+      if (self.valid_languages.includes(language_key)) {
+        self.valid_languages.splice(self.valid_languages.indexOf(language_key), 1);
+        if (self.results) {
+          self.results.find(r => r.language_key == language_key).disabled = true;
+        }
+      }
+    },
     manuallySearch: function () {
       this.resultsOutdated = false;
       this.getResults();
@@ -450,18 +475,21 @@ export default {
     getResults: function () {
       let self = this;
       self.loading = false;
-      self.results = Crafting.getResults(self.options, self.crafts);
+      self.results = Crafting.getResults(self.options, self.crafts, self.valid_languages);
       self.loading = false;
     }
   },
   mounted () {
     var self = this;
-    self.$store.commit('setItems', Object.keys(en_gb));
+    const item_keys = Object.keys(en_gb);
+    self.$store.commit('setItems', item_keys);
+    Crafting.setItems(item_keys);
     
     // default setup
     var defaults = DefaultSetup();
     self.crafts = defaults.crafting;
     self.options = defaults.options;
+    self.valid_languages = Languages.map(l => l.key);//.filter(l => l == "ko_kr");
 
     // load data from cache
     var loadedCrafting = self.$store.getters.getCrafting;

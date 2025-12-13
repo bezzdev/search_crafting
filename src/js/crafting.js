@@ -3,6 +3,14 @@ import { Languages } from './languages.js';
 import { LanguageTooltips } from './languageTooltips.js';
 
 var crafting = {
+  items: {},
+  setItems: function (items) {
+    let self = this;
+    items.forEach(item => {
+      let translation = item.replace("block.minecraft.", "").replace("item.minecraft.", "");
+      self.items[item] = translation;
+    })
+  },
   getRelevantGroupsForInventory: function (groups, size, inventory) {
     var relevant = []
     groups.forEach(function(group) {
@@ -30,6 +38,9 @@ var crafting = {
     })
     return relevant;
   },
+  getTranslation: function (translations, item) {
+      return translations[item].toLowerCase();
+  },
   getLongerSearches: function (goals, groups, translations, searches) { // translations, searches) {
     let self = this;
 
@@ -37,16 +48,33 @@ var crafting = {
     goals.forEach(function(item) {
       groups.filter(group => group.some(recipe => recipe.output == item)).forEach(function(group) {
         group.forEach(function(recipe) {
-          var translation = translations[recipe.output].toLowerCase();
+          var translation = self.getTranslation(translations, recipe.output);
 
           searches.forEach(function(search) {
-            for(var i = 0; i < translation.length; i++) {
+            for(var i = 0; i < translation.length - search.length; i++) {
               if (translation.substring(i, i + search.length) == search) {
                 var new_char = translation[i + search.length];
                 if(!self.option_values.badCharacters.includes(new_char)) {
                   var new_search = search + new_char;
                   if (!new_searches.includes(new_search)) {
                     new_searches.push(new_search)
+                  }
+                }
+              }
+            }
+
+            if (search[0] == ':') {
+              var target = search.substring(1);
+              var source = self.items[recipe.output];
+              for(var j = 0; j < source.length - target.length; j++) {
+                if (source.substring(j, j + target.length) == target) {
+                  var new_char2 = source[j + target.length];
+                  if(!self.option_values.badCharacters.includes(new_char2)) {
+                    var new_search2 = search + new_char2;
+
+                    if (!new_searches.includes(new_search2)) {
+                      new_searches.push(new_search2)
+                    }
                   }
                 }
               }
@@ -59,15 +87,24 @@ var crafting = {
     var valid_searches = self.validateSearches(goals, groups, translations, new_searches)
     return valid_searches;
   },
+  matchItem: function (key, translations, search) {
+    let self = this;
+    if (search[0] == ':') {
+      return self.getTranslation(translations, key).includes(search.substring(1)) || self.items[key].includes(search.substring(1));
+    } else {
+      return self.getTranslation(translations, key).includes(search);
+    }
+  },
   validateSearches: function (goals, groups, translations, searches) {
+    let self = this;
     var valid_searches = []
     searches.forEach(function(search) {
       if(goals.every(function(goal) {
         var found = groups.find(function(group) { 
-          return group.some(function(recipe) {
+          return group.some(function(recipe) { 
             return recipe.output == goal
-          }) && group.some(function(recipe) { 
-            return translations[recipe.output].includes(search)
+          }) && group.some(function (recipe) {
+            return self.matchItem(recipe.output, translations, search);
           })
         })
         return found != null;
@@ -81,12 +118,13 @@ var crafting = {
     var self = this;
     
     // var item_translations = []
-    var searches = []
+    var searches = [':']
 
+    // get all 1 character searches
     goals.forEach(function(item) {
       groups.filter(group => group.some(recipe => recipe.output == item)).forEach(function(group) {
         group.forEach(function(recipe) {
-          var translation = translations[recipe.output].toLowerCase();
+          var translation = self.getTranslation(translations, recipe.output);
           // item_translations.push(translation);
 
           for(var c = 0; c < translation.length; c++) {
@@ -100,6 +138,7 @@ var crafting = {
       })
     })
 
+    // filter to searches that find everything
     var valid_searches = self.validateSearches(goals, groups, translations, searches)
 
     if (this.option_values.max_characters >= 2) {
@@ -111,13 +150,13 @@ var crafting = {
     return valid_searches
   },
   searchGroups: function (groups, translations, search) {
+    let self = this;
     var found = []
     groups.forEach(function(group) {
       var matched = false;
       group.forEach(function(recipe) {
-        var output = translations[recipe.output];
-        if (output.toLowerCase().includes(search)) {
-          matched = true;
+        if(self.matchItem(recipe.output, translations, search)) {
+            matched = true;
         }
       })
       if (matched) {
@@ -151,7 +190,7 @@ var crafting = {
     if (!this.options.score_search_lengths)
       letters = 1;
 
-    var letter_penalty = this.option_values.letter_penalty * Math.pow(letters - 1, 3);
+    var letter_penalty = this.option_values.letter_penalty *  (letters - 1);
 
     var junk_penalty = remainder * this.option_values.junk_penalty;
     if (remainder > 0) {
@@ -322,7 +361,35 @@ var crafting = {
     })
     return scored_search_results;
   },
-  getResults: function (options, crafts) {
+  getAllSearchesForItems: function (craft, groups, translations) {
+    let self = this;
+    var searches = self.getSearchesForItems(craft.goals, groups, translations);
+    var last_searches = searches;
+
+    var latest_results = self.scoreSearches(craft.goals, craft, groups, translations, searches);
+
+    var scored_search_results = [];
+    scored_search_results = scored_search_results.concat(latest_results);
+
+    var acceptable = craft.goals.length;
+    if (self.option_values.max_characters >= 2) {
+      for(var i = 3; i <= self.option_values.max_characters; i++) {
+        var found = scored_search_results.filter(r => r.results.length == acceptable).length > 5;
+        // dont find longer searches if we've found the best results
+        if (!found) {
+          var next_searches = self.getLongerSearches(craft.goals, groups, translations, last_searches).filter(s => !searches.includes(s));
+                  
+          latest_results = self.scoreSearches(craft.goals, craft, groups, translations, next_searches);
+          scored_search_results = scored_search_results.concat(latest_results);
+          last_searches = next_searches;
+        } else {
+          break;
+        }
+      }
+    }
+    return scored_search_results;
+  },
+  getResults: function (options, crafts, valid_languages) {
     var self = this;
     var results = []
     self.options = options;
@@ -340,7 +407,8 @@ var crafting = {
 
     var keys = Languages.map(l => l.key)
 
-    var test_languages = keys.map(k => Languages.find(l => l.key == k))
+    var all_languages = keys.map(k => Languages.find(l => l.key == k))
+    // var valid_languages = ["gd_gb"]; // all_languages;
 
     var valid_crafts = crafts.filter(c => c.goals.length > 0 && c.inventory.length > 0);
     valid_crafts.forEach(function (craft) {
@@ -357,7 +425,7 @@ var crafting = {
     })
     var enabled_crafts = valid_crafts.filter(c => c.enabled);
     
-    test_languages.forEach(function(language) {
+    all_languages.forEach(function(language) {
       var translations = LanguageTooltips[language.key];
 
       var translation_result = {
@@ -370,127 +438,115 @@ var crafting = {
         crafts: [],
         unique_character_count: 0,
         unique_characters: [],
-        score: 0
+        score: 0,
+        completed: false,
+        disabled: false
       }
 
-      enabled_crafts.forEach(function(craft) {
-        if (craft.valid) {
-          var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.size, craft.inventory)
-          var searches = self.getSearchesForItems(craft.goals, groups, translations);
-          var last_searches = searches;
+      if (!valid_languages.includes(language.key)) {
+        translation_result.disabled = true;
+        results.push(translation_result)
+      } else {
+        enabled_crafts.forEach(function(craft) {
+          if (craft.valid) {
+            var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.size, craft.inventory)
 
-          var scored_search_results = []
-          var latest_results = self.scoreSearches(craft.goals, craft, groups, translations, searches);
+            var scored_search_results = self.getAllSearchesForItems(craft, groups, translations);
+            // var scored_search_results = self.getAllSearchesForItems(craft, groups, self.items);
 
-          scored_search_results = scored_search_results.concat(latest_results);
+            if (self.options.overlap_crafting) {
+              var acceptable = craft.goals.length;
+              if (craft.goals.length == 2) { // only try overlapping for searches of 2 goals
+                if (!(scored_search_results.find(r => r.results.length == acceptable) != null)) { // only try if we dont have a better search
+                  var goal_a = [craft.goals[0]];
+                  var goal_b = [craft.goals[1]];
 
-          var acceptable = craft.goals.length;
-          if (self.option_values.max_characters >= 2) {
-            for(var i = 3; i <= self.option_values.max_characters; i++) {
-              var found = latest_results.filter(r => r.results.length == acceptable) > 5;
-              if (!found) {
-                var next_searches = self.getLongerSearches(craft.goals, groups, translations, last_searches);
-                next_searches = next_searches.filter(s => !searches.includes(s));
-                
-                latest_results = self.scoreSearches(craft.goals, craft, groups, translations, next_searches);
-                scored_search_results = scored_search_results.concat(latest_results);
-                last_searches = next_searches;
-              } else {
-                break;
-              }
-            }
-          }
+                  var searches_a = self.getSearchesForItems(goal_a, groups, translations).filter(s => s.length == 2);
+                  var searches_b = self.getSearchesForItems(goal_b, groups, translations).filter(s => s.length == 2);
 
-          if (self.options.overlap_crafting) {
-            if (craft.goals.length == 2) { // only try overlapping for searches of 2 goals
-              if (!(latest_results.find(r => r.results.length == acceptable) != null)) { // only try if we dont have a better search
-                var goal_a = [craft.goals[0]];
-                var goal_b = [craft.goals[1]];
+                  for(var sa = 0; sa < searches_a.length; sa++) {
+                    var search_a = searches_a[sa];
+                    for (var sb = 0; sb < searches_b.length; sb++) {
+                      var search_b = searches_b[sb];
+                      if (search_a[0] == search_b[0]) {
+                        // we have an overlap
+                        var score_a = self.scoreSearches(goal_a, craft, groups, translations, [search_a])[0];
+                        var score_b = self.scoreSearches(goal_b, craft, groups, translations, [search_b])[0];
 
-                var searches_a = self.getSearchesForItems(goal_a, groups, translations).filter(s => s.length == 2);
-                var searches_b = self.getSearchesForItems(goal_b, groups, translations).filter(s => s.length == 2);
+                        var results_a = self.searchGroups(groups, translations, search_a);
+                        var results_b = self.searchGroups(groups, translations, search_b);
 
-                for(var sa = 0; sa < searches_a.length; sa++) {
-                  var search_a = searches_a[sa];
-                  for (var sb = 0; sb < searches_b.length; sb++) {
-                    var search_b = searches_b[sb];
-                    if (search_a[0] == search_b[0]) {
-                      // we have an overlap
-                      var score_a = self.scoreSearches(goal_a, craft, groups, translations, [search_a])[0];
-                      var score_b = self.scoreSearches(goal_b, craft, groups, translations, [search_b])[0];
+                        var combinedScore = score_a.score + score_b.score + self.option_values.overlap_penalty;
 
-                      var results_a = self.searchGroups(groups, translations, search_a);
-                      var results_b = self.searchGroups(groups, translations, search_b);
+                        let combined_score = {
+                          search_term: search_a + "<" + search_b[1],
+                          results: self.getRecipesForGroups(results_a, craft.inventory).concat(self.getRecipesForGroups(results_b, craft.inventory)),
+                          overlap: true,
+                          score: combinedScore
+                        }
 
-                      var combinedScore = score_a.score + score_b.score + self.option_values.overlap_penalty;
-
-                      let combined_score = {
-                        search_term: search_a + "<" + search_b[1],
-                        results: self.getRecipesForGroups(results_a, craft.inventory).concat(self.getRecipesForGroups(results_b, craft.inventory)),
-                        overlap: true,
-                        score: combinedScore
+                        scored_search_results.push(combined_score);
                       }
-
-                      scored_search_results.push(combined_score);
                     }
                   }
                 }
               }
             }
-          }
 
-          var best_searches = []
-          var best_search = null
+            var best_searches = []
+            var best_search = null
 
-          if (scored_search_results.length > 0) {
-            scored_search_results.sort(function compare(a, b) {
-              if (a.score < b.score) {
-                return -1;
-              } else if (a.score > b.score) {
-                return 1;
-              }
-              return 0;
-            })
-            
-            best_search = scored_search_results[0]
-          }
+            if (scored_search_results.length > 0) {
+              scored_search_results.sort(function compare(a, b) {
+                if (a.score < b.score) {
+                  return -1;
+                } else if (a.score > b.score) {
+                  return 1;
+                }
+                return 0;
+              })
+              
+              best_search = scored_search_results[0]
+            }
 
-          if (scored_search_results.length > 1) {
-            scored_search_results.splice(0, 1);
-            var same_scores = scored_search_results.filter(s => s.score == best_search.score).length
+            if (scored_search_results.length > 1) {
+              scored_search_results.splice(0, 1);
+              var same_scores = scored_search_results.filter(s => s.score == best_search.score).length
 
-            var take = Math.max(same_scores, 5);
-            best_searches = scored_search_results.slice(0, take);
-          }
+              var take = Math.max(same_scores, 5);
+              best_searches = scored_search_results.slice(0, take);
+            }
 
-          translation_result.crafts.push({
-            goals: craft.goals,
-            valid: true,
-            best_search: best_search,
-            best_searches: best_searches
-          })
-        } else {
             translation_result.crafts.push({
-            goals: craft.goals,
-            valid: false,
-            best_search: null,
-            best_searches: []
-          })
-        }
+              goals: craft.goals,
+              valid: true,
+              best_search: best_search,
+              best_searches: best_searches
+            })
+          } else {
+              translation_result.crafts.push({
+              goals: craft.goals,
+              valid: false,
+              best_search: null,
+              best_searches: []
+            })
+          }
 
-        if (best_search != null) {
-          translation_result.score += best_search.score * craft.weight
-        } else {
-          translation_result.score += self.option_values.fail_penalty * craft.weight
-        }
-      })
+          if (best_search != null) {
+            translation_result.score += best_search.score * craft.weight
+          } else {
+            translation_result.score += self.option_values.fail_penalty * craft.weight
+          }
+        })
 
-      // calculate unique characters
-      var unique_characters = self.getUniqueCharacters(translation_result.crafts.filter(craft => craft.best_search != null).map(c => c.best_search.search_term))
-      translation_result.unique_characters = unique_characters;
-      translation_result.unique_character_count = unique_characters.length;
+        // calculate unique characters
+        var unique_characters = self.getUniqueCharacters(translation_result.crafts.filter(craft => craft.best_search != null).map(c => c.best_search.search_term))
+        translation_result.unique_characters = unique_characters;
+        translation_result.unique_character_count = unique_characters.length;
 
-      results.push(translation_result)
+        translation_result.completed = true;
+        results.push(translation_result)
+      }
     })
 
     results.sort(function compare(a, b) {
