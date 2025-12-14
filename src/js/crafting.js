@@ -405,10 +405,11 @@ var crafting = {
     }
     return scored_search_results;
   },
-  getResults: function (options, crafts, valid_languages) {
+  getResults: function (options, crafts, valid_languages, permitted_items) {
     var self = this;
     var results = []
     self.options = options;
+    self.permittedItems = permitted_items;
 
     self.option_values = {
       badCharacters: ["□"],
@@ -482,18 +483,26 @@ var crafting = {
                   var searches_a = self.getAllSearchesForItems(goal_a, craft.inventory, groups, translations);
                   var searches_b = self.getAllSearchesForItems(goal_b, craft.inventory, groups, translations);
 
-                  var filtered_a = searches_a.filter(s => s.score < lowest_score && s.search_term.length >= 2).sort(self.scoreSort);
-                  var filtered_b = searches_b.filter(s => s.score < lowest_score && s.search_term.length >= 2).sort(self.scoreSort);
+                  var filtered_a = searches_a.filter(s => s.score < lowest_score && s.search_term.length >= 1).sort(self.scoreSort);
+                  var filtered_b = searches_b.filter(s => s.score < lowest_score && s.search_term.length >= 1).sort(self.scoreSort);
                   
                   var overlaps = []
                   if (filtered_a && filtered_b) {
                     filtered_a.forEach(function(search_a) {
                       filtered_b.forEach(function(search_b) {
-                        var overlap_score = search_a.score + search_b.score + self.option_values.overlap_penalty;
+                        var search_left = search_a;
+                        var search_right = search_b;
+
+                        if (search_b.search_term.length < search_a.search_term.length) {
+                          search_left = search_b;
+                          search_right = search_a;
+                        }
+
+                        var overlap_score = search_left.score + search_right.score + self.option_values.overlap_penalty;
                         if (overlap_score < lowest_score) {
-                          var overlap = false;
-                          for (var c = 0; c < search_a.search_term.length; c++) {
-                            if (search_a.search_term[c] != search_b.search_term[c]) {
+                          var overlap = true;
+                          for (var c = 0; c < search_left.search_term.length; c++) {
+                            if (search_left.search_term[c] != search_right.search_term[c]) {
                               break;
                             } else {
                               overlap = true;
@@ -501,21 +510,26 @@ var crafting = {
                           }
 
                           if (overlap) {
-                            var left = search_a.search_term;
-                            var right = search_b.search_term.substring(c);
-                            var middle = "<".repeat(left.length - c);
+                            var left = search_left.search_term;
+                            var right = search_right.search_term.substring(c);
+                            var backspaces = left.length - c;
+                            var middle = "<".repeat(backspaces);
                             var overlap_search = left + middle + right;
                             
-                            // we have an overlap
-                            var results_a = self.searchGroups(groups, translations, search_a.search_term);
-                            var results_b = self.searchGroups(groups, translations, search_b.search_term);
+                            if (!overlaps.find(o => o.search_term == overlap_search)) {
+                              // we have an overlap
+                              var results_left = self.searchGroups(groups, translations, search_left.search_term);
+                              var results_right = self.searchGroups(groups, translations, search_right.search_term);
 
-                            overlaps.push({
-                              search_term: overlap_search,
-                              results: self.getRecipesForGroups(results_a, craft.inventory).concat(self.getRecipesForGroups(results_b, craft.inventory)),
-                              overlap: true,
-                              score: overlap_score
-                            })
+                              overlap_score = search_left.score + search_right.score + (self.option_values.overlap_penalty * backspaces);
+
+                              overlaps.push({
+                                search_term: overlap_search,
+                                results: self.getRecipesForGroups(results_left, craft.inventory).concat(self.getRecipesForGroups(results_right, craft.inventory)),
+                                overlap: true,
+                                score: overlap_score
+                              })
+                            }
                           }
                         }
                       })
