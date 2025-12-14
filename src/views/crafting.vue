@@ -527,7 +527,7 @@ export default {
     getResults: function () {
       let self = this;
       self.loading = false;
-      self.results = Crafting.getResults(self.options, self.crafts, self.valid_languages);
+      self.results = Crafting.getResults(self.options, self.crafts, self.valid_languages, self.permittedItems);
       self.loading = false;
     },
     copyText: function (text) {
