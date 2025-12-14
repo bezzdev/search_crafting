@@ -254,16 +254,16 @@
                 </v-text-field>
               </v-col>
               <v-col>
-                <v-switch v-model="options.colon_crafting" class="ml-2" label="label" @change="setResultsOutdated">
+                <v-switch v-model="options.resource_id" class="ml-2" label="label" @change="setResultsOutdated">
                   <template v-slot:label>
-                    Colon Crafting
+                    Resource ID
                     <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
                         <v-icon v-on="on" class="ml-2">
                           mdi-information
                         </v-icon>
                       </template>
-                      <span>Allow the use of the preappended ':' to search for items using their namespaced name</span>
+                      <span>Allow the use of the preappended ':' to search for items using their Resource ID</span>
                     </v-tooltip>
                   </template>
                 </v-switch>

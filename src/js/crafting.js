@@ -131,9 +131,8 @@ var crafting = {
   getSearchesForItems: function (goals, groups, translations) {
     var self = this;
     
-    // var item_translations = []
     var searches = []
-    if (self.options.colon_crafting) {
+    if (self.options.resource_id) {
       searches.push(':');
     }
 
