@@ -29,6 +29,9 @@ var optionsLoader = function (options, defaults) {
     options.overlap_crafting = defaults.overlap_crafting
   if (!checkProperty(options, 'overlap_penalty'))
     options.overlap_penalty = defaults.overlap_penalty
+  if (!checkProperty(options, 'resource_id'))
+    options.resource_id = defaults.resource_id
+  
   return options;
 }
 

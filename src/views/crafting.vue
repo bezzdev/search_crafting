@@ -263,7 +263,7 @@
                           mdi-information
                         </v-icon>
                       </template>
-                      <span>Allow the use of the preappended ':' to search for items using their Resource ID</span>
+                      <span>Allow the use of the prepended ':' to search for items using their Resource ID</span>
                     </v-tooltip>
                   </template>
                 </v-switch>
@@ -323,6 +323,7 @@ import { en_gb } from '../js/names/en_gb.js';
 import { ShareSerialize, ShareDeserialize } from '../js/shareSerializer'
 import { CraftingLoader } from '../js/craftingLoader'
 import { OptionsLoader } from '../js/optionsLoader'
+import { LanguageLoader } from '../js/languageLoader'
 import { DefaultSetup } from '../js/defaultSetup'
 import { Crafting } from '../js/crafting.js';
 import { Languages } from '../js//languages.js';
@@ -394,7 +395,8 @@ export default {
 
       var encoded = ShareSerialize({
         crafting: this.crafts,
-        options: this.options
+        options: this.options,
+        languages: this.valid_languages.length.length == this.all_languages.length ? null : this.valid_languages
       }, items);
 
       var link = process.env.VUE_APP_CLIENT_PROTOCOL + process.env.VUE_APP_CLIENT_URL + "?data=" + encoded;
@@ -569,7 +571,10 @@ export default {
           self.crafts = CraftingLoader(json.crafting);
         }
         if (json.options) {
-          self.options =  OptionsLoader(json.options, defaults.options);
+          self.options = OptionsLoader(json.options, defaults.options);
+        }
+        if (json.languages) {
+          self.valid_languages = LanguageLoader(json.languages, self.all_languages);
         }
         self.getResults();
       }

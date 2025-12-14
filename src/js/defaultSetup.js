@@ -311,7 +311,7 @@ var defaultSetup = function() {
       }
     ],
     options: {
-      max_characters: 2,
+      max_characters: 3,
       score_search_lengths: true,
       optimize_unique_characters: true,
       search: '',
@@ -333,8 +333,9 @@ var defaultSetup = function() {
         "item.minecraft.golden_helmet",
         "item.minecraft.cauldron"
       ],
-      overlap_crafting: false,
+      overlap_crafting: true,
       overlap_penalty: 20,
+      resource_id: true
     }
   }
 }
