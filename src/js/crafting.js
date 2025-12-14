@@ -4,6 +4,14 @@ import { LanguageTooltips } from './languageTooltips.js';
 
 var crafting = {
   items: {},
+  scoreSort: function compare(a, b) {
+    if (a.score < b.score) {
+      return -1;
+    } else if (a.score > b.score) {
+      return 1;
+    }
+    return 0;
+  },
   setItems: function (items) {
     let self = this;
     items.forEach(item => {
@@ -89,8 +97,14 @@ var crafting = {
   },
   matchItem: function (key, translations, search) {
     let self = this;
-    if (search[0] == ':') {
-      return self.getTranslation(translations, key).includes(search.substring(1)) || self.items[key].includes(search.substring(1));
+    if (search.includes(':')) { // if (search[0] == ':') {
+      const split = search.indexOf(':');
+      const before = search.substring(0, split);
+      if (before != "" || "minecraft".includes(before) == false) {
+        return false;
+      }
+      const after = search.substring(split + 1);
+      return after == "" || self.getTranslation(translations, key).includes(after) || self.items[key].includes(after);
     } else {
       return self.getTranslation(translations, key).includes(search);
     }
@@ -159,7 +173,7 @@ var crafting = {
       var matched = false;
       group.forEach(function(recipe) {
         if(self.matchItem(recipe.output, translations, search)) {
-            matched = true;
+          matched = true;
         }
       })
       if (matched) {
@@ -338,7 +352,7 @@ var crafting = {
     translation_result.unique_characters = unique_characters;
     translation_result.unique_character_count = unique_characters.length;
   },
-  scoreSearches: function (goals, craft, groups, translations, searches) {
+  scoreSearches: function (goals, inventory, groups, translations, searches) {
     var self = this;
     var scored_search_results = []
     searches.forEach(function(search) {
@@ -357,32 +371,32 @@ var crafting = {
 
       scored_search_results.push({
         search_term: search,
-        results: self.getRecipesForGroups(results, craft.inventory),
+        results: self.getRecipesForGroups(results, inventory),
         overlap: false,
         score: score
       })
     })
     return scored_search_results;
   },
-  getAllSearchesForItems: function (craft, groups, translations) {
+  getAllSearchesForItems: function (goals, inventory, groups, translations) {
     let self = this;
-    var searches = self.getSearchesForItems(craft.goals, groups, translations);
+    var searches = self.getSearchesForItems(goals, groups, translations);
     var last_searches = searches;
 
-    var latest_results = self.scoreSearches(craft.goals, craft, groups, translations, searches);
+    var latest_results = self.scoreSearches(goals, inventory, groups, translations, searches);
 
     var scored_search_results = [];
     scored_search_results = scored_search_results.concat(latest_results);
 
-    var acceptable = craft.goals.length;
+    var acceptable = goals.length;
     if (self.option_values.max_characters >= 2) {
       for(var i = 3; i <= self.option_values.max_characters; i++) {
         var found = scored_search_results.filter(r => r.results.length == acceptable).length > 5;
         // dont find longer searches if we've found the best results
         if (!found) {
-          var next_searches = self.getLongerSearches(craft.goals, groups, translations, last_searches).filter(s => !searches.includes(s));
+          var next_searches = self.getLongerSearches(goals, groups, translations, last_searches).filter(s => !searches.includes(s));
                   
-          latest_results = self.scoreSearches(craft.goals, craft, groups, translations, next_searches);
+          latest_results = self.scoreSearches(goals, inventory, groups, translations, next_searches);
           scored_search_results = scored_search_results.concat(latest_results);
           last_searches = next_searches;
         } else {
@@ -454,43 +468,61 @@ var crafting = {
           if (craft.valid) {
             var groups = self.getRelevantGroupsForInventory(RecipeGroups, craft.size, craft.inventory)
 
-            var scored_search_results = self.getAllSearchesForItems(craft, groups, translations);
+            var scored_search_results = self.getAllSearchesForItems(craft.goals, craft.inventory, groups, translations);
             // var scored_search_results = self.getAllSearchesForItems(craft, groups, self.items);
 
             if (self.options.overlap_crafting) {
               var acceptable = craft.goals.length;
               if (craft.goals.length == 2) { // only try overlapping for searches of 2 goals
+                var lowest_score = Math.min(...scored_search_results.map(s => s.score));
+
                 if (!(scored_search_results.find(r => r.results.length == acceptable) != null)) { // only try if we dont have a better search
                   var goal_a = [craft.goals[0]];
                   var goal_b = [craft.goals[1]];
 
-                  var searches_a = self.getSearchesForItems(goal_a, groups, translations).filter(s => s.length == 2);
-                  var searches_b = self.getSearchesForItems(goal_b, groups, translations).filter(s => s.length == 2);
+                  var searches_a = self.getAllSearchesForItems(goal_a, craft.inventory, groups, translations);
+                  var searches_b = self.getAllSearchesForItems(goal_b, craft.inventory, groups, translations);
 
-                  for(var sa = 0; sa < searches_a.length; sa++) {
-                    var search_a = searches_a[sa];
-                    for (var sb = 0; sb < searches_b.length; sb++) {
-                      var search_b = searches_b[sb];
-                      if (search_a[0] == search_b[0]) {
-                        // we have an overlap
-                        var score_a = self.scoreSearches(goal_a, craft, groups, translations, [search_a])[0];
-                        var score_b = self.scoreSearches(goal_b, craft, groups, translations, [search_b])[0];
+                  var filtered_a = searches_a.filter(s => s.score < lowest_score && s.search_term.length >= 2).sort(self.scoreSort);
+                  var filtered_b = searches_b.filter(s => s.score < lowest_score && s.search_term.length >= 2).sort(self.scoreSort);
+                  
+                  var overlaps = []
+                  if (filtered_a && filtered_b) {
+                    filtered_a.forEach(function(search_a) {
+                      filtered_b.forEach(function(search_b) {
+                        var overlap_score = search_a.score + search_b.score + self.option_values.overlap_penalty;
+                        if (overlap_score < lowest_score) {
+                          var overlap = false;
+                          for (var c = 0; c < search_a.search_term.length; c++) {
+                            if (search_a.search_term[c] != search_b.search_term[c]) {
+                              break;
+                            } else {
+                              overlap = true;
+                            }
+                          }
 
-                        var results_a = self.searchGroups(groups, translations, search_a);
-                        var results_b = self.searchGroups(groups, translations, search_b);
+                          if (overlap) {
+                            var left = search_a.search_term;
+                            var right = search_b.search_term.substring(c);
+                            var middle = "<".repeat(left.length - c);
+                            var overlap_search = left + middle + right;
+                            
+                            // we have an overlap
+                            var results_a = self.searchGroups(groups, translations, search_a.search_term);
+                            var results_b = self.searchGroups(groups, translations, search_b.search_term);
 
-                        var combinedScore = score_a.score + score_b.score + self.option_values.overlap_penalty;
-
-                        let combined_score = {
-                          search_term: search_a + "<" + search_b[1],
-                          results: self.getRecipesForGroups(results_a, craft.inventory).concat(self.getRecipesForGroups(results_b, craft.inventory)),
-                          overlap: true,
-                          score: combinedScore
+                            overlaps.push({
+                              search_term: overlap_search,
+                              results: self.getRecipesForGroups(results_a, craft.inventory).concat(self.getRecipesForGroups(results_b, craft.inventory)),
+                              overlap: true,
+                              score: overlap_score
+                            })
+                          }
                         }
-
-                        scored_search_results.push(combined_score);
-                      }
-                    }
+                      })
+                    })
+                    overlaps = overlaps.sort(self.scoreSort);
+                    scored_search_results = scored_search_results.concat(overlaps);
                   }
                 }
               }
@@ -500,14 +532,7 @@ var crafting = {
             var best_search = null
 
             if (scored_search_results.length > 0) {
-              scored_search_results.sort(function compare(a, b) {
-                if (a.score < b.score) {
-                  return -1;
-                } else if (a.score > b.score) {
-                  return 1;
-                }
-                return 0;
-              })
+              scored_search_results.sort(self.scoreSort);
               
               best_search = scored_search_results[0]
             }
@@ -552,14 +577,7 @@ var crafting = {
       }
     })
 
-    results.sort(function compare(a, b) {
-      if (a.score < b.score) {
-        return -1;
-      } else if (a.score > b.score) {
-        return 1;
-      }
-      return 0;
-    })
+    results.sort(self.scoreSort);
 
     if (self.options.optimize_unique_characters) {
       results.forEach(function(result) {
