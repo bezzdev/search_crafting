@@ -19,8 +19,8 @@
     <v-expansion-panel-content>
       <v-row>
         <v-col cols="10" v-if="result.completed">
-          <div class="language-description">
-            Unique characters needed: {{ result.unique_character_count }} ({{ result.unique_characters.join('').replaceAll(' ', '_').split().join(' ') }})
+          <div class="language-description" @click="copyText($event, uniqueCharacters)">
+            Unique characters needed: {{this.result.unique_character_count}} (<span class="unique-characters">{{ uniqueCharacters }}</span>)
           </div>
           <div class="language-description">
             Searches: {{ bestCharacters }}
@@ -57,11 +57,11 @@
                     </div>
                   </v-col>
                   <v-col cols="2" style="width: 100px;">
-                    <div class="pl-0 pt-2 d-inline-flex search-character">{{formatSearchTerm(craft.best_search.search_term)}}</div>
+                    <div class="pl-0 pt-2 d-inline-flex search-character" @click="copyText($event, craft.best_search.search_term)">{{ formatSearchTerm(craft.best_search.search_term)}}</div>
                     <div class="pt-2 d-inline-flex search-score">({{ formatScore(craft.best_search.score) }})</div>
                   </v-col>
                   <v-col cols="9">
-                    <item v-for="goal in craft.goals" :key="'c'+c+'-g-'+goal" :item="goal" :language="result.translations" />
+                    <item v-for="goal in craft.goals" :key="'c'+c+'-g-'+goal" :item="goal" :language="result.translations" @click="copyItem($event, goal, result.translations)" />
                     <div class="mx-4 d-inline-flex" v-if="!(craft.best_search.results.length - craft.goals.length == 0)">
                       <v-icon>mdi-plus</v-icon>
                     </div>
@@ -90,11 +90,11 @@
                     </div>
                   </v-col>
                   <v-col cols="2" style="width: 100px;">
-                    <div class="pl-0 pt-2 d-inline-flex search-character">{{ formatSearchTerm(search.search_term) }}</div>
+                    <div class="pl-0 pt-2 d-inline-flex search-character" @click="copyText($event, search.search_term)">{{ formatSearchTerm(search.search_term) }}</div>
                     <div class="pt-2 d-inline-flex search-score">({{ formatScore(search.score) }})</div>
                   </v-col>
                   <v-col cols="9">
-                    <item v-for="goal in craft.goals" :key="'c'+c+'-g-'+s+'-'+goal" :item="goal" :language="result.translations" />
+                    <item v-for="goal in craft.goals" :key="'c'+c+'-g-'+s+'-'+goal" :item="goal" :language="result.translations" @click="copyItem($event, goal, result.translations)"/>
                     <div class="mx-4 d-inline-flex" v-if="!(search.results.length == craft.goals.length)">
                       <v-icon>mdi-plus</v-icon>
                     </div>
@@ -150,6 +150,9 @@ export default {
           return `${this.result.localized} = ${this.result.language_name} (${this.result.language_region})`;
       }
     },
+    uniqueCharacters() {
+      return `${ this.result.unique_characters.join('').replaceAll(' ', '_').split().join(' ') }`;
+    },
     bestCharacters() {
       return this.result.crafts.filter(c => c.best_search != null).map(c => "" + c.best_search.search_term.replaceAll(' ', '_').split('').join(' ') + "").join(', ')
     }
@@ -164,9 +167,15 @@ export default {
       return results.filter(i => !goals.includes(i));
     },
     formatSearchTerm: function (term) {
-      // if (term == " ")
-      //   return "\xa0 \xa0";
       return "" + term.replaceAll(' ', '_').split('').join('') + "";
+    },
+    copyText: function (e, text) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.$emit("copyText", text);
+    },
+    copyItem: function (e, key, languages) {
+      this.copyText(e, languages[key]);
     },
     formatScore: function(score) {
       if (score.toFixed)
@@ -183,12 +192,16 @@ export default {
 </script>
 <style lang="scss" scoped>
 .search-character {
-  cursor: default;
+  cursor: alias;
   user-select: text;
   padding-left: 8px;
   padding-right: 4px;
   padding-bottom: 10px;
   letter-spacing: 0.25em;
+}
+.unique-characters {
+  cursor: alias;
+  color: white;
 }
 .language-description {
   padding: 0 16px;

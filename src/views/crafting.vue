@@ -290,13 +290,26 @@
         </v-row>
         <v-expansion-panels v-show="!loading && !resultsOutdated">
           <template v-for="result in filteredResults">
-            <languageResult v-if="!result.disabled" :result="result" :key="result.language_key" @disableLanguage="disableLanguage" :edit="edit" />
-            <disabledLanguageResult v-if="result.disabled" :result="result" :key="result.language_key" @enableLanguage="enableLanguage" />
+            <language-result v-if="!result.disabled" :result="result" :key="result.language_key" @disableLanguage="disableLanguage" :edit="edit" @copyText="copyText" />
+            <disabled-language-result v-if="result.disabled" :result="result" :key="result.language_key" @enableLanguage="enableLanguage" />
           </template>
         </v-expansion-panels>
       </v-col>
       <v-spacer/>
     </v-row>
+    <v-snackbar v-model="snackbar" :timeout="2000">
+      {{ snackbarText }}
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="red"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </v-container>
 </template>
 <script>
@@ -336,6 +349,8 @@ export default {
     resultsOutdated: false,
     craftsChanged: false,
     loading: false,
+    snackbar: false,
+    snackbarText: ""
   }),
   computed: {
     loaded () {
@@ -512,6 +527,11 @@ export default {
       self.loading = false;
       self.results = Crafting.getResults(self.options, self.crafts, self.valid_languages);
       self.loading = false;
+    },
+    copyText: function (text) {
+      navigator.clipboard.writeText(text);
+      this.snackbarText = "Copied text: "+ text;
+      this.snackbar = true;
     }
   },
   mounted () {
@@ -525,7 +545,7 @@ export default {
     self.crafts = defaults.crafting;
     self.options = defaults.options;
     self.all_languages = Languages.map(l => l.key);
-    self.valid_languages = Languages.map(l => l.key);//.filter(l => l == "ko_kr");
+    self.valid_languages = Languages.map(l => l.key);
 
     // load data from cache
     var loadedCrafting = self.$store.getters.getCrafting;
