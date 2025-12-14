@@ -57,7 +57,7 @@
                     </div>
                   </v-col>
                   <v-col cols="2" style="width: 100px;">
-                    <div class="pl-0 pt-2 d-inline-flex search-character" @click="copyText($event, craft.best_search.search_term)">{{ formatSearchTerm(craft.best_search.search_term)}}</div>
+                    <div class="pl-0 pt-2 d-inline-flex search-character" @click="copySearch($event, craft.best_search.search_term)">{{ formatSearchTerm(craft.best_search.search_term)}}</div>
                     <div class="pt-2 d-inline-flex search-score">({{ formatScore(craft.best_search.score) }})</div>
                   </v-col>
                   <v-col cols="9">
@@ -90,7 +90,7 @@
                     </div>
                   </v-col>
                   <v-col cols="2" style="width: 100px;">
-                    <div class="pl-0 pt-2 d-inline-flex search-character" @click="copyText($event, search.search_term)">{{ formatSearchTerm(search.search_term) }}</div>
+                    <div class="pl-0 pt-2 d-inline-flex search-character" @click="copySearch($event, search.search_term)">{{ formatSearchTerm(search.search_term) }}</div>
                     <div class="pt-2 d-inline-flex search-score">({{ formatScore(search.score) }})</div>
                   </v-col>
                   <v-col cols="9">
@@ -173,6 +173,9 @@ export default {
       e.preventDefault();
       e.stopPropagation();
       this.$emit("copyText", text);
+    },
+    copySearch: function (e, text) {
+      this.copyText(e, text);
     },
     copyItem: function (e, key, languages) {
       this.copyText(e, languages[key]);
