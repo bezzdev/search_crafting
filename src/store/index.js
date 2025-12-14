@@ -36,6 +36,7 @@ export default new Vuex.Store({
               "- Added resource ID searching, prepending ':' to a search instead checks against the items nontranslated resource ID<br>" +
               "- Languages can be enabled and disabled to prevent them from appearing in the search results<br>" +
               "- The overlap algorithm now has coverage for longer search lengths and combinations<br>" +
+              "- Added toki pona and Furlan languages<br>" + 
               "- Fixed some language name translation errors<br>" +
               "- Search strings and item names can be copied on click<br>" +
               "- The ' ' space character is now rendered as an '_' for better readability"
