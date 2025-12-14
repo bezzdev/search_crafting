@@ -35,7 +35,21 @@
           </div>
         </v-col>
         <v-col>
-          <v-checkbox v-if="edit" class="ml-2 pt-4" label="Visible" :value="true" :input-value="true" dense @change="disableLanguage"/>
+          <v-checkbox v-if="edit" class="ml-2 pt-4" :value="true" :input-value="true" dense @change="disableLanguage">
+            <template v-slot:label>
+              Enabled
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on }">
+                  <v-icon v-on="on" class="ml-2">
+                    mdi-information
+                  </v-icon>
+                </template>
+                <div class="text-center">
+                  Disabled this language so it no longer appears in the search
+                </div>
+              </v-tooltip>
+            </template>
+          </v-checkbox>
         </v-col>
       </v-row>
       <v-lazy>
