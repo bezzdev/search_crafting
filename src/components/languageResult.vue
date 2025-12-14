@@ -44,23 +44,23 @@
             <template v-if="craft.best_search">
               <v-expansion-panel-header class="search-header">
                 <v-row dense style="width: 100%;">
-                  <v-col cols="2" style="width: 100px;">
-                    <div class="pt-2 d-inline-flex search-character">{{formatSearchTerm(craft.best_search.search_term)}}</div>
-                    <div class="pt-2 d-inline-flex">({{ formatScore(craft.best_search.score) }})</div>
-                    <div class="overlap-icon-container">
-                      <div class="overlap-icon" style="top: -26px;" v-if="craft.best_search.overlap">
-                        <v-tooltip bottom>
-                          <template v-slot:activator="{ on }">
-                            <v-icon v-on="on" small>
-                              mdi-information
-                            </v-icon>
-                          </template>
-                          <span>This search requires overlapping (the &#60; symbol means backspace)</span>
-                        </v-tooltip>
-                      </div>
+                  <v-col cols="1" class="icon-column">
+                    <div class="overlap-icon" v-if="craft.best_search.overlap">
+                      <v-tooltip bottom>
+                        <template v-slot:activator="{ on }">
+                          <v-icon v-on="on" small>
+                            mdi-information
+                          </v-icon>
+                        </template>
+                        <span>This search requires overlapping (the &#60; symbol means backspace)</span>
+                      </v-tooltip>
                     </div>
                   </v-col>
-                  <v-col cols="10">
+                  <v-col cols="2" style="width: 100px;">
+                    <div class="pl-0 pt-2 d-inline-flex search-character">{{formatSearchTerm(craft.best_search.search_term)}}</div>
+                    <div class="pt-2 d-inline-flex search-score">({{ formatScore(craft.best_search.score) }})</div>
+                  </v-col>
+                  <v-col cols="9">
                     <item v-for="goal in craft.goals" :key="'c'+c+'-g-'+goal" :item="goal" :language="result.translations" />
                     <div class="mx-4 d-inline-flex" v-if="!(craft.best_search.results.length - craft.goals.length == 0)">
                       <v-icon>mdi-plus</v-icon>
@@ -74,26 +74,26 @@
                   </v-icon>
                 </template>
               </v-expansion-panel-header>
-              <v-expansion-panel-content class="px-4">
+              <v-expansion-panel-content class="px-0  ">
                 <v-divider class="pb-4" />
                 <v-row v-for="search, s in craft.best_searches" :key="search.search_term" dense style="width: 100%;">
-                  <v-col cols="2" style="width: 100px;">
-                    <div class="pt-2 d-inline-flex search-character">{{ formatSearchTerm(search.search_term) }}</div>
-                    <div class="pt-2 d-inline-flex">({{ formatScore(search.score) }})</div>
-                    <div class="overlap-icon-container">
-                      <div class="overlap-icon" v-if="search.overlap">
-                        <v-tooltip bottom>
-                          <template v-slot:activator="{ on }">
-                            <v-icon v-on="on" small>
-                              mdi-information
-                            </v-icon>
-                          </template>
-                          <span>This search requires overlapping (the &#60; symbol means backspace)</span>
-                        </v-tooltip>
-                      </div>
+                  <v-col cols="1" class="icon-column">
+                    <div class="overlap-icon" v-if="search.overlap">
+                      <v-tooltip bottom>
+                        <template v-slot:activator="{ on }">
+                          <v-icon v-on="on" small>
+                            mdi-information
+                          </v-icon>
+                        </template>
+                        <span>This search requires overlapping (the &#60; symbol means backspace)</span>
+                      </v-tooltip>
                     </div>
                   </v-col>
-                  <v-col cols="10">
+                  <v-col cols="2" style="width: 100px;">
+                    <div class="pl-0 pt-2 d-inline-flex search-character">{{ formatSearchTerm(search.search_term) }}</div>
+                    <div class="pt-2 d-inline-flex search-score">({{ formatScore(search.score) }})</div>
+                  </v-col>
+                  <v-col cols="9">
                     <item v-for="goal in craft.goals" :key="'c'+c+'-g-'+s+'-'+goal" :item="goal" :language="result.translations" />
                     <div class="mx-4 d-inline-flex" v-if="!(search.results.length == craft.goals.length)">
                       <v-icon>mdi-plus</v-icon>
@@ -194,17 +194,18 @@ export default {
   padding: 0 16px;
   color: #bfbfbf;
 }
+.icon-column {
+  max-width: 3% !important;
+}
 .search-header {
   min-height: 32px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-.overlap-icon-container {
-  position: relative;
+  padding: 8px;
 }
 .overlap-icon {
-  position: absolute;
-  left: -16px;
-  top: -34px;
+  padding-top: 7px;
+  padding-left: 2px;
+}
+.search-score {
+  float: right;
 }
 </style>
