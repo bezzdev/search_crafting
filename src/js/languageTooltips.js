@@ -121,6 +121,8 @@ import { yo_ng } from './tooltips/yo_ng_tooltips.js';
 import { zh_cn } from './tooltips/zh_cn_tooltips.js';
 import { zh_hk } from './tooltips/zh_hk_tooltips.js';
 import { zh_tw } from './tooltips/zh_tw_tooltips.js';
+import { tok } from './tooltips/tok_tooltips.js';
+import { fur_it } from './tooltips/fur_it_tooltips.js';
 
 var language_tooltips = {
   'af_za': af_za,
@@ -245,6 +247,8 @@ var language_tooltips = {
   'yo_ng': yo_ng,
   'zh_cn': zh_cn,
   'zh_hk': zh_hk,
-  'zh_tw': zh_tw
+  'zh_tw': zh_tw,
+  'tok': tok,
+  'fur_it': fur_it
 }
 export const LanguageTooltips = language_tooltips;

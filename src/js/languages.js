@@ -122,5 +122,7 @@ var languages = [
   { name: 'Беларуская', region: 'Беларусь', key: 'be_by', localized: 'Belarusian', warning: null },
   { name: 'Македонски', region: 'Македонија', key: 'mk_mk', localized: 'Macedonian', warning: null },
   { name: 'Дореформенный русскій', region: 'Русь', key: 'rpr', localized: 'Pre-reform Russian', warning: null },
+  { name: 'toki pona', region: 'ma pona', key: 'tok', localized: 'Toki Pona', warning: null },
+  { name: 'Furlan', region: 'Friûl', key: 'fur_it', localized: 'Friulian', warning: null },
 ]
 export const Languages = languages;
