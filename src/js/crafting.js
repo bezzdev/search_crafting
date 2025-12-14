@@ -97,7 +97,7 @@ var crafting = {
   },
   matchItem: function (key, translations, search) {
     let self = this;
-    if (search.includes(':')) { // if (search[0] == ':') {
+    if (search.includes(':')) {
       const split = search.indexOf(':');
       const before = search.substring(0, split);
       if (before != "" || "minecraft".includes(before) == false) {
