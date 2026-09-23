@@ -214,12 +214,13 @@ var crafting = {
         double_letters += 1;
       }
     }
+    var double_input_penalty = double_letters * this.option_values.double_input_penalty;
 
     var junk_penalty = remainder * this.option_values.junk_penalty;
     if (remainder > 0) {
       junk_penalty += this.option_values.has_junk_penalty
     }
-    return letter_penalty + (double_letters * this.option_values.double_input_penalty) + junk_penalty + boost
+    return letter_penalty + double_input_penalty + junk_penalty + boost
   },
   getUniqueCharacters: function (items) {
     // get all characters

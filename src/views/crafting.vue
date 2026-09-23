@@ -515,26 +515,31 @@ export default {
     },
     disableAllLanguages: function () {
       let self = this;
-      self.all_languages.forEach(key => {
-        if (self.enabled_languages.includes(key)) {
-          self.enabled_languages.splice(self.enabled_languages.indexOf(key), 1);
-          if (self.results) {
-            self.results.find(r => r.language_key == key).disabled = true;
+      if (self.results) {
+        self.all_languages.forEach(key => {
+          let lang = self.results.find(r => r.language_key == key)
+          if (lang) {
+            lang.disabled = true;
           }
-        }
-      })
+        })
+      }
+
+      self.enabled_languages = []
       self.$store.commit('setEnabledLanguages', self.enabled_languages)
     },
     enableAllLanguages: function () {
       let self = this;
-      self.all_languages.forEach(key => {
-        if (!self.enabled_languages.includes(key)) {
-          self.enabled_languages.push(key);
-          if (self.results) {
-            self.results.find(r => r.language_key == key).disabled = false;
+      if (self.results) {
+        self.all_languages.forEach(key => {
+          let lang = self.results.find(r => r.language_key == key)
+          if (lang) 
+          {
+            lang.disabled = false;
           }
-        }
-      })
+        })
+      }
+
+      self.enabled_languages = self.all_languages.map(l => l)
       self.$store.commit('setEnabledLanguages', self.enabled_languages)
     },
     manuallySearch: function () {
@@ -601,11 +606,13 @@ export default {
         if (json.options) {
           self.options = OptionsLoader(json.options, defaults.options);
         }
-        if (json.languages) {
+        if (json.enabled_languages) {
           self.enabled_languages = LanguageLoader(json.enabled_languages, self.all_languages);
         }
       }
       self.$router.replace({'query': null});
+      
+      self.getResults();
     }
    
     // finish loading

@@ -5,7 +5,7 @@ var deserialize10 = function(encoded, items) {
   var result = {
     crafting: [],
     options: {},
-    languages: []
+    enabled_languages: []
   }
 
   json.c.forEach(craft => {
@@ -90,7 +90,7 @@ var shareSerialize = function (data, items) {
       di: data.options.double_input,
       cb: data.options.character_blacklist
     },
-    l: data.enabled_languages
+    l: data.languages
   }
 
   var json = JSON.stringify(shareObject);
