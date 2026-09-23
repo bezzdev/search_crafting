@@ -30,6 +30,21 @@ export default new Vuex.Store({
     readChangelog: -1,
     changelog: [
       {
+        id: 13,
+        date: "Tuesday, September 23 - 2026",
+        title: "Version 13",
+        text: "Features <br>" +
+              "- Added double input penalty<br>" +
+              "- Added banned character list<br>" +
+              "- Changed default search craft setup<br>" +
+              "- Reformatted search settings layout<br>" +
+              "<br>" +
+              "Bug fixes <br>" +
+              "- Fixed some language name typos <br>" + 
+              "- Fixed disabled languages not persisting on refresh <br>" + 
+              "- Fixed overlap penalty not saving correctly <br>"
+      },
+      {
         id: 12,
         date: "Sunday, December 14 - 2025",
         title: "Version 12",
