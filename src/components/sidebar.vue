@@ -82,6 +82,7 @@ export default {
     confirmReset: function () {
       this.$store.commit('setCrafting', [])
       this.$store.commit('setOptions', null)
+      this.$store.commit('setEnabledLanguages', null)
       
       this.resetDialog = false;
       window.location.reload();

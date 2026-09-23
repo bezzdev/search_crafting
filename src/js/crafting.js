@@ -201,18 +201,25 @@ var crafting = {
   },
   scoreSearch: function(search, junk, boost) {
     var remainder = junk;
-    var letters = search;
+    var letters = search.length;
     
     if (!this.options.score_search_lengths)
       letters = 1;
 
     var letter_penalty = this.option_values.letter_penalty *  (letters - 1);
 
+    var double_letters = 0;
+    for(let c = 1; c < letters; c++) {
+      if (search[c-1] == search[c]) {
+        double_letters += 1;
+      }
+    }
+
     var junk_penalty = remainder * this.option_values.junk_penalty;
     if (remainder > 0) {
       junk_penalty += this.option_values.has_junk_penalty
     }
-    return letter_penalty + junk_penalty + boost
+    return letter_penalty + (double_letters * this.option_values.double_input_penalty) + junk_penalty + boost
   },
   getUniqueCharacters: function (items) {
     // get all characters
@@ -366,7 +373,7 @@ var crafting = {
         junk = without_additional;
       }
 
-      var score = self.scoreSearch(search.length, junk.length, boost);
+      var score = self.scoreSearch(search, junk.length, boost);
 
       scored_search_results.push({
         search_term: search,
@@ -412,14 +419,15 @@ var crafting = {
     self.permittedItems = permitted_items;
 
     self.option_values = {
-      badCharacters: ["□"],
+      badCharacters: ["□", ...(self.options.character_blacklist ?? "").split('')],
       letter_penalty: parseFloat(self.options.letter_penalty),
       junk_penalty: parseFloat(self.options.junk_penalty),
       has_junk_penalty: parseFloat(self.options.has_junk_penalty),
       fail_penalty: parseFloat(self.options.fail_penalty),
       permitted_items_benefit:  parseFloat(self.options.permitted_items_benefit),
       max_characters: parseInt(self.options.max_characters),
-      overlap_penalty: parseFloat(self.options.overlap_penalty)
+      overlap_penalty: parseFloat(self.options.overlap_penalty),
+      double_input_penalty: parseFloat(self.options.double_input)
     }
 
     var keys = Languages.map(l => l.key)
@@ -516,7 +524,7 @@ var crafting = {
                             var middle = "<".repeat(backspaces);
                             var overlap_search = left + middle + right;
                             
-                            if (!overlaps.find(o => o.search_term == overlap_search)) {
+                            if (overlaps <= 2 && !overlaps.find(o => o.search_term == overlap_search)) {
                               // we have an overlap
                               var results_left = self.searchGroups(groups, translations, search_left.search_term);
                               var results_right = self.searchGroups(groups, translations, search_right.search_term);

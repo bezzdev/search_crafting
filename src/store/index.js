@@ -14,6 +14,7 @@ const vuexLocalStorage = new VuexPersist({
   reducer: (state) => ({
     crafting: state.crafting,
     options: state.options,
+    enabled_languages: state.enabled_languages,
     readChangelog: state.readChangelog
   }),
 })
@@ -177,6 +178,9 @@ export default new Vuex.Store({
     getOptions: state => {
       return state.options;
     },
+    getEnabledLanguages: state => {
+      return state.enabled_languages;
+    },
     getMenu: state => {
       return state.menu
     },
@@ -202,6 +206,9 @@ export default new Vuex.Store({
     },
     setOptions (state, val) {
       state.options = val;
+    },
+    setEnabledLanguages (state, val) {
+      state.enabled_languages = val;
     },
     setMenu (state, val) {
       state.menu = val;

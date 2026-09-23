@@ -24,7 +24,7 @@
           </v-tooltip>
         </v-toolbar>
         <v-expansion-panels class="mb-2">
-          <permitted v-if="options" ref="permitted" :permitted="options.permitted_items" :edit="edit" 
+          <permitted v-if="options && options.allow_permitted_items" ref="permitted" :permitted="options.permitted_items" :edit="edit" 
             @itemsChanged="itemsChanged"
           />
         </v-expansion-panels>
@@ -61,7 +61,7 @@
           <v-card-text>
             <v-row>
               <v-col cols="4">
-                <v-switch v-model="options.score_search_lengths" class="ml-2" label="label" @change="setResultsOutdated">
+                <v-switch v-model="options.score_search_lengths" label="label" @change="setDirty">
                   <template v-slot:label>
                     Search Length Matters
                     <v-tooltip bottom>
@@ -74,9 +74,7 @@
                     </v-tooltip>
                   </template>
                 </v-switch>
-              </v-col>
-              <v-col cols="4">
-                <v-subheader class="pl-0">
+                <v-subheader class="pl-0 input-slider">
                   Maximum Search Length: {{ options.max_characters }}
                   <v-tooltip bottom>
                     <template v-slot:activator="{ on }">
@@ -87,7 +85,7 @@
                     <span>The maximum length of a search.</span>
                   </v-tooltip>
                 </v-subheader>
-                <v-slider v-model="options.max_characters" step="1" min="1" max="8" ticks="always" @change="setResultsOutdated">
+                <v-slider v-model="options.max_characters" step="1" min="1" max="8" ticks="always" @change="setDirty">
                   <template v-slot:prepend>
                     <span>1</span>
                   </template>
@@ -95,9 +93,116 @@
                     <span>8</span>
                   </template> 
                 </v-slider>
+                <v-text-field v-model="options.letter_penalty" class="mt-3" label="Search Length Penalty" @change="setDirty" type="number" dense>
+                  <template v-slot:append>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Penalty for each additional character in the search</span>
+                    </v-tooltip>
+                  </template>
+                </v-text-field>
               </v-col>
               <v-col cols="4">
-                <v-switch v-model="options.optimize_unique_characters" class="ml-2" label="label" @change="setResultsOutdated">
+                <v-text-field v-model="options.has_junk_penalty" label="Has Junk Penalty" @change="setDirty" type="number">
+                  <template v-slot:append>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Penalty for having any junk in the search results</span>
+                    </v-tooltip>
+                  </template>
+                </v-text-field>
+                <v-text-field v-model="options.junk_penalty" label="Junk Item Penalty" @change="setDirty" type="number">
+                  <template v-slot:append>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Penalty for each junk item in the search results</span>
+                    </v-tooltip>
+                  </template>
+                </v-text-field>
+                <v-text-field v-model="options.fail_penalty" label="Search Fail Penalty" @change="setDirty" type="number">
+                  <template v-slot:append>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Penalty for failing to find a valid search</span>
+                    </v-tooltip>
+                  </template>
+                </v-text-field>
+              </v-col>
+              <v-col cols="4">
+                <v-switch v-model="options.allow_permitted_items" class="ml-2" label="label" @change="setDirty">
+                  <template v-slot:label>
+                    Allow Permitted Items
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on" class="ml-2">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <div class="text-center">
+                        Configure permitted items that will not negatively affect the efficiency score
+                      </div>
+                    </v-tooltip>
+                  </template>
+                </v-switch>
+                <v-switch v-model="options.permit_goal_items" class="ml-2" label="label" @change="setDirty">
+                  <template v-slot:label>
+                    Include Goal Items
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on" class="ml-2">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <div class="text-center">
+                        Goal items from other crafts will be included in the permitted list
+                      </div>
+                    </v-tooltip>
+                  </template>
+                </v-switch>
+                <v-text-field class="pl-4 pr-2" v-model="options.permitted_items_benefit" label="Permitted Item Benefit" @change="setDirty" type="number">
+                  <template v-slot:append>
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Score benefit for finding these additional items</span>
+                    </v-tooltip>
+                  </template>
+                </v-text-field>
+              </v-col>
+              <v-col cols="4">
+                <v-switch v-model="options.resource_id" label="label" @change="setDirty" dense>
+                  <template v-slot:label>
+                    Resource ID
+                    <v-tooltip bottom>
+                      <template v-slot:activator="{ on }">
+                        <v-icon v-on="on" class="ml-2">
+                          mdi-information
+                        </v-icon>
+                      </template>
+                      <span>Allow the use of the prepended ':' to search for items using their Resource ID</span>
+                    </v-tooltip>
+                  </template>
+                </v-switch>
+                <v-switch v-model="options.optimize_unique_characters" label="label" @change="setDirty" dense>
                   <template v-slot:label>
                     Optimize Character Set
                     <v-tooltip bottom>
@@ -113,11 +218,7 @@
                     </v-tooltip>
                   </template>
                 </v-switch>
-              </v-col>
-            </v-row>
-            <v-row class="px-2 pt-2">
-              <v-col cols="3">
-                <v-text-field v-model="options.letter_penalty" label="Search Length Penalty" @change="setResultsOutdated" type="number" dense>
+                <v-text-field v-model="options.double_input" class="mt-4" label="Double Input Penalty" @change="setDirty" type="number" dense>
                   <template v-slot:append>
                     <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
@@ -125,13 +226,11 @@
                           mdi-information
                         </v-icon>
                       </template>
-                      <span>Penalty for each additional character in the search</span>
+                      <span>Penalty for the same character input twice in a row</span>
                     </v-tooltip>
                   </template>
                 </v-text-field>
-              </v-col>
-              <v-col cols="3">
-                <v-text-field v-model="options.junk_penalty" label="Junk Item Penalty" @change="setResultsOutdated" type="number" dense>
+                <v-text-field v-model="options.character_blacklist" class="mt-3" persistent-placeholder :label="characterBlacklistLabel" @change="setDirty">
                   <template v-slot:append>
                     <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
@@ -139,93 +238,13 @@
                           mdi-information
                         </v-icon>
                       </template>
-                      <span>Penalty for each junk item in the search results</span>
+                      <span>These characters will not show in search results</span>
                     </v-tooltip>
                   </template>
                 </v-text-field>
-              </v-col>
-              <v-col cols="3">
-                <v-text-field v-model="options.has_junk_penalty" label="Has Junk Penalty" @change="setResultsOutdated" type="number" dense>
-                  <template v-slot:append>
-                    <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                        <v-icon v-on="on">
-                          mdi-information
-                        </v-icon>
-                      </template>
-                      <span>Penalty for having any junk in the search results</span>
-                    </v-tooltip>
-                  </template>
-                </v-text-field>
-              </v-col>
-              <v-col cols="3">
-                <v-text-field v-model="options.fail_penalty" label="Search Fail Penalty" @change="setResultsOutdated" type="number" dense>
-                  <template v-slot:append>
-                    <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                        <v-icon v-on="on">
-                          mdi-information
-                        </v-icon>
-                      </template>
-                      <span>Penalty for failing to find a valid search</span>
-                    </v-tooltip>
-                  </template>
-                </v-text-field>
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="4">
-                <v-switch v-model="options.allow_permitted_items" class="ml-2" label="label" @change="setResultsOutdated">
-                  <template v-slot:label>
-                    Allow Permitted Items
-                    <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                        <v-icon v-on="on" class="ml-2">
-                          mdi-information
-                        </v-icon>
-                      </template>
-                      <div class="text-center">
-                        Permitted items will not negatively affect the efficiency score
-                      </div>
-                    </v-tooltip>
-                  </template>
-                </v-switch>
               </v-col>
               <v-col cols="4">
-                <v-switch v-model="options.permit_goal_items" class="ml-2" label="label" @change="setResultsOutdated">
-                  <template v-slot:label>
-                    Include Goal Items
-                    <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                        <v-icon v-on="on" class="ml-2">
-                          mdi-information
-                        </v-icon>
-                      </template>
-                      <div class="text-center">
-                        Goal items from other crafts will be included in the permitted list
-                      </div>
-                    </v-tooltip>
-                  </template>
-                </v-switch>
-              </v-col>
-              <v-col cols="4">
-                <v-text-field class="pl-4 pr-2" v-model="options.permitted_items_benefit" label="Permitted Item Benefit" @change="setResultsOutdated" type="number">
-                  <template v-slot:append>
-                    <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                        <v-icon v-on="on">
-                          mdi-information
-                        </v-icon>
-                      </template>
-                      <span>Score benefit for finding these additional items</span>
-                    </v-tooltip>
-                  </template>
-                </v-text-field>
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="4">
-                <v-switch v-model="options.overlap_crafting" class="ml-2" label="label" @change="setResultsOutdated">
+                <v-switch v-model="options.overlap_crafting" label="label" @change="setDirty">
                   <template v-slot:label>
                     Craft Overlap
                     <v-tooltip bottom>
@@ -238,9 +257,7 @@
                     </v-tooltip>
                   </template>
                 </v-switch>
-              </v-col>
-              <v-col cols="4">
-                <v-text-field class="pl-4 pr-2"  v-model="options.overlap_penalty" label="Overlap Penalty" @change="setResultsOutdated" type="number">
+                <v-text-field v-model="options.overlap_penalty" class="mt-4" label="Overlap Penalty" @change="setDirty" type="number" dense>
                   <template v-slot:append>
                     <v-tooltip bottom>
                       <template v-slot:activator="{ on }">
@@ -253,26 +270,11 @@
                   </template>
                 </v-text-field>
               </v-col>
-              <v-col>
-                <v-switch v-model="options.resource_id" class="ml-2" label="label" @change="setResultsOutdated">
-                  <template v-slot:label>
-                    Resource ID
-                    <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                        <v-icon v-on="on" class="ml-2">
-                          mdi-information
-                        </v-icon>
-                      </template>
-                      <span>Allow the use of the prepended ':' to search for items using their Resource ID</span>
-                    </v-tooltip>
-                  </template>
-                </v-switch>
-              </v-col>
             </v-row>
           </v-card-text>
         </v-card>
-        <v-expansion-panels class="mb-2" v-if="valid_languages.length != all_languages.length">
-          <disabled-languages :languages="all_languages" :enabledLanguages="valid_languages" @disableAll="disableAllLanguages" @enableAll="enableAllLanguages"></disabled-languages>
+        <v-expansion-panels class="mb-2" v-if="enabled_languages.length != all_languages.length">
+          <disabled-languages :languages="all_languages" :enabledLanguages="enabled_languages" @disableAll="disableAllLanguages" @enableAll="enableAllLanguages"></disabled-languages>
         </v-expansion-panels>
         <div class="text-center" v-if="resultsOutdated && options.auto_search">
           <v-progress-circular
@@ -341,12 +343,13 @@ export default {
   data: () => ({
     crafts: [],
     all_languages: [],
-    valid_languages: [],
+    enabled_languages: [],
     options: null,
     option_values: null,
     results: [],
     edit: false,
     settingsOpen: false,
+    settingsOutdated:false,
     resultsOutdated: false,
     craftsChanged: false,
     loading: false,
@@ -371,6 +374,9 @@ export default {
         }
       }
       return [];
+    },
+    characterBlacklistLabel() {
+      return 'Banned Characters (' + (this.options.character_blacklist ?? "").length + ')';
     }
   },
   watch: {
@@ -384,7 +390,7 @@ export default {
         for(var c = 0; c < this.crafts.length; c++)
           this.$refs["craft"][c].applyChanges();
 
-        this.setResultsOutdated();
+        this.setDirty();
       }
     },
     toggleSettings: function () {
@@ -396,11 +402,18 @@ export default {
       var encoded = ShareSerialize({
         crafting: this.crafts,
         options: this.options,
-        languages: this.valid_languages.length.length == this.all_languages.length ? null : this.valid_languages
+        languages: this.enabled_languages.length == this.all_languages.length ? null : this.enabled_languages
       }, items);
 
       var link = process.env.VUE_APP_CLIENT_PROTOCOL + process.env.VUE_APP_CLIENT_URL + "?data=" + encoded;
       navigator.clipboard.writeText(link);
+    },
+    setDirty: function () {
+      this.setSettingsOutdated();
+      this.setResultsOutdated();
+    },
+    setSettingsOutdated: function () {
+      this.settingsOutdated = true;
     },
     setResultsOutdated: function () {
       this.resultsOutdated = true;
@@ -457,7 +470,7 @@ export default {
       this.craftsChanged = true;
     },
     enabledChanged: function () {
-      this.setResultsOutdated();
+      this.setDirty();
     },
     searchChanged: function () {
       this.$store.commit('setOptions', this.options)
@@ -482,43 +495,47 @@ export default {
     },
     disableLanguage: function(language_key) {
       let self = this;
-      if (self.valid_languages.includes(language_key)) {
-        self.valid_languages.splice(self.valid_languages.indexOf(language_key), 1);
+      if (self.enabled_languages.includes(language_key)) {
+        self.enabled_languages.splice(self.enabled_languages.indexOf(language_key), 1);
         if (self.results) {
           self.results.find(r => r.language_key == language_key).disabled = true;
         }
       }
+      self.$store.commit('setEnabledLanguages', self.enabled_languages)
     },
     enableLanguage: function(language_key) {
       let self = this;
-      if (!self.valid_languages.includes(language_key)) {
-        self.valid_languages.push(language_key);
+      if (!self.enabled_languages.includes(language_key)) {
+        self.enabled_languages.push(language_key);
         if (self.results) {
           self.results.find(r => r.language_key == language_key).disabled = false;
         }
       }
+      self.$store.commit('setEnabledLanguages', self.enabled_languages)
     },
     disableAllLanguages: function () {
       let self = this;
       self.all_languages.forEach(key => {
-        if (self.valid_languages.includes(key)) {
-          self.valid_languages.splice(self.valid_languages.indexOf(key), 1);
+        if (self.enabled_languages.includes(key)) {
+          self.enabled_languages.splice(self.enabled_languages.indexOf(key), 1);
           if (self.results) {
             self.results.find(r => r.language_key == key).disabled = true;
           }
         }
       })
+      self.$store.commit('setEnabledLanguages', self.enabled_languages)
     },
     enableAllLanguages: function () {
       let self = this;
       self.all_languages.forEach(key => {
-        if (!self.valid_languages.includes(key)) {
-          self.valid_languages.push(key);
+        if (!self.enabled_languages.includes(key)) {
+          self.enabled_languages.push(key);
           if (self.results) {
             self.results.find(r => r.language_key == key).disabled = false;
           }
         }
       })
+      self.$store.commit('setEnabledLanguages', self.enabled_languages)
     },
     manuallySearch: function () {
       this.resultsOutdated = false;
@@ -527,7 +544,7 @@ export default {
     getResults: function () {
       let self = this;
       self.loading = false;
-      self.results = Crafting.getResults(self.options, self.crafts, self.valid_languages, self.permittedItems);
+      self.results = Crafting.getResults(self.options, self.crafts, self.enabled_languages, self.permittedItems);
       self.loading = false;
     },
     copyText: function (text) {
@@ -547,7 +564,13 @@ export default {
     self.crafts = defaults.crafting;
     self.options = defaults.options;
     self.all_languages = Languages.map(l => l.key);
-    self.valid_languages = Languages.map(l => l.key);
+    self.enabled_languages = Languages.map(l => l.key);
+
+    if (defaults.disabled_languages?.length) {
+      self.enabled_languages = Languages.map(l => l.key).filter(key => !defaults.disabled_languages.includes(key));
+    } else if (defaults.enabled_languages?.length) {
+      self.enabled_languages = Languages.map(l => l.key).filter(key => defaults.enabled_languages.includes(key));
+    }
 
     // load data from cache
     var loadedCrafting = self.$store.getters.getCrafting;
@@ -557,6 +580,11 @@ export default {
     var loadedOptions = self.$store.getters.getOptions;
     if (loadedOptions != null) {
       self.options = OptionsLoader(loadedOptions, defaults.options);
+    }
+
+    var loadedLanguages = self.$store.getters.getEnabledLanguages;
+    if (loadedLanguages != null) {
+      self.enabled_languages = loadedLanguages;
     }
     
     // load share data
@@ -574,30 +602,31 @@ export default {
           self.options = OptionsLoader(json.options, defaults.options);
         }
         if (json.languages) {
-          self.valid_languages = LanguageLoader(json.languages, self.all_languages);
+          self.enabled_languages = LanguageLoader(json.enabled_languages, self.all_languages);
         }
-        self.getResults();
       }
       self.$router.replace({'query': null});
-    } else {
-      self.setResultsOutdated();
     }
-
+   
     // finish loading
     self.$store.commit('setLoaded', true)
 
     // get new results
     setInterval(function() {
-      if (self.resultsOutdated) {
+      if (self.settingsOutdated) {
         self.$store.commit('setCrafting', self.crafts)
         self.$store.commit('setOptions', self.options)
+        self.$store.commit('setEnabledLanguages', self.enabled_languages)
 
-        if (self.options.auto_search) {
-          self.resultsOutdated = false;
-          self.getResults();
-        }
+        self.settingsOutdated = false;
+      }
+      if (self.resultsOutdated && self.options.auto_search) {
+        self.getResults();
+        self.resultsOutdated = false;
       }
     }, 500)
+
+    self.setDirty();
   }
 }
 </script>
@@ -608,4 +637,19 @@ export default {
   padding-left: 8px;
   padding-right: 8px;
 }
+
+.v-input--switch {
+  margin-top: 2px;
+}
+
+.input-slider {
+  margin-top: -6px;
+}
+
+.v-input--switch .v-messages,
+.v-input__slider .v-messages,
+.v-text-field__details {
+  display: none;
+}
+
 </style>

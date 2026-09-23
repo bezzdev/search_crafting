@@ -31,7 +31,11 @@ var optionsLoader = function (options, defaults) {
     options.overlap_penalty = defaults.overlap_penalty
   if (!checkProperty(options, 'resource_id'))
     options.resource_id = defaults.resource_id
-  
+  if (!checkProperty(options, 'double_input'))
+    options.double_input = defaults.double_input
+  if (!checkProperty(options, 'character_blacklist'))
+    options.character_blacklist = defaults.character_blacklist
+    
   return options;
 }
 

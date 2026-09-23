@@ -35,10 +35,12 @@ var deserialize10 = function(encoded, items) {
   tryGetValue(result.options, "permitted_items", json, "o.pi")
   result.options.permitted_items = result.options.permitted_items.map(p => items[p]);
   tryGetValue(result.options, "overlap_crafting", json, "o.co");
-  tryGetValue(result.options, "overlap_penalty", json, "o.o");
+  tryGetValue(result.options, "overlap_penalty", json, "o.op");
   tryGetValue(result.options, "resource_id", json, "o.r");
+  tryGetValue(result.options, "double_input", json, "o.di");
+  tryGetValue(result.options, "character_blacklist", json, "o.cb");
 
-  tryGetValue(result, "languages", json, "l");
+  tryGetValue(result, "enabled_languages", json, "l");
 
   return result;
 }
@@ -84,9 +86,11 @@ var shareSerialize = function (data, items) {
       pi: data.options.permitted_items.map(p => items.indexOf(p)),
       co: data.options.overlap_crafting,
       op: data.options.overlap_penalty,
-      r: data.options.resource_id
+      r: data.options.resource_id,
+      di: data.options.double_input,
+      cb: data.options.character_blacklist
     },
-    l: data.languages
+    l: data.enabled_languages
   }
 
   var json = JSON.stringify(shareObject);
