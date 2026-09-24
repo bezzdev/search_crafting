@@ -276,7 +276,7 @@
         <v-expansion-panels class="mb-2" v-if="enabled_languages.length != all_languages.length">
           <disabled-languages :languages="all_languages" :enabledLanguages="enabled_languages" @disableAll="disableAllLanguages" @enableAll="enableAllLanguages"></disabled-languages>
         </v-expansion-panels>
-        <div class="text-center" v-if="resultsOutdated && options.auto_search">
+        <div class="text-center" v-if="loading" style="margin-top: 100px !important;">
           <v-progress-circular
             indeterminate
             color="primary"
@@ -548,9 +548,12 @@ export default {
     },
     getResults: function () {
       let self = this;
-      self.loading = false;
-      self.results = Crafting.getResults(self.options, self.crafts, self.enabled_languages, self.permittedItems);
-      self.loading = false;
+      self.loading = true;
+      
+      setTimeout(function () {
+        self.results = Crafting.getResults(self.options, self.crafts, self.enabled_languages, self.permittedItems);
+        self.loading = false;
+      }, 200)
     },
     copyText: function (text) {
       navigator.clipboard.writeText(text);
@@ -560,6 +563,7 @@ export default {
   },
   mounted () {
     var self = this;
+
     const item_keys = Object.keys(en_gb);
     self.$store.commit('setItems', item_keys);
     Crafting.setItems(item_keys);
@@ -578,18 +582,22 @@ export default {
     }
 
     // load data from cache
+    let cached = false;
     var loadedCrafting = self.$store.getters.getCrafting;
     if (loadedCrafting != null && loadedCrafting.length > 0) {
       self.crafts = CraftingLoader(loadedCrafting);
+      cached = true;
     }
     var loadedOptions = self.$store.getters.getOptions;
     if (loadedOptions != null) {
       self.options = OptionsLoader(loadedOptions, defaults.options);
+      cached = true;
     }
 
     var loadedLanguages = self.$store.getters.getEnabledLanguages;
     if (loadedLanguages != null) {
       self.enabled_languages = loadedLanguages;
+      cached = true;
     }
     
     // load share data
@@ -611,8 +619,13 @@ export default {
         }
       }
       self.$router.replace({'query': null});
-      
+
       self.getResults();
+    } else if (!cached) {
+      self.settingsOutdated = true;
+      self.getResults();
+    } else {
+      self.setDirty();
     }
    
     // finish loading
@@ -629,11 +642,9 @@ export default {
       }
       if (self.resultsOutdated && self.options.auto_search) {
         self.getResults();
-        self.resultsOutdated = false;
+        self.resultsOutdated = false;  
       }
     }, 500)
-
-    self.setDirty();
   }
 }
 </script>
