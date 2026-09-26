@@ -18,7 +18,21 @@
       <span>Use this site to find the most optimal search terms for your desired items.</span>
     </v-tooltip>
     <v-spacer/>
-
+    <v-chip
+      color="white"
+      label
+      link
+      href="https://discord.gg/WRdbs68jZc" 
+    >
+      <span class="mr-2 black--text">Join the searchcraftcord Discord server</span>
+      <v-avatar
+        tile
+        size="42">
+        <v-img src="discord.svg" contain aspect-ratio="1"/>
+      </v-avatar>
+    </v-chip>
+    
+    <v-divider class="mx-2" vertical/>
     <a class="bezz" href="https://twitter.com/bezzdev" target="_blank" >
       <span class="pr-2">@bezzdev</span>
       <v-avatar

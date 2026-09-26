@@ -38,6 +38,7 @@ export default new Vuex.Store({
               "- Added banned character list<br>" +
               "- Changed default search craft setup<br>" +
               "- Reformatted search settings layout<br>" +
+              "- Added Discord link<br>" + 
               "<br>" +
               "Bug fixes <br>" +
               "- Fixed some language name typos <br>" + 
