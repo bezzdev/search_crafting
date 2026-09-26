@@ -24,7 +24,7 @@
           </v-tooltip>
         </v-toolbar>
         <v-expansion-panels class="mb-2">
-          <permitted v-if="options && options.allow_permitted_items" ref="permitted" :permitted="options.permitted_items" :edit="edit" 
+          <permitted v-if="options" v-show="options.allow_permitted_items" ref="permitted" :permitted="options.permitted_items" :edit="edit" 
             @itemsChanged="itemsChanged"
           />
         </v-expansion-panels>
