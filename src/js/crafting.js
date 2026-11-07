@@ -525,7 +525,7 @@ var crafting = {
                             var middle = "<".repeat(backspaces);
                             var overlap_search = left + middle + right;
                             
-                            if (overlaps <= 2 && !overlaps.find(o => o.search_term == overlap_search)) {
+                            if (overlaps.length <= 2 && !overlaps.find(o => o.search_term == overlap_search)) {
                               // we have an overlap
                               var results_left = self.searchGroups(groups, translations, search_left.search_term);
                               var results_right = self.searchGroups(groups, translations, search_right.search_term);
